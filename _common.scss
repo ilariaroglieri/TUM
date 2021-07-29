@@ -6,7 +6,7 @@ $tablet: 768px;
 $mobile: 640px;
 
 //colors
-$primaryColor: #7d4d66;
+$primaryColor: #43454a;
 
 // Typography
 @font-face {
@@ -30,23 +30,9 @@ $primaryColor: #7d4d66;
   font-style: italic;
 }
 
-@font-face {
-  font-family: 'Basis Grotesque Mono';
-  src:url('assets/fonts/BasisGrotesqueMono-Regular.woff2') format('woff2'),
-      url('assets/fonts/BasisGrotesqueMono-Regular.woff') format('woff'),
-      url('assets/fonts/BasisGrotesqueMono-Regular.ttf') format('ttf'),
-      url('assets/fonts/BasisGrotesqueMono-Regular.svg') format('svg'),
-      url('assets/fonts/BasisGrotesqueMono-Regular.eot') format('eot');
-  font-weight: 400;
-}
-
-
-.monospaced {
-  font-family: 'Basis Grotesque Mono';
-}
 
 .s-large { 
-  font-size: 35px;
+  font-size: 4.8vw;
 }
 
 .s-medium { 

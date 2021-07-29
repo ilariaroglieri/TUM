@@ -1,5 +1,5 @@
 /*   
-Theme Name: Archivio Luciano Caruso Theme
+Theme Name: TUM Theme
 Author: Ilaria roglieri
 Version: 1.0
 */
@@ -178,20 +178,28 @@ li {
   z-index: 100;
 }
 #header {
-  margin-top:$spacing;
+  padding: $half-spacing;
+  svg {
+    text {
+      font-family: 'Basis Grotesque';
+      @extend .uppercase;
+      font-size: 60px;
+      opacity: 1;
+      @include transition(opacity .5s);
+      &.hidden {
+        opacity: 0;
+      }
+    }
+  }
   div[class*="menu-1"]{
-    opacity: 0;
     width: 100%;
     position: fixed;
-    top: -100%;
     left: 0;
     z-index:99;
     background-color: white;
     padding-top: $fourfold-spacing;
     @include transition(all .5s);
     &.active {
-      opacity: 1;
-      top: 0;
     }
     ul li {
       text-align: center;
@@ -220,8 +228,6 @@ li {
   #logo {
     text-align:center;
     z-index: 101;
-    opacity: 0;
-    transform: translateY(-100%);
     @include transition(all .3s);
     a:hover {
       border-bottom: none;
@@ -229,9 +235,6 @@ li {
     &.visible {
       opacity: 1;
       transform: translateY(0);
-    }
-    &.white * {
-      color: white;
     }
   }
   .menu-toggle {

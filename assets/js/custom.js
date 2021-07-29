@@ -1,14 +1,4 @@
-function checkScroll() {
-	var currentScrollPos = $(window).scrollTop();
 
-  if ($('body').hasClass('home')) {
-  	if (currentScrollPos > window.innerHeight) {
-  		$('.icon, #logo, .menu-toggle').removeClass('white');
-    } else {
-  		$('.icon, #logo, .menu-toggle').addClass('white');
-    }
-  }
-}
 
 //-----------DOCUMENT.READY----------------
 
@@ -19,7 +9,6 @@ jQuery(document).ready(function($) {
   // scroll events
   var prevScrollPos = $(window).scrollTop();
   $(window).scroll(function() {
-    checkScroll();
 
     var currentScrollPos = $(window).scrollTop();
     if (prevScrollPos > currentScrollPos && prevScrollPos > 0) {
@@ -31,8 +20,11 @@ jQuery(document).ready(function($) {
 	  prevScrollPos = currentScrollPos;
   });
 
-  checkScroll();
 
+setTimeout(function() {
+  $('.el').addClass('hidden');
+
+},1000);
 
 // --- Hamburger menu
   $('.menu-toggle').click(function() {

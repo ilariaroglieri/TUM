@@ -32,15 +32,31 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-		<div id="container">
+		<div class="container-fluid">
 			<div id="header">
 				<div id="logo">
 					<h2 class="site-name">
-						<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
-							<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/svg/descal_logo.svg" />
+						<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+							<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 width="100%" height="100%" viewBox="0 0 645.21 103.68" style="enable-background:new 0 0 645.21 103.68;"
+								 xml:space="preserve">
+							<style type="text/css">
+								.st0{fill:#43454A;}
+								.st1{fill:none;stroke:#3F89FF;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:10;}
+							</style>
+							<text class="st0" x="0" y="45px">Festival del</text>
+							<text class="st0" x="0" y="103px">Tu</text>
+							<text class="st0 el" x="77px" y="103px">rismo</text>
+
+							<path class="st1" d="M278.74,81.84c1.92-9.67,3.85-19.34,7.7-19.34c7.7,0,7.7,38.68,15.4,38.68c7.7,0,7.7-38.68,15.4-38.68
+								c7.7,0,7.7,38.68,15.4,38.68c7.7,0,7.7-38.68,15.4-38.68c7.7,0,7.7,38.68,15.4,38.68c7.7,0,7.7-38.68,15.4-38.68
+								c7.7,0,7.7,38.68,15.4,38.68c3.85,0,5.78-9.67,7.7-19.34"/>
+
+							<text class="st0" x="405px" y="103px">usicale</text>
+							</svg>
+
 						</a>
 					</h2>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				</div>
 
 				<button class="menu-toggle d-none">menu

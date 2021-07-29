@@ -1,5 +1,5 @@
 /*   
-Theme Name: Archivio Luciano Caruso Theme
+Theme Name: TUM Theme
 Author: Ilaria roglieri
 Version: 1.0
 */
@@ -12,15 +12,8 @@ Version: 1.0
   src: url("assets/fonts/BasisGrotesque-Italic.woff2") format("woff2"), url("assets/fonts/BasisGrotesque-Italic.woff") format("woff"), url("assets/fonts/BasisGrotesque-Italic.ttf") format("ttf"), url("assets/fonts/BasisGrotesque-Italic.svg") format("svg"), url("assets/fonts/BasisGrotesque-Italic.eot") format("eot");
   font-weight: 400;
   font-style: italic; }
-@font-face {
-  font-family: 'Basis Grotesque Mono';
-  src: url("assets/fonts/BasisGrotesqueMono-Regular.woff2") format("woff2"), url("assets/fonts/BasisGrotesqueMono-Regular.woff") format("woff"), url("assets/fonts/BasisGrotesqueMono-Regular.ttf") format("ttf"), url("assets/fonts/BasisGrotesqueMono-Regular.svg") format("svg"), url("assets/fonts/BasisGrotesqueMono-Regular.eot") format("eot");
-  font-weight: 400; }
-.monospaced {
-  font-family: 'Basis Grotesque Mono'; }
-
 .s-large {
-  font-size: 35px; }
+  font-size: 4.8vw; }
 
 .s-medium {
   font-size: 24px; }
@@ -205,7 +198,7 @@ Version: 1.0
 .t-center {
   text-align: center; }
 
-.uppercase {
+.uppercase, #header svg text {
   text-transform: uppercase; }
 
 .button {
@@ -216,7 +209,7 @@ Version: 1.0
 /* basic elements */
 body {
   font-family: 'Arial', sans-serif;
-  color: #7d4d66;
+  color: #43454a;
   overflow-x: hidden;
   line-height: 1.3; }
 
@@ -228,10 +221,10 @@ h1, h2, h3, h4 {
   line-height: 1; }
 
 a {
-  color: #7d4d66;
+  color: #43454a;
   text-decoration: none; }
   a:hover {
-    color: #7d4d66;
+    color: #43454a;
     border-bottom: 1px solid; }
 
 ul {
@@ -262,12 +255,21 @@ ul {
   z-index: 100; }
 
 #header {
-  margin-top: 20px; }
+  padding: 10px; }
+  #header svg text {
+    font-family: 'Basis Grotesque';
+    font-size: 60px;
+    opacity: 1;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s; }
+    #header svg text.hidden {
+      opacity: 0; }
   #header div[class*="menu-1"] {
-    opacity: 0;
     width: 100%;
     position: fixed;
-    top: -100%;
     left: 0;
     z-index: 99;
     background-color: white;
@@ -277,9 +279,6 @@ ul {
     -ms-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s; }
-    #header div[class*="menu-1"].active {
-      opacity: 1;
-      top: 0; }
     #header div[class*="menu-1"] ul li {
       text-align: center;
       margin-bottom: 10px; }
@@ -293,14 +292,12 @@ ul {
     #header .icon svg {
       width: 30px;
       height: 55px;
-      fill: #7d4d66; }
+      fill: #43454a; }
     #header .icon.white svg {
       fill: white; }
   #header #logo {
     text-align: center;
     z-index: 101;
-    opacity: 0;
-    transform: translateY(-100%);
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -311,8 +308,6 @@ ul {
     #header #logo.visible {
       opacity: 1;
       transform: translateY(0); }
-    #header #logo.white * {
-      color: white; }
   #header .menu-toggle {
     border: 1px solid transparent;
     width: 30px;
@@ -334,7 +329,7 @@ ul {
       position: absolute;
       height: 2px;
       width: 30px;
-      background: #7d4d66;
+      background: #43454a;
       opacity: 1;
       -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
@@ -385,9 +380,9 @@ ul {
   min-height: 100vh; }
 
 .show {
-  border-top: 1px dotted #7d4d66; }
+  border-top: 1px dotted #43454a; }
   .show:last-of-type {
-    border-bottom: 1px dotted #7d4d66; }
+    border-bottom: 1px dotted #43454a; }
 
 @media screen and (max-width: 768px) {
   .t-hidden {
