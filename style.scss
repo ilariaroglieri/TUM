@@ -517,12 +517,13 @@ li {
       }
     }
     &.panel {
-      background-color: $blue-bg;
+      background: $blue-bg url('../TUM-theme/assets/svg/TUM_panel_shape.svg') no-repeat center center;
+      background-size: 25%;
       h5, h5 > a {
         color: $blue;
       }
       a:hover {
-        border-bottom: 0.12em solid white; 
+        border-bottom: 0.12em solid $blue; 
       }
     }
   }

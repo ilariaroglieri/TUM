@@ -65,7 +65,11 @@
                 </div>
 
                 <div class="date-time">
-                  <h5 class="uppercase"><?php eo_next_occurrence('d m Y'); ?> <?php _e ('H','sf64_theme');?><?php eo_next_occurrence(get_option('time_format')); ?>  
+                  <?php 
+                  $month = eo_get_next_occurrence('F');
+                  $shortMonth = substr($month, 0, 3);
+                  ?>
+                  <h5 class="uppercase"><?php eo_next_occurrence('d'); ?> <?php echo $shortMonth; ?> <?php eo_next_occurrence('Y'); ?> <?php _e ('H','sf64_theme');?><?php eo_next_occurrence(get_option('time_format')); ?>  
                   </h5>
                 </div>
               </div>

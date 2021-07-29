@@ -506,11 +506,12 @@ ul {
   #content-home .event .title a span {
     font-size: 200%; }
 #content-home .event.panel {
-  background-color: #fde7da; }
+  background: #fde7da url("../TUM-theme/assets/svg/TUM_panel_shape.svg") no-repeat center center;
+  background-size: 25%; }
   #content-home .event.panel h5, #content-home .event.panel h5 > a {
     color: #3f89ff; }
   #content-home .event.panel a:hover {
-    border-bottom: 0.12em solid white; }
+    border-bottom: 0.12em solid #3f89ff; }
 
 #footer {
   border-top: 5px solid #43454a; }
