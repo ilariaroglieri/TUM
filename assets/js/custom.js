@@ -30,13 +30,15 @@ jQuery(document).ready(function($) {
   $('.menu-toggle').click(function() {
     $(this).toggleClass('open');
     $('div[class*="menu-1"]').toggleClass('active');
-    // check if it's on slider
 
     if ($(this).hasClass('open') == true) {
-    	// $('.icon, .menu-toggle').removeClass('white');
-    	$('#logo').addClass('visible');
+      console.log('menu aperto');
+    	$('#header').addClass('overflow-visible');
     } else {
-    	$('#logo').removeClass('visible');
+      console.log('menu chiuso');
+    	setTimeout(function() {
+        $('#header').removeClass('overflow-visible');
+      }, 500);
     }
   });
 

@@ -6,7 +6,7 @@ Version: 1.0
 
 @import 'common';
 
-$headerH: 19vw;
+$headerH: 19.5vw;
 
 // eg @include transition(background-color 200ms, left 200ms);
 @mixin transition($args...) {
@@ -195,7 +195,8 @@ body {
   font-family:'Basis Grotesque', 'Arial', sans-serif;
   color: $primaryColor;
   overflow-x: hidden;
-  line-height: 1.3;
+  line-height: 1.2;
+  margin: 0;
   @extend .s-regular;
 }
 
@@ -259,7 +260,13 @@ li {
   top:0;
   width: 100%;
   height: $headerH;
+  background-color: white;
+  overflow: hidden;
   z-index: 100;
+  border-bottom: 5px solid $primaryColor;
+  &.overflow-visible {
+    overflow: visible;
+  }
 
   #logo {
     padding: $half-spacing;
@@ -307,46 +314,48 @@ li {
     width: 100%;
     z-index:99;
     background-color: white;
-    padding: $half-spacing;
     position: relative;
     top: -100vh;
     border-bottom: 5px solid $primaryColor;
-    @include transition(all .5s);
+    @include transition(top .5s);
     &.active {
       top: 0;
     }
-    ul li {
-      @extend .s-large;
-      @extend .uppercase;
-      a {
-        &:hover {
-          @at-root body.blue & {
-            color: $blue;
-          }
-          @at-root body.green & {
-            color: $green;
-          }
-          @at-root body.yellow & {
-            color: $yellow;
-          }
-          @at-root body.red & {
-            color: $red;
-          }    
-        }
-      }
-      &.current-menu-item {
+    ul {
+      padding: $half-spacing;
+        li {
+        @extend .s-large;
+        @extend .uppercase;
         a {
-          @at-root body.blue & {
-            color: $blue;
+          &:hover {
+            @at-root body.blue & {
+              color: $blue;
+            }
+            @at-root body.green & {
+              color: $green;
+            }
+            @at-root body.yellow & {
+              color: $yellow;
+            }
+            @at-root body.red & {
+              color: $red;
+            }    
           }
-          @at-root body.green & {
-            color: $green;
-          }
-          @at-root body.yellow & {
-            color: $yellow;
-          }
-          @at-root body.red & {
-            color: $red;
+        }
+        &.current-menu-item {
+          a {
+            @at-root body.blue & {
+              color: $blue;
+            }
+            @at-root body.green & {
+              color: $green;
+            }
+            @at-root body.yellow & {
+              color: $yellow;
+            }
+            @at-root body.red & {
+              color: $red;
+            }
           }
         }
       }
