@@ -501,6 +501,10 @@ li {
     .event {
       height: 50vh;
       border-bottom: 5px solid white;
+      &:last-of-type {
+        border-bottom: none;
+
+      }
     }
   }
 
@@ -522,6 +526,10 @@ li {
       }
     }
   }
+}
+
+#footer {
+  border-top: 5px solid $primaryColor;
 }
 
 @media screen and (max-width: $desktop) {

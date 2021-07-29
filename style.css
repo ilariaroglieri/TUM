@@ -498,6 +498,8 @@ ul {
 #content-home #events-showcase .event {
   height: 50vh;
   border-bottom: 5px solid white; }
+  #content-home #events-showcase .event:last-of-type {
+    border-bottom: none; }
 #content-home .event .title a {
   color: #43454a;
   font-size: 50%; }
@@ -509,6 +511,9 @@ ul {
     color: #3f89ff; }
   #content-home .event.panel a:hover {
     border-bottom: 0.12em solid white; }
+
+#footer {
+  border-top: 5px solid #43454a; }
 
 @media screen and (max-width: 768px) {
   .t-hidden {
