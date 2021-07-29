@@ -54,7 +54,7 @@
             $cats = get_the_terms($post->ID, 'event-category');
             $venues = get_the_terms($post->ID, 'event-venue');
             ?>
-            <div class="event <?php echo $cats[0]->slug; ?> d-flex column between spacing-p-t-2 spacing-p-b-2">
+            <div class="event <?php echo $cats[0]->slug; ?> d-flex column between spacing-p-t-1 spacing-p-b-1">
 
 
               <div class="d-flex flex-row between">
@@ -71,7 +71,7 @@
               </div>
 
               <div class="title flex-row spacing-p-t-2 spacing-p-b-2">
-                <h3 class="uppercase s-medium"><?php the_title(); ?></h3>
+                <h3 class="uppercase s-medium"><a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a></h3>
               </div>
 
               <div class="d-flex flex-row between">
@@ -85,7 +85,7 @@
                   <?php endif;?>
                 </div>
                 <div class="more">
-                  <a class="uppercase" href="<?php the_permalink(); ?>">Scopri di più</a>
+                  <h5 class="uppercase"><a href="<?php the_permalink(); ?>">Scopri di più</a></h5>
                 </div>
               </div>
 

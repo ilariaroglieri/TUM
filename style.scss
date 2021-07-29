@@ -203,8 +203,6 @@ body {
 p {
 	margin:0;
   @extend .s-regular;
-  max-width: 550px;
-  text-indent: $spacing;
 }
 
 h1, h2, h3, h4, h5 {
@@ -447,6 +445,10 @@ li {
 
 .content {
   padding-top: $headerH;
+  p {
+    max-width: 550px;
+  text-indent: $spacing;
+  }
 }
 
 //home
@@ -503,13 +505,20 @@ li {
   }
 
   .event {
-    .title {
-       color: $primaryColor; 
+    .title a {
+      color: $primaryColor;
+      font-size: 50%; 
+      span { 
+        font-size: 200%; 
       }
+    }
     &.panel {
       background-color: $blue-bg;
-      h5, a {
+      h5, h5 > a {
         color: $blue;
+      }
+      a:hover {
+        border-bottom: 0.12em solid white; 
       }
     }
   }

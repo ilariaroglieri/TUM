@@ -288,9 +288,7 @@ body {
   margin: 0; }
 
 p {
-  margin: 0;
-  max-width: 550px;
-  text-indent: 30px; }
+  margin: 0; }
 
 h1, h2, h3, h4, h5 {
   font-weight: normal;
@@ -463,6 +461,9 @@ ul {
 
 .content {
   padding-top: 19vw; }
+  .content p {
+    max-width: 550px;
+    text-indent: 30px; }
 
 #content-home .slider .slide {
   padding: 15px;
@@ -497,12 +498,17 @@ ul {
 #content-home #events-showcase .event {
   height: 50vh;
   border-bottom: 5px solid white; }
-#content-home .event .title {
-  color: #43454a; }
+#content-home .event .title a {
+  color: #43454a;
+  font-size: 50%; }
+  #content-home .event .title a span {
+    font-size: 200%; }
 #content-home .event.panel {
   background-color: #fde7da; }
-  #content-home .event.panel h5, #content-home .event.panel a {
+  #content-home .event.panel h5, #content-home .event.panel h5 > a {
     color: #3f89ff; }
+  #content-home .event.panel a:hover {
+    border-bottom: 0.12em solid white; }
 
 @media screen and (max-width: 768px) {
   .t-hidden {
