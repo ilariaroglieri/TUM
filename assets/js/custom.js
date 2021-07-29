@@ -21,21 +21,16 @@ jQuery(document).ready(function($) {
   });
 
 
-setTimeout(function() {
-  $('.el').addClass('hidden');
+// setTimeout(function() {
+//   $('.el').addClass('hidden');
 
-},1000);
+// },1000);
 
 // --- Hamburger menu
   $('.menu-toggle').click(function() {
     $(this).toggleClass('open');
     $('div[class*="menu-1"]').toggleClass('active');
     // check if it's on slider
-  	if ( $('body').hasClass('home') && $(window).scrollTop() < window.innerHeight ) {
-  		console.log('ei!')
-  		$('#logo').addClass('visible').toggleClass('white');
-  		$('.icon, .menu-toggle').toggleClass('white');
-  	}
 
     if ($(this).hasClass('open') == true) {
     	// $('.icon, .menu-toggle').removeClass('white');

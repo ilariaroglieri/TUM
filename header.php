@@ -38,13 +38,13 @@
 					<h2 class="site-name">
 						<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 							<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								 width="100%" height="100%" viewBox="0 0 645.21 103.68" style="enable-background:new 0 0 645.21 103.68;"
+								 width="100%" height="100%" viewBox="0 0 645.21 105" style="enable-background:new 0 0 645.21 103.68;"
 								 xml:space="preserve">
 							<style type="text/css">
 								.st0{fill:#43454A;}
 								.st1{fill:none;stroke:#3F89FF;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:10;}
 							</style>
-							<text class="st0" x="0" y="45px">Festival del</text>
+							<text class="st0" x="0" y="43px">Festival del</text>
 							<text class="st0" x="0" y="103px">Tu</text>
 							<text class="st0 el" x="77px" y="103px">rismo</text>
 

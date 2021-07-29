@@ -8,6 +8,17 @@ $mobile: 640px;
 //colors
 $primaryColor: #43454a;
 
+$blue: #3f89ff;
+$green: #b5d300;
+$red: #ff4c44;
+$yellow: #fed100;
+
+$blue-bg: #fde7da;
+$green-bg: #ede8db;
+$red-bg: #fafadc;
+$yellow-bg: #dcece8;
+
+
 // Typography
 @font-face {
   font-family: 'Basis Grotesque';
@@ -32,7 +43,8 @@ $primaryColor: #43454a;
 
 
 .s-large { 
-  font-size: 4.8vw;
+  font-size: 9vw;
+  line-height: 1;
 }
 
 .s-medium { 
@@ -49,7 +61,7 @@ $primaryColor: #43454a;
 
 
 // grid system
-$spacing: 20px;
+$spacing: 30px;
 $half-spacing: $spacing/2;
 $double-spacing: $spacing*2;
 $triple-spacing: $spacing*3;

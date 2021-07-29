@@ -119,7 +119,7 @@ Version: 1.0
 
 /* basic elements */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family:'Basis Grotesque', 'Arial', sans-serif;
   color: $primaryColor;
   overflow-x: hidden;
   line-height: 1.3;
@@ -139,7 +139,6 @@ a {
   text-decoration: none;
   &:hover {
     color: $primaryColor;
-    border-bottom: 1px solid;
   }
 }
 
@@ -178,7 +177,15 @@ li {
   z-index: 100;
 }
 #header {
-  padding: $half-spacing;
+  position: fixed;
+  left: 0;
+  top:0;
+  width: 100%;
+  background-color: white;
+  #logo {
+    padding: $half-spacing;
+    border-bottom: 5px solid $primaryColor;
+  }
   svg {
     text {
       font-family: 'Basis Grotesque';
@@ -193,17 +200,29 @@ li {
   }
   div[class*="menu-1"]{
     width: 100%;
-    position: fixed;
-    left: 0;
+    height: 100%;
     z-index:99;
     background-color: white;
-    padding-top: $fourfold-spacing;
+    padding: $half-spacing;
+    position: relative;
+    top: -100vh;
     @include transition(all .5s);
     &.active {
+      top: 0;
     }
     ul li {
-      text-align: center;
-      margin-bottom: $half-spacing;
+      @extend .s-large;
+      @extend .uppercase;
+      a {
+        &:hover {
+          color: $blue;
+        }
+      }
+      &.current-menu-item {
+        a {
+          color: $blue;
+        }
+      }
     }
   }
   .icon {
@@ -234,19 +253,18 @@ li {
     }
     &.visible {
       opacity: 1;
-      transform: translateY(0);
     }
   }
   .menu-toggle {
     border: 1px solid transparent;
-    width: 30px;
-    height: 30px;
+    width: 8vw;
+    height: 7vw;
     border: none;
     margin: 0;
     text-indent: -1000px;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: $half-spacing;
+    right: $half-spacing;
     overflow: hidden;
     padding: 0;
     z-index: 14000;
@@ -256,9 +274,9 @@ li {
     display: flex;
     span {
       position: absolute;
-      height: 2px;
-      width: 30px;
-      background: $primaryColor;
+      height: 8px;
+      width: 8vw;
+      background: $blue;
       opacity: 1;
       -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
@@ -270,10 +288,10 @@ li {
         top: 0;
       }
       &:nth-child(2) {
-        top: 10px;
+        top: calc(50% - 4px);
       }
       &:nth-child(3) {
-        top: 20px;
+        top: calc(100% - 8px);
       }
     }
     &.white {
@@ -289,7 +307,7 @@ li {
       transform: rotate(45deg);
       // transform-origin: 50% 0;
       top: 50%;
-      width: 32px;
+      width: 8vw;
     }
 
     &.open span:nth-child(2) {
@@ -304,7 +322,7 @@ li {
       transform: rotate(-45deg);
       // transform-origin: 50% 0;
       top: 50%;
-      width: 32px;
+      width: 8vw;
     }
   }
 }
