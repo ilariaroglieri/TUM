@@ -31,15 +31,15 @@ jQuery(document).ready(function($) {
     $(this).toggleClass('open');
     $('div[class*="menu-1"]').toggleClass('active');
 
-    if ($(this).hasClass('open') == true) {
-      console.log('menu aperto');
-    	$('#header').addClass('overflow-visible');
-    } else {
-      console.log('menu chiuso');
-    	setTimeout(function() {
-        $('#header').removeClass('overflow-visible');
-      }, 500);
-    }
+    // if ($(this).hasClass('open') == true) {
+    //   console.log('menu aperto');
+    // 	$('#header').addClass('overflow-visible');
+    // } else {
+    //   console.log('menu chiuso');
+    // 	setTimeout(function() {
+    //     $('#header').removeClass('overflow-visible');
+    //   }, 500);
+    // }
   });
 
 // --- slider init

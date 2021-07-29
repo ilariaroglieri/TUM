@@ -6,7 +6,7 @@ Version: 1.0
 
 @import 'common';
 
-$headerH: 19.5vw;
+$headerH: 19vw;
 
 // eg @include transition(background-color 200ms, left 200ms);
 @mixin transition($args...) {
@@ -49,8 +49,8 @@ $headerH: 19.5vw;
   &.baseline {
     align-items: baseline;
   }
-  &.end {
-    justify-content: flex-end;
+  &.between {
+    justify-content: space-between;
   }
   &.column {
     flex-flow: column;
@@ -207,9 +207,13 @@ p {
   text-indent: $spacing;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-weight: normal;
   line-height: 1;
+}
+
+h5 {
+  @extend .s-regular;
 }
 
 a {
@@ -229,10 +233,8 @@ ul {
 li {
 }
 
-.container {
-  width: $desktop;
-  margin: 0 auto;
-  padding: 0 10%; // add two empty columns on the sides
+.container-fluid-w-p {
+  margin: 0 $half-spacing;
   position: relative;
   z-index: 1;
 }
@@ -245,9 +247,8 @@ li {
 }
 
 .flex-row{
-  margin-right: -#{$half-spacing};
-  margin-left: -#{$half-spacing};
-  position: relative;
+  margin-right: $half-spacing;
+  margin-left: $half-spacing;
 }
 
 #header-container {
@@ -270,7 +271,7 @@ li {
 
   #logo {
     padding: $half-spacing;
-    border-bottom: 5px solid $primaryColor;
+    // border-bottom: 5px solid $primaryColor;
     position: relative;
     z-index: 100;
     background-color: white;
@@ -314,12 +315,12 @@ li {
     width: 100%;
     z-index:99;
     background-color: white;
-    position: relative;
+    position: fixed;
     top: -100vh;
     border-bottom: 5px solid $primaryColor;
     @include transition(top .5s);
     &.active {
-      top: 0;
+      top: $headerH;
     }
     ul {
       padding: $half-spacing;
@@ -487,6 +488,28 @@ li {
         @at-root body.red & {
           background-color: $red-bg;
         }
+      }
+    }
+  }
+  #showcase-header {
+    border-bottom: 5px solid $primaryColor;
+  }
+
+  #events-showcase {
+    .event {
+      height: 50vh;
+      border-bottom: 5px solid white;
+    }
+  }
+
+  .event {
+    .title {
+       color: $primaryColor; 
+      }
+    &.panel {
+      background-color: $blue-bg;
+      h5, a {
+        color: $blue;
       }
     }
   }

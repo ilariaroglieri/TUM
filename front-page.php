@@ -32,6 +32,70 @@
         </div>
       </div>
     <?php endif; ?>
+
+    <!-- eventi IN EVIDENZA -->
+    <?php if( have_rows('evento_in_evidenza') ): ?>
+      <div class="container-fluid">
+        <div id="showcase-header" class="spacing-t-2">
+          <div class="d-flex flex-row baseline between">
+            <h3 class="uppercase s-large">Ultimi eventi</h3>
+            <a class="s-regular uppercase" href="<?php echo get_permalink( get_page_by_title( 'Programma' ) ); ?>"><?php _e ('Vai al calendario','TUM-theme'); ?></a>
+          </div>
+        </div>
+        <div id="events-showcase" class="container-fluid">
+          <?php while( have_rows('evento_in_evidenza') ) : the_row(); ?>
+            <?php 
+
+            $post = get_sub_field('evento');
+            setup_postdata($post); ?>
+
+            <?php 
+            $tags = get_the_terms($post->ID, 'event-tag');
+            $cats = get_the_terms($post->ID, 'event-category');
+            $venues = get_the_terms($post->ID, 'event-venue');
+            ?>
+            <div class="event <?php echo $cats[0]->slug; ?> d-flex column between spacing-p-t-2 spacing-p-b-2">
+
+
+              <div class="d-flex flex-row between">
+                <div class="tag">
+                  <?php foreach( $tags as $tag ) { ?>
+                    <h5 class="uppercase"><?php echo $tag->name ?></h5>
+                  <?php } ?>
+                </div>
+
+                <div class="date-time">
+                  <h5 class="uppercase"><?php eo_next_occurrence('d m Y'); ?> <?php _e ('H','sf64_theme');?><?php eo_next_occurrence(get_option('time_format')); ?>  
+                  </h5>
+                </div>
+              </div>
+
+              <div class="title flex-row spacing-p-t-2 spacing-p-b-2">
+                <h3 class="uppercase s-medium"><?php the_title(); ?></h3>
+              </div>
+
+              <div class="d-flex flex-row between">
+                <div class="venues">
+                  <?php if ($venues):
+                    foreach( $venues as $venue ): ?>
+                      <h5 class="venue uppercase"><a href="<?php echo get_term_link( $venue->term_id ); ?>"><?php echo $venue->name; ?></a></h5>
+                    <?php endforeach; 
+                  else: ?>
+                    <h5 class="venue uppercase">Online</h5>
+                  <?php endif;?>
+                </div>
+                <div class="more">
+                  <a class="uppercase" href="<?php the_permalink(); ?>">Scopri di più</a>
+                </div>
+              </div>
+
+            </div>
+
+            <?php wp_reset_postdata(); ?>
+          <?php endwhile; ?>
+        </div>
+      </div>
+    <?php endif; ?>
   
   <?php endwhile; else: ?>
 

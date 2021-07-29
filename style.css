@@ -40,7 +40,7 @@ body.red .bg-color {
 .s-medium {
   font-size: 60px; }
 
-.s-regular, body, p {
+.s-regular, body, p, h5 {
   font-size: 21px; }
 
 .s-small {
@@ -176,8 +176,8 @@ body.red .bg-color {
     align-items: flex-start; }
   .d-flex.baseline {
     align-items: baseline; }
-  .d-flex.end {
-    justify-content: flex-end; }
+  .d-flex.between {
+    justify-content: space-between; }
   .d-flex.column {
     flex-flow: column; }
     .d-flex.column.center {
@@ -210,7 +210,7 @@ body.red .bg-color {
   height: 100vh; }
 
 .full-height-w-h {
-  height: calc(100vh - 19.5vw); }
+  height: calc(100vh - 19vw); }
 
 .f-right {
   text-align: right;
@@ -292,7 +292,7 @@ p {
   max-width: 550px;
   text-indent: 30px; }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-weight: normal;
   line-height: 1; }
 
@@ -307,10 +307,8 @@ ul {
   padding-left: 0;
   list-style-type: none; }
 
-.container {
-  width: 1440px;
-  margin: 0 auto;
-  padding: 0 10%;
+.container-fluid-w-p {
+  margin: 0 15px;
   position: relative;
   z-index: 1; }
 
@@ -321,9 +319,8 @@ ul {
   width: 100%; }
 
 .flex-row {
-  margin-right: -15px;
-  margin-left: -15px;
-  position: relative; }
+  margin-right: 15px;
+  margin-left: 15px; }
 
 #header-container {
   position: fixed;
@@ -334,7 +331,7 @@ ul {
   left: 0;
   top: 0;
   width: 100%;
-  height: 19.5vw;
+  height: 19vw;
   background-color: white;
   overflow: hidden;
   z-index: 100;
@@ -343,7 +340,6 @@ ul {
     overflow: visible; }
   #header #logo {
     padding: 15px;
-    border-bottom: 5px solid #43454a;
     position: relative;
     z-index: 100;
     background-color: white; }
@@ -372,7 +368,7 @@ ul {
     width: 100%;
     z-index: 99;
     background-color: white;
-    position: relative;
+    position: fixed;
     top: -100vh;
     border-bottom: 5px solid #43454a;
     -webkit-transition: top 0.5s;
@@ -381,7 +377,7 @@ ul {
     -o-transition: top 0.5s;
     transition: top 0.5s; }
     #header div[class*="menu-1"].active {
-      top: 0; }
+      top: 19vw; }
     #header div[class*="menu-1"] ul {
       padding: 15px; }
       body.blue #header div[class*="menu-1"] ul li a:hover {
@@ -466,7 +462,7 @@ ul {
       width: 8vw; }
 
 .content {
-  padding-top: 19.5vw; }
+  padding-top: 19vw; }
 
 #content-home .slider .slide {
   padding: 15px;
@@ -496,6 +492,17 @@ ul {
       background-color: #dcece8; }
     body.red #content-home .slider .slide::after {
       background-color: #fafadc; }
+#content-home #showcase-header {
+  border-bottom: 5px solid #43454a; }
+#content-home #events-showcase .event {
+  height: 50vh;
+  border-bottom: 5px solid white; }
+#content-home .event .title {
+  color: #43454a; }
+#content-home .event.panel {
+  background-color: #fde7da; }
+  #content-home .event.panel h5, #content-home .event.panel a {
+    color: #3f89ff; }
 
 @media screen and (max-width: 768px) {
   .t-hidden {
