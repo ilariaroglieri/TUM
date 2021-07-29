@@ -20,23 +20,34 @@ $yellow-bg: #dcece8;
 
 // colors
 .blue {
-  color:$blue;
-  stroke: $blue;
+   stroke: $blue;
 }
 
 .green {
-  color:$green;
-  stroke: $green;
+    stroke: $green;
 }
 
 .red {
-  color:$red;
   stroke: $red;
 }
 
 .yellow {
-  color:$yellow;
   stroke: $yellow;
+}
+
+.bg-color {
+  @at-root body.blue & {
+    color: $blue-bg;
+  }
+  @at-root body.green & {
+    color: $green-bg;
+  }
+  @at-root body.yellow & {
+    color: $yellow-bg;
+  }
+  @at-root body.red & {
+    color: $red-bg;
+  }
 }
 
 // Typography
@@ -68,11 +79,11 @@ $yellow-bg: #dcece8;
 }
 
 .s-medium { 
-  font-size: 24px;
+  font-size: 60px;
 }
 
 .s-regular {
-	font-size: 18px;
+	font-size: 21px;
 }
 
 .s-small {

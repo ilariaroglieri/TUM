@@ -4,20 +4,25 @@ Author: Ilaria roglieri
 Version: 1.0
 */
 .blue {
-  color: #3f89ff;
   stroke: #3f89ff; }
 
 .green {
-  color: #b5d300;
   stroke: #b5d300; }
 
 .red {
-  color: #ff4c44;
   stroke: #ff4c44; }
 
 .yellow {
-  color: #fed100;
   stroke: #fed100; }
+
+body.blue .bg-color {
+  color: #fde7da; }
+body.green .bg-color {
+  color: #ede8db; }
+body.yellow .bg-color {
+  color: #dcece8; }
+body.red .bg-color {
+  color: #fafadc; }
 
 @font-face {
   font-family: 'Basis Grotesque';
@@ -33,10 +38,10 @@ Version: 1.0
   line-height: 1; }
 
 .s-medium {
-  font-size: 24px; }
+  font-size: 60px; }
 
-.s-regular {
-  font-size: 18px; }
+.s-regular, body, p {
+  font-size: 21px; }
 
 .s-small {
   font-size: 14px; }
@@ -201,8 +206,11 @@ Version: 1.0
 .full-width {
   width: 100%; }
 
-.full-height, .slider .slick-list, .slider .slick-track {
+.full-height {
   height: 100vh; }
+
+.full-height-w-h {
+  height: calc(100vh - 19vw); }
 
 .f-right {
   text-align: right;
@@ -215,13 +223,61 @@ Version: 1.0
 .t-center {
   text-align: center; }
 
-.uppercase, #header svg text, #header div[class*="menu-1"] ul li {
+.uppercase, body.blue .button.light a, body.green .button.light a, body.yellow .button.light a, body.red .button.light a, #header svg text, #header div[class*="menu-1"] ul li {
   text-transform: uppercase; }
 
 .button {
-  border: 1px solid;
-  padding: 5px 0;
-  cursor: pointer; }
+  border: 5px solid;
+  padding: 5px 10px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  .button a {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+  body.blue .button.light {
+    border-color: #fde7da; }
+    body.blue .button.light a {
+      color: #fde7da; }
+  body.green .button.light {
+    border-color: #ede8db; }
+    body.green .button.light a {
+      color: #ede8db; }
+  body.yellow .button.light {
+    border-color: #dcece8; }
+    body.yellow .button.light a {
+      color: #dcece8; }
+  body.red .button.light {
+    border-color: #fafadc; }
+    body.red .button.light a {
+      color: #fafadc; }
+  body.blue .button:hover.light {
+    background-color: #fde7da;
+    color: #3f89ff; }
+    body.blue .button:hover.light a {
+      color: #3f89ff; }
+  body.green .button:hover.light {
+    background-color: #ede8db;
+    color: #b5d300; }
+    body.green .button:hover.light a {
+      color: #b5d300; }
+  body.yellow .button:hover.light {
+    background-color: #dcece8;
+    color: #fed100; }
+    body.yellow .button:hover.light a {
+      color: #fed100; }
+  body.red .button:hover.light {
+    background-color: #fafadc;
+    color: #ff4c44; }
+    body.red .button:hover.light a {
+      color: #ff4c44; }
 
 /* basic elements */
 body {
@@ -231,7 +287,9 @@ body {
   line-height: 1.3; }
 
 p {
-  margin: 0; }
+  margin: 0;
+  max-width: 550px;
+  text-indent: 30px; }
 
 h1, h2, h3, h4 {
   font-weight: normal;
@@ -275,7 +333,7 @@ ul {
   left: 0;
   top: 0;
   width: 100%;
-  background-color: white;
+  height: 19vw;
   z-index: 100; }
   #header #logo {
     padding: 15px;
@@ -306,12 +364,12 @@ ul {
       opacity: 1; }
   #header div[class*="menu-1"] {
     width: 100%;
-    height: 100%;
     z-index: 99;
     background-color: white;
     padding: 15px;
     position: relative;
     top: -100vh;
+    border-bottom: 5px solid #43454a;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -ms-transition: all 0.5s;
@@ -335,31 +393,6 @@ ul {
       color: #fed100; }
     body.red #header div[class*="menu-1"] ul li.current-menu-item a {
       color: #ff4c44; }
-  #header .icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100; }
-    #header .icon a:hover {
-      border-bottom: none; }
-    #header .icon svg {
-      width: 30px;
-      height: 55px;
-      fill: #43454a; }
-    #header .icon.white svg {
-      fill: white; }
-  #header #logo {
-    text-align: center;
-    z-index: 101;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s; }
-    #header #logo a:hover {
-      border-bottom: none; }
-    #header #logo.visible {
-      opacity: 1; }
   #header .menu-toggle {
     border: 1px solid transparent;
     width: 8vw;
@@ -425,23 +458,37 @@ ul {
       top: 50%;
       width: 8vw; }
 
-.slider .slick-list, .slider .slick-track {
-  -webkit-transform: none !important;
-  -moz-transform: none !important;
-  -ms-transform: none !important;
-  -o-transform: none !important;
-  transform: none !important; }
-.slider .slide .svg {
-  background-attachment: fixed !important;
-  background-size: auto 75% !important; }
+.content {
+  padding-top: 19vw; }
 
-#showcase {
-  min-height: 100vh; }
-
-.show {
-  border-top: 1px dotted #43454a; }
-  .show:last-of-type {
-    border-bottom: 1px dotted #43454a; }
+#content-home .slider .slide {
+  padding: 15px;
+  background-blend-mode: screen; }
+  body.blue #content-home .slider .slide {
+    background-color: #3f89ff !important; }
+  body.green #content-home .slider .slide {
+    background-color: #b5d300 !important; }
+  body.yellow #content-home .slider .slide {
+    background-color: #fed100 !important; }
+  body.red #content-home .slider .slide {
+    background-color: #ff4c44 !important; }
+  #content-home .slider .slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    pointer-events: none; }
+    body.blue #content-home .slider .slide::after {
+      background-color: #fde7da; }
+    body.green #content-home .slider .slide::after {
+      background-color: #ede8db; }
+    body.yellow #content-home .slider .slide::after {
+      background-color: #dcece8; }
+    body.red #content-home .slider .slide::after {
+      background-color: #fafadc; }
 
 @media screen and (max-width: 768px) {
   .t-hidden {
