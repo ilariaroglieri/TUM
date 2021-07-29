@@ -3,6 +3,22 @@ Theme Name: TUM Theme
 Author: Ilaria roglieri
 Version: 1.0
 */
+.blue {
+  color: #3f89ff;
+  stroke: #3f89ff; }
+
+.green {
+  color: #b5d300;
+  stroke: #b5d300; }
+
+.red {
+  color: #ff4c44;
+  stroke: #ff4c44; }
+
+.yellow {
+  color: #fed100;
+  stroke: #fed100; }
+
 @font-face {
   font-family: 'Basis Grotesque';
   src: url("assets/fonts/BasisGrotesque-Regular.woff2") format("woff2"), url("assets/fonts/BasisGrotesque-Regular.woff") format("woff"), url("assets/fonts/BasisGrotesque-Regular.ttf") format("ttf"), url("assets/fonts/BasisGrotesque-Regular.svg") format("svg"), url("assets/fonts/BasisGrotesque-Regular.eot") format("eot");
@@ -259,10 +275,14 @@ ul {
   left: 0;
   top: 0;
   width: 100%;
-  background-color: white; }
+  background-color: white;
+  z-index: 100; }
   #header #logo {
     padding: 15px;
-    border-bottom: 5px solid #43454a; }
+    border-bottom: 5px solid #43454a;
+    position: relative;
+    z-index: 100;
+    background-color: white; }
   #header svg text {
     font-family: 'Basis Grotesque';
     font-size: 60px;
@@ -274,6 +294,16 @@ ul {
     transition: opacity 0.5s; }
     #header svg text.hidden {
       opacity: 0; }
+  #header svg .svg-shape {
+    opacity: 0; }
+    body.blue #header svg .svg-shape.blue {
+      opacity: 1; }
+    body.green #header svg .svg-shape.green {
+      opacity: 1; }
+    body.yellow #header svg .svg-shape.yellow {
+      opacity: 1; }
+    body.red #header svg .svg-shape.red {
+      opacity: 1; }
   #header div[class*="menu-1"] {
     width: 100%;
     height: 100%;
@@ -289,10 +319,22 @@ ul {
     transition: all 0.5s; }
     #header div[class*="menu-1"].active {
       top: 0; }
-    #header div[class*="menu-1"] ul li a:hover {
+    body.blue #header div[class*="menu-1"] ul li a:hover {
       color: #3f89ff; }
-    #header div[class*="menu-1"] ul li.current-menu-item a {
+    body.green #header div[class*="menu-1"] ul li a:hover {
+      color: #b5d300; }
+    body.yellow #header div[class*="menu-1"] ul li a:hover {
+      color: #fed100; }
+    body.red #header div[class*="menu-1"] ul li a:hover {
+      color: #ff4c44; }
+    body.blue #header div[class*="menu-1"] ul li.current-menu-item a {
       color: #3f89ff; }
+    body.green #header div[class*="menu-1"] ul li.current-menu-item a {
+      color: #b5d300; }
+    body.yellow #header div[class*="menu-1"] ul li.current-menu-item a {
+      color: #fed100; }
+    body.red #header div[class*="menu-1"] ul li.current-menu-item a {
+      color: #ff4c44; }
   #header .icon {
     position: absolute;
     top: 0;
@@ -339,7 +381,6 @@ ul {
       position: absolute;
       height: 8px;
       width: 8vw;
-      background: #3f89ff;
       opacity: 1;
       -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
@@ -350,6 +391,14 @@ ul {
       -ms-transition: all 0.3s;
       -o-transition: all 0.3s;
       transition: all 0.3s; }
+      body.blue #header .menu-toggle span {
+        background-color: #3f89ff; }
+      body.green #header .menu-toggle span {
+        background-color: #b5d300; }
+      body.yellow #header .menu-toggle span {
+        background-color: #fed100; }
+      body.red #header .menu-toggle span {
+        background-color: #ff4c44; }
       #header .menu-toggle span:nth-child(1) {
         top: 0; }
       #header .menu-toggle span:nth-child(2) {

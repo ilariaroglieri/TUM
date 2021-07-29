@@ -18,6 +18,26 @@ $green-bg: #ede8db;
 $red-bg: #fafadc;
 $yellow-bg: #dcece8;
 
+// colors
+.blue {
+  color:$blue;
+  stroke: $blue;
+}
+
+.green {
+  color:$green;
+  stroke: $green;
+}
+
+.red {
+  color:$red;
+  stroke: $red;
+}
+
+.yellow {
+  color:$yellow;
+  stroke: $yellow;
+}
 
 // Typography
 @font-face {

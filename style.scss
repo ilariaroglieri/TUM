@@ -182,9 +182,13 @@ li {
   top:0;
   width: 100%;
   background-color: white;
+  z-index: 100;
   #logo {
     padding: $half-spacing;
     border-bottom: 5px solid $primaryColor;
+    position: relative;
+    z-index: 100;
+    background-color: white;
   }
   svg {
     text {
@@ -195,6 +199,29 @@ li {
       @include transition(opacity .5s);
       &.hidden {
         opacity: 0;
+      }
+    }
+    .svg-shape {
+      opacity: 0;
+      &.blue {
+        @at-root body.blue & {
+          opacity: 1;
+        }
+      }
+      &.green {
+        @at-root body.green & {
+          opacity: 1;
+        }
+      }
+      &.yellow {
+        @at-root body.yellow & {
+          opacity: 1;
+        }
+      }
+      &.red {
+        @at-root body.red & {
+          opacity: 1;
+        }
       }
     }
   }
@@ -215,12 +242,34 @@ li {
       @extend .uppercase;
       a {
         &:hover {
-          color: $blue;
+          @at-root body.blue & {
+            color: $blue;
+          }
+          @at-root body.green & {
+            color: $green;
+          }
+          @at-root body.yellow & {
+            color: $yellow;
+          }
+          @at-root body.red & {
+            color: $red;
+          }    
         }
       }
       &.current-menu-item {
         a {
-          color: $blue;
+          @at-root body.blue & {
+            color: $blue;
+          }
+          @at-root body.green & {
+            color: $green;
+          }
+          @at-root body.yellow & {
+            color: $yellow;
+          }
+          @at-root body.red & {
+            color: $red;
+          }
         }
       }
     }
@@ -276,13 +325,24 @@ li {
       position: absolute;
       height: 8px;
       width: 8vw;
-      background: $blue;
       opacity: 1;
       -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
       -o-transform: rotate(0deg);
       transform: rotate(0deg);
       @include transition(all .3s);
+      @at-root body.blue & {
+        background-color: $blue;
+      }
+      @at-root body.green & {
+        background-color: $green;
+      }
+      @at-root body.yellow & {
+        background-color: $yellow;
+      }
+      @at-root body.red & {
+        background-color: $red;
+      }
 
       &:nth-child(1) {
         top: 0;
