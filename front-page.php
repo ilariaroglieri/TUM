@@ -21,7 +21,7 @@
                 <div class="d-half t-whole max-width">
                   <?php echo $text; ?>
                   <div class="d-block">
-                    <a class="underline" href="<?php echo get_page_link(86); ?>">Leggi di più...</a>
+                    <a class="underline" href="<?php echo get_page_link(5); ?>">Leggi di più...</a>
                   </div>
 
                   <div class="button light spacing-t-2">
