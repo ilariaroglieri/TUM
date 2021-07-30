@@ -641,9 +641,9 @@ body.red a.underline {
     body.red #content-page .main-text strong, body.red #content-single-event .main-text strong {
       color: #ff4c44; }
 
-.page-id-55 #content-page .main-text {
+.page-id-55 #content-page .main-text, .page-id-42 #content-page .main-text {
   column-count: 1; }
-  .page-id-55 #content-page .main-text p {
+  .page-id-55 #content-page .main-text p, .page-id-42 #content-page .main-text p {
     text-indent: 0; }
 
 .partner-row .logo {
