@@ -14,7 +14,7 @@
             $img = get_sub_field('immagine');?>
 
             <div class="slide" style="background: <?php if ($img):?>url( <?php echo $img['url']; ?>) <?php endif; ?> center center no-repeat">
-              <div class="flex-row d-flex">
+              <div class="d-flex m-column">
                 <div class="d-half t-whole">
                   <h2 class="s-medium uppercase bg-color"><?php echo $title; ?></h2>
                 </div>

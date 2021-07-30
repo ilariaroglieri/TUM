@@ -547,7 +547,7 @@ body.red a.underline {
       color: #ff4c44; }
 
 #content-home .slider .slide {
-  padding: 15px;
+  padding: 15px 0;
   background-blend-mode: screen; }
   body.blue #content-home .slider .slide {
     background-color: #3f89ff !important; }
@@ -740,6 +740,22 @@ div.wpforms-container-full .wpforms-form {
     width: calc(8.3333%*2 - 30px);
     margin: 0 15px; } }
 @media screen and (max-width: 640px) {
+  .s-large, .s-medium, #header div[class*="menu-1"] ul li {
+    font-size: 8vw; }
+
+  #header {
+    height: 21vw; }
+    #header.compact {
+      height: 14vw; }
+      #header.compact div[class*="menu-1"].active {
+        top: 14vw; }
+
+  .content {
+    padding-top: 21vw; }
+
+  #header div[class*="menu-1"].active {
+    top: 21vw; }
+
   .m-hidden {
     display: none; }
 

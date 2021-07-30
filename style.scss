@@ -548,7 +548,7 @@ body.red {
 #content-home {
   .slider {
     .slide {
-      padding: $half-spacing;
+      padding: $half-spacing 0;
       background-blend-mode: screen;
       @at-root body.blue & {
         background-color: $blue !important;
@@ -846,6 +846,24 @@ div.wpforms-container-full .wpforms-form {
 }
 
 @media screen and (max-width: $mobile) {
+  .s-large, .s-medium {
+    font-size: 8vw;
+  }
+  #header {
+    height: 21vw;
+    &.compact {
+      height: 14vw;
+      div[class*="menu-1"].active {
+        top: 14vw;
+      }
+    }
+  }
+  .content {
+    padding-top: 21vw;
+  }
+  #header div[class*="menu-1"].active {
+    top: 21vw;
+  }
   .m-hidden {
     display: none; 
   }
