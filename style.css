@@ -217,6 +217,9 @@ body.red .bg-color {
 .full-height {
   height: 100vh; }
 
+.half-height {
+  height: 50vh; }
+
 .full-height-w-h {
   height: calc(100vh - 19vw); }
 
@@ -591,7 +594,36 @@ body.red a.underline {
   #content-home .event.panel a:hover {
     border-bottom: 0.12em solid #3f89ff; }
 
-#content-page .main-text {
+.single-event .content {
+  padding-bottom: 0; }
+.single-event .event-category-panel {
+  background-color: #fde7da; }
+  .single-event .event-category-panel h5 {
+    color: #3f89ff; }
+  .single-event .event-category-panel .event-img {
+    position: relative;
+    background-color: #3f89ff !important;
+    background-blend-mode: screen; }
+    .single-event .event-category-panel .event-img .event-shape {
+      background: url("../TUM-theme/assets/svg/TUM_panel_shape-light.svg") no-repeat center center;
+      background-size: 33vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+    .single-event .event-category-panel .event-img::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      background-color: #fde7da; }
+
+#content-page .main-text, #content-single-event .main-text {
   max-width: 1200px;
   column-count: 2;
   column-gap: 15px;

@@ -102,6 +102,10 @@ $headerH: 19vw;
   height: 100vh;
 }
 
+.half-height {
+  height: 50vh;
+}
+
 .full-height-w-h {
   height: calc(100vh - #{$headerH});
 }
@@ -618,8 +622,46 @@ body.red {
   }
 }
 
+// single events
+.single-event {
+  .content {
+    padding-bottom: 0;
+  }
+  .event-category-panel {
+    background-color: $blue-bg;
+    h5 {
+      color: $blue;
+    }
+    .event-img {
+      position: relative;
+      background-color: $blue !important;
+      background-blend-mode: screen;
+      .event-shape {
+        background: url('../TUM-theme/assets/svg/TUM_panel_shape-light.svg') no-repeat center center;
+        background-size: 33vh;
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      &::after {
+        content:'';
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        background-color: $blue-bg;
+      }
+    }
+  }
+}
+
 // content page
-#content-page {
+#content-page, #content-single-event {
   .main-text {
     max-width: 1200px;
     column-count: 2;
