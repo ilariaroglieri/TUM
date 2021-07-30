@@ -20,9 +20,12 @@
                 </div>
                 <div class="d-half t-whole max-width">
                   <?php echo $text; ?>
+                  <div class="d-block">
+                    <a class="underline" href="<?php echo get_page_link(86); ?>">Leggi di più...</a>
+                  </div>
 
                   <div class="button light spacing-t-2">
-                    <a href="<?php echo get_page_link(42); ?>" />Registrati</a>
+                    <a href="<?php echo get_page_link(42); ?>">Registrati</a>
                   </div>
                 </div>
               </div>
@@ -39,7 +42,7 @@
         <div id="showcase-header" class="spacing-t-2">
           <div class="d-flex flex-row baseline between">
             <h3 class="uppercase s-large">Ultimi eventi</h3>
-            <a class="s-regular uppercase" href="<?php echo get_permalink( get_page_by_title( 'Programma' ) ); ?>"><?php _e ('Vai al calendario','TUM-theme'); ?></a>
+            <!-- <a class="s-regular uppercase" href="<?php echo get_permalink( get_page_by_title( 'Programma' ) ); ?>"><?php _e ('Vai al calendario','TUM-theme'); ?></a> -->
           </div>
         </div>
         <div id="events-showcase" class="container-fluid">

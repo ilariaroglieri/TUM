@@ -17,7 +17,7 @@
               </div>
             <?php endif; ?>
 
-            <div class="partner-row d-flex wrap v-center center">
+            <div class="partner-row d-flex wrap center">
               <?php if( have_rows('immagine_logo') ): ?>
                 <?php  while( have_rows('immagine_logo') ) : the_row(); ?>
                   <?php $logo = get_sub_field('logo');?>

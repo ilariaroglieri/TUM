@@ -34,6 +34,10 @@ $headerH: 19vw;
   display: inline-block;
 }
 
+.d-block {
+  display: block;
+}
+
 .d-none {
   display: none;
 }
@@ -51,6 +55,9 @@ $headerH: 19vw;
   }
   &.between {
     justify-content: space-between;
+  }
+  &.v-center {
+    justify-content: center;
   }
   &.column {
     flex-flow: column;
@@ -217,6 +224,7 @@ h5 {
 a {
   color:$primaryColor;
   text-decoration: none;
+  // @include transition(all .3s);
   &:hover {
     color: $primaryColor;
   }
@@ -472,11 +480,43 @@ li {
   }
 }
 
+body.blue {
+  a.underline {
+    border-bottom: 0.12em solid $blue-bg;
+    &:hover {
+      color: $blue-bg;
+    }
+  }
+}
+body.green {
+  a.underline {
+    border-bottom: 0.12em solid $green-bg;
+    &:hover {
+      color: $green-bg;
+    }
+  }
+}
+body.yellow {
+  a.underline {
+    border-bottom: 0.12em solid $yellow-bg;
+    &:hover {
+      color: $yellow-bg;
+    }
+  }
+}
+body.red {
+  a.underline {
+    border-bottom: 0.12em solid $red-bg;
+    &:hover {
+      color: $red-bg;
+    }
+  }
+}
+
 .content {
   padding-top: $headerH;
-  padding-bottom: $half-spacing;
+  padding-bottom: $spacing;
   min-height: calc(100vh - #{$headerH});
-  @include transition(all .3s 1s);
   //  &.w-c-menu {
   //   padding-top:10vw;
   //   // min-height: calc(100vh - 10vw);
@@ -791,5 +831,14 @@ div.wpforms-container-full .wpforms-form {
     width: calc(50% - #{$spacing});
     margin: 0 #{$half-spacing};
     margin-bottom: 0;
+  }
+
+  //partner
+  .partner-row {
+    justify-content: center;
+    .logo {
+      margin-bottom: $spacing;
+      margin-right: 0;
+    }
   }
 }
