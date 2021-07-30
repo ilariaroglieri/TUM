@@ -12,9 +12,12 @@ jQuery(document).ready(function($) {
 
     var currentScrollPos = $(window).scrollTop();
     if (prevScrollPos > currentScrollPos && prevScrollPos > 0) {
-	    $('#header').removeClass('compact')
+	    $('#header').removeClass('compact');
+      $('.content, div[class*="menu-1"]').removeClass('w-c-menu');
+
 	  } else {
-	    $('#header').addClass('compact')
+	    $('#header').addClass('compact');
+      $('.content, div[class*="menu-1"]').addClass('w-c-menu');
 	  }
 
 	  prevScrollPos = currentScrollPos;

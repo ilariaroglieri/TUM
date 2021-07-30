@@ -18,7 +18,7 @@
                 <div class="d-half t-whole">
                   <h2 class="s-medium uppercase bg-color"><?php echo $title; ?></h2>
                 </div>
-                <div class="d-half t-whole">
+                <div class="d-half t-whole max-width">
                   <?php echo $text; ?>
 
                   <div class="button light spacing-t-2">

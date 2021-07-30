@@ -305,6 +305,9 @@ ul {
   padding-left: 0;
   list-style-type: none; }
 
+.max-width p {
+  max-width: 550px; }
+
 .container-fluid-w-p {
   margin: 0 15px;
   position: relative;
@@ -342,9 +345,9 @@ ul {
   #header.compact {
     height: 10vw; }
     #header.compact .svg-shape-g {
-      transform: translateX(-17vw); }
+      transform: translateX(-30%); }
       #header.compact .svg-shape-g .svg-shape {
-        transform: translateY(-5vw); }
+        transform: translateY(-52%); }
     #header.compact .text {
       opacity: 0;
       -webkit-transition: opacity 0.3s;
@@ -353,7 +356,7 @@ ul {
       -o-transition: opacity 0.3s;
       transition: opacity 0.3s; }
     #header.compact .mini-logo {
-      transform: translateY(-5vw); }
+      transform: translateY(-52%); }
   #header #logo {
     padding: 15px;
     position: relative;
@@ -412,6 +415,8 @@ ul {
     transition: top 0.5s; }
     #header div[class*="menu-1"].active {
       top: 19vw; }
+      #header div[class*="menu-1"].active.w-c-menu {
+        top: 10vw; }
     #header div[class*="menu-1"] ul {
       padding: 15px; }
       body.blue #header div[class*="menu-1"] ul li a:hover {
@@ -449,7 +454,7 @@ ul {
     display: flex; }
     #header .menu-toggle span {
       position: absolute;
-      height: 8px;
+      height: 1vw;
       width: 8vw;
       opacity: 1;
       -webkit-transform: rotate(0deg);
@@ -472,9 +477,9 @@ ul {
       #header .menu-toggle span:nth-child(1) {
         top: 0; }
       #header .menu-toggle span:nth-child(2) {
-        top: calc(50% - 4px); }
+        top: calc(50% - .5vw); }
       #header .menu-toggle span:nth-child(3) {
-        top: calc(100% - 8px); }
+        top: calc(100% - 1vw); }
     #header .menu-toggle.white span {
       background: white; }
     #header .menu-toggle.open span:nth-child(1) {
@@ -496,10 +501,19 @@ ul {
       width: 8vw; }
 
 .content {
-  padding-top: 19vw; }
+  padding-top: 19vw;
+  padding-bottom: 15px;
+  min-height: calc(100vh - 10vw); }
   .content p {
-    max-width: 550px;
     text-indent: 30px; }
+    body.blue .content p a {
+      color: #3f89ff; }
+    body.green .content p a {
+      color: #b5d300; }
+    body.yellow .content p a {
+      color: #fed100; }
+    body.red .content p a {
+      color: #ff4c44; }
 
 #content-home .slider .slide {
   padding: 15px;
@@ -548,6 +562,12 @@ ul {
     color: #3f89ff; }
   #content-home .event.panel a:hover {
     border-bottom: 0.12em solid #3f89ff; }
+
+#content-page .main-text {
+  max-width: 1200px;
+  column-count: 2;
+  column-gap: 15px;
+  column-width: 550px; }
 
 #footer {
   border-top: 5px solid #43454a; }

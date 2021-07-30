@@ -231,6 +231,12 @@ ul {
 li {
 }
 
+.max-width {
+  p {
+    max-width: 550px;
+  }
+}
+
 .container-fluid-w-p {
   margin: 0 $half-spacing;
   position: relative;
@@ -267,9 +273,9 @@ li {
   &.compact {
     height: 10vw;
     .svg-shape-g {
-      transform: translateX(-17vw);
+      transform: translateX(-30%);
       .svg-shape {
-        transform: translateY(-5vw);
+        transform: translateY(-52%);
       }
     }
     .text {
@@ -277,7 +283,7 @@ li {
       @include transition(opacity .3s);
     }
     .mini-logo {
-      transform: translateY(-5vw);
+      transform: translateY(-52%);
     }
   }
 
@@ -340,6 +346,9 @@ li {
     @include transition(top .5s);
     &.active {
       top: $headerH;
+      &.w-c-menu {
+        top:10vw;
+      }
     }
     ul {
       padding: $half-spacing;
@@ -400,7 +409,7 @@ li {
     display: flex;
     span {
       position: absolute;
-      height: 8px;
+      height: 1vw;
       width: 8vw;
       opacity: 1;
       -webkit-transform: rotate(0deg);
@@ -420,15 +429,14 @@ li {
       @at-root body.red & {
         background-color: $red;
       }
-
       &:nth-child(1) {
         top: 0;
       }
       &:nth-child(2) {
-        top: calc(50% - 4px);
+        top: calc(50% - .5vw);
       }
       &:nth-child(3) {
-        top: calc(100% - 8px);
+        top: calc(100% - 1vw);
       }
     }
     &.white {
@@ -466,9 +474,25 @@ li {
 
 .content {
   padding-top: $headerH;
+  padding-bottom: $half-spacing;
+  min-height: calc(100vh - 10vw);
+
   p {
-    max-width: 550px;
-  text-indent: $spacing;
+    text-indent: $spacing;
+    a {
+      @at-root body.blue & {
+        color: $blue;
+      }
+      @at-root body.green & {
+        color: $green;
+      }
+      @at-root body.yellow & {
+        color: $yellow;
+      }
+      @at-root body.red & {
+        color: $red;
+      }
+    }
   }
 }
 
@@ -547,6 +571,16 @@ li {
         border-bottom: 0.12em solid $blue; 
       }
     }
+  }
+}
+
+// content page
+#content-page {
+  .main-text {
+    max-width: 1200px;
+    column-count: 2;
+    column-gap: $half-spacing;
+    column-width: 550px;
   }
 }
 
