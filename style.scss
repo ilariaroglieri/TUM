@@ -263,8 +263,22 @@ li {
   overflow: hidden;
   z-index: 100;
   border-bottom: 5px solid $primaryColor;
-  &.overflow-visible {
-    overflow: visible;
+  @include transition(height .3s .3s);
+  &.compact {
+    height: 10vw;
+    .svg-shape-g {
+      transform: translateX(-17vw);
+      .svg-shape {
+        transform: translateY(-5vw);
+      }
+    }
+    .text {
+      opacity:0;
+      @include transition(opacity .3s);
+    }
+    .mini-logo {
+      transform: translateY(-5vw);
+    }
   }
 
   #logo {
@@ -280,31 +294,38 @@ li {
       @extend .uppercase;
       font-size: 60px;
       opacity: 1;
-      @include transition(opacity .5s);
-      &.hidden {
-        opacity: 0;
-      }
+      @include transition(opacity .3s .3s);
     }
-    .svg-shape {
-      opacity: 0;
-      &.blue {
-        @at-root body.blue & {
-          opacity: 1;
+    .mini-logo {
+      transform: translateY(0);
+      @include transition(all .3s .3s);
+    }
+    .svg-shape-g {
+      transform: translateX(0);
+      @include transition(transform .3s);
+      .svg-shape {
+        opacity: 0;
+        transform: translateY(0);
+        @include transition(transform .3s .3s);
+        &.blue {
+          @at-root body.blue & {
+            opacity: 1;
+          }
         }
-      }
-      &.green {
-        @at-root body.green & {
-          opacity: 1;
+        &.green {
+          @at-root body.green & {
+            opacity: 1;
+          }
         }
-      }
-      &.yellow {
-        @at-root body.yellow & {
-          opacity: 1;
+        &.yellow {
+          @at-root body.yellow & {
+            opacity: 1;
+          }
         }
-      }
-      &.red {
-        @at-root body.red & {
-          opacity: 1;
+        &.red {
+          @at-root body.red & {
+            opacity: 1;
+          }
         }
       }
     }
@@ -518,7 +539,7 @@ li {
     }
     &.panel {
       background: $blue-bg url('../TUM-theme/assets/svg/TUM_panel_shape.svg') no-repeat center center;
-      background-size: 25%;
+      background-size: 33vh;
       h5, h5 > a {
         color: $blue;
       }

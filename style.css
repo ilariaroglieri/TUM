@@ -333,9 +333,27 @@ ul {
   background-color: white;
   overflow: hidden;
   z-index: 100;
-  border-bottom: 5px solid #43454a; }
-  #header.overflow-visible {
-    overflow: visible; }
+  border-bottom: 5px solid #43454a;
+  -webkit-transition: height 0.3s 0.3s;
+  -moz-transition: height 0.3s 0.3s;
+  -ms-transition: height 0.3s 0.3s;
+  -o-transition: height 0.3s 0.3s;
+  transition: height 0.3s 0.3s; }
+  #header.compact {
+    height: 10vw; }
+    #header.compact .svg-shape-g {
+      transform: translateX(-17vw); }
+      #header.compact .svg-shape-g .svg-shape {
+        transform: translateY(-5vw); }
+    #header.compact .text {
+      opacity: 0;
+      -webkit-transition: opacity 0.3s;
+      -moz-transition: opacity 0.3s;
+      -ms-transition: opacity 0.3s;
+      -o-transition: opacity 0.3s;
+      transition: opacity 0.3s; }
+    #header.compact .mini-logo {
+      transform: translateY(-5vw); }
   #header #logo {
     padding: 15px;
     position: relative;
@@ -345,23 +363,41 @@ ul {
     font-family: 'Basis Grotesque';
     font-size: 60px;
     opacity: 1;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -ms-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s; }
-    #header svg text.hidden {
-      opacity: 0; }
-  #header svg .svg-shape {
-    opacity: 0; }
-    body.blue #header svg .svg-shape.blue {
-      opacity: 1; }
-    body.green #header svg .svg-shape.green {
-      opacity: 1; }
-    body.yellow #header svg .svg-shape.yellow {
-      opacity: 1; }
-    body.red #header svg .svg-shape.red {
-      opacity: 1; }
+    -webkit-transition: opacity 0.3s 0.3s;
+    -moz-transition: opacity 0.3s 0.3s;
+    -ms-transition: opacity 0.3s 0.3s;
+    -o-transition: opacity 0.3s 0.3s;
+    transition: opacity 0.3s 0.3s; }
+  #header svg .mini-logo {
+    transform: translateY(0);
+    -webkit-transition: all 0.3s 0.3s;
+    -moz-transition: all 0.3s 0.3s;
+    -ms-transition: all 0.3s 0.3s;
+    -o-transition: all 0.3s 0.3s;
+    transition: all 0.3s 0.3s; }
+  #header svg .svg-shape-g {
+    transform: translateX(0);
+    -webkit-transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
+    -ms-transition: transform 0.3s;
+    -o-transition: transform 0.3s;
+    transition: transform 0.3s; }
+    #header svg .svg-shape-g .svg-shape {
+      opacity: 0;
+      transform: translateY(0);
+      -webkit-transition: transform 0.3s 0.3s;
+      -moz-transition: transform 0.3s 0.3s;
+      -ms-transition: transform 0.3s 0.3s;
+      -o-transition: transform 0.3s 0.3s;
+      transition: transform 0.3s 0.3s; }
+      body.blue #header svg .svg-shape-g .svg-shape.blue {
+        opacity: 1; }
+      body.green #header svg .svg-shape-g .svg-shape.green {
+        opacity: 1; }
+      body.yellow #header svg .svg-shape-g .svg-shape.yellow {
+        opacity: 1; }
+      body.red #header svg .svg-shape-g .svg-shape.red {
+        opacity: 1; }
   #header div[class*="menu-1"] {
     width: 100%;
     z-index: 99;
@@ -507,7 +543,7 @@ ul {
     font-size: 200%; }
 #content-home .event.panel {
   background: #fde7da url("../TUM-theme/assets/svg/TUM_panel_shape.svg") no-repeat center center;
-  background-size: 25%; }
+  background-size: 33vh; }
   #content-home .event.panel h5, #content-home .event.panel h5 > a {
     color: #3f89ff; }
   #content-home .event.panel a:hover {
