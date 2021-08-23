@@ -650,20 +650,17 @@ body.red {
   #showcase-header {
     border-bottom: 5px solid $primaryColor;
   }
+}
 
-  #events-showcase {
-    .event {
-      height: 50vh;
-      border-bottom: 5px solid white;
-      &:last-of-type {
-        border-bottom: none;
-
-      }
-    }
-  }
-
+// home + calendar
+#events-showcase, #events-calendar {
   .event {
-    .title a {
+    height: 50vh;
+    border-bottom: 5px solid white;
+    &:last-of-type {
+      border-bottom: none;
+    }
+      .title a {
       color: $primaryColor;
       font-size: 50%; 
       span { 
@@ -680,8 +677,39 @@ body.red {
         border-bottom: 0.12em solid $blue; 
       }
     }
+    &.tour {
+      background: $red-bg url('../TUM-theme/assets/svg/TUM_panel_shape.svg') no-repeat center center;
+      background-size: 33vh;
+      h5, h5 > a {
+        color: $red;
+      }
+      a:hover {
+        border-bottom: 0.12em solid $red; 
+      }
+    } 
+    &.workshop {
+      background: $yellow-bg url('../TUM-theme/assets/svg/TUM_panel_shape.svg') no-repeat center center;
+      background-size: 33vh;
+      h5, h5 > a {
+        color: $yellow;
+      }
+      a:hover {
+        border-bottom: 0.12em solid $yellow; 
+      }
+    }
+    &.film {
+      background: $green-bg url('../TUM-theme/assets/svg/TUM_panel_shape.svg') no-repeat center center;
+      background-size: 33vh;
+      h5, h5 > a {
+        color: $green;
+      }
+      a:hover {
+        border-bottom: 0.12em solid $green; 
+      }
+    }
   }
 }
+
 
 // single events
 .single-event {
