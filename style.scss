@@ -137,6 +137,34 @@ $headerH: 19vw;
   a {
     @include transition(all .3s);
   }
+  @at-root body.blue & {
+    border-color: $blue;
+    a {
+      @extend .uppercase;
+      color: $blue;
+    }
+  }
+  @at-root body.green & {
+    border-color: $green;
+    a {
+      @extend .uppercase;
+      color: $green;
+    }
+  }
+  @at-root body.yellow & {
+    border-color: $yellow;
+    a {
+      @extend .uppercase;
+      color: $yellow;
+    }
+  }
+  @at-root body.red & {
+    border-color: $red;
+    a {
+      @extend .uppercase;
+      color: $red;
+    }
+  }
   &.light {
     @at-root body.blue & {
       border-color: $blue-bg;
@@ -168,7 +196,6 @@ $headerH: 19vw;
     }
   }
   &:hover {
-    &.light {
     @at-root body.blue & {
       background-color: $blue-bg;
       color: $blue;
@@ -197,7 +224,36 @@ $headerH: 19vw;
         color: $red;
       }
     }
-  }
+    &.light {
+      @at-root body.blue & {
+        background-color: $blue-bg;
+        color: $blue;
+        a {
+          color: $blue;
+        }
+      }
+      @at-root body.green & {
+        background-color: $green-bg;
+        color: $green;
+        a {
+          color: $green;
+        }
+      }
+      @at-root body.yellow & {
+        background-color: $yellow-bg;
+        color: $yellow;
+        a {
+          color: $yellow;
+        }
+      }
+      @at-root body.red & {
+        background-color: $red-bg;
+        color: $red;
+        a {
+          color: $red;
+        }
+      }
+    }
   }
 }
 
@@ -519,7 +575,6 @@ body.red {
 
 .content {
   padding-top: $headerH;
-  padding-bottom: $spacing;
   min-height: calc(100vh - #{$headerH});
   //  &.w-c-menu {
   //   padding-top:10vw;
@@ -583,6 +638,12 @@ body.red {
         @at-root body.red & {
           background-color: $red-bg;
         }
+      }
+      p {
+        margin-bottom: 24px;
+      }
+      p > strong{
+        font-weight: normal;
       }
     }
   }
@@ -658,6 +719,18 @@ body.red {
         background-color: $blue-bg;
       }
     }
+    .button {
+      border-color: $blue;
+      a {
+        color: $blue;
+      }
+      &:hover {
+        background-color: $blue;
+        a {
+          color: $blue-bg;
+        }
+      }
+    }
   }
 }
 
@@ -668,6 +741,9 @@ body.red {
     column-count: 2;
     column-gap: $half-spacing;
     // column-width: 550px;
+    p {
+      margin-bottom: 24px;
+    }
     h2 {
       break-before: column;
     }
@@ -814,6 +890,23 @@ div.wpforms-container-full .wpforms-form {
   }
 }
 
+.wpforms-confirmation-container-full {
+  border: 5px solid !important;
+  background: transparent !important;
+  @at-root body.blue & {
+    border-color: $blue !important;
+  }
+  @at-root body.green & {
+    border-color: $green !important;
+  }
+  @at-root body.yellow & {
+    border-color: $yellow !important;
+  }
+  @at-root body.red & {
+    border-color: $red !important;
+  }
+}
+
 
 
 
@@ -877,11 +970,11 @@ div.wpforms-container-full .wpforms-form {
 }
 
 @media screen and (max-width: $mobile) {
-  .s-large, .s-medium {
+  .s-large, .s-big, .s-medium {
     font-size: 8vw;
   }
   #header {
-    height: 21vw;
+    height: 23vw;
     &.compact {
       height: 14vw;
       div[class*="menu-1"].active {
@@ -890,10 +983,10 @@ div.wpforms-container-full .wpforms-form {
     }
   }
   .content {
-    padding-top: 21vw;
+    padding-top: 23vw;
   }
   #header div[class*="menu-1"].active {
-    top: 21vw;
+    top: 23vw;
   }
   .m-hidden {
     display: none; 

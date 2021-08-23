@@ -16,9 +16,9 @@
             <div class="slide" style="background: <?php if ($img):?>url( <?php echo $img['url']; ?>) <?php endif; ?> center center no-repeat">
               <div class="d-flex m-column">
                 <div class="d-half t-whole">
-                  <h2 class="s-medium uppercase bg-color"><?php echo $title; ?></h2>
+                  <h2 class="s-medium uppercase"><?php echo $title; ?></h2>
                 </div>
-                <div class="d-half t-whole max-width">
+                <div class="d-half t-whole text max-width">
                   <?php echo $text; ?>
                   <div class="d-block">
                     <a class="underline" href="<?php echo get_page_link(5); ?>">Leggi di più...</a>
@@ -41,7 +41,7 @@
       <div class="container-fluid">
         <div id="showcase-header" class="spacing-t-2">
           <div class="d-flex flex-row baseline between">
-            <h3 class="uppercase s-large">Ultimi eventi</h3>
+            <h3 class="uppercase s-large">News</h3>
             <!-- <a class="s-regular uppercase" href="<?php echo get_permalink( get_page_by_title( 'Programma' ) ); ?>"><?php _e ('Vai al calendario','TUM-theme'); ?></a> -->
           </div>
         </div>
@@ -53,7 +53,6 @@
             setup_postdata($post); ?>
 
             <?php 
-            $tags = get_the_terms($post->ID, 'event-tag');
             $cats = get_the_terms($post->ID, 'event-category');
             $venues = get_the_terms($post->ID, 'event-venue');
             ?>
@@ -62,8 +61,8 @@
 
               <div class="d-flex flex-row between">
                 <div class="tag">
-                  <?php foreach( $tags as $tag ) { ?>
-                    <h5 class="uppercase"><?php echo $tag->name ?></h5>
+                  <?php foreach( $cats as $cat ) { ?>
+                    <h5 class="uppercase"><?php echo $cat->name ?></h5>
                   <?php } ?>
                 </div>
 

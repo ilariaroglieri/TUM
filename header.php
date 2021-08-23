@@ -73,7 +73,9 @@
 								.svg-shape{fill:none;stroke-width:5;stroke-linecap:square;stroke-miterlimit:10;}
 							</style>
 							<text class="st0 text" x="0" y="43px">Festival del</text>
-							<text class="st0 mini-logo" x="0" y="103px">Tu</text>
+							<g class="mini-logo">
+								<text class="st0" x="0" y="103px">Tu</text>
+							</g>
 							<text class="st0 text" x="77px" y="103px">rismo</text>
 
 							<g class="svg-shape-g">

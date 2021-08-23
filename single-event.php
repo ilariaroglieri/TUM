@@ -8,7 +8,7 @@
         <div class="d-flex column between spacing-p-t-1 spacing-p-b-1">
           <div class="d-flex flex-row between">
             <div class="tag">
-              <?php $tags = get_the_terms($post->ID, 'event-tag'); ?>
+              <?php $tags = get_the_terms($post->ID, 'event-category'); ?>
               <?php foreach( $tags as $tag ) { ?>
                 <h5 class="uppercase"><?php echo $tag->name ?></h5>
               <?php } ?>
@@ -36,8 +36,12 @@
           <div class="event-shape"></div>
         </div>
         
-        <div class="main-text flex-row spacing-p-t-2 spacing-p-b-3">
+        <div class="main-text flex-row spacing-p-t-1 spacing-p-b-1">
           <?php the_content(); ?>
+        </div>
+
+        <div class="button flex-row spacing-t-2 spacing-b-2">
+          <a href="<?php echo get_page_link(42); ?>">Registrati</a>
         </div>
 
       </article>
