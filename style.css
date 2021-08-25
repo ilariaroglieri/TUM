@@ -3,33 +3,33 @@ Theme Name: TUM Theme
 Author: Ilaria roglieri
 Version: 1.0
 */
-.blue {
+.blue, #events-showcase .event.panel, #events-calendar .event.panel {
   fill: none;
-  stroke-width: 8px;
+  stroke-width: 12px;
   stroke: #3f89ff; }
 
-.green {
+.green, #events-showcase .event.film, #events-calendar .event.film {
   fill: none;
-  stroke-width: 8px;
+  stroke-width: 12px;
   stroke: #b5d300; }
 
-.red {
+.red, #events-showcase .event.tour, #events-calendar .event.tour {
   fill: none;
-  stroke-width: 8px;
+  stroke-width: 12px;
   stroke: #ff4c44; }
 
-.yellow {
+.yellow, #events-showcase .event.workshop, #events-calendar .event.workshop {
   fill: none;
-  stroke-width: 8px;
+  stroke-width: 12px;
   stroke: #fed100; }
 
-body.blue .bg-color {
+body.blue .bg-color, #events-showcase body.event.panel .bg-color, #events-calendar body.event.panel .bg-color {
   color: #fde7da; }
-body.green .bg-color {
+body.green .bg-color, #events-showcase body.event.film .bg-color, #events-calendar body.event.film .bg-color {
   color: #ede8db; }
-body.yellow .bg-color {
+body.yellow .bg-color, #events-showcase body.event.workshop .bg-color, #events-calendar body.event.workshop .bg-color {
   color: #dcece8; }
-body.red .bg-color {
+body.red .bg-color, #events-showcase body.event.tour .bg-color, #events-calendar body.event.tour .bg-color {
   color: #fafadc; }
 
 @font-face {
@@ -245,7 +245,7 @@ body.red .bg-color {
 .t-center {
   text-align: center; }
 
-.uppercase, body.blue .button a, body.green .button a, body.yellow .button a, body.red .button a, body.blue .button.light a, body.green .button.light a, body.yellow .button.light a, body.red .button.light a, #header svg text, #header div[class*="menu-1"] ul li, body.blue div.wpforms-container-full .wpforms-form button[type="submit"], body.green div.wpforms-container-full .wpforms-form button[type="submit"], body.yellow div.wpforms-container-full .wpforms-form button[type="submit"], body.red div.wpforms-container-full .wpforms-form button[type="submit"] {
+.uppercase, body.blue .button a, #events-showcase body.event.panel .button a, #events-calendar body.event.panel .button a, body.green .button a, #events-showcase body.event.film .button a, #events-calendar body.event.film .button a, body.yellow .button a, #events-showcase body.event.workshop .button a, #events-calendar body.event.workshop .button a, body.red .button a, #events-showcase body.event.tour .button a, #events-calendar body.event.tour .button a, body.blue .button.light a, body.green .button.light a, body.yellow .button.light a, body.red .button.light a, #header svg text, #header div[class*="menu-1"] ul li, body.blue div.wpforms-container-full .wpforms-form button[type="submit"], #events-showcase body.event.panel div.wpforms-container-full .wpforms-form button[type="submit"], #events-calendar body.event.panel div.wpforms-container-full .wpforms-form button[type="submit"], body.green div.wpforms-container-full .wpforms-form button[type="submit"], #events-showcase body.event.film div.wpforms-container-full .wpforms-form button[type="submit"], #events-calendar body.event.film div.wpforms-container-full .wpforms-form button[type="submit"], body.yellow div.wpforms-container-full .wpforms-form button[type="submit"], #events-showcase body.event.workshop div.wpforms-container-full .wpforms-form button[type="submit"], #events-calendar body.event.workshop div.wpforms-container-full .wpforms-form button[type="submit"], body.red div.wpforms-container-full .wpforms-form button[type="submit"], #events-showcase body.event.tour div.wpforms-container-full .wpforms-form button[type="submit"], #events-calendar body.event.tour div.wpforms-container-full .wpforms-form button[type="submit"] {
   text-transform: uppercase; }
 
 .button {
@@ -264,77 +264,77 @@ body.red .bg-color {
     -ms-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s; }
-  body.blue .button {
+  body.blue .button, #events-showcase body.event.panel .button, #events-calendar body.event.panel .button {
     border-color: #3f89ff; }
-    body.blue .button a {
+    body.blue .button a, #events-showcase body.event.panel .button a, #events-calendar body.event.panel .button a {
       color: #3f89ff; }
-  body.green .button {
+  body.green .button, #events-showcase body.event.film .button, #events-calendar body.event.film .button {
     border-color: #b5d300; }
-    body.green .button a {
+    body.green .button a, #events-showcase body.event.film .button a, #events-calendar body.event.film .button a {
       color: #b5d300; }
-  body.yellow .button {
+  body.yellow .button, #events-showcase body.event.workshop .button, #events-calendar body.event.workshop .button {
     border-color: #fed100; }
-    body.yellow .button a {
+    body.yellow .button a, #events-showcase body.event.workshop .button a, #events-calendar body.event.workshop .button a {
       color: #fed100; }
-  body.red .button {
+  body.red .button, #events-showcase body.event.tour .button, #events-calendar body.event.tour .button {
     border-color: #ff4c44; }
-    body.red .button a {
+    body.red .button a, #events-showcase body.event.tour .button a, #events-calendar body.event.tour .button a {
       color: #ff4c44; }
-  body.blue .button.light {
+  body.blue .button.light, #events-showcase body.event.panel .button.light, #events-calendar body.event.panel .button.light {
     border-color: #fde7da; }
-    body.blue .button.light a {
+    body.blue .button.light a, #events-showcase body.event.panel .button.light a, #events-calendar body.event.panel .button.light a {
       color: #fde7da; }
-  body.green .button.light {
+  body.green .button.light, #events-showcase body.event.film .button.light, #events-calendar body.event.film .button.light {
     border-color: #ede8db; }
-    body.green .button.light a {
+    body.green .button.light a, #events-showcase body.event.film .button.light a, #events-calendar body.event.film .button.light a {
       color: #ede8db; }
-  body.yellow .button.light {
+  body.yellow .button.light, #events-showcase body.event.workshop .button.light, #events-calendar body.event.workshop .button.light {
     border-color: #dcece8; }
-    body.yellow .button.light a {
+    body.yellow .button.light a, #events-showcase body.event.workshop .button.light a, #events-calendar body.event.workshop .button.light a {
       color: #dcece8; }
-  body.red .button.light {
+  body.red .button.light, #events-showcase body.event.tour .button.light, #events-calendar body.event.tour .button.light {
     border-color: #fafadc; }
-    body.red .button.light a {
+    body.red .button.light a, #events-showcase body.event.tour .button.light a, #events-calendar body.event.tour .button.light a {
       color: #fafadc; }
-  body.blue .button:hover {
+  body.blue .button:hover, #events-showcase body.event.panel .button:hover, #events-calendar body.event.panel .button:hover {
     background-color: #fde7da;
     color: #3f89ff; }
-    body.blue .button:hover a {
+    body.blue .button:hover a, #events-showcase body.event.panel .button:hover a, #events-calendar body.event.panel .button:hover a {
       color: #3f89ff; }
-  body.green .button:hover {
+  body.green .button:hover, #events-showcase body.event.film .button:hover, #events-calendar body.event.film .button:hover {
     background-color: #ede8db;
     color: #b5d300; }
-    body.green .button:hover a {
+    body.green .button:hover a, #events-showcase body.event.film .button:hover a, #events-calendar body.event.film .button:hover a {
       color: #b5d300; }
-  body.yellow .button:hover {
+  body.yellow .button:hover, #events-showcase body.event.workshop .button:hover, #events-calendar body.event.workshop .button:hover {
     background-color: #dcece8;
     color: #fed100; }
-    body.yellow .button:hover a {
+    body.yellow .button:hover a, #events-showcase body.event.workshop .button:hover a, #events-calendar body.event.workshop .button:hover a {
       color: #fed100; }
-  body.red .button:hover {
+  body.red .button:hover, #events-showcase body.event.tour .button:hover, #events-calendar body.event.tour .button:hover {
     background-color: #fafadc;
     color: #ff4c44; }
-    body.red .button:hover a {
+    body.red .button:hover a, #events-showcase body.event.tour .button:hover a, #events-calendar body.event.tour .button:hover a {
       color: #ff4c44; }
-  body.blue .button:hover.light {
+  body.blue .button:hover.light, #events-showcase body.event.panel .button:hover.light, #events-calendar body.event.panel .button:hover.light {
     background-color: #fde7da;
     color: #3f89ff; }
-    body.blue .button:hover.light a {
+    body.blue .button:hover.light a, #events-showcase body.event.panel .button:hover.light a, #events-calendar body.event.panel .button:hover.light a {
       color: #3f89ff; }
-  body.green .button:hover.light {
+  body.green .button:hover.light, #events-showcase body.event.film .button:hover.light, #events-calendar body.event.film .button:hover.light {
     background-color: #ede8db;
     color: #b5d300; }
-    body.green .button:hover.light a {
+    body.green .button:hover.light a, #events-showcase body.event.film .button:hover.light a, #events-calendar body.event.film .button:hover.light a {
       color: #b5d300; }
-  body.yellow .button:hover.light {
+  body.yellow .button:hover.light, #events-showcase body.event.workshop .button:hover.light, #events-calendar body.event.workshop .button:hover.light {
     background-color: #dcece8;
     color: #fed100; }
-    body.yellow .button:hover.light a {
+    body.yellow .button:hover.light a, #events-showcase body.event.workshop .button:hover.light a, #events-calendar body.event.workshop .button:hover.light a {
       color: #fed100; }
-  body.red .button:hover.light {
+  body.red .button:hover.light, #events-showcase body.event.tour .button:hover.light, #events-calendar body.event.tour .button:hover.light {
     background-color: #fafadc;
     color: #ff4c44; }
-    body.red .button:hover.light a {
+    body.red .button:hover.light a, #events-showcase body.event.tour .button:hover.light a, #events-calendar body.event.tour .button:hover.light a {
       color: #ff4c44; }
 
 /* basic elements */
@@ -451,13 +451,13 @@ ul {
       -ms-transition: transform 0.3s 0.3s;
       -o-transition: transform 0.3s 0.3s;
       transition: transform 0.3s 0.3s; }
-      body.blue #header svg .svg-shape-g .svg-shape.blue {
+      body.blue #header svg .svg-shape-g .svg-shape.blue, #events-showcase body.event.panel #header svg .svg-shape-g .svg-shape.blue, #events-calendar body.event.panel #header svg .svg-shape-g .svg-shape.blue, body.blue #header svg .svg-shape-g #events-showcase .svg-shape.event.panel, #events-showcase body.blue #header svg .svg-shape-g .svg-shape.event.panel, #events-showcase body.event.panel #header svg .svg-shape-g .svg-shape.event.panel, body.blue #header svg .svg-shape-g #events-calendar .svg-shape.event.panel, #events-calendar body.blue #header svg .svg-shape-g .svg-shape.event.panel, #events-calendar body.event.panel #header svg .svg-shape-g .svg-shape.event.panel {
         opacity: 1; }
-      body.green #header svg .svg-shape-g .svg-shape.green {
+      body.green #header svg .svg-shape-g .svg-shape.green, #events-showcase body.event.film #header svg .svg-shape-g .svg-shape.green, #events-calendar body.event.film #header svg .svg-shape-g .svg-shape.green, body.green #header svg .svg-shape-g #events-showcase .svg-shape.event.film, #events-showcase body.green #header svg .svg-shape-g .svg-shape.event.film, #events-showcase body.event.film #header svg .svg-shape-g .svg-shape.event.film, body.green #header svg .svg-shape-g #events-calendar .svg-shape.event.film, #events-calendar body.green #header svg .svg-shape-g .svg-shape.event.film, #events-calendar body.event.film #header svg .svg-shape-g .svg-shape.event.film {
         opacity: 1; }
-      body.yellow #header svg .svg-shape-g .svg-shape.yellow {
+      body.yellow #header svg .svg-shape-g .svg-shape.yellow, #events-showcase body.event.workshop #header svg .svg-shape-g .svg-shape.yellow, #events-calendar body.event.workshop #header svg .svg-shape-g .svg-shape.yellow, body.yellow #header svg .svg-shape-g #events-showcase .svg-shape.event.workshop, #events-showcase body.yellow #header svg .svg-shape-g .svg-shape.event.workshop, #events-showcase body.event.workshop #header svg .svg-shape-g .svg-shape.event.workshop, body.yellow #header svg .svg-shape-g #events-calendar .svg-shape.event.workshop, #events-calendar body.yellow #header svg .svg-shape-g .svg-shape.event.workshop, #events-calendar body.event.workshop #header svg .svg-shape-g .svg-shape.event.workshop {
         opacity: 1; }
-      body.red #header svg .svg-shape-g .svg-shape.red {
+      body.red #header svg .svg-shape-g .svg-shape.red, #events-showcase body.event.tour #header svg .svg-shape-g .svg-shape.red, #events-calendar body.event.tour #header svg .svg-shape-g .svg-shape.red, body.red #header svg .svg-shape-g #events-showcase .svg-shape.event.tour, #events-showcase body.red #header svg .svg-shape-g .svg-shape.event.tour, #events-showcase body.event.tour #header svg .svg-shape-g .svg-shape.event.tour, body.red #header svg .svg-shape-g #events-calendar .svg-shape.event.tour, #events-calendar body.red #header svg .svg-shape-g .svg-shape.event.tour, #events-calendar body.event.tour #header svg .svg-shape-g .svg-shape.event.tour {
         opacity: 1; }
   #header div[class*="menu-1"] {
     width: 100%;
@@ -477,21 +477,21 @@ ul {
         top: 10vw; }
     #header div[class*="menu-1"] ul {
       padding: 15px; }
-      body.blue #header div[class*="menu-1"] ul li a:hover {
+      body.blue #header div[class*="menu-1"] ul li a:hover, #events-showcase body.event.panel #header div[class*="menu-1"] ul li a:hover, #events-calendar body.event.panel #header div[class*="menu-1"] ul li a:hover {
         color: #3f89ff; }
-      body.green #header div[class*="menu-1"] ul li a:hover {
+      body.green #header div[class*="menu-1"] ul li a:hover, #events-showcase body.event.film #header div[class*="menu-1"] ul li a:hover, #events-calendar body.event.film #header div[class*="menu-1"] ul li a:hover {
         color: #b5d300; }
-      body.yellow #header div[class*="menu-1"] ul li a:hover {
+      body.yellow #header div[class*="menu-1"] ul li a:hover, #events-showcase body.event.workshop #header div[class*="menu-1"] ul li a:hover, #events-calendar body.event.workshop #header div[class*="menu-1"] ul li a:hover {
         color: #fed100; }
-      body.red #header div[class*="menu-1"] ul li a:hover {
+      body.red #header div[class*="menu-1"] ul li a:hover, #events-showcase body.event.tour #header div[class*="menu-1"] ul li a:hover, #events-calendar body.event.tour #header div[class*="menu-1"] ul li a:hover {
         color: #ff4c44; }
-      body.blue #header div[class*="menu-1"] ul li.current-menu-item a {
+      body.blue #header div[class*="menu-1"] ul li.current-menu-item a, #events-showcase body.event.panel #header div[class*="menu-1"] ul li.current-menu-item a, #events-calendar body.event.panel #header div[class*="menu-1"] ul li.current-menu-item a {
         color: #3f89ff; }
-      body.green #header div[class*="menu-1"] ul li.current-menu-item a {
+      body.green #header div[class*="menu-1"] ul li.current-menu-item a, #events-showcase body.event.film #header div[class*="menu-1"] ul li.current-menu-item a, #events-calendar body.event.film #header div[class*="menu-1"] ul li.current-menu-item a {
         color: #b5d300; }
-      body.yellow #header div[class*="menu-1"] ul li.current-menu-item a {
+      body.yellow #header div[class*="menu-1"] ul li.current-menu-item a, #events-showcase body.event.workshop #header div[class*="menu-1"] ul li.current-menu-item a, #events-calendar body.event.workshop #header div[class*="menu-1"] ul li.current-menu-item a {
         color: #fed100; }
-      body.red #header div[class*="menu-1"] ul li.current-menu-item a {
+      body.red #header div[class*="menu-1"] ul li.current-menu-item a, #events-showcase body.event.tour #header div[class*="menu-1"] ul li.current-menu-item a, #events-calendar body.event.tour #header div[class*="menu-1"] ul li.current-menu-item a {
         color: #ff4c44; }
   #header .menu-toggle {
     border: 1px solid transparent;
@@ -524,13 +524,13 @@ ul {
       -ms-transition: all 0.3s;
       -o-transition: all 0.3s;
       transition: all 0.3s; }
-      body.blue #header .menu-toggle span {
+      body.blue #header .menu-toggle span, #events-showcase body.event.panel #header .menu-toggle span, #events-calendar body.event.panel #header .menu-toggle span {
         background-color: #3f89ff; }
-      body.green #header .menu-toggle span {
+      body.green #header .menu-toggle span, #events-showcase body.event.film #header .menu-toggle span, #events-calendar body.event.film #header .menu-toggle span {
         background-color: #b5d300; }
-      body.yellow #header .menu-toggle span {
+      body.yellow #header .menu-toggle span, #events-showcase body.event.workshop #header .menu-toggle span, #events-calendar body.event.workshop #header .menu-toggle span {
         background-color: #fed100; }
-      body.red #header .menu-toggle span {
+      body.red #header .menu-toggle span, #events-showcase body.event.tour #header .menu-toggle span, #events-calendar body.event.tour #header .menu-toggle span {
         background-color: #ff4c44; }
       #header .menu-toggle span:nth-child(1) {
         top: 0; }
@@ -558,24 +558,24 @@ ul {
       top: 50%;
       width: 8vw; }
 
-body.blue a.underline {
+body.blue a.underline, #events-showcase body.event.panel a.underline, #events-calendar body.event.panel a.underline {
   border-bottom: 0.12em solid #fde7da; }
-  body.blue a.underline:hover {
+  body.blue a.underline:hover, #events-showcase body.event.panel a.underline:hover, #events-calendar body.event.panel a.underline:hover {
     color: #fde7da; }
 
-body.green a.underline {
+body.green a.underline, #events-showcase body.event.film a.underline, #events-calendar body.event.film a.underline {
   border-bottom: 0.12em solid #ede8db; }
-  body.green a.underline:hover {
+  body.green a.underline:hover, #events-showcase body.event.film a.underline:hover, #events-calendar body.event.film a.underline:hover {
     color: #ede8db; }
 
-body.yellow a.underline {
+body.yellow a.underline, #events-showcase body.event.workshop a.underline, #events-calendar body.event.workshop a.underline {
   border-bottom: 0.12em solid #dcece8; }
-  body.yellow a.underline:hover {
+  body.yellow a.underline:hover, #events-showcase body.event.workshop a.underline:hover, #events-calendar body.event.workshop a.underline:hover {
     color: #dcece8; }
 
-body.red a.underline {
+body.red a.underline, #events-showcase body.event.tour a.underline, #events-calendar body.event.tour a.underline {
   border-bottom: 0.12em solid #fafadc; }
-  body.red a.underline:hover {
+  body.red a.underline:hover, #events-showcase body.event.tour a.underline:hover, #events-calendar body.event.tour a.underline:hover {
     color: #fafadc; }
 
 .content {
@@ -583,25 +583,25 @@ body.red a.underline {
   min-height: calc(100vh - 19vw); }
   .content p {
     text-indent: 30px; }
-    body.blue .content p a {
+    body.blue .content p a, #events-showcase body.event.panel .content p a, #events-calendar body.event.panel .content p a {
       color: #3f89ff; }
-    body.green .content p a {
+    body.green .content p a, #events-showcase body.event.film .content p a, #events-calendar body.event.film .content p a {
       color: #b5d300; }
-    body.yellow .content p a {
+    body.yellow .content p a, #events-showcase body.event.workshop .content p a, #events-calendar body.event.workshop .content p a {
       color: #fed100; }
-    body.red .content p a {
+    body.red .content p a, #events-showcase body.event.tour .content p a, #events-calendar body.event.tour .content p a {
       color: #ff4c44; }
 
 #content-home .slider .slide {
   padding: 15px 0;
   background-blend-mode: screen; }
-  body.blue #content-home .slider .slide {
+  body.blue #content-home .slider .slide, #events-showcase body.event.panel #content-home .slider .slide, #events-calendar body.event.panel #content-home .slider .slide {
     background-color: #3f89ff !important; }
-  body.green #content-home .slider .slide {
+  body.green #content-home .slider .slide, #events-showcase body.event.film #content-home .slider .slide, #events-calendar body.event.film #content-home .slider .slide {
     background-color: #b5d300 !important; }
-  body.yellow #content-home .slider .slide {
+  body.yellow #content-home .slider .slide, #events-showcase body.event.workshop #content-home .slider .slide, #events-calendar body.event.workshop #content-home .slider .slide {
     background-color: #fed100 !important; }
-  body.red #content-home .slider .slide {
+  body.red #content-home .slider .slide, #events-showcase body.event.tour #content-home .slider .slide, #events-calendar body.event.tour #content-home .slider .slide {
     background-color: #ff4c44 !important; }
   #content-home .slider .slide::after {
     content: '';
@@ -612,13 +612,13 @@ body.red a.underline {
     height: 100%;
     mix-blend-mode: multiply;
     pointer-events: none; }
-    body.blue #content-home .slider .slide::after {
+    body.blue #content-home .slider .slide::after, #events-showcase body.event.panel #content-home .slider .slide::after, #events-calendar body.event.panel #content-home .slider .slide::after {
       background-color: #fde7da; }
-    body.green #content-home .slider .slide::after {
+    body.green #content-home .slider .slide::after, #events-showcase body.event.film #content-home .slider .slide::after, #events-calendar body.event.film #content-home .slider .slide::after {
       background-color: #ede8db; }
-    body.yellow #content-home .slider .slide::after {
+    body.yellow #content-home .slider .slide::after, #events-showcase body.event.workshop #content-home .slider .slide::after, #events-calendar body.event.workshop #content-home .slider .slide::after {
       background-color: #dcece8; }
-    body.red #content-home .slider .slide::after {
+    body.red #content-home .slider .slide::after, #events-showcase body.event.tour #content-home .slider .slide::after, #events-calendar body.event.tour #content-home .slider .slide::after {
       background-color: #fafadc; }
   #content-home .slider .slide p {
     margin-bottom: 24px; }
@@ -670,23 +670,19 @@ svg.animated-shape {
     #events-showcase .event .svg-container svg.animated-shape, #events-calendar .event .svg-container svg.animated-shape {
       animation-play-state: paused; }
   #events-showcase .event.panel, #events-calendar .event.panel {
-    background: #fde7da no-repeat center center;
-    background-size: 33vh; }
+    background: #fde7da no-repeat center center; }
     #events-showcase .event.panel h5, #events-showcase .event.panel h5 > a, #events-calendar .event.panel h5, #events-calendar .event.panel h5 > a {
       color: #3f89ff; }
   #events-showcase .event.tour, #events-calendar .event.tour {
-    background: #fafadc no-repeat center center;
-    background-size: 33vh; }
+    background: #fafadc no-repeat center center; }
     #events-showcase .event.tour h5, #events-showcase .event.tour h5 > a, #events-calendar .event.tour h5, #events-calendar .event.tour h5 > a {
       color: #ff4c44; }
   #events-showcase .event.workshop, #events-calendar .event.workshop {
-    background: #dcece8 no-repeat center center;
-    background-size: 33vh; }
+    background: #dcece8 no-repeat center center; }
     #events-showcase .event.workshop h5, #events-showcase .event.workshop h5 > a, #events-calendar .event.workshop h5, #events-calendar .event.workshop h5 > a {
       color: #fed100; }
   #events-showcase .event.film, #events-calendar .event.film {
-    background: #ede8db no-repeat center center;
-    background-size: 33vh; }
+    background: #ede8db no-repeat center center; }
     #events-showcase .event.film h5, #events-showcase .event.film h5 > a, #events-calendar .event.film h5, #events-calendar .event.film h5 > a {
       color: #b5d300; }
 
@@ -738,13 +734,13 @@ svg.animated-shape {
     break-before: column; }
   #content-page .main-text strong, #content-single-event .main-text strong {
     font-weight: normal; }
-    body.blue #content-page .main-text strong, body.blue #content-single-event .main-text strong {
+    body.blue #content-page .main-text strong, #events-showcase body.event.panel #content-page .main-text strong, #events-calendar body.event.panel #content-page .main-text strong, body.blue #content-single-event .main-text strong, #events-showcase body.event.panel #content-single-event .main-text strong, #events-calendar body.event.panel #content-single-event .main-text strong {
       color: #3f89ff; }
-    body.green #content-page .main-text strong, body.green #content-single-event .main-text strong {
+    body.green #content-page .main-text strong, #events-showcase body.event.film #content-page .main-text strong, #events-calendar body.event.film #content-page .main-text strong, body.green #content-single-event .main-text strong, #events-showcase body.event.film #content-single-event .main-text strong, #events-calendar body.event.film #content-single-event .main-text strong {
       color: #b5d300; }
-    body.yellow #content-page .main-text strong, body.yellow #content-single-event .main-text strong {
+    body.yellow #content-page .main-text strong, #events-showcase body.event.workshop #content-page .main-text strong, #events-calendar body.event.workshop #content-page .main-text strong, body.yellow #content-single-event .main-text strong, #events-showcase body.event.workshop #content-single-event .main-text strong, #events-calendar body.event.workshop #content-single-event .main-text strong {
       color: #fed100; }
-    body.red #content-page .main-text strong, body.red #content-single-event .main-text strong {
+    body.red #content-page .main-text strong, #events-showcase body.event.tour #content-page .main-text strong, #events-calendar body.event.tour #content-page .main-text strong, body.red #content-single-event .main-text strong, #events-showcase body.event.tour #content-single-event .main-text strong, #events-calendar body.event.tour #content-single-event .main-text strong {
       color: #ff4c44; }
 
 .page-id-55 #content-page .main-text, .page-id-42 #content-page .main-text {
@@ -771,73 +767,75 @@ div.wpforms-container-full .wpforms-form {
     font-size: 21px !important;
     font-weight: 400 !important;
     text-transform: uppercase !important; }
-  body.blue div.wpforms-container-full .wpforms-form .wpforms-required-label {
+  body.blue div.wpforms-container-full .wpforms-form .wpforms-required-label, #events-showcase body.event.panel div.wpforms-container-full .wpforms-form .wpforms-required-label, #events-calendar body.event.panel div.wpforms-container-full .wpforms-form .wpforms-required-label {
     color: #3f89ff !important; }
-  body.green div.wpforms-container-full .wpforms-form .wpforms-required-label {
+  body.green div.wpforms-container-full .wpforms-form .wpforms-required-label, #events-showcase body.event.film div.wpforms-container-full .wpforms-form .wpforms-required-label, #events-calendar body.event.film div.wpforms-container-full .wpforms-form .wpforms-required-label {
     color: #b5d300 !important; }
-  body.yellow div.wpforms-container-full .wpforms-form .wpforms-required-label {
+  body.yellow div.wpforms-container-full .wpforms-form .wpforms-required-label, #events-showcase body.event.workshop div.wpforms-container-full .wpforms-form .wpforms-required-label, #events-calendar body.event.workshop div.wpforms-container-full .wpforms-form .wpforms-required-label {
     color: #fed100 !important; }
-  body.red div.wpforms-container-full .wpforms-form .wpforms-required-label {
+  body.red div.wpforms-container-full .wpforms-form .wpforms-required-label, #events-showcase body.event.tour div.wpforms-container-full .wpforms-form .wpforms-required-label, #events-calendar body.event.tour div.wpforms-container-full .wpforms-form .wpforms-required-label {
     color: #ff4c44 !important; }
   div.wpforms-container-full .wpforms-form input[type=text], div.wpforms-container-full .wpforms-form input[type=email] {
     border: none !important;
     border-bottom: 5px solid !important;
     border-radius: none !important; }
-    body.blue div.wpforms-container-full .wpforms-form input[type=text],
-    body.blue div.wpforms-container-full .wpforms-form input[type=email] {
+    body.blue div.wpforms-container-full .wpforms-form input[type=text], #events-showcase body.event.panel div.wpforms-container-full .wpforms-form input[type=text], #events-calendar body.event.panel div.wpforms-container-full .wpforms-form input[type=text],
+    body.blue div.wpforms-container-full .wpforms-form input[type=email],
+    #events-showcase body.event.panel div.wpforms-container-full .wpforms-form input[type=email],
+    #events-calendar body.event.panel div.wpforms-container-full .wpforms-form input[type=email] {
       border-color: #3f89ff !important; }
-    body.green div.wpforms-container-full .wpforms-form input[type=text], body.green div.wpforms-container-full .wpforms-form input[type=email] {
+    body.green div.wpforms-container-full .wpforms-form input[type=text], #events-showcase body.event.film div.wpforms-container-full .wpforms-form input[type=text], #events-calendar body.event.film div.wpforms-container-full .wpforms-form input[type=text], body.green div.wpforms-container-full .wpforms-form input[type=email], #events-showcase body.event.film div.wpforms-container-full .wpforms-form input[type=email], #events-calendar body.event.film div.wpforms-container-full .wpforms-form input[type=email] {
       border-color: #b5d300 !important; }
-    body.yellow div.wpforms-container-full .wpforms-form input[type=text], body.yellow div.wpforms-container-full .wpforms-form input[type=email] {
+    body.yellow div.wpforms-container-full .wpforms-form input[type=text], #events-showcase body.event.workshop div.wpforms-container-full .wpforms-form input[type=text], #events-calendar body.event.workshop div.wpforms-container-full .wpforms-form input[type=text], body.yellow div.wpforms-container-full .wpforms-form input[type=email], #events-showcase body.event.workshop div.wpforms-container-full .wpforms-form input[type=email], #events-calendar body.event.workshop div.wpforms-container-full .wpforms-form input[type=email] {
       border-color: #fed100 !important; }
-    body.red div.wpforms-container-full .wpforms-form input[type=text], body.red div.wpforms-container-full .wpforms-form input[type=email] {
+    body.red div.wpforms-container-full .wpforms-form input[type=text], #events-showcase body.event.tour div.wpforms-container-full .wpforms-form input[type=text], #events-calendar body.event.tour div.wpforms-container-full .wpforms-form input[type=text], body.red div.wpforms-container-full .wpforms-form input[type=email], #events-showcase body.event.tour div.wpforms-container-full .wpforms-form input[type=email], #events-calendar body.event.tour div.wpforms-container-full .wpforms-form input[type=email] {
       border-color: #ff4c44 !important; }
   div.wpforms-container-full .wpforms-form textarea {
     border: 5px solid !important;
     border-radius: none !important; }
-    body.blue div.wpforms-container-full .wpforms-form textarea {
+    body.blue div.wpforms-container-full .wpforms-form textarea, #events-showcase body.event.panel div.wpforms-container-full .wpforms-form textarea, #events-calendar body.event.panel div.wpforms-container-full .wpforms-form textarea {
       border-color: #3f89ff !important; }
-    body.green div.wpforms-container-full .wpforms-form textarea {
+    body.green div.wpforms-container-full .wpforms-form textarea, #events-showcase body.event.film div.wpforms-container-full .wpforms-form textarea, #events-calendar body.event.film div.wpforms-container-full .wpforms-form textarea {
       border-color: #b5d300 !important; }
-    body.yellow div.wpforms-container-full .wpforms-form textarea {
+    body.yellow div.wpforms-container-full .wpforms-form textarea, #events-showcase body.event.workshop div.wpforms-container-full .wpforms-form textarea, #events-calendar body.event.workshop div.wpforms-container-full .wpforms-form textarea {
       border-color: #fed100 !important; }
-    body.red div.wpforms-container-full .wpforms-form textarea {
+    body.red div.wpforms-container-full .wpforms-form textarea, #events-showcase body.event.tour div.wpforms-container-full .wpforms-form textarea, #events-calendar body.event.tour div.wpforms-container-full .wpforms-form textarea {
       border-color: #ff4c44 !important; }
   div.wpforms-container-full .wpforms-form button[type="submit"] {
     border: 5px solid !important;
     background-color: transparent !important;
     border-radius: none !important; }
-    body.blue div.wpforms-container-full .wpforms-form button[type="submit"] {
+    body.blue div.wpforms-container-full .wpforms-form button[type="submit"], #events-showcase body.event.panel div.wpforms-container-full .wpforms-form button[type="submit"], #events-calendar body.event.panel div.wpforms-container-full .wpforms-form button[type="submit"] {
       border-color: #3f89ff;
       color: #3f89ff; }
-      body.blue div.wpforms-container-full .wpforms-form button[type="submit"]:hover {
+      body.blue div.wpforms-container-full .wpforms-form button[type="submit"]:hover, #events-showcase body.event.panel div.wpforms-container-full .wpforms-form button[type="submit"]:hover, #events-calendar body.event.panel div.wpforms-container-full .wpforms-form button[type="submit"]:hover {
         background-color: #fde7da !important; }
-    body.green div.wpforms-container-full .wpforms-form button[type="submit"] {
+    body.green div.wpforms-container-full .wpforms-form button[type="submit"], #events-showcase body.event.film div.wpforms-container-full .wpforms-form button[type="submit"], #events-calendar body.event.film div.wpforms-container-full .wpforms-form button[type="submit"] {
       border-color: #b5d300;
       color: #b5d300; }
-      body.green div.wpforms-container-full .wpforms-form button[type="submit"]:hover {
+      body.green div.wpforms-container-full .wpforms-form button[type="submit"]:hover, #events-showcase body.event.film div.wpforms-container-full .wpforms-form button[type="submit"]:hover, #events-calendar body.event.film div.wpforms-container-full .wpforms-form button[type="submit"]:hover {
         background-color: #ede8db !important; }
-    body.yellow div.wpforms-container-full .wpforms-form button[type="submit"] {
+    body.yellow div.wpforms-container-full .wpforms-form button[type="submit"], #events-showcase body.event.workshop div.wpforms-container-full .wpforms-form button[type="submit"], #events-calendar body.event.workshop div.wpforms-container-full .wpforms-form button[type="submit"] {
       border-color: #fed100;
       color: #fed100; }
-      body.yellow div.wpforms-container-full .wpforms-form button[type="submit"]:hover {
+      body.yellow div.wpforms-container-full .wpforms-form button[type="submit"]:hover, #events-showcase body.event.workshop div.wpforms-container-full .wpforms-form button[type="submit"]:hover, #events-calendar body.event.workshop div.wpforms-container-full .wpforms-form button[type="submit"]:hover {
         background-color: #dcece8 !important; }
-    body.red div.wpforms-container-full .wpforms-form button[type="submit"] {
+    body.red div.wpforms-container-full .wpforms-form button[type="submit"], #events-showcase body.event.tour div.wpforms-container-full .wpforms-form button[type="submit"], #events-calendar body.event.tour div.wpforms-container-full .wpforms-form button[type="submit"] {
       border-color: #ff4c44;
       color: #ff4c44; }
-      body.red div.wpforms-container-full .wpforms-form button[type="submit"]:hover {
+      body.red div.wpforms-container-full .wpforms-form button[type="submit"]:hover, #events-showcase body.event.tour div.wpforms-container-full .wpforms-form button[type="submit"]:hover, #events-calendar body.event.tour div.wpforms-container-full .wpforms-form button[type="submit"]:hover {
         background-color: #fafadc !important; }
 
 .wpforms-confirmation-container-full {
   border: 5px solid !important;
   background: transparent !important; }
-  body.blue .wpforms-confirmation-container-full {
+  body.blue .wpforms-confirmation-container-full, #events-showcase body.event.panel .wpforms-confirmation-container-full, #events-calendar body.event.panel .wpforms-confirmation-container-full {
     border-color: #3f89ff !important; }
-  body.green .wpforms-confirmation-container-full {
+  body.green .wpforms-confirmation-container-full, #events-showcase body.event.film .wpforms-confirmation-container-full, #events-calendar body.event.film .wpforms-confirmation-container-full {
     border-color: #b5d300 !important; }
-  body.yellow .wpforms-confirmation-container-full {
+  body.yellow .wpforms-confirmation-container-full, #events-showcase body.event.workshop .wpforms-confirmation-container-full, #events-calendar body.event.workshop .wpforms-confirmation-container-full {
     border-color: #fed100 !important; }
-  body.red .wpforms-confirmation-container-full {
+  body.red .wpforms-confirmation-container-full, #events-showcase body.event.tour .wpforms-confirmation-container-full, #events-calendar body.event.tour .wpforms-confirmation-container-full {
     border-color: #ff4c44 !important; }
 
 #footer {

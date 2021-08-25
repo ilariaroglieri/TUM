@@ -709,7 +709,7 @@ svg.animated-shape {
     }
     &.panel {
       background: $blue-bg no-repeat center center;
-      background-size: 33vh;
+      @extend .blue;
       h5, h5 > a {
         color: $blue;
       }
@@ -717,21 +717,21 @@ svg.animated-shape {
     }
     &.tour {
       background: $red-bg no-repeat center center;
-      background-size: 33vh;
+      @extend .red;
       h5, h5 > a {
         color: $red;
       }
     } 
     &.workshop {
       background: $yellow-bg no-repeat center center;
-      background-size: 33vh;
+      @extend .yellow;
       h5, h5 > a {
         color: $yellow;
       }
     }
     &.film {
       background: $green-bg no-repeat center center;
-      background-size: 33vh;
+      @extend .green;
       h5, h5 > a {
         color: $green;
       }
