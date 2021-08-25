@@ -627,10 +627,26 @@ body.red a.underline {
 #content-home #showcase-header {
   border-bottom: 5px solid #43454a; }
 
+svg.animated-shape {
+  --looping-percent: 100;
+  --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
+  stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
+  animation: loading-loop var(--animation-time) linear infinite; }
+
+@keyframes loading-loop {
+  from {
+    stroke-dashoffset: var(--total-length); }
+  to {
+    stroke-dashoffset: 0; } }
 #events-showcase .event, #events-calendar .event {
   height: 50vh;
   border-bottom: 5px solid white;
   position: relative; }
+  #events-showcase .event:hover .svg-container, #events-calendar .event:hover .svg-container {
+    opacity: 1; }
+    #events-showcase .event:hover .svg-container svg.animated-shape, #events-calendar .event:hover .svg-container svg.animated-shape {
+      --looping-percent: 90;
+      animation-play-state: running !important; }
   #events-showcase .event:last-of-type, #events-calendar .event:last-of-type {
     border-bottom: none; }
   #events-showcase .event .title a, #events-calendar .event .title a {
@@ -644,35 +660,35 @@ body.red a.underline {
     padding: 60px;
     top: 0;
     z-index: 0;
-    position: absolute; }
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
+    #events-showcase .event .svg-container svg.animated-shape, #events-calendar .event .svg-container svg.animated-shape {
+      animation-play-state: paused; }
   #events-showcase .event.panel, #events-calendar .event.panel {
     background: #fde7da no-repeat center center;
     background-size: 33vh; }
     #events-showcase .event.panel h5, #events-showcase .event.panel h5 > a, #events-calendar .event.panel h5, #events-calendar .event.panel h5 > a {
       color: #3f89ff; }
-    #events-showcase .event.panel a:hover, #events-calendar .event.panel a:hover {
-      border-bottom: 0.12em solid #3f89ff; }
   #events-showcase .event.tour, #events-calendar .event.tour {
     background: #fafadc no-repeat center center;
     background-size: 33vh; }
     #events-showcase .event.tour h5, #events-showcase .event.tour h5 > a, #events-calendar .event.tour h5, #events-calendar .event.tour h5 > a {
       color: #ff4c44; }
-    #events-showcase .event.tour a:hover, #events-calendar .event.tour a:hover {
-      border-bottom: 0.12em solid #ff4c44; }
   #events-showcase .event.workshop, #events-calendar .event.workshop {
     background: #dcece8 no-repeat center center;
     background-size: 33vh; }
     #events-showcase .event.workshop h5, #events-showcase .event.workshop h5 > a, #events-calendar .event.workshop h5, #events-calendar .event.workshop h5 > a {
       color: #fed100; }
-    #events-showcase .event.workshop a:hover, #events-calendar .event.workshop a:hover {
-      border-bottom: 0.12em solid #fed100; }
   #events-showcase .event.film, #events-calendar .event.film {
     background: #ede8db no-repeat center center;
     background-size: 33vh; }
     #events-showcase .event.film h5, #events-showcase .event.film h5 > a, #events-calendar .event.film h5, #events-calendar .event.film h5 > a {
       color: #b5d300; }
-    #events-showcase .event.film a:hover, #events-calendar .event.film a:hover {
-      border-bottom: 0.12em solid #b5d300; }
 
 .single-event .content {
   padding-bottom: 0; }
@@ -731,17 +747,6 @@ body.red a.underline {
     body.red #content-page .main-text strong, body.red #content-single-event .main-text strong {
       color: #ff4c44; }
 
-svg.animated-shape {
-  --looping-percent: 95;
-  --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
-  stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
-  animation: loading-loop var(--animation-time) linear infinite; }
-
-@keyframes loading-loop {
-  from {
-    stroke-dashoffset: var(--total-length); }
-  to {
-    stroke-dashoffset: 0; } }
 .page-id-55 #content-page .main-text, .page-id-42 #content-page .main-text {
   column-count: 1; }
   .page-id-55 #content-page .main-text p, .page-id-42 #content-page .main-text p {

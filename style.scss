@@ -656,16 +656,38 @@ body.red {
   }
 }
 
+// svg animations
+svg.animated-shape {
+  --looping-percent: 100;
+  --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
+  stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
+  animation: loading-loop var(--animation-time) linear infinite;
+}
+
+@keyframes loading-loop {
+  from { stroke-dashoffset: var(--total-length); }
+  to   { stroke-dashoffset: 0; }
+}
+
 // home + calendar
 #events-showcase, #events-calendar {
   .event {
     height: 50vh;
     border-bottom: 5px solid white;
     position: relative;
-      &:last-of-type {
-        border-bottom: none;
+    &:hover {
+      .svg-container {
+        opacity: 1;
+        svg.animated-shape {
+          --looping-percent: 90;
+          animation-play-state: running !important;
+        }
       }
-      .title a {
+    }
+    &:last-of-type {
+      border-bottom: none;
+    }
+    .title a {
       color: $primaryColor;
       font-size: 50%; 
       span { 
@@ -679,6 +701,11 @@ body.red {
       top: 0;
       z-index:0;
       position: absolute;
+      opacity: 0;
+      @include transition(opacity .3s);
+      svg.animated-shape {
+        animation-play-state: paused;
+      }
     }
     &.panel {
       background: $blue-bg no-repeat center center;
@@ -686,18 +713,13 @@ body.red {
       h5, h5 > a {
         color: $blue;
       }
-      a:hover {
-        border-bottom: 0.12em solid $blue; 
-      }
+    
     }
     &.tour {
       background: $red-bg no-repeat center center;
       background-size: 33vh;
       h5, h5 > a {
         color: $red;
-      }
-      a:hover {
-        border-bottom: 0.12em solid $red; 
       }
     } 
     &.workshop {
@@ -706,18 +728,12 @@ body.red {
       h5, h5 > a {
         color: $yellow;
       }
-      a:hover {
-        border-bottom: 0.12em solid $yellow; 
-      }
     }
     &.film {
       background: $green-bg no-repeat center center;
       background-size: 33vh;
       h5, h5 > a {
         color: $green;
-      }
-      a:hover {
-        border-bottom: 0.12em solid $green; 
       }
     }
   }
@@ -804,20 +820,6 @@ body.red {
       }
     }
   }
-}
-
-// svg animations
-svg.animated-shape {
-  --looping-percent: 95;
-  --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
-  stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
-  animation: loading-loop var(--animation-time) linear infinite;
-}
- 
-
-@keyframes loading-loop {
-  from { stroke-dashoffset: var(--total-length); }
-  to   { stroke-dashoffset: 0; }
 }
 
 .page-id-55, .page-id-42 {
