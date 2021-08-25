@@ -17,7 +17,7 @@
         $cptQuery = new WP_Query( array(
           'post_type'         => 'event',
           'posts_per_page'    => -1,
-          'suppress_filters'  => false,
+          'suppress_filters'  => true,
           'show_past_events'  => false,
           ));
         ?>

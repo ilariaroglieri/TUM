@@ -4,15 +4,23 @@ Author: Ilaria roglieri
 Version: 1.0
 */
 .blue {
+  fill: none;
+  stroke-width: 8px;
   stroke: #3f89ff; }
 
 .green {
+  fill: none;
+  stroke-width: 8px;
   stroke: #b5d300; }
 
 .red {
+  fill: none;
+  stroke-width: 8px;
   stroke: #ff4c44; }
 
 .yellow {
+  fill: none;
+  stroke-width: 8px;
   stroke: #fed100; }
 
 body.blue .bg-color {
@@ -712,6 +720,17 @@ body.red a.underline {
     body.red #content-page .main-text strong, body.red #content-single-event .main-text strong {
       color: #ff4c44; }
 
+.page-id-121 svg {
+  --looping-percent: 95;
+  --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
+  stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
+  animation: loading-loop var(--animation-time) linear infinite; }
+
+@keyframes loading-loop {
+  from {
+    stroke-dashoffset: var(--total-length); }
+  to {
+    stroke-dashoffset: 0; } }
 .page-id-55 #content-page .main-text, .page-id-42 #content-page .main-text {
   column-count: 1; }
   .page-id-55 #content-page .main-text p, .page-id-42 #content-page .main-text p {

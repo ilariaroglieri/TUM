@@ -793,6 +793,21 @@ body.red {
   }
 }
 
+// test
+.page-id-121 {
+  svg {
+    --looping-percent: 95;
+    --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
+    stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
+    animation: loading-loop var(--animation-time) linear infinite;
+  }
+} 
+
+@keyframes loading-loop {
+  from { stroke-dashoffset: var(--total-length); }
+  to   { stroke-dashoffset: 0; }
+}
+
 .page-id-55, .page-id-42 {
   #content-page {
     .main-text {

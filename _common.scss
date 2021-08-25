@@ -20,18 +20,27 @@ $yellow-bg: #dcece8;
 
 // colors
 .blue {
-   stroke: $blue;
+  fill: none;
+  stroke-width: 8px;
+  stroke: $blue;
+  // stroke-dasharray: 1120;
 }
 
 .green {
-    stroke: $green;
+  fill: none;
+  stroke-width: 8px;
+  stroke: $green;
 }
 
 .red {
+  fill: none;
+  stroke-width: 8px;
   stroke: $red;
 }
 
 .yellow {
+  fill: none;
+  stroke-width: 8px;
   stroke: $yellow;
 }
 

@@ -50,6 +50,22 @@ jQuery(document).ready(function($) {
   //   useTransform: false
   // });
 
+//--------- ANIME JS -----------
+
+document.querySelector(".animated").style.setProperty('--total-length', document.querySelector("svg.animated path").getTotalLength());
+
+var time = document.querySelector("svg.animated path").getTotalLength()/2500;
+document.querySelector(".animated").style.setProperty('--animation-time', `${time}s`);
+
+// anime({
+//   targets: 'svg.animated path',
+//   strokeDashoffset: [anime.setDashoffset, 0],
+//   easing: 'linear',
+//   duration: 1200,
+//   // delay: function(el, i) { return i * 250 },
+//   // direction: 'alternate',
+//   loop: true
+// });
 
 //----------END JQUERY -----------
 });
