@@ -58,6 +58,9 @@
             ?>
             <div class="event <?php echo $cats[0]->slug; ?> d-flex column between spacing-p-t-1 spacing-p-b-1">
 
+              <div class="svg-container">
+                <?php include ('svg-shapes.php'); ?>
+              </div>
 
               <div class="d-flex flex-row between">
                 <div class="tag">
@@ -76,7 +79,7 @@
                 </div>
               </div>
 
-              <div class="title flex-row spacing-p-t-2 spacing-p-b-2">
+              <div class="title flex-row spacing-p-t-2 spacing-p-b-2 p-relative">
                 <h3 class="uppercase s-medium"><a href="<?php the_permalink(); ?>"><span><?php the_title(); ?></span></a></h3>
               </div>
 

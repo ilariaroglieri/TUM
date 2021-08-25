@@ -90,6 +90,10 @@ $headerH: 19vw;
   position: absolute;
 }
 
+.p-relative {
+  position: relative;
+}
+
 .p-fixed {
   position:fixed;
 }
@@ -657,9 +661,10 @@ body.red {
   .event {
     height: 50vh;
     border-bottom: 5px solid white;
-    &:last-of-type {
-      border-bottom: none;
-    }
+    position: relative;
+      &:last-of-type {
+        border-bottom: none;
+      }
       .title a {
       color: $primaryColor;
       font-size: 50%; 
@@ -667,8 +672,16 @@ body.red {
         font-size: 200%; 
       }
     }
+    .svg-container {
+      height: 100%;
+      width: 100%;
+      padding: $double-spacing;
+      top: 0;
+      z-index:0;
+      position: absolute;
+    }
     &.panel {
-      background: $blue-bg url('../TUM-theme/assets/svg/TUM_panel_shape.svg') no-repeat center center;
+      background: $blue-bg no-repeat center center;
       background-size: 33vh;
       h5, h5 > a {
         color: $blue;
@@ -678,7 +691,7 @@ body.red {
       }
     }
     &.tour {
-      background: $red-bg url('../TUM-theme/assets/svg/TUM_panel_shape.svg') no-repeat center center;
+      background: $red-bg no-repeat center center;
       background-size: 33vh;
       h5, h5 > a {
         color: $red;
@@ -688,7 +701,7 @@ body.red {
       }
     } 
     &.workshop {
-      background: $yellow-bg url('../TUM-theme/assets/svg/TUM_panel_shape.svg') no-repeat center center;
+      background: $yellow-bg no-repeat center center;
       background-size: 33vh;
       h5, h5 > a {
         color: $yellow;
@@ -698,7 +711,7 @@ body.red {
       }
     }
     &.film {
-      background: $green-bg url('../TUM-theme/assets/svg/TUM_panel_shape.svg') no-repeat center center;
+      background: $green-bg no-repeat center center;
       background-size: 33vh;
       h5, h5 > a {
         color: $green;
@@ -793,15 +806,14 @@ body.red {
   }
 }
 
-// test
-.page-id-121 {
-  svg {
-    --looping-percent: 95;
-    --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
-    stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
-    animation: loading-loop var(--animation-time) linear infinite;
-  }
-} 
+// svg animations
+svg.animated-shape {
+  --looping-percent: 95;
+  --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
+  stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
+  animation: loading-loop var(--animation-time) linear infinite;
+}
+ 
 
 @keyframes loading-loop {
   from { stroke-dashoffset: var(--total-length); }

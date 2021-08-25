@@ -52,10 +52,10 @@ jQuery(document).ready(function($) {
 
 //--------- ANIME JS -----------
 
-document.querySelector(".animated").style.setProperty('--total-length', document.querySelector("svg.animated path").getTotalLength());
+document.querySelector(".animated-shape").style.setProperty('--total-length', document.querySelector("svg.animated-shape path").getTotalLength());
 
-var time = document.querySelector("svg.animated path").getTotalLength()/2500;
-document.querySelector(".animated").style.setProperty('--animation-time', `${time}s`);
+var time = document.querySelector("svg.animated-shape path").getTotalLength()/2500;
+document.querySelector(".animated-shape").style.setProperty('--animation-time', `${time}s`);
 
 // anime({
 //   targets: 'svg.animated path',

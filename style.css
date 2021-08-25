@@ -216,6 +216,9 @@ body.red .bg-color {
 .p-absolute {
   position: absolute; }
 
+.p-relative {
+  position: relative; }
+
 .p-fixed {
   position: fixed; }
 
@@ -626,7 +629,8 @@ body.red a.underline {
 
 #events-showcase .event, #events-calendar .event {
   height: 50vh;
-  border-bottom: 5px solid white; }
+  border-bottom: 5px solid white;
+  position: relative; }
   #events-showcase .event:last-of-type, #events-calendar .event:last-of-type {
     border-bottom: none; }
   #events-showcase .event .title a, #events-calendar .event .title a {
@@ -634,29 +638,36 @@ body.red a.underline {
     font-size: 50%; }
     #events-showcase .event .title a span, #events-calendar .event .title a span {
       font-size: 200%; }
+  #events-showcase .event .svg-container, #events-calendar .event .svg-container {
+    height: 100%;
+    width: 100%;
+    padding: 60px;
+    top: 0;
+    z-index: 0;
+    position: absolute; }
   #events-showcase .event.panel, #events-calendar .event.panel {
-    background: #fde7da url("../TUM-theme/assets/svg/TUM_panel_shape.svg") no-repeat center center;
+    background: #fde7da no-repeat center center;
     background-size: 33vh; }
     #events-showcase .event.panel h5, #events-showcase .event.panel h5 > a, #events-calendar .event.panel h5, #events-calendar .event.panel h5 > a {
       color: #3f89ff; }
     #events-showcase .event.panel a:hover, #events-calendar .event.panel a:hover {
       border-bottom: 0.12em solid #3f89ff; }
   #events-showcase .event.tour, #events-calendar .event.tour {
-    background: #fafadc url("../TUM-theme/assets/svg/TUM_panel_shape.svg") no-repeat center center;
+    background: #fafadc no-repeat center center;
     background-size: 33vh; }
     #events-showcase .event.tour h5, #events-showcase .event.tour h5 > a, #events-calendar .event.tour h5, #events-calendar .event.tour h5 > a {
       color: #ff4c44; }
     #events-showcase .event.tour a:hover, #events-calendar .event.tour a:hover {
       border-bottom: 0.12em solid #ff4c44; }
   #events-showcase .event.workshop, #events-calendar .event.workshop {
-    background: #dcece8 url("../TUM-theme/assets/svg/TUM_panel_shape.svg") no-repeat center center;
+    background: #dcece8 no-repeat center center;
     background-size: 33vh; }
     #events-showcase .event.workshop h5, #events-showcase .event.workshop h5 > a, #events-calendar .event.workshop h5, #events-calendar .event.workshop h5 > a {
       color: #fed100; }
     #events-showcase .event.workshop a:hover, #events-calendar .event.workshop a:hover {
       border-bottom: 0.12em solid #fed100; }
   #events-showcase .event.film, #events-calendar .event.film {
-    background: #ede8db url("../TUM-theme/assets/svg/TUM_panel_shape.svg") no-repeat center center;
+    background: #ede8db no-repeat center center;
     background-size: 33vh; }
     #events-showcase .event.film h5, #events-showcase .event.film h5 > a, #events-calendar .event.film h5, #events-calendar .event.film h5 > a {
       color: #b5d300; }
@@ -720,7 +731,7 @@ body.red a.underline {
     body.red #content-page .main-text strong, body.red #content-single-event .main-text strong {
       color: #ff4c44; }
 
-.page-id-121 svg {
+svg.animated-shape {
   --looping-percent: 95;
   --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
   stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
