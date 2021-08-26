@@ -22,7 +22,7 @@ $headerH: 19vw;
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-37.1%);
+    transform: translateX(-37.2%);
   }
 }
 
@@ -395,7 +395,7 @@ li {
         @include transition(transform .3s .3s);
         .svg-shape {
           opacity: 0;
-          animation: marquee 4s linear infinite;
+          animation: marquee 3s linear infinite;
           &.blue {
             @at-root body.blue & {
               opacity: 1;

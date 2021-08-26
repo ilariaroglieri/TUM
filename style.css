@@ -167,7 +167,7 @@ body.red .bg-color, #events-showcase body.event.tour .bg-color, #events-calendar
   0% {
     transform: translateX(0); }
   100% {
-    transform: translateX(-37.1%); } }
+    transform: translateX(-37.2%); } }
 *,
 *:after,
 *:before {
@@ -457,7 +457,7 @@ ul {
       transition: transform 0.3s 0.3s; }
       #header svg .svg-shapes .svg-shape-g .svg-shape {
         opacity: 0;
-        animation: marquee 4s linear infinite; }
+        animation: marquee 3s linear infinite; }
         body.blue #header svg .svg-shapes .svg-shape-g .svg-shape.blue, #events-showcase body.event.panel #header svg .svg-shapes .svg-shape-g .svg-shape.blue, #events-calendar body.event.panel #header svg .svg-shapes .svg-shape-g .svg-shape.blue, body.blue #header svg .svg-shapes .svg-shape-g #events-showcase .svg-shape.event.panel, #events-showcase body.blue #header svg .svg-shapes .svg-shape-g .svg-shape.event.panel, #events-showcase body.event.panel #header svg .svg-shapes .svg-shape-g .svg-shape.event.panel, body.blue #header svg .svg-shapes .svg-shape-g #events-calendar .svg-shape.event.panel, #events-calendar body.blue #header svg .svg-shapes .svg-shape-g .svg-shape.event.panel, #events-calendar body.event.panel #header svg .svg-shapes .svg-shape-g .svg-shape.event.panel {
           opacity: 1; }
         body.green #header svg .svg-shapes .svg-shape-g .svg-shape.green, #events-showcase body.event.film #header svg .svg-shapes .svg-shape-g .svg-shape.green, #events-calendar body.event.film #header svg .svg-shapes .svg-shape-g .svg-shape.green, body.green #header svg .svg-shapes .svg-shape-g #events-showcase .svg-shape.event.film, #events-showcase body.green #header svg .svg-shapes .svg-shape-g .svg-shape.event.film, #events-showcase body.event.film #header svg .svg-shapes .svg-shape-g .svg-shape.event.film, body.green #header svg .svg-shapes .svg-shape-g #events-calendar .svg-shape.event.film, #events-calendar body.green #header svg .svg-shapes .svg-shape-g .svg-shape.event.film, #events-calendar body.event.film #header svg .svg-shapes .svg-shape-g .svg-shape.event.film {
