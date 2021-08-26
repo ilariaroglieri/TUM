@@ -17,6 +17,15 @@ $headerH: 19vw;
   transition: $args;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-37.1%);
+  }
+}
+
 *,
 *:after,
 *:before{
@@ -344,9 +353,9 @@ li {
   @include transition(height .3s .3s);
   &.compact {
     height: 10vw;
-    .svg-shape-g {
+    .svg-shapes {
       transform: translateX(-30%);
-      .svg-shape {
+      .svg-shape-g {
         transform: translateY(-52%);
       }
     }
@@ -378,31 +387,34 @@ li {
       transform: translateY(0);
       @include transition(all .3s .3s);
     }
-    .svg-shape-g {
+    .svg-shapes {
       transform: translateX(0);
       @include transition(transform .3s);
-      .svg-shape {
-        opacity: 0;
+      .svg-shape-g {
         transform: translateY(0);
         @include transition(transform .3s .3s);
-        &.blue {
-          @at-root body.blue & {
-            opacity: 1;
+        .svg-shape {
+          opacity: 0;
+          animation: marquee 4s linear infinite;
+          &.blue {
+            @at-root body.blue & {
+              opacity: 1;
+            }
           }
-        }
-        &.green {
-          @at-root body.green & {
-            opacity: 1;
+          &.green {
+            @at-root body.green & {
+              opacity: 1;
+            }
           }
-        }
-        &.yellow {
-          @at-root body.yellow & {
-            opacity: 1;
+          &.yellow {
+            @at-root body.yellow & {
+              opacity: 1;
+            }
           }
-        }
-        &.red {
-          @at-root body.red & {
-            opacity: 1;
+          &.red {
+            @at-root body.red & {
+              opacity: 1;
+            }
           }
         }
       }

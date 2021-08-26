@@ -163,6 +163,11 @@ body.red .bg-color, #events-showcase body.event.tour .bg-color, #events-calendar
 .spacing-p-t-4 {
   padding-top: 90px; }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-37.1%); } }
 *,
 *:after,
 *:before {
@@ -402,9 +407,9 @@ ul {
   transition: height 0.3s 0.3s; }
   #header.compact {
     height: 10vw; }
-    #header.compact .svg-shape-g {
+    #header.compact .svg-shapes {
       transform: translateX(-30%); }
-      #header.compact .svg-shape-g .svg-shape {
+      #header.compact .svg-shapes .svg-shape-g {
         transform: translateY(-52%); }
     #header.compact .text {
       opacity: 0;
@@ -436,29 +441,31 @@ ul {
     -ms-transition: all 0.3s 0.3s;
     -o-transition: all 0.3s 0.3s;
     transition: all 0.3s 0.3s; }
-  #header svg .svg-shape-g {
+  #header svg .svg-shapes {
     transform: translateX(0);
     -webkit-transition: transform 0.3s;
     -moz-transition: transform 0.3s;
     -ms-transition: transform 0.3s;
     -o-transition: transform 0.3s;
     transition: transform 0.3s; }
-    #header svg .svg-shape-g .svg-shape {
-      opacity: 0;
+    #header svg .svg-shapes .svg-shape-g {
       transform: translateY(0);
       -webkit-transition: transform 0.3s 0.3s;
       -moz-transition: transform 0.3s 0.3s;
       -ms-transition: transform 0.3s 0.3s;
       -o-transition: transform 0.3s 0.3s;
       transition: transform 0.3s 0.3s; }
-      body.blue #header svg .svg-shape-g .svg-shape.blue, #events-showcase body.event.panel #header svg .svg-shape-g .svg-shape.blue, #events-calendar body.event.panel #header svg .svg-shape-g .svg-shape.blue, body.blue #header svg .svg-shape-g #events-showcase .svg-shape.event.panel, #events-showcase body.blue #header svg .svg-shape-g .svg-shape.event.panel, #events-showcase body.event.panel #header svg .svg-shape-g .svg-shape.event.panel, body.blue #header svg .svg-shape-g #events-calendar .svg-shape.event.panel, #events-calendar body.blue #header svg .svg-shape-g .svg-shape.event.panel, #events-calendar body.event.panel #header svg .svg-shape-g .svg-shape.event.panel {
-        opacity: 1; }
-      body.green #header svg .svg-shape-g .svg-shape.green, #events-showcase body.event.film #header svg .svg-shape-g .svg-shape.green, #events-calendar body.event.film #header svg .svg-shape-g .svg-shape.green, body.green #header svg .svg-shape-g #events-showcase .svg-shape.event.film, #events-showcase body.green #header svg .svg-shape-g .svg-shape.event.film, #events-showcase body.event.film #header svg .svg-shape-g .svg-shape.event.film, body.green #header svg .svg-shape-g #events-calendar .svg-shape.event.film, #events-calendar body.green #header svg .svg-shape-g .svg-shape.event.film, #events-calendar body.event.film #header svg .svg-shape-g .svg-shape.event.film {
-        opacity: 1; }
-      body.yellow #header svg .svg-shape-g .svg-shape.yellow, #events-showcase body.event.workshop #header svg .svg-shape-g .svg-shape.yellow, #events-calendar body.event.workshop #header svg .svg-shape-g .svg-shape.yellow, body.yellow #header svg .svg-shape-g #events-showcase .svg-shape.event.workshop, #events-showcase body.yellow #header svg .svg-shape-g .svg-shape.event.workshop, #events-showcase body.event.workshop #header svg .svg-shape-g .svg-shape.event.workshop, body.yellow #header svg .svg-shape-g #events-calendar .svg-shape.event.workshop, #events-calendar body.yellow #header svg .svg-shape-g .svg-shape.event.workshop, #events-calendar body.event.workshop #header svg .svg-shape-g .svg-shape.event.workshop {
-        opacity: 1; }
-      body.red #header svg .svg-shape-g .svg-shape.red, #events-showcase body.event.tour #header svg .svg-shape-g .svg-shape.red, #events-calendar body.event.tour #header svg .svg-shape-g .svg-shape.red, body.red #header svg .svg-shape-g #events-showcase .svg-shape.event.tour, #events-showcase body.red #header svg .svg-shape-g .svg-shape.event.tour, #events-showcase body.event.tour #header svg .svg-shape-g .svg-shape.event.tour, body.red #header svg .svg-shape-g #events-calendar .svg-shape.event.tour, #events-calendar body.red #header svg .svg-shape-g .svg-shape.event.tour, #events-calendar body.event.tour #header svg .svg-shape-g .svg-shape.event.tour {
-        opacity: 1; }
+      #header svg .svg-shapes .svg-shape-g .svg-shape {
+        opacity: 0;
+        animation: marquee 4s linear infinite; }
+        body.blue #header svg .svg-shapes .svg-shape-g .svg-shape.blue, #events-showcase body.event.panel #header svg .svg-shapes .svg-shape-g .svg-shape.blue, #events-calendar body.event.panel #header svg .svg-shapes .svg-shape-g .svg-shape.blue, body.blue #header svg .svg-shapes .svg-shape-g #events-showcase .svg-shape.event.panel, #events-showcase body.blue #header svg .svg-shapes .svg-shape-g .svg-shape.event.panel, #events-showcase body.event.panel #header svg .svg-shapes .svg-shape-g .svg-shape.event.panel, body.blue #header svg .svg-shapes .svg-shape-g #events-calendar .svg-shape.event.panel, #events-calendar body.blue #header svg .svg-shapes .svg-shape-g .svg-shape.event.panel, #events-calendar body.event.panel #header svg .svg-shapes .svg-shape-g .svg-shape.event.panel {
+          opacity: 1; }
+        body.green #header svg .svg-shapes .svg-shape-g .svg-shape.green, #events-showcase body.event.film #header svg .svg-shapes .svg-shape-g .svg-shape.green, #events-calendar body.event.film #header svg .svg-shapes .svg-shape-g .svg-shape.green, body.green #header svg .svg-shapes .svg-shape-g #events-showcase .svg-shape.event.film, #events-showcase body.green #header svg .svg-shapes .svg-shape-g .svg-shape.event.film, #events-showcase body.event.film #header svg .svg-shapes .svg-shape-g .svg-shape.event.film, body.green #header svg .svg-shapes .svg-shape-g #events-calendar .svg-shape.event.film, #events-calendar body.green #header svg .svg-shapes .svg-shape-g .svg-shape.event.film, #events-calendar body.event.film #header svg .svg-shapes .svg-shape-g .svg-shape.event.film {
+          opacity: 1; }
+        body.yellow #header svg .svg-shapes .svg-shape-g .svg-shape.yellow, #events-showcase body.event.workshop #header svg .svg-shapes .svg-shape-g .svg-shape.yellow, #events-calendar body.event.workshop #header svg .svg-shapes .svg-shape-g .svg-shape.yellow, body.yellow #header svg .svg-shapes .svg-shape-g #events-showcase .svg-shape.event.workshop, #events-showcase body.yellow #header svg .svg-shapes .svg-shape-g .svg-shape.event.workshop, #events-showcase body.event.workshop #header svg .svg-shapes .svg-shape-g .svg-shape.event.workshop, body.yellow #header svg .svg-shapes .svg-shape-g #events-calendar .svg-shape.event.workshop, #events-calendar body.yellow #header svg .svg-shapes .svg-shape-g .svg-shape.event.workshop, #events-calendar body.event.workshop #header svg .svg-shapes .svg-shape-g .svg-shape.event.workshop {
+          opacity: 1; }
+        body.red #header svg .svg-shapes .svg-shape-g .svg-shape.red, #events-showcase body.event.tour #header svg .svg-shapes .svg-shape-g .svg-shape.red, #events-calendar body.event.tour #header svg .svg-shapes .svg-shape-g .svg-shape.red, body.red #header svg .svg-shapes .svg-shape-g #events-showcase .svg-shape.event.tour, #events-showcase body.red #header svg .svg-shapes .svg-shape-g .svg-shape.event.tour, #events-showcase body.event.tour #header svg .svg-shapes .svg-shape-g .svg-shape.event.tour, body.red #header svg .svg-shapes .svg-shape-g #events-calendar .svg-shape.event.tour, #events-calendar body.red #header svg .svg-shapes .svg-shape-g .svg-shape.event.tour, #events-calendar body.event.tour #header svg .svg-shapes .svg-shape-g .svg-shape.event.tour {
+          opacity: 1; }
   #header div[class*="menu-1"] {
     width: 100%;
     z-index: 99;
