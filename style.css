@@ -6,7 +6,8 @@ Version: 1.0
 .line {
   fill: none;
   stroke-width: 12px;
-  stroke: #43454a; }
+  stroke: #43454a;
+  stroke-dasharray: square; }
 
 .blue, #events-showcase .event.panel, #events-calendar .event.panel {
   fill: none;
@@ -466,7 +467,8 @@ ul {
         -moz-transition: stroke 0.3s;
         -ms-transition: stroke 0.3s;
         -o-transition: stroke 0.3s;
-        transition: stroke 0.3s; }
+        transition: stroke 0.3s;
+        animation: marquee 3s linear infinite; }
         #header svg .svg-shapes .svg-shape-g .svg-shape.line {
           opacity: 1; }
   #header div[class*="menu-1"] {

@@ -396,7 +396,7 @@ li {
         .svg-shape {
           opacity: 0;
           @include transition(stroke .3s);
-          // animation: marquee 3s linear infinite;
+          animation: marquee 3s linear infinite;
           &.line {
             opacity: 1;
           }

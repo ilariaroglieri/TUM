@@ -36,22 +36,5 @@ function default_attachment_display_settings() {
 
 add_action( 'after_setup_theme', 'default_attachment_display_settings' );
 
-add_filter('body_class','add_category_to_single');
-
-function add_category_to_single($classes) {
-    global $post;
-  	if (has_term( 'panel', 'event-category') ) {
-      $classes[] = 'blue';
-    } else if (has_term( 'workshop', 'event-category') ) {
-      $classes[] = 'red';
-    } else if (has_term( 'tour', 'event-category') ) {
-      $classes[] = 'yellow';
-    } else if (has_term( 'film', 'event-category') ) {
-      $classes[] = 'green';
-    } 
-  	// return the $classes array
-  	return $classes;
-}
-
 
 ?>

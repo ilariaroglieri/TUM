@@ -23,12 +23,12 @@ $yellow-bg: #dcece8;
   fill: none;
   stroke-width: 12px;
   stroke: $primaryColor;
+  stroke-dasharray: square;
 }
 .blue {
   fill: none;
   stroke-width: 12px;
   stroke: $blue;
-  // stroke-dasharray: 1120;
 }
 
 .green {
