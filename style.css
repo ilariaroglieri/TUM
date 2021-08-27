@@ -243,7 +243,7 @@ body.red .bg-color, #events-showcase body.event.tour .bg-color, #events-calendar
   height: 50vh; }
 
 .full-height-w-h {
-  height: calc(100vh - 19vw); }
+  height: calc(100vh - 18vw); }
 
 .f-right {
   text-align: right;
@@ -401,7 +401,7 @@ ul {
   left: 0;
   top: 0;
   width: 100%;
-  height: 19vw;
+  height: 18vw;
   background-color: white;
   overflow: hidden;
   z-index: 100;
@@ -416,7 +416,7 @@ ul {
     #header.compact .svg-shapes {
       transform: translateX(-30%); }
       #header.compact .svg-shapes .svg-shape-g {
-        transform: translateY(-52%); }
+        transform: translateY(-55%); }
     #header.compact .text {
       opacity: 0;
       -webkit-transition: opacity 0.3s;
@@ -425,7 +425,7 @@ ul {
       -o-transition: opacity 0.3s;
       transition: opacity 0.3s; }
     #header.compact .mini-logo {
-      transform: translateY(-52%); }
+      transform: translateY(-55%); }
   #header #logo {
     padding: 15px;
     position: relative;
@@ -484,7 +484,7 @@ ul {
     -o-transition: top 0.5s;
     transition: top 0.5s; }
     #header div[class*="menu-1"].active {
-      top: 19vw; }
+      top: 18vw; }
       #header div[class*="menu-1"].active.w-c-menu {
         top: 10vw; }
     #header div[class*="menu-1"] ul {
@@ -591,8 +591,8 @@ body.red a.underline, #events-showcase body.event.tour a.underline, #events-cale
     color: #fafadc; }
 
 .content {
-  padding-top: 19vw;
-  min-height: calc(100vh - 19vw); }
+  padding-top: 18vw;
+  min-height: calc(100vh - 18vw); }
   .content p {
     text-indent: 30px; }
     body[data-color='blue'] .content p a {
@@ -604,6 +604,14 @@ body.red a.underline, #events-showcase body.event.tour a.underline, #events-cale
     body[data-color='red'] .content p a {
       color: #ff4c44; }
 
+body[data-color='blue'] #content-home {
+  background-color: #fde7da; }
+body[data-color='green'] #content-home {
+  background-color: #ede8db; }
+body[data-color='yellow'] #content-home {
+  background-color: #dcece8; }
+body[data-color='red'] #content-home {
+  background-color: #fafadc; }
 #content-home .slider .slide {
   padding: 15px 0;
   background-blend-mode: screen; }
@@ -637,6 +645,7 @@ body.red a.underline, #events-showcase body.event.tour a.underline, #events-cale
   #content-home .slider .slide p > strong {
     font-weight: normal; }
 #content-home #showcase-header {
+  background-color: white;
   border-bottom: 5px solid #43454a; }
 
 svg.animated-shape {
@@ -651,7 +660,7 @@ svg.animated-shape {
   to {
     stroke-dashoffset: 0; } }
 #events-showcase .event, #events-calendar .event {
-  height: 50vh;
+  height: calc(100vh - 18vw);
   border-bottom: 5px solid white;
   position: relative; }
   #events-showcase .event:hover .svg-container, #events-calendar .event:hover .svg-container {

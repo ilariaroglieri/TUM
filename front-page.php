@@ -39,7 +39,7 @@
     <!-- eventi IN EVIDENZA -->
     <?php if( have_rows('evento_in_evidenza') ): ?>
       <div class="container-fluid">
-        <div id="showcase-header" class="spacing-t-2">
+        <div id="showcase-header" class="spacing-p-t-2">
           <div class="d-flex flex-row baseline between">
             <h3 class="uppercase s-large">News</h3>
             <!-- <a class="s-regular uppercase" href="<?php echo get_permalink( get_page_by_title( 'Programma' ) ); ?>"><?php _e ('Vai al calendario','TUM-theme'); ?></a> -->

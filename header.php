@@ -84,11 +84,11 @@
 								 width="100%" height="100%" viewBox="0 0 645.21 105" style="enable-background:new 0 0 645.21 103.68;"
 								 xml:space="preserve">
 								<defs>
-									<rect x="278.7" y="55" id="mask" width="120.9" height="50"/>
+									<rect x="275" y="55" id="mask" width="125" height="50"/>
 									<clipPath id="clipPath"><use xlink:href="#mask" overflow="visible"/></clipPath>
 								</defs>
 								<style type="text/css">
-									#mask{fill:none;stroke:white; stroke-width:2px;}
+									#mask{fill:none;stroke:none; stroke-width:2px;}
 									.st0{fill:#43454A;stroke:none;}
 									.svg-shape{fill:none;stroke-width:5;stroke-linecap:square;stroke-miterlimit:10;}
 								</style>

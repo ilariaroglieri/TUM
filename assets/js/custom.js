@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
   $(window).scroll(function() {
 
     var currentScrollPos = $(window).scrollTop();
-    if (prevScrollPos > currentScrollPos && prevScrollPos > 0) {
+    if (currentScrollPos <= 0) {
 	    $('#header').removeClass('compact');
       $('.content, div[class*="menu-1"]').removeClass('w-c-menu');
 
@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
       $('.content, div[class*="menu-1"]').addClass('w-c-menu');
 	  }
 
-	  prevScrollPos = currentScrollPos;
+	  // prevScrollPos = currentScrollPos;
   });
 
 
@@ -56,7 +56,7 @@ const shapes = document.querySelectorAll('svg.animated-shape');
 
 Array.from(shapes).forEach((el, i) => {
   var path = el.querySelector('path').getTotalLength();
-  var time = path/2500;
+  var time = path/1500;
   el.style.setProperty('--total-length', path);
   el.style.setProperty('--animation-time', `${time}s`);
 });

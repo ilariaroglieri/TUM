@@ -1,6 +1,6 @@
 <?php $cat = $cats[0]->slug; ?>
 <?php if ($cat == 'panel'): ?>
-	<svg version="1.1" class="animated-shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 484 484" style="enable-background:new 0 0 484 484;" xml:space="preserve">
+	<svg version="1.1" class="animated-shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
     <g>
 	    <path d="
 		M242,242.3c-24.1-48.2-48.2-96.5-71.8-136.8c-18.1-30.9-36-57.5-53.2-75.3C103.1,15.9,88.9,6.3,75.1,6.3c-7.7,0-16.2,3-24.5,12
@@ -12,7 +12,7 @@
 	  </g>
 	</svg>
 <?php elseif ($cat == 'film'): ?>
-	<svg version="1.1" class="animated-shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 484 484" style="enable-background:new 0 0 484 484;" xml:space="preserve">
+	<svg version="1.1" class="animated-shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
     <g>
 	    <path d="
 	    M242,242c46.1,55.3,92.5,111.1,132.6,154.9c24.2,26.5,48.3,51.1,67.3,66.1c13.9,11.1,22.8,15.1,28.2,15.1c5.6,0,8-4.2,8-11.6
@@ -39,7 +39,7 @@
 	  </g>
 	</svg>
 <?php elseif ($cat == 'workshop'): ?>
-	<svg version="1.1" class="animated-shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 484 484" style="enable-background:new 0 0 484 484;" xml:space="preserve">
+	<svg version="1.1" class="animated-shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
     <g>
 	    <path d="
 		M242,242c-40.3-53.8-80.9-107.8-117.3-150.9c-23.7-28-47.1-53.1-67-68.7C46.4,13.6,33.9,5.9,23.9,5.9c-12.6,0-18,12.3-18,31.6
@@ -57,7 +57,7 @@
 	  </g>
 	</svg>
 <?php elseif ($cat == 'tour'): ?>
-	<svg version="1.1" class="animated-shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 484 484" style="enable-background:new 0 0 484 484;" xml:space="preserve">
+	<svg version="1.1" class="animated-shape" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
     <g>
 	    <path d="
 		M242,242c52.5-35,105.3-70.2,147.8-102.9c29.3-22.6,55-44.9,71-64.8c9.8-12.1,17.6-25.4,17.6-37c0-11-6.9-18.6-18-23.6

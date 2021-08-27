@@ -6,7 +6,7 @@ Version: 1.0
 
 @import 'common';
 
-$headerH: 19vw;
+$headerH: 18vw;
 
 // eg @include transition(background-color 200ms, left 200ms);
 @mixin transition($args...) {
@@ -356,7 +356,7 @@ li {
     .svg-shapes {
       transform: translateX(-30%);
       .svg-shape-g {
-        transform: translateY(-52%);
+        transform: translateY(-55%);
       }
     }
     .text {
@@ -364,7 +364,7 @@ li {
       @include transition(opacity .3s);
     }
     .mini-logo {
-      transform: translateY(-52%);
+      transform: translateY(-55%);
     }
   }
 
@@ -621,6 +621,18 @@ body.red {
 
 //home
 #content-home {
+  @at-root body[data-color='blue'] & {
+    background-color: $blue-bg;
+  }
+  @at-root body[data-color='green'] & {
+    background-color: $green-bg;
+  }
+  @at-root body[data-color='yellow'] & {
+    background-color: $yellow-bg;
+  }
+  @at-root body[data-color='red'] & {
+    background-color: $red-bg;
+  }
   .slider {
     .slide {
       padding: $half-spacing 0;
@@ -668,12 +680,14 @@ body.red {
     }
   }
   #showcase-header {
+    background-color: white;
     border-bottom: 5px solid $primaryColor;
   }
 }
 
 // svg animations
 svg.animated-shape {
+  // stroke-width: 17;
   --looping-percent: 100;
   --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
   stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
@@ -688,7 +702,7 @@ svg.animated-shape {
 // home + calendar
 #events-showcase, #events-calendar {
   .event {
-    height: 50vh;
+    height: calc(100vh - #{$headerH});
     border-bottom: 5px solid white;
     position: relative;
     &:hover {
