@@ -19,6 +19,11 @@ $red-bg: #fafadc;
 $yellow-bg: #dcece8;
 
 // colors
+.line {
+  fill: none;
+  stroke-width: 12px;
+  stroke: $primaryColor;
+}
 .blue {
   fill: none;
   stroke-width: 12px;

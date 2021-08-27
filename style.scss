@@ -150,28 +150,28 @@ $headerH: 19vw;
   a {
     @include transition(all .3s);
   }
-  @at-root body.blue & {
+  @at-root body[data-color='blue'] & {
     border-color: $blue;
     a {
       @extend .uppercase;
       color: $blue;
     }
   }
-  @at-root body.green & {
+  @at-root body[data-color='green'] & {
     border-color: $green;
     a {
       @extend .uppercase;
       color: $green;
     }
   }
-  @at-root body.yellow & {
+  @at-root body[data-color='yellow'] & {
     border-color: $yellow;
     a {
       @extend .uppercase;
       color: $yellow;
     }
   }
-  @at-root body.red & {
+  @at-root body[data-color='red'] & {
     border-color: $red;
     a {
       @extend .uppercase;
@@ -179,28 +179,28 @@ $headerH: 19vw;
     }
   }
   &.light {
-    @at-root body.blue & {
+    @at-root body[data-color='blue'] & {
       border-color: $blue-bg;
       a {
         @extend .uppercase;
         color: $blue-bg;
       }
     }
-    @at-root body.green & {
+    @at-root body[data-color='green'] & {
       border-color: $green-bg;
       a {
         @extend .uppercase;
         color: $green-bg;
       }
     }
-    @at-root body.yellow & {
+    @at-root body[data-color='yellow'] & {
       border-color: $yellow-bg;
       a {
         @extend .uppercase;
         color: $yellow-bg;
       }
     }
-    @at-root body.red & {
+    @at-root body[data-color='red'] & {
       border-color: $red-bg;
       a {
         @extend .uppercase;
@@ -209,28 +209,28 @@ $headerH: 19vw;
     }
   }
   &:hover {
-    @at-root body.blue & {
+    @at-root body[data-color='blue'] & {
       background-color: $blue-bg;
       color: $blue;
       a {
         color: $blue;
       }
     }
-    @at-root body.green & {
+    @at-root body[data-color='green'] & {
       background-color: $green-bg;
       color: $green;
       a {
         color: $green;
       }
     }
-    @at-root body.yellow & {
+    @at-root body[data-color='yellow'] & {
       background-color: $yellow-bg;
       color: $yellow;
       a {
         color: $yellow;
       }
     }
-    @at-root body.red & {
+    @at-root body[data-color='red'] & {
       background-color: $red-bg;
       color: $red;
       a {
@@ -238,28 +238,28 @@ $headerH: 19vw;
       }
     }
     &.light {
-      @at-root body.blue & {
+      @at-root body[data-color='blue'] & {
         background-color: $blue-bg;
         color: $blue;
         a {
           color: $blue;
         }
       }
-      @at-root body.green & {
+      @at-root body[data-color='green'] & {
         background-color: $green-bg;
         color: $green;
         a {
           color: $green;
         }
       }
-      @at-root body.yellow & {
+      @at-root body[data-color='yellow'] & {
         background-color: $yellow-bg;
         color: $yellow;
         a {
           color: $yellow;
         }
       }
-      @at-root body.red & {
+      @at-root body[data-color='red'] & {
         background-color: $red-bg;
         color: $red;
         a {
@@ -395,27 +395,31 @@ li {
         @include transition(transform .3s .3s);
         .svg-shape {
           opacity: 0;
-          animation: marquee 3s linear infinite;
-          &.blue {
-            @at-root body.blue & {
-              opacity: 1;
-            }
+          @include transition(stroke .3s);
+          // animation: marquee 3s linear infinite;
+          &.line {
+            opacity: 1;
           }
-          &.green {
-            @at-root body.green & {
-              opacity: 1;
-            }
-          }
-          &.yellow {
-            @at-root body.yellow & {
-              opacity: 1;
-            }
-          }
-          &.red {
-            @at-root body.red & {
-              opacity: 1;
-            }
-          }
+          // &.blue {
+          //   @at-root body[data-color='blue'] & {
+          //     opacity: 1;
+          //   }
+          // }
+          // &.green {
+          //   @at-root body[data-color='green'] & {
+          //     opacity: 1;
+          //   }
+          // }
+          // &.yellow {
+          //   @at-root body[data-color='yellow'] & {
+          //     opacity: 1;
+          //   }
+          // }
+          // &.red {
+          //   @at-root body[data-color='red'] & {
+          //     opacity: 1;
+          //   }
+          // }
         }
       }
     }
@@ -441,32 +445,32 @@ li {
         @extend .uppercase;
         a {
           &:hover {
-            @at-root body.blue & {
+            @at-root body[data-color='blue'] & {
               color: $blue;
             }
-            @at-root body.green & {
+            @at-root body[data-color='green'] & {
               color: $green;
             }
-            @at-root body.yellow & {
+            @at-root body[data-color='yellow'] & {
               color: $yellow;
             }
-            @at-root body.red & {
+            @at-root body[data-color='red'] & {
               color: $red;
             }    
           }
         }
         &.current-menu-item {
           a {
-            @at-root body.blue & {
+            @at-root body[data-color='blue'] & {
               color: $blue;
             }
-            @at-root body.green & {
+            @at-root body[data-color='green'] & {
               color: $green;
             }
-            @at-root body.yellow & {
+            @at-root body[data-color='yellow'] & {
               color: $yellow;
             }
-            @at-root body.red & {
+            @at-root body[data-color='red'] & {
               color: $red;
             }
           }
@@ -501,16 +505,16 @@ li {
       -o-transform: rotate(0deg);
       transform: rotate(0deg);
       @include transition(all .3s);
-      @at-root body.blue & {
+      @at-root body[data-color='blue'] & {
         background-color: $blue;
       }
-      @at-root body.green & {
+      @at-root body[data-color='green'] & {
         background-color: $green;
       }
-      @at-root body.yellow & {
+      @at-root body[data-color='yellow'] & {
         background-color: $yellow;
       }
-      @at-root body.red & {
+      @at-root body[data-color='red'] & {
         background-color: $red;
       }
       &:nth-child(1) {
@@ -599,16 +603,16 @@ body.red {
   p {
     text-indent: $spacing;
     a {
-      @at-root body.blue & {
+      @at-root body[data-color='blue'] & {
         color: $blue;
       }
-      @at-root body.green & {
+      @at-root body[data-color='green'] & {
         color: $green;
       }
-      @at-root body.yellow & {
+      @at-root body[data-color='yellow'] & {
         color: $yellow;
       }
-      @at-root body.red & {
+      @at-root body[data-color='red'] & {
         color: $red;
       }
     }
@@ -621,16 +625,16 @@ body.red {
     .slide {
       padding: $half-spacing 0;
       background-blend-mode: screen;
-      @at-root body.blue & {
+      @at-root body[data-color='blue'] & {
         background-color: $blue !important;
       }
-      @at-root body.green & {
+      @at-root body[data-color='green'] & {
         background-color: $green !important;
       }
-      @at-root body.yellow & {
+      @at-root body[data-color='yellow'] & {
         background-color: $yellow !important;
       }
-      @at-root body.red & {
+      @at-root body[data-color='red'] & {
         background-color: $red !important;
       }
       &::after {
@@ -642,16 +646,16 @@ body.red {
         height: 100%;
         mix-blend-mode: multiply;
         pointer-events: none;
-        @at-root body.blue & {
+        @at-root body[data-color='blue'] & {
           background-color: $blue-bg;
         }
-        @at-root body.green & {
+        @at-root body[data-color='green'] & {
           background-color: $green-bg;
         }
-        @at-root body.yellow & {
+        @at-root body[data-color='yellow'] & {
           background-color: $yellow-bg;
         }
-        @at-root body.red & {
+        @at-root body[data-color='red'] & {
           background-color: $red-bg;
         }
       }
@@ -818,16 +822,16 @@ svg.animated-shape {
     }
     strong {
       font-weight: normal;
-      @at-root body.blue & {
+      @at-root body[data-color='blue'] & {
       color: $blue;
       }
-      @at-root body.green & {
+      @at-root body[data-color='green'] & {
         color: $green;
       }
-      @at-root body.yellow & {
+      @at-root body[data-color='yellow'] & {
         color: $yellow;
       }
-      @at-root body.red & {
+      @at-root body[data-color='red'] & {
         color: $red;
       }
     }
@@ -873,16 +877,16 @@ div.wpforms-container-full .wpforms-form {
     text-transform: uppercase !important;
   }
   .wpforms-required-label {
-    @at-root body.blue & {
+    @at-root body[data-color='blue'] & {
       color: $blue !important;
     }
-    @at-root body.green & {
+    @at-root body[data-color='green'] & {
       color: $green !important;
     }
-    @at-root body.yellow & {
+    @at-root body[data-color='yellow'] & {
       color: $yellow !important;
     }
-    @at-root body.red & {
+    @at-root body[data-color='red'] & {
       color: $red !important;
     }
   }
@@ -891,32 +895,32 @@ div.wpforms-container-full .wpforms-form {
     border: none !important;
     border-bottom: 5px solid !important;
     border-radius: none !important;
-    @at-root body.blue & {
+    @at-root body[data-color='blue'] & {
       border-color: $blue !important;
     }
-    @at-root body.green & {
+    @at-root body[data-color='green'] & {
       border-color: $green !important;
     }
-    @at-root body.yellow & {
+    @at-root body[data-color='yellow'] & {
       border-color: $yellow !important;
     }
-    @at-root body.red & {
+    @at-root body[data-color='red'] & {
       border-color: $red !important;
     }
   }
   textarea {
     border: 5px solid !important;
     border-radius: none !important;
-    @at-root body.blue & {
+    @at-root body[data-color='blue'] & {
       border-color: $blue !important;
     }
-    @at-root body.green & {
+    @at-root body[data-color='green'] & {
       border-color: $green !important;
     }
-    @at-root body.yellow & {
+    @at-root body[data-color='yellow'] & {
       border-color: $yellow !important;
     }
-    @at-root body.red & {
+    @at-root body[data-color='red'] & {
       border-color: $red !important;
     }
   }
@@ -924,7 +928,7 @@ div.wpforms-container-full .wpforms-form {
     border: 5px solid !important;
     background-color: transparent !important;
     border-radius: none !important;
-    @at-root body.blue & {
+    @at-root body[data-color='blue'] & {
       border-color: $blue;
       @extend .uppercase;
       color: $blue;
@@ -932,7 +936,7 @@ div.wpforms-container-full .wpforms-form {
         background-color: $blue-bg !important;
       }
     }
-    @at-root body.green & {
+    @at-root body[data-color='green'] & {
       border-color: $green;
       @extend .uppercase;
       color: $green;
@@ -940,7 +944,7 @@ div.wpforms-container-full .wpforms-form {
         background-color: $green-bg !important;
       }
     }
-    @at-root body.yellow & {
+    @at-root body[data-color='yellow'] & {
       border-color: $yellow;
       @extend .uppercase;
       color: $yellow;
@@ -948,7 +952,7 @@ div.wpforms-container-full .wpforms-form {
         background-color: $yellow-bg !important;
       }
     }
-    @at-root body.red & {
+    @at-root body[data-color='red'] & {
       border-color: $red;
       @extend .uppercase;
       color: $red;
@@ -962,16 +966,16 @@ div.wpforms-container-full .wpforms-form {
 .wpforms-confirmation-container-full {
   border: 5px solid !important;
   background: transparent !important;
-  @at-root body.blue & {
+  @at-root body[data-color='blue'] & {
     border-color: $blue !important;
   }
-  @at-root body.green & {
+  @at-root body[data-color='green'] & {
     border-color: $green !important;
   }
-  @at-root body.yellow & {
+  @at-root body[data-color='yellow'] & {
     border-color: $yellow !important;
   }
-  @at-root body.red & {
+  @at-root body[data-color='red'] & {
     border-color: $red !important;
   }
 }
