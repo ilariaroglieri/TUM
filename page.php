@@ -8,7 +8,7 @@
     <div class="container-fluid-w-p">
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <h1 class="spacing-p-t-1 s-large uppercase"><?php the_title(); ?></h1>
-        <div class="main-text spacing-t-2 spacing-b-2">
+        <div class="main-text max-width spacing-t-2 spacing-b-2">
           <?php the_content(); ?>
         </div>
 

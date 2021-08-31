@@ -123,6 +123,10 @@ $headerH: 18vw;
   height: calc(100vh - #{$headerH});
 }
 
+.max-width {
+  max-width: $desktop-mini;
+}
+
 .f-right {
   text-align: right;
   float: right;
@@ -270,6 +274,21 @@ $headerH: 18vw;
   }
 }
 
+.border-top {
+  @at-root body[data-color='blue'] & {
+    border-top: $blue 5px solid;
+  }
+  @at-root body[data-color='green'] & {
+    border-top: $green 5px solid;
+  }
+  @at-root body[data-color='yellow'] & {
+    border-top: $yellow 5px solid;
+  }
+  @at-root body[data-color='red'] & {
+    border-top: $red 5px solid;
+  }
+}
+
 /* basic elements */
 body {
   font-family:'Basis Grotesque', 'Arial', sans-serif;
@@ -287,7 +306,7 @@ p {
 
 h1, h2, h3, h4, h5 {
   font-weight: normal;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 h5 {
@@ -312,12 +331,6 @@ ul {
 li {
 }
 
-.max-width {
-  p {
-    max-width: 550px;
-  }
-}
-
 .container-fluid-w-p {
   margin: 0 $half-spacing;
   position: relative;
@@ -334,6 +347,11 @@ li {
 .flex-row{
   margin-right: $half-spacing;
   margin-left: $half-spacing;
+}
+
+.flex-row-neg{
+  margin-right: -$half-spacing;
+  margin-left: -$half-spacing;
 }
 
 #header-container {
@@ -400,26 +418,6 @@ li {
           &.line {
             opacity: 1;
           }
-          // &.blue {
-          //   @at-root body[data-color='blue'] & {
-          //     opacity: 1;
-          //   }
-          // }
-          // &.green {
-          //   @at-root body[data-color='green'] & {
-          //     opacity: 1;
-          //   }
-          // }
-          // &.yellow {
-          //   @at-root body[data-color='yellow'] & {
-          //     opacity: 1;
-          //   }
-          // }
-          // &.red {
-          //   @at-root body[data-color='red'] & {
-          //     opacity: 1;
-          //   }
-          // }
         }
       }
     }
@@ -602,6 +600,9 @@ body.red {
   // }
   p {
     text-indent: $spacing;
+    &.no-indent {
+      text-indent: 0;
+    }
     a {
       @at-root body[data-color='blue'] & {
         color: $blue;
@@ -672,7 +673,7 @@ body.red {
         }
       }
       p {
-        margin-bottom: 24px;
+        margin-bottom: 22px;
       }
       p > strong{
         font-weight: normal;
@@ -774,17 +775,61 @@ svg.animated-shape {
 .single-event {
   .content {
     padding-bottom: 0;
+    p {
+      margin-bottom: 22px;
+    }
+    strong, h2, h5, h6 {
+      font-weight: normal;
+      @at-root body[data-color='blue'] & {
+        color: $blue;
+      }
+      @at-root body[data-color='green'] & {
+        color: $green;
+      }
+      @at-root body[data-color='yellow'] & {
+        color: $yellow;
+      }
+      @at-root body[data-color='red'] & {
+        color: $red;
+      }
+    }
+    h2, h3, h5 {
+      @extend .s-regular;
+    }
+
+    .speaker.accordion-btn {
+      cursor: pointer;
+      .portrait {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+    }
+    .accordion-content {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      @include transition(opacity .3s);
+      &.active {
+        opacity: 1;
+        height: initial;
+      }
+      p {
+        @extend .no-indent;
+      }
+    }
   }
   .event-category-panel {
     background-color: $blue-bg;
-    h5 {
+    h2, h5, h6 {
       color: $blue;
     }
-    .event-img {
+    .event-img, .portrait {
       position: relative;
       background-color: $blue !important;
       background-blend-mode: screen;
       background-size: cover !important;
+      overflow:hidden;
       .event-shape {
         background: url('../TUM-theme/assets/svg/TUM_panel_shape-light.svg') no-repeat center center;
         background-size: 33vh;
@@ -819,38 +864,155 @@ svg.animated-shape {
       }
     }
   }
+  .event-category-tour {
+    background-color: $yellow-bg;
+    h2, h5 {
+      color: $yellow;
+    }
+    .event-img {
+      position: relative;
+      background-color: $yellow !important;
+      background-blend-mode: screen;
+      background-size: cover !important;
+      .event-shape {
+        background: url('../TUM-theme/assets/svg/TUM_panel_shape-light.svg') no-repeat center center;
+        background-size: 33vh;
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      &::after {
+        content:'';
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        background-color: $yellow-bg;
+      }
+    }
+    .button {
+      border-color: $yellow;
+      a {
+        color: $yellow;
+      }
+      &:hover {
+        background-color: $yellow;
+        a {
+          color: $yellow-bg;
+        }
+      }
+    }
+  }
+  .event-category-workshop {
+    background-color: $red-bg;
+    h2, h5 {
+      color: $red;
+    }
+    .event-img {
+      position: relative;
+      background-color: $red !important;
+      background-blend-mode: screen;
+      background-size: cover !important;
+      .event-shape {
+        background: url('../TUM-theme/assets/svg/TUM_panel_shape-light.svg') no-repeat center center;
+        background-size: 33vh;
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      &::after {
+        content:'';
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        background-color: $red-bg;
+      }
+    }
+    .button {
+      border-color: $red;
+      a {
+        color: $red;
+      }
+      &:hover {
+        background-color: $red;
+        a {
+          color: $red-bg;
+        }
+      }
+    }
+  }
+  .event-category-film {
+    background-color: $green-bg;
+    h2, h5 {
+      color: $green;
+    }
+    .event-img {
+      position: relative;
+      background-color: $green !important;
+      background-blend-mode: screen;
+      background-size: cover !important;
+      .event-shape {
+        background: url('../TUM-theme/assets/svg/TUM_panel_shape-light.svg') no-repeat center center;
+        background-size: 33vh;
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      &::after {
+        content:'';
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        background-color: $green-bg;
+      }
+    }
+    .button {
+      border-color: $green;
+      a {
+        color: $green;
+      }
+      &:hover {
+        background-color: $green;
+        a {
+          color: $green-bg;
+        }
+      }
+    }
+  }
 }
 
 // content page
 #content-page, #content-single-event {
   .main-text {
-    max-width: 1200px;
     column-count: 2;
     column-gap: $half-spacing;
     // column-width: 550px;
     p {
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
-    h2 {
+    h2, h5 {
       break-before: column;
-    }
-    strong {
-      font-weight: normal;
-      @at-root body[data-color='blue'] & {
-      color: $blue;
-      }
-      @at-root body[data-color='green'] & {
-        color: $green;
-      }
-      @at-root body[data-color='yellow'] & {
-        color: $yellow;
-      }
-      @at-root body[data-color='red'] & {
-        color: $red;
-      }
     }
   }
 }
+
 
 .page-id-55, .page-id-42 {
   #content-page {

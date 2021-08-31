@@ -50,7 +50,11 @@ jQuery(document).ready(function($) {
   //   useTransform: false
   // });
 
-//--------- ANIME JS -----------
+$('.accordion-btn').click(function() {
+  $(this).next($('.accordion-content')).toggleClass('active');
+});
+
+//--------- SVG SNAP JS -----------
 
 const shapes = document.querySelectorAll('svg.animated-shape');
 
@@ -101,7 +105,6 @@ for (var path in strokes) {
 }
 
 
-// lineSVG.animate({ stroke: '#3f89ff' }, 300);
 
 //----------END JQUERY -----------
 });

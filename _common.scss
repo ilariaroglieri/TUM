@@ -2,6 +2,7 @@
 
 //Breakpoint
 $desktop: 1440px;
+$desktop-mini: 1200px;
 $tablet: 768px;
 $mobile: 640px;
 
@@ -23,7 +24,6 @@ $yellow-bg: #dcece8;
   fill: none;
   stroke-width: 12px;
   stroke: $primaryColor;
-  stroke-dasharray: square;
 }
 .blue {
   fill: none;
@@ -94,6 +94,7 @@ $yellow-bg: #dcece8;
 
 .s-medium { 
   font-size: 60px;
+  line-height: 1;
 }
 
 .s-big { 
@@ -101,7 +102,7 @@ $yellow-bg: #dcece8;
 }
 
 .s-regular {
-	font-size: 24px;
+	font-size: 22px;
 }
 
 .s-small {
