@@ -35,17 +35,17 @@
           <div class="event-shape"></div>
         </div>
         
-        <div class="max-width d-flex t-column flex-row spacing-p-t-2 spacing-p-b-1">
+        <div class="max-width d-flex t-column flex-row spacing-p-t-2 spacing-p-b-2">
           <div class="main-text d-whole">
             <?php the_content(); ?>
           </div>
         </div>
 
         <?php if( have_rows('persona') ): ?>
-          <div class="border-top">
-            <div class="max-width d-flex t-column flex-row spacing-p-t-3 spacing-p-b-1">
+          <div class="dark-bnd">
+            <div class="max-width d-flex t-column flex-row spacing-p-t-2 spacing-p-b-1">
               <div class="speakers-list d-half t-whole">
-                <h2 class="uppercase">Speakers</h2>
+                <h2 class="uppercase spacing-b-1">Speakers</h2>
 
                 <?php while( have_rows('persona') ) : the_row();
 
@@ -71,7 +71,7 @@
 
               <div class="moderator-list d-half t-whole">
                 <?php if( have_rows('moderator') ): ?>
-                  <h2 class="uppercase">Moderatore</h2>
+                  <h2 class="uppercase spacing-b-1">Moderatore</h2>
 
                   <?php while( have_rows('moderator') ) : the_row();
 

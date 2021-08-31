@@ -54,13 +54,14 @@ body.red .bg-color, #events-showcase body.event.tour .bg-color, #events-calendar
   font-size: 60px;
   line-height: 1; }
 
-.s-big {
-  font-size: 40px; }
+.s-big, #content-single-event h3 {
+  font-size: 40px;
+  line-height: 1; }
 
-.s-regular, body, p, h5, .single-event .content h2, .single-event .content h3, .single-event .content h5 {
+.s-regular, body, p, h5, #content-single-event h2, #content-single-event h5 {
   font-size: 22px; }
 
-.s-small {
+.s-small, #content-single-event h6 {
   font-size: 14px; }
 
 .d-one-third {
@@ -360,6 +361,33 @@ body[data-color='yellow'] .border-top {
 body[data-color='red'] .border-top {
   border-top: #ff4c44 5px solid; }
 
+body[data-color='blue'] .border-bottom {
+  border-bottom: #3f89ff 5px solid; }
+body[data-color='green'] .border-bottom {
+  border-bottom: #b5d300 5px solid; }
+body[data-color='yellow'] .border-bottom {
+  border-bottom: #fed100 5px solid; }
+body[data-color='red'] .border-bottom {
+  border-bottom: #ff4c44 5px solid; }
+
+.dark-bnd p a, .dark-bnd h3 {
+  color: white !important; }
+body[data-color='blue'] .dark-bnd {
+  background-color: #3f89ff;
+  color: #fde7da; }
+body[data-color='green'] .dark-bnd {
+  background-color: #b5d300;
+  color: #ede8db; }
+body[data-color='yellow'] .dark-bnd {
+  background-color: #fed100;
+  color: #dcece8; }
+body[data-color='red'] .dark-bnd {
+  background-color: #ff4c44;
+  color: #fafadc; }
+
+.no-indent, #content-single-event .accordion-content p {
+  text-indent: 0; }
+
 /* basic elements */
 body {
   font-family: 'Basis Grotesque', 'Arial', sans-serif;
@@ -371,7 +399,7 @@ body {
 p {
   margin: 0; }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   line-height: 1.2; }
 
@@ -608,8 +636,6 @@ body.red a.underline, #events-showcase body.event.tour a.underline, #events-cale
   min-height: calc(100vh - 18vw); }
   .content p {
     text-indent: 30px; }
-    .content p.no-indent, .single-event .content .accordion-content p {
-      text-indent: 0; }
     body[data-color='blue'] .content p a {
       color: #3f89ff; }
     body[data-color='green'] .content p a {
@@ -722,27 +748,37 @@ svg.animated-shape {
     #events-showcase .event.film h5, #events-showcase .event.film h5 > a, #events-calendar .event.film h5, #events-calendar .event.film h5 > a {
       color: #b5d300; }
 
-.single-event .content {
+#content-single-event {
   padding-bottom: 0; }
-  .single-event .content p {
+  body[data-color='blue'] #content-single-event {
+    background-color: #fde7da; }
+  body[data-color='green'] #content-single-event {
+    background-color: #ede8db; }
+  body[data-color='yellow'] #content-single-event {
+    background-color: #dcece8; }
+  body[data-color='red'] #content-single-event {
+    background-color: #fafadc; }
+  #content-single-event p {
     margin-bottom: 22px; }
-  .single-event .content strong, .single-event .content h2, .single-event .content h5, .single-event .content h6 {
+  #content-single-event strong, #content-single-event h5 {
     font-weight: normal; }
-    body[data-color='blue'] .single-event .content strong, body[data-color='blue'] .single-event .content h2, body[data-color='blue'] .single-event .content h5, body[data-color='blue'] .single-event .content h6 {
+    body[data-color='blue'] #content-single-event strong, body[data-color='blue'] #content-single-event h5 {
       color: #3f89ff; }
-    body[data-color='green'] .single-event .content strong, body[data-color='green'] .single-event .content h2, body[data-color='green'] .single-event .content h5, body[data-color='green'] .single-event .content h6 {
+    body[data-color='green'] #content-single-event strong, body[data-color='green'] #content-single-event h5 {
       color: #b5d300; }
-    body[data-color='yellow'] .single-event .content strong, body[data-color='yellow'] .single-event .content h2, body[data-color='yellow'] .single-event .content h5, body[data-color='yellow'] .single-event .content h6 {
+    body[data-color='yellow'] #content-single-event strong, body[data-color='yellow'] #content-single-event h5 {
       color: #fed100; }
-    body[data-color='red'] .single-event .content strong, body[data-color='red'] .single-event .content h2, body[data-color='red'] .single-event .content h5, body[data-color='red'] .single-event .content h6 {
+    body[data-color='red'] #content-single-event strong, body[data-color='red'] #content-single-event h5 {
       color: #ff4c44; }
-  .single-event .content .speaker.accordion-btn {
+  #content-single-event h6 {
+    font-weight: normal; }
+  #content-single-event .speaker.accordion-btn {
     cursor: pointer; }
-    .single-event .content .speaker.accordion-btn .portrait {
+    #content-single-event .speaker.accordion-btn .portrait {
       width: 100px;
       height: 100px;
       border-radius: 50%; }
-  .single-event .content .accordion-content {
+  #content-single-event .accordion-content {
     height: 0;
     opacity: 0;
     overflow: hidden;
@@ -751,20 +787,16 @@ svg.animated-shape {
     -ms-transition: opacity 0.3s;
     -o-transition: opacity 0.3s;
     transition: opacity 0.3s; }
-    .single-event .content .accordion-content.active {
+    #content-single-event .accordion-content.active {
       opacity: 1;
       height: initial; }
-.single-event .event-category-panel {
-  background-color: #fde7da; }
-  .single-event .event-category-panel h2, .single-event .event-category-panel h5, .single-event .event-category-panel h6 {
-    color: #3f89ff; }
-  .single-event .event-category-panel .event-img, .single-event .event-category-panel .portrait {
+  #content-single-event .event-category-panel .event-img, #content-single-event .event-category-panel .portrait {
     position: relative;
     background-color: #3f89ff !important;
     background-blend-mode: screen;
     background-size: cover !important;
     overflow: hidden; }
-    .single-event .event-category-panel .event-img .event-shape, .single-event .event-category-panel .portrait .event-shape {
+    #content-single-event .event-category-panel .event-img .event-shape, #content-single-event .event-category-panel .portrait .event-shape {
       background: url("../TUM-theme/assets/svg/TUM_panel_shape-light.svg") no-repeat center center;
       background-size: 33vh;
       position: absolute;
@@ -772,7 +804,7 @@ svg.animated-shape {
       left: 0;
       width: 100%;
       height: 100%; }
-    .single-event .event-category-panel .event-img::after, .single-event .event-category-panel .portrait::after {
+    #content-single-event .event-category-panel .event-img::after, #content-single-event .event-category-panel .portrait::after {
       content: '';
       position: absolute;
       top: 0;
@@ -782,119 +814,113 @@ svg.animated-shape {
       mix-blend-mode: multiply;
       pointer-events: none;
       background-color: #fde7da; }
-  .single-event .event-category-panel .button {
+  #content-single-event .event-category-panel .button {
     border-color: #3f89ff; }
-    .single-event .event-category-panel .button a {
+    #content-single-event .event-category-panel .button a {
       color: #3f89ff; }
-    .single-event .event-category-panel .button:hover {
+    #content-single-event .event-category-panel .button:hover {
       background-color: #3f89ff; }
-      .single-event .event-category-panel .button:hover a {
+      #content-single-event .event-category-panel .button:hover a {
         color: #fde7da; }
-.single-event .event-category-tour {
-  background-color: #dcece8; }
-  .single-event .event-category-tour h2, .single-event .event-category-tour h5 {
-    color: #fed100; }
-  .single-event .event-category-tour .event-img {
-    position: relative;
-    background-color: #fed100 !important;
-    background-blend-mode: screen;
-    background-size: cover !important; }
-    .single-event .event-category-tour .event-img .event-shape {
-      background: url("../TUM-theme/assets/svg/TUM_panel_shape-light.svg") no-repeat center center;
-      background-size: 33vh;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%; }
-    .single-event .event-category-tour .event-img::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      mix-blend-mode: multiply;
-      pointer-events: none;
-      background-color: #dcece8; }
-  .single-event .event-category-tour .button {
-    border-color: #fed100; }
-    .single-event .event-category-tour .button a {
-      color: #fed100; }
-    .single-event .event-category-tour .button:hover {
-      background-color: #fed100; }
-      .single-event .event-category-tour .button:hover a {
-        color: #dcece8; }
-.single-event .event-category-workshop {
-  background-color: #fafadc; }
-  .single-event .event-category-workshop h2, .single-event .event-category-workshop h5 {
-    color: #ff4c44; }
-  .single-event .event-category-workshop .event-img {
-    position: relative;
-    background-color: #ff4c44 !important;
-    background-blend-mode: screen;
-    background-size: cover !important; }
-    .single-event .event-category-workshop .event-img .event-shape {
-      background: url("../TUM-theme/assets/svg/TUM_panel_shape-light.svg") no-repeat center center;
-      background-size: 33vh;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%; }
-    .single-event .event-category-workshop .event-img::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      mix-blend-mode: multiply;
-      pointer-events: none;
-      background-color: #fafadc; }
-  .single-event .event-category-workshop .button {
-    border-color: #ff4c44; }
-    .single-event .event-category-workshop .button a {
-      color: #ff4c44; }
-    .single-event .event-category-workshop .button:hover {
-      background-color: #ff4c44; }
-      .single-event .event-category-workshop .button:hover a {
-        color: #fafadc; }
-.single-event .event-category-film {
-  background-color: #ede8db; }
-  .single-event .event-category-film h2, .single-event .event-category-film h5 {
-    color: #b5d300; }
-  .single-event .event-category-film .event-img {
-    position: relative;
-    background-color: #b5d300 !important;
-    background-blend-mode: screen;
-    background-size: cover !important; }
-    .single-event .event-category-film .event-img .event-shape {
-      background: url("../TUM-theme/assets/svg/TUM_panel_shape-light.svg") no-repeat center center;
-      background-size: 33vh;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%; }
-    .single-event .event-category-film .event-img::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      mix-blend-mode: multiply;
-      pointer-events: none;
-      background-color: #ede8db; }
-  .single-event .event-category-film .button {
-    border-color: #b5d300; }
-    .single-event .event-category-film .button a {
-      color: #b5d300; }
-    .single-event .event-category-film .button:hover {
-      background-color: #b5d300; }
-      .single-event .event-category-film .button:hover a {
-        color: #ede8db; }
+  #content-single-event .event-category-tour {
+    background-color: #dcece8; }
+    #content-single-event .event-category-tour .event-img {
+      position: relative;
+      background-color: #fed100 !important;
+      background-blend-mode: screen;
+      background-size: cover !important; }
+      #content-single-event .event-category-tour .event-img .event-shape {
+        background: url("../TUM-theme/assets/svg/TUM_panel_shape-light.svg") no-repeat center center;
+        background-size: 33vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+      #content-single-event .event-category-tour .event-img::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        background-color: #dcece8; }
+    #content-single-event .event-category-tour .button {
+      border-color: #fed100; }
+      #content-single-event .event-category-tour .button a {
+        color: #fed100; }
+      #content-single-event .event-category-tour .button:hover {
+        background-color: #fed100; }
+        #content-single-event .event-category-tour .button:hover a {
+          color: #dcece8; }
+  #content-single-event .event-category-workshop {
+    background-color: #fafadc; }
+    #content-single-event .event-category-workshop .event-img {
+      position: relative;
+      background-color: #ff4c44 !important;
+      background-blend-mode: screen;
+      background-size: cover !important; }
+      #content-single-event .event-category-workshop .event-img .event-shape {
+        background: url("../TUM-theme/assets/svg/TUM_panel_shape-light.svg") no-repeat center center;
+        background-size: 33vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+      #content-single-event .event-category-workshop .event-img::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        background-color: #fafadc; }
+    #content-single-event .event-category-workshop .button {
+      border-color: #ff4c44; }
+      #content-single-event .event-category-workshop .button a {
+        color: #ff4c44; }
+      #content-single-event .event-category-workshop .button:hover {
+        background-color: #ff4c44; }
+        #content-single-event .event-category-workshop .button:hover a {
+          color: #fafadc; }
+  #content-single-event .event-category-film {
+    background-color: #ede8db; }
+    #content-single-event .event-category-film .event-img {
+      position: relative;
+      background-color: #b5d300 !important;
+      background-blend-mode: screen;
+      background-size: cover !important; }
+      #content-single-event .event-category-film .event-img .event-shape {
+        background: url("../TUM-theme/assets/svg/TUM_panel_shape-light.svg") no-repeat center center;
+        background-size: 33vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+      #content-single-event .event-category-film .event-img::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        background-color: #ede8db; }
+    #content-single-event .event-category-film .button {
+      border-color: #b5d300; }
+      #content-single-event .event-category-film .button a {
+        color: #b5d300; }
+      #content-single-event .event-category-film .button:hover {
+        background-color: #b5d300; }
+        #content-single-event .event-category-film .button:hover a {
+          color: #ede8db; }
 
 #content-page .main-text, #content-single-event .main-text {
   column-count: 2;
@@ -1035,7 +1061,7 @@ div.wpforms-container-full .wpforms-form {
       margin-top: 30px;
       break-before: unset; } }
 @media screen and (max-width: 640px) {
-  .s-large, .s-big, .s-medium, #header div[class*="menu-1"] ul li {
+  .s-large, .s-big, #content-single-event h3, .s-medium, #header div[class*="menu-1"] ul li {
     font-size: 8vw; }
 
   #header {

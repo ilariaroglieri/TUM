@@ -289,6 +289,47 @@ $headerH: 18vw;
   }
 }
 
+.border-bottom {
+  @at-root body[data-color='blue'] & {
+    border-bottom: $blue 5px solid;
+  }
+  @at-root body[data-color='green'] & {
+    border-bottom: $green 5px solid;
+  }
+  @at-root body[data-color='yellow'] & {
+    border-bottom: $yellow 5px solid;
+  }
+  @at-root body[data-color='red'] & {
+    border-bottom: $red 5px solid;
+  }
+}
+
+.dark-bnd {
+  p a, h3 {
+    color: white !important;
+  }
+  @at-root body[data-color='blue'] & {
+    background-color: $blue;
+    color: $blue-bg;
+  }
+  @at-root body[data-color='green'] & {
+    background-color: $green;
+    color: $green-bg;
+  }
+  @at-root body[data-color='yellow'] & {
+    background-color: $yellow;
+    color: $yellow-bg;
+  }
+  @at-root body[data-color='red'] & {
+    background-color: $red;
+    color: $red-bg;
+  }
+}
+
+.no-indent {
+  text-indent: 0;
+}
+
 /* basic elements */
 body {
   font-family:'Basis Grotesque', 'Arial', sans-serif;
@@ -304,7 +345,7 @@ p {
   @extend .s-regular;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   line-height: 1.2;
 }
@@ -600,9 +641,6 @@ body.red {
   // }
   p {
     text-indent: $spacing;
-    &.no-indent {
-      text-indent: 0;
-    }
     a {
       @at-root body[data-color='blue'] & {
         color: $blue;
@@ -772,58 +810,73 @@ svg.animated-shape {
 
 
 // single events
-.single-event {
-  .content {
-    padding-bottom: 0;
-    p {
-      margin-bottom: 22px;
-    }
-    strong, h2, h5, h6 {
-      font-weight: normal;
-      @at-root body[data-color='blue'] & {
-        color: $blue;
-      }
-      @at-root body[data-color='green'] & {
-        color: $green;
-      }
-      @at-root body[data-color='yellow'] & {
-        color: $yellow;
-      }
-      @at-root body[data-color='red'] & {
-        color: $red;
-      }
-    }
-    h2, h3, h5 {
-      @extend .s-regular;
-    }
 
-    .speaker.accordion-btn {
-      cursor: pointer;
-      .portrait {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-      }
+#content-single-event {
+  padding-bottom: 0;
+   @at-root body[data-color='blue'] & {
+    background-color: $blue-bg;
+  }
+  @at-root body[data-color='green'] & {
+    background-color: $green-bg;
+  }
+  @at-root body[data-color='yellow'] & {
+    background-color: $yellow-bg;
+  }
+  @at-root body[data-color='red'] & {
+    background-color: $red-bg;
+  }
+  p {
+    margin-bottom: 22px;
+  }
+  strong, h5 {
+    font-weight: normal;
+    @at-root body[data-color='blue'] & {
+      color: $blue;
     }
-    .accordion-content {
-      height: 0;
-      opacity: 0;
-      overflow: hidden;
-      @include transition(opacity .3s);
-      &.active {
-        opacity: 1;
-        height: initial;
-      }
-      p {
-        @extend .no-indent;
-      }
+    @at-root body[data-color='green'] & {
+      color: $green;
+    }
+    @at-root body[data-color='yellow'] & {
+      color: $yellow;
+    }
+    @at-root body[data-color='red'] & {
+      color: $red;
+    }
+  }
+  h2, h5 {
+    @extend .s-regular;
+  }
+   h3 {
+    @extend .s-big;
+  }
+  h6 {
+    @extend .s-small;
+    font-weight: normal;
+  }
+
+  .speaker.accordion-btn {
+    cursor: pointer;
+    .portrait {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+  .accordion-content {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    @include transition(opacity .3s);
+    &.active {
+      opacity: 1;
+      height: initial;
+    }
+    p {
+      @extend .no-indent;
     }
   }
   .event-category-panel {
-    background-color: $blue-bg;
-    h2, h5, h6 {
-      color: $blue;
-    }
+    // background-color: $blue-bg;
     .event-img, .portrait {
       position: relative;
       background-color: $blue !important;
@@ -866,9 +919,6 @@ svg.animated-shape {
   }
   .event-category-tour {
     background-color: $yellow-bg;
-    h2, h5 {
-      color: $yellow;
-    }
     .event-img {
       position: relative;
       background-color: $yellow !important;
@@ -910,9 +960,6 @@ svg.animated-shape {
   }
   .event-category-workshop {
     background-color: $red-bg;
-    h2, h5 {
-      color: $red;
-    }
     .event-img {
       position: relative;
       background-color: $red !important;
@@ -954,9 +1001,6 @@ svg.animated-shape {
   }
   .event-category-film {
     background-color: $green-bg;
-    h2, h5 {
-      color: $green;
-    }
     .event-img {
       position: relative;
       background-color: $green !important;
@@ -997,6 +1041,7 @@ svg.animated-shape {
     }
   }
 }
+
 
 // content page
 #content-page, #content-single-event {
