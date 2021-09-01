@@ -731,10 +731,14 @@ body.red {
       }
     }
   }
-  #showcase-header {
-    background-color: white;
-    border-bottom: 5px solid $primaryColor;
-  }
+}
+
+.white-header {
+  background-color: white;
+  padding-top: $half-spacing;
+  padding-bottom: $half-spacing/2;
+  border-bottom: 5px solid $primaryColor;
+  border-top: 5px solid $primaryColor;
 }
 
 // svg animations
@@ -778,7 +782,7 @@ body.red {
 }
 
 // home + calendar
-#events-showcase, #events-calendar {
+#events-showcase, #events-calendar, #events-related {
   .event {
     height: calc(100vh - #{$headerH});
     border-bottom: 5px solid white;
@@ -869,11 +873,11 @@ body.red {
       color: $red;
     }
   }
+  .hentry {
+    padding-bottom: 20vh;
+  }
   h2, h5 {
     @extend .s-regular;
-  }
-   h3 {
-    @extend .s-big;
   }
   h6 {
     @extend .s-small;
@@ -902,22 +906,12 @@ body.red {
     }
   }
   .event-category-panel {
-    // background-color: $blue-bg;
     .event-img, .portrait {
       position: relative;
       background-color: $blue !important;
       background-blend-mode: screen;
       background-size: cover !important;
       overflow:hidden;
-      .event-shape {
-        background: url('../TUM-theme/assets/svg/TUM_panel_shape-light.svg') no-repeat center center;
-        background-size: 33vh;
-        position:absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
       &::after {
         content:'';
         position:absolute;
@@ -930,35 +924,13 @@ body.red {
         background-color: $blue-bg;
       }
     }
-    .button {
-      border-color: $blue;
-      a {
-        color: $blue;
-      }
-      &:hover {
-        background-color: $blue;
-        a {
-          color: $blue-bg;
-        }
-      }
-    }
   }
   .event-category-tour {
-    background-color: $yellow-bg;
     .event-img {
       position: relative;
       background-color: $yellow !important;
       background-blend-mode: screen;
       background-size: cover !important;
-      .event-shape {
-        background: url('../TUM-theme/assets/svg/TUM_panel_shape-light.svg') no-repeat center center;
-        background-size: 33vh;
-        position:absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
       &::after {
         content:'';
         position:absolute;
@@ -971,35 +943,14 @@ body.red {
         background-color: $yellow-bg;
       }
     }
-    .button {
-      border-color: $yellow;
-      a {
-        color: $yellow;
-      }
-      &:hover {
-        background-color: $yellow;
-        a {
-          color: $yellow-bg;
-        }
-      }
-    }
+    
   }
   .event-category-workshop {
-    background-color: $red-bg;
     .event-img {
       position: relative;
       background-color: $red !important;
       background-blend-mode: screen;
       background-size: cover !important;
-      .event-shape {
-        background: url('../TUM-theme/assets/svg/TUM_panel_shape-light.svg') no-repeat center center;
-        background-size: 33vh;
-        position:absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
       &::after {
         content:'';
         position:absolute;
@@ -1012,35 +963,13 @@ body.red {
         background-color: $red-bg;
       }
     }
-    .button {
-      border-color: $red;
-      a {
-        color: $red;
-      }
-      &:hover {
-        background-color: $red;
-        a {
-          color: $red-bg;
-        }
-      }
-    }
   }
   .event-category-film {
-    background-color: $green-bg;
     .event-img {
       position: relative;
       background-color: $green !important;
       background-blend-mode: screen;
       background-size: cover !important;
-      .event-shape {
-        background: url('../TUM-theme/assets/svg/TUM_panel_shape-light.svg') no-repeat center center;
-        background-size: 33vh;
-        position:absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
       &::after {
         content:'';
         position:absolute;
@@ -1051,18 +980,6 @@ body.red {
         mix-blend-mode: multiply;
         pointer-events: none;
         background-color: $green-bg;
-      }
-    }
-    .button {
-      border-color: $green;
-      a {
-        color: $green;
-      }
-      &:hover {
-        background-color: $green;
-        a {
-          color: $green-bg;
-        }
       }
     }
   }

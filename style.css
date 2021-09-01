@@ -6,27 +6,27 @@ Version: 1.0
 .line {
   stroke: #43454a; }
 
-.blue, #events-showcase .event.panel, #events-calendar .event.panel {
+.blue, #events-showcase .event.panel, #events-calendar .event.panel, #events-related .event.panel {
   stroke: #3f89ff; }
-  div.light-color .blue, div.light-color #events-showcase .event.panel, #events-showcase div.light-color .event.panel, div.light-color #events-calendar .event.panel, #events-calendar div.light-color .event.panel {
+  div.light-color .blue, div.light-color #events-showcase .event.panel, #events-showcase div.light-color .event.panel, div.light-color #events-calendar .event.panel, #events-calendar div.light-color .event.panel, div.light-color #events-related .event.panel, #events-related div.light-color .event.panel {
     stroke: #fde7da; }
 
-.green, #events-showcase .event.film, #events-calendar .event.film {
+.green, #events-showcase .event.film, #events-calendar .event.film, #events-related .event.film {
   stroke: #b5d300; }
 
-.red, #events-showcase .event.tour, #events-calendar .event.tour {
+.red, #events-showcase .event.tour, #events-calendar .event.tour, #events-related .event.tour {
   stroke: #ff4c44; }
 
-.yellow, #events-showcase .event.workshop, #events-calendar .event.workshop {
+.yellow, #events-showcase .event.workshop, #events-calendar .event.workshop, #events-related .event.workshop {
   stroke: #fed100; }
 
-body.blue .bg-color, #events-showcase body.event.panel .bg-color, #events-calendar body.event.panel .bg-color {
+body.blue .bg-color, #events-showcase body.event.panel .bg-color, #events-calendar body.event.panel .bg-color, #events-related body.event.panel .bg-color {
   color: #fde7da; }
-body.green .bg-color, #events-showcase body.event.film .bg-color, #events-calendar body.event.film .bg-color {
+body.green .bg-color, #events-showcase body.event.film .bg-color, #events-calendar body.event.film .bg-color, #events-related body.event.film .bg-color {
   color: #ede8db; }
-body.yellow .bg-color, #events-showcase body.event.workshop .bg-color, #events-calendar body.event.workshop .bg-color {
+body.yellow .bg-color, #events-showcase body.event.workshop .bg-color, #events-calendar body.event.workshop .bg-color, #events-related body.event.workshop .bg-color {
   color: #dcece8; }
-body.red .bg-color, #events-showcase body.event.tour .bg-color, #events-calendar body.event.tour .bg-color {
+body.red .bg-color, #events-showcase body.event.tour .bg-color, #events-calendar body.event.tour .bg-color, #events-related body.event.tour .bg-color {
   color: #fafadc; }
 
 @font-face {
@@ -46,7 +46,7 @@ body.red .bg-color, #events-showcase body.event.tour .bg-color, #events-calendar
   font-size: 54px;
   line-height: 1; }
 
-.s-big, #content-single-event h3 {
+.s-big {
   font-size: 32px;
   line-height: 1; }
 
@@ -610,24 +610,24 @@ svg {
       top: 50%;
       width: 8vw; }
 
-body.blue a.underline, #events-showcase body.event.panel a.underline, #events-calendar body.event.panel a.underline {
+body.blue a.underline, #events-showcase body.event.panel a.underline, #events-calendar body.event.panel a.underline, #events-related body.event.panel a.underline {
   border-bottom: 0.12em solid #fde7da; }
-  body.blue a.underline:hover, #events-showcase body.event.panel a.underline:hover, #events-calendar body.event.panel a.underline:hover {
+  body.blue a.underline:hover, #events-showcase body.event.panel a.underline:hover, #events-calendar body.event.panel a.underline:hover, #events-related body.event.panel a.underline:hover {
     color: #fde7da; }
 
-body.green a.underline, #events-showcase body.event.film a.underline, #events-calendar body.event.film a.underline {
+body.green a.underline, #events-showcase body.event.film a.underline, #events-calendar body.event.film a.underline, #events-related body.event.film a.underline {
   border-bottom: 0.12em solid #ede8db; }
-  body.green a.underline:hover, #events-showcase body.event.film a.underline:hover, #events-calendar body.event.film a.underline:hover {
+  body.green a.underline:hover, #events-showcase body.event.film a.underline:hover, #events-calendar body.event.film a.underline:hover, #events-related body.event.film a.underline:hover {
     color: #ede8db; }
 
-body.yellow a.underline, #events-showcase body.event.workshop a.underline, #events-calendar body.event.workshop a.underline {
+body.yellow a.underline, #events-showcase body.event.workshop a.underline, #events-calendar body.event.workshop a.underline, #events-related body.event.workshop a.underline {
   border-bottom: 0.12em solid #dcece8; }
-  body.yellow a.underline:hover, #events-showcase body.event.workshop a.underline:hover, #events-calendar body.event.workshop a.underline:hover {
+  body.yellow a.underline:hover, #events-showcase body.event.workshop a.underline:hover, #events-calendar body.event.workshop a.underline:hover, #events-related body.event.workshop a.underline:hover {
     color: #dcece8; }
 
-body.red a.underline, #events-showcase body.event.tour a.underline, #events-calendar body.event.tour a.underline {
+body.red a.underline, #events-showcase body.event.tour a.underline, #events-calendar body.event.tour a.underline, #events-related body.event.tour a.underline {
   border-bottom: 0.12em solid #fafadc; }
-  body.red a.underline:hover, #events-showcase body.event.tour a.underline:hover, #events-calendar body.event.tour a.underline:hover {
+  body.red a.underline:hover, #events-showcase body.event.tour a.underline:hover, #events-calendar body.event.tour a.underline:hover, #events-related body.event.tour a.underline:hover {
     color: #fafadc; }
 
 .content {
@@ -686,9 +686,13 @@ body[data-color='red'] #content-home {
     margin-bottom: 22px; }
   #content-home .slider .slide p > strong {
     font-weight: normal; }
-#content-home #showcase-header {
+
+.white-header {
   background-color: white;
-  border-bottom: 5px solid #43454a; }
+  padding-top: 15px;
+  padding-bottom: 7.5px;
+  border-bottom: 5px solid #43454a;
+  border-top: 5px solid #43454a; }
 
 .svg-container {
   height: 100%;
@@ -724,37 +728,37 @@ body[data-color='red'] #content-home {
     stroke-dashoffset: var(--total-length); }
   to {
     stroke-dashoffset: 0; } }
-#events-showcase .event, #events-calendar .event {
+#events-showcase .event, #events-calendar .event, #events-related .event {
   height: calc(100vh - 18vw);
   border-bottom: 5px solid white;
   position: relative; }
-  #events-showcase .event:hover .svg-container.animated-shape, #events-calendar .event:hover .svg-container.animated-shape {
+  #events-showcase .event:hover .svg-container.animated-shape, #events-calendar .event:hover .svg-container.animated-shape, #events-related .event:hover .svg-container.animated-shape {
     opacity: 1; }
-    #events-showcase .event:hover .svg-container.animated-shape svg, #events-calendar .event:hover .svg-container.animated-shape svg {
+    #events-showcase .event:hover .svg-container.animated-shape svg, #events-calendar .event:hover .svg-container.animated-shape svg, #events-related .event:hover .svg-container.animated-shape svg {
       --looping-percent: 90;
       animation-play-state: running !important; }
-  #events-showcase .event:last-of-type, #events-calendar .event:last-of-type {
+  #events-showcase .event:last-of-type, #events-calendar .event:last-of-type, #events-related .event:last-of-type {
     border-bottom: none; }
-  #events-showcase .event .title a, #events-calendar .event .title a {
+  #events-showcase .event .title a, #events-calendar .event .title a, #events-related .event .title a {
     color: #43454a;
     font-size: 50%; }
-    #events-showcase .event .title a span, #events-calendar .event .title a span {
+    #events-showcase .event .title a span, #events-calendar .event .title a span, #events-related .event .title a span {
       font-size: 200%; }
-  #events-showcase .event.panel, #events-calendar .event.panel {
+  #events-showcase .event.panel, #events-calendar .event.panel, #events-related .event.panel {
     background: #fde7da no-repeat center center; }
-    #events-showcase .event.panel h5, #events-showcase .event.panel h5 > a, #events-calendar .event.panel h5, #events-calendar .event.panel h5 > a {
+    #events-showcase .event.panel h5, #events-showcase .event.panel h5 > a, #events-calendar .event.panel h5, #events-calendar .event.panel h5 > a, #events-related .event.panel h5, #events-related .event.panel h5 > a {
       color: #3f89ff; }
-  #events-showcase .event.tour, #events-calendar .event.tour {
+  #events-showcase .event.tour, #events-calendar .event.tour, #events-related .event.tour {
     background: #fafadc no-repeat center center; }
-    #events-showcase .event.tour h5, #events-showcase .event.tour h5 > a, #events-calendar .event.tour h5, #events-calendar .event.tour h5 > a {
+    #events-showcase .event.tour h5, #events-showcase .event.tour h5 > a, #events-calendar .event.tour h5, #events-calendar .event.tour h5 > a, #events-related .event.tour h5, #events-related .event.tour h5 > a {
       color: #ff4c44; }
-  #events-showcase .event.workshop, #events-calendar .event.workshop {
+  #events-showcase .event.workshop, #events-calendar .event.workshop, #events-related .event.workshop {
     background: #dcece8 no-repeat center center; }
-    #events-showcase .event.workshop h5, #events-showcase .event.workshop h5 > a, #events-calendar .event.workshop h5, #events-calendar .event.workshop h5 > a {
+    #events-showcase .event.workshop h5, #events-showcase .event.workshop h5 > a, #events-calendar .event.workshop h5, #events-calendar .event.workshop h5 > a, #events-related .event.workshop h5, #events-related .event.workshop h5 > a {
       color: #fed100; }
-  #events-showcase .event.film, #events-calendar .event.film {
+  #events-showcase .event.film, #events-calendar .event.film, #events-related .event.film {
     background: #ede8db no-repeat center center; }
-    #events-showcase .event.film h5, #events-showcase .event.film h5 > a, #events-calendar .event.film h5, #events-calendar .event.film h5 > a {
+    #events-showcase .event.film h5, #events-showcase .event.film h5 > a, #events-calendar .event.film h5, #events-calendar .event.film h5 > a, #events-related .event.film h5, #events-related .event.film h5 > a {
       color: #b5d300; }
 
 #content-single-event {
@@ -779,6 +783,8 @@ body[data-color='red'] #content-home {
       color: #fed100; }
     body[data-color='red'] #content-single-event strong, body[data-color='red'] #content-single-event h5, body[data-color='red'] #content-single-event h5 a {
       color: #ff4c44; }
+  #content-single-event .hentry {
+    padding-bottom: 20vh; }
   #content-single-event h6 {
     font-weight: normal; }
   #content-single-event .speaker.accordion-btn {
@@ -805,14 +811,6 @@ body[data-color='red'] #content-home {
     background-blend-mode: screen;
     background-size: cover !important;
     overflow: hidden; }
-    #content-single-event .event-category-panel .event-img .event-shape, #content-single-event .event-category-panel .portrait .event-shape {
-      background: url("../TUM-theme/assets/svg/TUM_panel_shape-light.svg") no-repeat center center;
-      background-size: 33vh;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%; }
     #content-single-event .event-category-panel .event-img::after, #content-single-event .event-category-panel .portrait::after {
       content: '';
       position: absolute;
@@ -823,113 +821,51 @@ body[data-color='red'] #content-home {
       mix-blend-mode: multiply;
       pointer-events: none;
       background-color: #fde7da; }
-  #content-single-event .event-category-panel .button {
-    border-color: #3f89ff; }
-    #content-single-event .event-category-panel .button a {
-      color: #3f89ff; }
-    #content-single-event .event-category-panel .button:hover {
-      background-color: #3f89ff; }
-      #content-single-event .event-category-panel .button:hover a {
-        color: #fde7da; }
-  #content-single-event .event-category-tour {
-    background-color: #dcece8; }
-    #content-single-event .event-category-tour .event-img {
-      position: relative;
-      background-color: #fed100 !important;
-      background-blend-mode: screen;
-      background-size: cover !important; }
-      #content-single-event .event-category-tour .event-img .event-shape {
-        background: url("../TUM-theme/assets/svg/TUM_panel_shape-light.svg") no-repeat center center;
-        background-size: 33vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; }
-      #content-single-event .event-category-tour .event-img::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        mix-blend-mode: multiply;
-        pointer-events: none;
-        background-color: #dcece8; }
-    #content-single-event .event-category-tour .button {
-      border-color: #fed100; }
-      #content-single-event .event-category-tour .button a {
-        color: #fed100; }
-      #content-single-event .event-category-tour .button:hover {
-        background-color: #fed100; }
-        #content-single-event .event-category-tour .button:hover a {
-          color: #dcece8; }
-  #content-single-event .event-category-workshop {
-    background-color: #fafadc; }
-    #content-single-event .event-category-workshop .event-img {
-      position: relative;
-      background-color: #ff4c44 !important;
-      background-blend-mode: screen;
-      background-size: cover !important; }
-      #content-single-event .event-category-workshop .event-img .event-shape {
-        background: url("../TUM-theme/assets/svg/TUM_panel_shape-light.svg") no-repeat center center;
-        background-size: 33vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; }
-      #content-single-event .event-category-workshop .event-img::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        mix-blend-mode: multiply;
-        pointer-events: none;
-        background-color: #fafadc; }
-    #content-single-event .event-category-workshop .button {
-      border-color: #ff4c44; }
-      #content-single-event .event-category-workshop .button a {
-        color: #ff4c44; }
-      #content-single-event .event-category-workshop .button:hover {
-        background-color: #ff4c44; }
-        #content-single-event .event-category-workshop .button:hover a {
-          color: #fafadc; }
-  #content-single-event .event-category-film {
-    background-color: #ede8db; }
-    #content-single-event .event-category-film .event-img {
-      position: relative;
-      background-color: #b5d300 !important;
-      background-blend-mode: screen;
-      background-size: cover !important; }
-      #content-single-event .event-category-film .event-img .event-shape {
-        background: url("../TUM-theme/assets/svg/TUM_panel_shape-light.svg") no-repeat center center;
-        background-size: 33vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; }
-      #content-single-event .event-category-film .event-img::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        mix-blend-mode: multiply;
-        pointer-events: none;
-        background-color: #ede8db; }
-    #content-single-event .event-category-film .button {
-      border-color: #b5d300; }
-      #content-single-event .event-category-film .button a {
-        color: #b5d300; }
-      #content-single-event .event-category-film .button:hover {
-        background-color: #b5d300; }
-        #content-single-event .event-category-film .button:hover a {
-          color: #ede8db; }
+  #content-single-event .event-category-tour .event-img {
+    position: relative;
+    background-color: #fed100 !important;
+    background-blend-mode: screen;
+    background-size: cover !important; }
+    #content-single-event .event-category-tour .event-img::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      background-color: #dcece8; }
+  #content-single-event .event-category-workshop .event-img {
+    position: relative;
+    background-color: #ff4c44 !important;
+    background-blend-mode: screen;
+    background-size: cover !important; }
+    #content-single-event .event-category-workshop .event-img::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      background-color: #fafadc; }
+  #content-single-event .event-category-film .event-img {
+    position: relative;
+    background-color: #b5d300 !important;
+    background-blend-mode: screen;
+    background-size: cover !important; }
+    #content-single-event .event-category-film .event-img::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      background-color: #ede8db; }
 
 #content-page .main-text, #content-single-event .main-text {
   column-count: 2;
@@ -1070,7 +1006,7 @@ div.wpforms-container-full .wpforms-form {
       margin-top: 30px;
       break-before: unset; } }
 @media screen and (max-width: 640px) {
-  .s-large, .s-big, #content-single-event h3, .s-medium, #header div[class*="menu-1"] ul li {
+  .s-large, .s-big, .s-medium, #header div[class*="menu-1"] ul li {
     font-size: 7vw; }
 
   #header {
