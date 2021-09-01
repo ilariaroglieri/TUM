@@ -145,6 +145,10 @@ $headerH: 18vw;
   text-transform: uppercase;
 }
 
+.btn:hover {
+  text-decoration: underline;
+}
+
 .button {
   border: 5px solid;
   padding: 5px 10px;
@@ -304,28 +308,6 @@ $headerH: 18vw;
   }
 }
 
-.dark-bnd {
-  p a, h3 {
-    color: white !important;
-  }
-  @at-root body[data-color='blue'] & {
-    background-color: $blue;
-    color: $blue-bg;
-  }
-  @at-root body[data-color='green'] & {
-    background-color: $green;
-    color: $green-bg;
-  }
-  @at-root body[data-color='yellow'] & {
-    background-color: $yellow;
-    color: $yellow-bg;
-  }
-  @at-root body[data-color='red'] & {
-    background-color: $red;
-    color: $red-bg;
-  }
-}
-
 .no-indent {
   text-indent: 0;
 }
@@ -371,6 +353,29 @@ ul {
 
 li {
 }
+
+.dark-bnd, .dark-bnd a {
+  p a, h3 {
+    color: white !important;
+  }
+  @at-root body[data-color='blue'] & {
+    background-color: $blue;
+    color: $blue-bg;
+  }
+  @at-root body[data-color='green'] & {
+    background-color: $green;
+    color: $green-bg;
+  }
+  @at-root body[data-color='yellow'] & {
+    background-color: $yellow;
+    color: $yellow-bg;
+  }
+  @at-root body[data-color='red'] & {
+    background-color: $red;
+    color: $red-bg;
+  }
+}
+
 
 .container-fluid-w-p {
   margin: 0 $half-spacing;
@@ -654,6 +659,9 @@ body.red {
       @at-root body[data-color='red'] & {
         color: $red;
       }
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -828,7 +836,7 @@ svg.animated-shape {
   p {
     margin-bottom: 22px;
   }
-  strong, h5 {
+  strong, h5, h5 a {
     font-weight: normal;
     @at-root body[data-color='blue'] & {
       color: $blue;

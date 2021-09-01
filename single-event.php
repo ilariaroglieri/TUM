@@ -34,9 +34,26 @@
         <div class="event-img half-height" style="background: <?php if ($img):?>url( <?php echo $img[0]; ?>) <?php endif; ?> center center no-repeat">
           <div class="event-shape"></div>
         </div>
+
+        <div class="dark-bnd">
+          <div class="d-flex flex-row between spacing-p-t-1 spacing-p-b-1">
+            <div class="event_type">
+              <?php $eventType = get_field('tipo_evento'); ?>
+              <h4 class="uppercase"><?= $eventType; ?></h4>
+            </div>
+
+            <div class="venue">
+              <?php $venues = get_the_terms($post->ID, 'event-venue'); ?>
+              <?php foreach( $venues as $venue ) { ?>
+                <h4 class="uppercase"><?php echo $venue->name ?></h4>
+              <?php } ?>
+            </div>
+          </div>
+        </div>
+
         
         <div class="max-width d-flex t-column flex-row spacing-p-t-2 spacing-p-b-2">
-          <div class="main-text d-whole">
+          <div class="main-text">
             <?php the_content(); ?>
           </div>
         </div>
@@ -59,6 +76,7 @@
                     <div class="info d-two-thirds t-whole">
                       <h3 class="uppercase"><?= $name; ?></h3>
                       <h6 class="s-small spacing-b-1"><?= $qualifica; ?></h6>
+                      <h4 class="btn s-small uppercase">Leggi bio</h4>
                     </div>
                   </div>
 
@@ -85,6 +103,7 @@
                       <div class="info d-two-thirds t-whole">
                         <h3 class="uppercase"><?= $name; ?></h3>
                         <h6 class="s-small spacing-b-1"><?= $qualifica; ?></h6>
+                        <h4 class="btn s-small uppercase">Leggi bio</h4>
                       </div>
                     </div>
 
@@ -97,11 +116,22 @@
               </div>
             </div>
           </div>
-        <?php endif; ?>
 
-        <div class="button flex-row spacing-t-2 spacing-b-2">
-          <a href="<?php echo get_page_link(42); ?>">Registrati</a>
-        </div>
+          <div class="d-flex v-center max-width flex-row spacing-p-b-2 spacing-p-t-2">
+            <div class="button">
+              <?php if ($eventType == 'Evento gratuito con prenotazione'): ?>
+                <a class="uppercase" href="<?php echo get_page_link(42); ?>">Registrati</a>
+              <?php elseif ($eventType == 'Evento a pagamento'): ?>
+                <?php $link = get_field('link_iscrizione_evento_a_pagamento'); ?>
+                <a class="uppercase" href="<?= $link; ?>">Registrati</a>
+              <?php else: ?>
+                <a class="uppercase" href="<?php echo get_page_link(42); ?>">Registrati</a>
+              <?php endif; ?>
+            </div>
+          </div>
+
+
+        <?php endif; ?>
 
       </article>
     </div>

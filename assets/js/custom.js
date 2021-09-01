@@ -51,7 +51,14 @@ jQuery(document).ready(function($) {
   // });
 
 $('.accordion-btn').click(function() {
-  $(this).next($('.accordion-content')).toggleClass('active');
+  var content = $(this).next($('.accordion-content'));
+  content.toggleClass('active');
+
+  if (content.hasClass('active')) {
+    $(this).find($('.btn')).html('Chiudi bio');
+  } else {
+    $(this).find($('.btn')).html('Leggi bio');
+  }
 });
 
 //--------- SVG SNAP JS -----------
