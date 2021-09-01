@@ -376,6 +376,11 @@ li {
   }
 }
 
+svg {
+  fill: none;
+  stroke-width: 1vw;
+}
+
 
 .container-fluid-w-p {
   margin: 0 $half-spacing;
@@ -733,12 +738,38 @@ body.red {
 }
 
 // svg animations
-svg.animated-shape {
-  // stroke-width: 17;
-  --looping-percent: 100;
-  --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
-  stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
-  animation: loading-loop var(--animation-time) linear infinite;
+.svg-container {
+  height: 100%;
+  width: 100%;
+  padding: $double-spacing;
+  top: 0;
+  z-index:0;
+  position: absolute;
+  &.light-color {
+    @at-root body[data-color='blue'] & {
+      stroke: $blue-bg;
+    }
+    @at-root body[data-color='green'] & {
+      stroke: $green-bg;
+    }
+    @at-root body[data-color='yellow'] & {
+      stroke: $yellow-bg;
+    }
+    @at-root body[data-color='red'] & {
+      stroke: $red-bg;
+    }
+  }
+  &.animated-shape {
+    opacity: 0;
+    @include transition(opacity .3s);
+    svg {
+      animation-play-state: paused;
+      --looping-percent: 100;
+      --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
+      stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
+      animation: loading-loop var(--animation-time) linear infinite;
+    }
+  }
 }
 
 @keyframes loading-loop {
@@ -753,9 +784,9 @@ svg.animated-shape {
     border-bottom: 5px solid white;
     position: relative;
     &:hover {
-      .svg-container {
+      .svg-container.animated-shape {
         opacity: 1;
-        svg.animated-shape {
+        svg {
           --looping-percent: 90;
           animation-play-state: running !important;
         }
@@ -769,19 +800,6 @@ svg.animated-shape {
       font-size: 50%; 
       span { 
         font-size: 200%; 
-      }
-    }
-    .svg-container {
-      height: 100%;
-      width: 100%;
-      padding: $double-spacing;
-      top: 0;
-      z-index:0;
-      position: absolute;
-      opacity: 0;
-      @include transition(opacity .3s);
-      svg.animated-shape {
-        animation-play-state: paused;
       }
     }
     &.panel {
@@ -1273,7 +1291,7 @@ div.wpforms-container-full .wpforms-form {
 
 @media screen and (max-width: $mobile) {
   .s-large, .s-big, .s-medium {
-    font-size: 8vw;
+    font-size: 7vw;
   }
   #header {
     height: 23vw;

@@ -3,7 +3,8 @@
   $venues = get_the_terms($post->ID, 'event-venue');
   ?>
   <div class="event <?php echo $cats[0]->slug; ?> d-flex column between spacing-p-t-1 spacing-p-b-1">
-    <div class="svg-container">
+    <div class="svg-container animated-shape">
+      <?php $cat = $cats[0]->slug; ?>
       <?php include ('svg-shapes.php'); ?>
     </div>
 

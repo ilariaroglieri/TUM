@@ -63,7 +63,7 @@ $('.accordion-btn').click(function() {
 
 //--------- SVG SNAP JS -----------
 
-const shapes = document.querySelectorAll('svg.animated-shape');
+const shapes = document.querySelectorAll('.animated-shape svg');
 
 Array.from(shapes).forEach((el, i) => {
   var path = el.querySelector('path').getTotalLength();

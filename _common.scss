@@ -21,31 +21,25 @@ $yellow-bg: #dcece8;
 
 // colors
 .line {
-  fill: none;
-  stroke-width: 12px;
   stroke: $primaryColor;
 }
+
 .blue {
-  fill: none;
-  stroke-width: 12px;
   stroke: $blue;
+  div.light-color & {
+    stroke: $blue-bg;
+  }
 }
 
 .green {
-  fill: none;
-  stroke-width: 12px;
   stroke: $green;
 }
 
 .red {
-  fill: none;
-  stroke-width: 12px;
   stroke: $red;
 }
 
 .yellow {
-  fill: none;
-  stroke-width: 12px;
   stroke: $yellow;
 }
 

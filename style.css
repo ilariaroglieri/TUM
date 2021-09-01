@@ -4,28 +4,20 @@ Author: Ilaria roglieri
 Version: 1.0
 */
 .line {
-  fill: none;
-  stroke-width: 12px;
   stroke: #43454a; }
 
 .blue, #events-showcase .event.panel, #events-calendar .event.panel {
-  fill: none;
-  stroke-width: 12px;
   stroke: #3f89ff; }
+  div.light-color .blue, div.light-color #events-showcase .event.panel, #events-showcase div.light-color .event.panel, div.light-color #events-calendar .event.panel, #events-calendar div.light-color .event.panel {
+    stroke: #fde7da; }
 
 .green, #events-showcase .event.film, #events-calendar .event.film {
-  fill: none;
-  stroke-width: 12px;
   stroke: #b5d300; }
 
 .red, #events-showcase .event.tour, #events-calendar .event.tour {
-  fill: none;
-  stroke-width: 12px;
   stroke: #ff4c44; }
 
 .yellow, #events-showcase .event.workshop, #events-calendar .event.workshop {
-  fill: none;
-  stroke-width: 12px;
   stroke: #fed100; }
 
 body.blue .bg-color, #events-showcase body.event.panel .bg-color, #events-calendar body.event.panel .bg-color {
@@ -417,6 +409,10 @@ body[data-color='red'] .dark-bnd, body[data-color='red'] .dark-bnd a {
   background-color: #ff4c44;
   color: #fafadc; }
 
+svg {
+  fill: none;
+  stroke-width: 1vw; }
+
 .container-fluid-w-p {
   margin: 0 15px;
   position: relative;
@@ -694,11 +690,34 @@ body[data-color='red'] #content-home {
   background-color: white;
   border-bottom: 5px solid #43454a; }
 
-svg.animated-shape {
-  --looping-percent: 100;
-  --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
-  stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
-  animation: loading-loop var(--animation-time) linear infinite; }
+.svg-container {
+  height: 100%;
+  width: 100%;
+  padding: 60px;
+  top: 0;
+  z-index: 0;
+  position: absolute; }
+  body[data-color='blue'] .svg-container.light-color {
+    stroke: #fde7da; }
+  body[data-color='green'] .svg-container.light-color {
+    stroke: #ede8db; }
+  body[data-color='yellow'] .svg-container.light-color {
+    stroke: #dcece8; }
+  body[data-color='red'] .svg-container.light-color {
+    stroke: #fafadc; }
+  .svg-container.animated-shape {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
+    .svg-container.animated-shape svg {
+      animation-play-state: paused;
+      --looping-percent: 100;
+      --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
+      stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
+      animation: loading-loop var(--animation-time) linear infinite; }
 
 @keyframes loading-loop {
   from {
@@ -709,9 +728,9 @@ svg.animated-shape {
   height: calc(100vh - 18vw);
   border-bottom: 5px solid white;
   position: relative; }
-  #events-showcase .event:hover .svg-container, #events-calendar .event:hover .svg-container {
+  #events-showcase .event:hover .svg-container.animated-shape, #events-calendar .event:hover .svg-container.animated-shape {
     opacity: 1; }
-    #events-showcase .event:hover .svg-container svg.animated-shape, #events-calendar .event:hover .svg-container svg.animated-shape {
+    #events-showcase .event:hover .svg-container.animated-shape svg, #events-calendar .event:hover .svg-container.animated-shape svg {
       --looping-percent: 90;
       animation-play-state: running !important; }
   #events-showcase .event:last-of-type, #events-calendar .event:last-of-type {
@@ -721,21 +740,6 @@ svg.animated-shape {
     font-size: 50%; }
     #events-showcase .event .title a span, #events-calendar .event .title a span {
       font-size: 200%; }
-  #events-showcase .event .svg-container, #events-calendar .event .svg-container {
-    height: 100%;
-    width: 100%;
-    padding: 60px;
-    top: 0;
-    z-index: 0;
-    position: absolute;
-    opacity: 0;
-    -webkit-transition: opacity 0.3s;
-    -moz-transition: opacity 0.3s;
-    -ms-transition: opacity 0.3s;
-    -o-transition: opacity 0.3s;
-    transition: opacity 0.3s; }
-    #events-showcase .event .svg-container svg.animated-shape, #events-calendar .event .svg-container svg.animated-shape {
-      animation-play-state: paused; }
   #events-showcase .event.panel, #events-calendar .event.panel {
     background: #fde7da no-repeat center center; }
     #events-showcase .event.panel h5, #events-showcase .event.panel h5 > a, #events-calendar .event.panel h5, #events-calendar .event.panel h5 > a {
@@ -1067,7 +1071,7 @@ div.wpforms-container-full .wpforms-form {
       break-before: unset; } }
 @media screen and (max-width: 640px) {
   .s-large, .s-big, #content-single-event h3, .s-medium, #header div[class*="menu-1"] ul li {
-    font-size: 8vw; }
+    font-size: 7vw; }
 
   #header {
     height: 23vw; }
