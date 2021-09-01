@@ -376,6 +376,22 @@ li {
   }
 }
 
+strong, h5, h5 a {
+  font-weight: normal;
+  @at-root body[data-color='blue'] & {
+    color: $blue;
+  }
+  @at-root body[data-color='green'] & {
+    color: $green;
+  }
+  @at-root body[data-color='yellow'] & {
+    color: $yellow;
+  }
+  @at-root body[data-color='red'] & {
+    color: $red;
+  }
+}
+
 svg {
   fill: none;
   stroke-width: 1vw;
@@ -857,21 +873,6 @@ body.red {
   }
   p {
     margin-bottom: 22px;
-  }
-  strong, h5, h5 a {
-    font-weight: normal;
-    @at-root body[data-color='blue'] & {
-      color: $blue;
-    }
-    @at-root body[data-color='green'] & {
-      color: $green;
-    }
-    @at-root body[data-color='yellow'] & {
-      color: $yellow;
-    }
-    @at-root body[data-color='red'] & {
-      color: $red;
-    }
   }
   .hentry {
     padding-bottom: 20vh;

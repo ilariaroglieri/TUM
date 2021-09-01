@@ -8,8 +8,6 @@ Version: 1.0
 
 .blue, #events-showcase .event.panel, #events-calendar .event.panel, #events-related .event.panel {
   stroke: #3f89ff; }
-  div.light-color .blue, div.light-color #events-showcase .event.panel, #events-showcase div.light-color .event.panel, div.light-color #events-calendar .event.panel, #events-calendar div.light-color .event.panel, div.light-color #events-related .event.panel, #events-related div.light-color .event.panel {
-    stroke: #fde7da; }
 
 .green, #events-showcase .event.film, #events-calendar .event.film, #events-related .event.film {
   stroke: #b5d300; }
@@ -409,6 +407,17 @@ body[data-color='red'] .dark-bnd, body[data-color='red'] .dark-bnd a {
   background-color: #ff4c44;
   color: #fafadc; }
 
+strong, h5, h5 a {
+  font-weight: normal; }
+  body[data-color='blue'] strong, body[data-color='blue'] h5, body[data-color='blue'] h5 a {
+    color: #3f89ff; }
+  body[data-color='green'] strong, body[data-color='green'] h5, body[data-color='green'] h5 a {
+    color: #b5d300; }
+  body[data-color='yellow'] strong, body[data-color='yellow'] h5, body[data-color='yellow'] h5 a {
+    color: #fed100; }
+  body[data-color='red'] strong, body[data-color='red'] h5, body[data-color='red'] h5 a {
+    color: #ff4c44; }
+
 svg {
   fill: none;
   stroke-width: 1vw; }
@@ -773,16 +782,6 @@ body[data-color='red'] #content-home {
     background-color: #fafadc; }
   #content-single-event p {
     margin-bottom: 22px; }
-  #content-single-event strong, #content-single-event h5, #content-single-event h5 a {
-    font-weight: normal; }
-    body[data-color='blue'] #content-single-event strong, body[data-color='blue'] #content-single-event h5, body[data-color='blue'] #content-single-event h5 a {
-      color: #3f89ff; }
-    body[data-color='green'] #content-single-event strong, body[data-color='green'] #content-single-event h5, body[data-color='green'] #content-single-event h5 a {
-      color: #b5d300; }
-    body[data-color='yellow'] #content-single-event strong, body[data-color='yellow'] #content-single-event h5, body[data-color='yellow'] #content-single-event h5 a {
-      color: #fed100; }
-    body[data-color='red'] #content-single-event strong, body[data-color='red'] #content-single-event h5, body[data-color='red'] #content-single-event h5 a {
-      color: #ff4c44; }
   #content-single-event .hentry {
     padding-bottom: 20vh; }
   #content-single-event h6 {

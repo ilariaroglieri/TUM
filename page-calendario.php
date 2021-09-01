@@ -8,6 +8,11 @@
       <div class="title">
         <h1 class="spacing-p-t-1 s-large uppercase"><?php the_title(); ?></h1>
       </div>
+
+      <div class="main-text max-width spacing-t-2 spacing-b-2">
+        <?php the_content();?>
+      </div>
+
     </div>
 
     <div class="container-fluid">

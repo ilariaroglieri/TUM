@@ -108,7 +108,7 @@
                     <div class="speaker accordion-btn d-flex flex-row-neg t-column spacing-p-b-2">
                       <div class="portrait d-one-third t-whole" style="background: url( <?php echo $ritratto['url'];?> )"></div>
                       <div class="info d-two-thirds t-whole">
-                        <h3 class="uppercase"><?= $name; ?></h3>
+                        <h3 class="s-big uppercase"><?= $name; ?></h3>
                         <h6 class="s-small spacing-b-1"><?= $qualifica; ?></h6>
                         <h4 class="btn s-small uppercase">Leggi bio</h4>
                       </div>

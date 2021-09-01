@@ -26,9 +26,6 @@ $yellow-bg: #dcece8;
 
 .blue {
   stroke: $blue;
-  div.light-color & {
-    stroke: $blue-bg;
-  }
 }
 
 .green {
