@@ -69,7 +69,8 @@
           <div class="dark-bnd">
             <div class="max-width d-flex t-column spacing-p-t-2 spacing-p-b-1">
               <div class="speakers-list d-half t-whole">
-                <h2 class="uppercase spacing-b-1">Speakers</h2>
+                <?php $title = get_field('titolo_blocco'); ?>
+                <h2 class="uppercase spacing-b-1"><?= $title; ?></h2>
 
                 <?php while( have_rows('persona') ) : the_row();
 
@@ -98,7 +99,8 @@
 
               <div class="moderator-list d-half t-whole">
                 <?php if( have_rows('moderator') ): ?>
-                  <h2 class="uppercase spacing-b-1">Moderatore</h2>
+                  <?php $title = get_field('titolo_blocco_2'); ?>
+                  <h2 class="uppercase spacing-b-1"><?= $title; ?></h2>
 
                   <?php while( have_rows('moderator') ) : the_row();
 
@@ -127,17 +129,35 @@
           </div>
         <?php endif; ?>
 
-        <div class="d-flex v-center max-width flex-row spacing-p-b-2 spacing-p-t-2">
-          <div class="button">
-            <?php if ($eventType == 'Evento gratuito con prenotazione'): ?>
-              <a class="uppercase" href="<?php echo get_page_link(42); ?>">Registrati</a>
-            <?php elseif ($eventType == 'Evento a pagamento'): ?>
-              <?php $link = get_field('link_iscrizione_evento_a_pagamento'); ?>
-              <a class="uppercase" href="<?= $link; ?>">Registrati</a>
+        <div class="d-flex half-max-width flex-row spacing-p-b-2 spacing-p-t-2">
+          <?php if ($eventType == 'Evento gratuito con prenotazione'): ?>
+            <?php $link = get_field('link_esterno'); ?>
+            <?php if ($link): ?>
+              <div class="button">
+                <a class="uppercase" href="<?php echo $link; ?>">Registrati qui</a>
+              </div>
             <?php else: ?>
-              <a class="uppercase" href="<?php echo get_page_link(42); ?>">Registrati</a>
+              <?php echo do_shortcode('[mc4wp_form id="226"]'); ?>
             <?php endif; ?>
-          </div>
+          <?php elseif ($eventType == 'Evento a pagamento'): ?>
+            <?php if ($link): ?>
+              <div class="button">
+                <a class="uppercase" href="<?php echo $link; ?>">Compra qui</a>
+              </div>
+            <?php else: ?>
+              <?php echo do_shortcode('[mc4wp_form id="226"]'); ?>
+            <?php endif; ?>
+          <?php else: ?>
+            <?php $embed = get_field('embed_esterno'); ?>
+            <?php if ($embed): ?>
+              <div class="button">
+                <p class="uppercase">Guarda in streaming su questo sito</p>
+              </div>
+            <?php else: ?>
+               <?php echo do_shortcode('[mc4wp_form id="226"]'); ?>
+            <?php endif; ?>
+          <?php endif; ?>
+        </div>
         </div>
 
       </article>

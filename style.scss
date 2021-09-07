@@ -127,6 +127,10 @@ $headerH: 18vw;
   max-width: $desktop-mini;
 }
 
+.half-max-width {
+  max-width: $desktop-mini/2;
+}
+
 .f-right {
   text-align: right;
   float: right;
@@ -971,7 +975,101 @@ body.red {
 }
 
 // cf7
+
+
+input[type=text],
+input[type=email],
+input[type=url] {
+  width: 100%;
+  border: none !important;
+  border-bottom: 5px solid !important;
+  border-radius: none !important;
+  padding: 5px 0;
+  height: 38px;
+  background-color: transparent !important;
+  @extend .s-small;
+  color: $primaryColor;
+  @at-root body[data-color='blue'] & {
+    border-color: $blue !important;
+  }
+  @at-root body[data-color='green'] & {
+    border-color: $green !important;
+  }
+  @at-root body[data-color='yellow'] & {
+    border-color: $yellow !important;
+  }
+  @at-root body[data-color='red'] & {
+    border-color: $red !important;
+  }
+}
+select {
+  width: 100%;
+  padding: 5px;
+  height: 38px;
+  margin: $half-spacing 0;
+  @extend .s-small;
+}
+textarea {
+  width: 100%;
+  border: 5px solid !important;
+  border-radius: none !important;
+  @at-root body[data-color='blue'] & {
+    border-color: $blue !important;
+  }
+  @at-root body[data-color='green'] & {
+    border-color: $green !important;
+  }
+  @at-root body[data-color='yellow'] & {
+    border-color: $yellow !important;
+  }
+  @at-root body[data-color='red'] & {
+    border-color: $red !important;
+  }
+}
+input[type="submit"] {
+  border: 5px solid !important;
+  background-color: transparent !important;
+  border-radius: none !important;
+  padding: 5px 10px;
+  margin: $half-spacing 0;
+  cursor: pointer;
+  @extend .s-regular;
+  @at-root body[data-color='blue'] & {
+    border-color: $blue;
+    @extend .uppercase;
+    color: $blue;
+    &:hover {
+      background-color: $blue-bg !important;
+    }
+  }
+  @at-root body[data-color='green'] & {
+    border-color: $green;
+    @extend .uppercase;
+    color: $green;
+    &:hover {
+      background-color: $green-bg !important;
+    }
+  }
+  @at-root body[data-color='yellow'] & {
+    border-color: $yellow;
+    @extend .uppercase;
+    color: $yellow;
+    &:hover {
+      background-color: $yellow-bg !important;
+    }
+  }
+  @at-root body[data-color='red'] & {
+    border-color: $red;
+    @extend .uppercase;
+    color: $red;
+    &:hover {
+      background-color: $red-bg !important;
+    }
+  }
+}
+
 .wpcf7-form {
+  max-width: 800px;
   .d-flex {
     margin-bottom: $spacing;
     @extend .flex-row-neg;
@@ -979,98 +1077,8 @@ body.red {
   label {
     @extend .uppercase;
   }
-  max-width: 800px;
-  input[type=text],
-  input[type=email],
-  input[type=url] {
-    width: 100%;
-    border: none !important;
-    border-bottom: 5px solid !important;
-    border-radius: none !important;
-    padding: 5px 0;
-    height: 38px;
-    @extend .s-small;
-    color: $primaryColor;
-    @at-root body[data-color='blue'] & {
-      border-color: $blue !important;
-    }
-    @at-root body[data-color='green'] & {
-      border-color: $green !important;
-    }
-    @at-root body[data-color='yellow'] & {
-      border-color: $yellow !important;
-    }
-    @at-root body[data-color='red'] & {
-      border-color: $red !important;
-    }
-  }
-  select {
-    width: 100%;
-    padding: 5px;
-    height: 38px;
-    margin: $half-spacing 0;
-    @extend .s-small;
-  }
-  textarea {
-    width: 100%;
-    border: 5px solid !important;
-    border-radius: none !important;
-    @at-root body[data-color='blue'] & {
-      border-color: $blue !important;
-    }
-    @at-root body[data-color='green'] & {
-      border-color: $green !important;
-    }
-    @at-root body[data-color='yellow'] & {
-      border-color: $yellow !important;
-    }
-    @at-root body[data-color='red'] & {
-      border-color: $red !important;
-    }
-  }
   .wpcf7-list-item {
     width: 100%;
-  }
-  input[type="submit"] {
-    border: 5px solid !important;
-    background-color: transparent !important;
-    border-radius: none !important;
-    padding: 5px 10px;
-    margin: $half-spacing 0;
-    cursor: pointer;
-    @extend .s-regular;
-    @at-root body[data-color='blue'] & {
-      border-color: $blue;
-      @extend .uppercase;
-      color: $blue;
-      &:hover {
-        background-color: $blue-bg !important;
-      }
-    }
-    @at-root body[data-color='green'] & {
-      border-color: $green;
-      @extend .uppercase;
-      color: $green;
-      &:hover {
-        background-color: $green-bg !important;
-      }
-    }
-    @at-root body[data-color='yellow'] & {
-      border-color: $yellow;
-      @extend .uppercase;
-      color: $yellow;
-      &:hover {
-        background-color: $yellow-bg !important;
-      }
-    }
-    @at-root body[data-color='red'] & {
-      border-color: $red;
-      @extend .uppercase;
-      color: $red;
-      &:hover {
-        background-color: $red-bg !important;
-      }
-    }
   }
   .wpcf7-list-item {
     margin-left: 0 !important;
