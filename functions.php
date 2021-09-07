@@ -8,15 +8,11 @@ show_admin_bar(false);
 
 function register_my_menu() {
 	register_nav_menu('header-menu',__( 'Header Menu' ));
+	register_nav_menu('footer-menu',__( 'Footer Menu' ));
 }
 
 add_action( 'init', 'register_my_menu' );
 
-
-function anime_scripts() {
-	wp_enqueue_script( 'anime', get_stylesheet_directory_uri() . '/assets/js/anime.min.js', array(), '', true );
-}
-add_action( 'wp_enqueue_scripts', 'anime_scripts' );
 
 function jquery_scripts() {
 	wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/assets/js/custom.js', array(), '', true );

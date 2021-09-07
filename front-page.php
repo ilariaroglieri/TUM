@@ -21,11 +21,11 @@
                 <div class="d-half t-whole text max-width">
                   <?php echo $text; ?>
                   <div class="d-block">
-                    <a class="underline" href="<?php echo get_page_link(5); ?>">Leggi di più...</a>
+                    <a class="btn uppercase" href="<?php echo get_page_link(5); ?>">Leggi di più</a>
                   </div>
 
                   <div class="button light spacing-t-2">
-                    <a href="<?php echo get_page_link(42); ?>">Registrati</a>
+                    <a href="<?php echo get_page_link(42); ?>">Iscriviti alla newsletter</a>
                   </div>
                 </div>
               </div>

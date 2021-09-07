@@ -48,10 +48,10 @@ body.red .bg-color, #events-showcase body.event.tour .bg-color, #events-calendar
   font-size: 32px;
   line-height: 1; }
 
-.s-regular, body, p, h5, #content-single-event h2, #content-single-event h5 {
+.s-regular, body, p, h5, #content-single-event h2, #content-single-event h5, .wpcf7-form input[type="submit"] {
   font-size: 21px; }
 
-.s-small, #content-single-event h6 {
+.s-small, #content-single-event h6, .wpcf7-form input[type=text], .wpcf7-form input[type=email], .wpcf7-form input[type=url], .wpcf7-form select, .wpcf7-form .wpcf7-not-valid-tip, .wpcf7-form .wpcf7-response-output, #footer .menu-menu-1-container ul li {
   font-size: 14px; }
 
 .d-one-third {
@@ -250,7 +250,7 @@ body.red .bg-color, #events-showcase body.event.tour .bg-color, #events-calendar
 .t-center {
   text-align: center; }
 
-.uppercase, body[data-color='blue'] .button a, body[data-color='green'] .button a, body[data-color='yellow'] .button a, body[data-color='red'] .button a, body[data-color='blue'] .button.light a, body[data-color='green'] .button.light a, body[data-color='yellow'] .button.light a, body[data-color='red'] .button.light a, #header svg text, #header div[class*="menu-1"] ul li, body[data-color='blue'] div.wpforms-container-full .wpforms-form button[type="submit"], body[data-color='green'] div.wpforms-container-full .wpforms-form button[type="submit"], body[data-color='yellow'] div.wpforms-container-full .wpforms-form button[type="submit"], body[data-color='red'] div.wpforms-container-full .wpforms-form button[type="submit"] {
+.uppercase, body[data-color='blue'] .button a, body[data-color='green'] .button a, body[data-color='yellow'] .button a, body[data-color='red'] .button a, body[data-color='blue'] .button.light a, body[data-color='green'] .button.light a, body[data-color='yellow'] .button.light a, body[data-color='red'] .button.light a, #header svg text, #header div[class*="menu-1"] ul li, .wpcf7-form label, body[data-color='blue'] .wpcf7-form input[type="submit"], body[data-color='green'] .wpcf7-form input[type="submit"], body[data-color='yellow'] .wpcf7-form input[type="submit"], body[data-color='red'] .wpcf7-form input[type="submit"], body[data-color='blue'] div.wpforms-container-full .wpforms-form button[type="submit"], body[data-color='green'] div.wpforms-container-full .wpforms-form button[type="submit"], body[data-color='yellow'] div.wpforms-container-full .wpforms-form button[type="submit"], body[data-color='red'] div.wpforms-container-full .wpforms-form button[type="submit"], #footer .menu-menu-1-container ul li {
   text-transform: uppercase; }
 
 .btn:hover {
@@ -289,61 +289,45 @@ body.red .bg-color, #events-showcase body.event.tour .bg-color, #events-calendar
     body[data-color='red'] .button a {
       color: #ff4c44; }
   body[data-color='blue'] .button.light {
+    background-color: #fde7da;
     border-color: #fde7da; }
     body[data-color='blue'] .button.light a {
-      color: #fde7da; }
+      color: #3f89ff; }
   body[data-color='green'] .button.light {
+    background-color: #ede8db;
     border-color: #ede8db; }
     body[data-color='green'] .button.light a {
-      color: #ede8db; }
+      color: #b5d300; }
   body[data-color='yellow'] .button.light {
+    background-color: #dcece8;
     border-color: #dcece8; }
     body[data-color='yellow'] .button.light a {
-      color: #dcece8; }
+      color: #fed100; }
   body[data-color='red'] .button.light {
+    background-color: #fafadc;
     border-color: #fafadc; }
     body[data-color='red'] .button.light a {
-      color: #fafadc; }
+      color: #ff4c44; }
   body[data-color='blue'] .button:hover {
-    background-color: #fde7da;
-    color: #3f89ff; }
+    background-color: #3f89ff;
+    color: #fde7da; }
     body[data-color='blue'] .button:hover a {
-      color: #3f89ff; }
+      color: #fde7da; }
   body[data-color='green'] .button:hover {
-    background-color: #ede8db;
-    color: #b5d300; }
+    background-color: #b5d300;
+    color: #ede8db; }
     body[data-color='green'] .button:hover a {
-      color: #b5d300; }
+      color: #ede8db; }
   body[data-color='yellow'] .button:hover {
-    background-color: #dcece8;
-    color: #fed100; }
+    background-color: #fed100;
+    color: #dcece8; }
     body[data-color='yellow'] .button:hover a {
-      color: #fed100; }
+      color: #dcece8; }
   body[data-color='red'] .button:hover {
-    background-color: #fafadc;
-    color: #ff4c44; }
+    background-color: #ff4c44;
+    color: #fafadc; }
     body[data-color='red'] .button:hover a {
-      color: #ff4c44; }
-  body[data-color='blue'] .button:hover.light {
-    background-color: #fde7da;
-    color: #3f89ff; }
-    body[data-color='blue'] .button:hover.light a {
-      color: #3f89ff; }
-  body[data-color='green'] .button:hover.light {
-    background-color: #ede8db;
-    color: #b5d300; }
-    body[data-color='green'] .button:hover.light a {
-      color: #b5d300; }
-  body[data-color='yellow'] .button:hover.light {
-    background-color: #dcece8;
-    color: #fed100; }
-    body[data-color='yellow'] .button:hover.light a {
-      color: #fed100; }
-  body[data-color='red'] .button:hover.light {
-    background-color: #fafadc;
-    color: #ff4c44; }
-    body[data-color='red'] .button:hover.light a {
-      color: #ff4c44; }
+      color: #fafadc; }
 
 body[data-color='blue'] .border-top {
   border-top: #3f89ff 5px solid; }
@@ -437,7 +421,7 @@ svg {
   margin-right: 15px;
   margin-left: 15px; }
 
-.flex-row-neg {
+.flex-row-neg, .wpcf7-form .d-flex {
   margin-right: -15px;
   margin-left: -15px; }
 
@@ -710,14 +694,16 @@ body[data-color='red'] #content-home {
   top: 0;
   z-index: 0;
   position: absolute; }
-  body[data-color='blue'] .svg-container.light-color {
-    stroke: #fde7da; }
-  body[data-color='green'] .svg-container.light-color {
-    stroke: #ede8db; }
-  body[data-color='yellow'] .svg-container.light-color {
-    stroke: #dcece8; }
-  body[data-color='red'] .svg-container.light-color {
-    stroke: #fafadc; }
+  .svg-container.light-color {
+    z-index: 10; }
+    body[data-color='blue'] .svg-container.light-color {
+      stroke: #fde7da; }
+    body[data-color='green'] .svg-container.light-color {
+      stroke: #ede8db; }
+    body[data-color='yellow'] .svg-container.light-color {
+      stroke: #dcece8; }
+    body[data-color='red'] .svg-container.light-color {
+      stroke: #fafadc; }
   .svg-container.animated-shape {
     opacity: 0;
     -webkit-transition: opacity 0.3s;
@@ -804,67 +790,37 @@ body[data-color='red'] #content-home {
     #content-single-event .accordion-content.active {
       opacity: 1;
       height: initial; }
-  #content-single-event .event-category-panel .event-img, #content-single-event .event-category-panel .portrait {
-    position: relative;
-    background-color: #3f89ff !important;
-    background-blend-mode: screen;
-    background-size: cover !important;
-    overflow: hidden; }
-    #content-single-event .event-category-panel .event-img::after, #content-single-event .event-category-panel .portrait::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      mix-blend-mode: multiply;
-      pointer-events: none;
+
+.event-img, .portrait {
+  position: relative;
+  background-blend-mode: screen;
+  background-size: cover !important;
+  overflow: hidden; }
+  .event-img::after, .portrait::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    pointer-events: none; }
+  body[data-color='blue'] .event-img, body[data-color='blue'] .portrait {
+    background-color: #3f89ff !important; }
+    body[data-color='blue'] .event-img::after, body[data-color='blue'] .portrait::after {
       background-color: #fde7da; }
-  #content-single-event .event-category-tour .event-img {
-    position: relative;
-    background-color: #fed100 !important;
-    background-blend-mode: screen;
-    background-size: cover !important; }
-    #content-single-event .event-category-tour .event-img::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      mix-blend-mode: multiply;
-      pointer-events: none;
+  body[data-color='green'] .event-img, body[data-color='green'] .portrait {
+    background-color: #ede8db !important; }
+    body[data-color='green'] .event-img::after, body[data-color='green'] .portrait::after {
+      background-color: #b5d300; }
+  body[data-color='yellow'] .event-img, body[data-color='yellow'] .portrait {
+    background-color: #fed100 !important; }
+    body[data-color='yellow'] .event-img::after, body[data-color='yellow'] .portrait::after {
       background-color: #dcece8; }
-  #content-single-event .event-category-workshop .event-img {
-    position: relative;
-    background-color: #ff4c44 !important;
-    background-blend-mode: screen;
-    background-size: cover !important; }
-    #content-single-event .event-category-workshop .event-img::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      mix-blend-mode: multiply;
-      pointer-events: none;
+  body[data-color='red'] .event-img, body[data-color='red'] .portrait {
+    background-color: #ff4c44 !important; }
+    body[data-color='red'] .event-img::after, body[data-color='red'] .portrait::after {
       background-color: #fafadc; }
-  #content-single-event .event-category-film .event-img {
-    position: relative;
-    background-color: #b5d300 !important;
-    background-blend-mode: screen;
-    background-size: cover !important; }
-    #content-single-event .event-category-film .event-img::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      mix-blend-mode: multiply;
-      pointer-events: none;
-      background-color: #ede8db; }
 
 #content-page .main-text, #content-single-event .main-text {
   column-count: 2;
@@ -891,6 +847,101 @@ body[data-color='red'] #content-home {
     width: initial;
     max-width: 100%;
     max-height: 100%; }
+
+.wpcf7-form {
+  max-width: 800px; }
+  .wpcf7-form .d-flex {
+    margin-bottom: 30px; }
+  .wpcf7-form input[type=text], .wpcf7-form input[type=email], .wpcf7-form input[type=url] {
+    width: 100%;
+    border: none !important;
+    border-bottom: 5px solid !important;
+    border-radius: none !important;
+    padding: 5px 0;
+    height: 38px;
+    color: #43454a; }
+    body[data-color='blue'] .wpcf7-form input[type=text],
+    body[data-color='blue'] .wpcf7-form input[type=email],
+    body[data-color='blue'] .wpcf7-form input[type=url] {
+      border-color: #3f89ff !important; }
+    body[data-color='green'] .wpcf7-form input[type=text], body[data-color='green'] .wpcf7-form input[type=email], body[data-color='green'] .wpcf7-form input[type=url] {
+      border-color: #b5d300 !important; }
+    body[data-color='yellow'] .wpcf7-form input[type=text], body[data-color='yellow'] .wpcf7-form input[type=email], body[data-color='yellow'] .wpcf7-form input[type=url] {
+      border-color: #fed100 !important; }
+    body[data-color='red'] .wpcf7-form input[type=text], body[data-color='red'] .wpcf7-form input[type=email], body[data-color='red'] .wpcf7-form input[type=url] {
+      border-color: #ff4c44 !important; }
+  .wpcf7-form select {
+    width: 100%;
+    padding: 5px;
+    height: 38px;
+    margin: 15px 0; }
+  .wpcf7-form textarea {
+    width: 100%;
+    border: 5px solid !important;
+    border-radius: none !important; }
+    body[data-color='blue'] .wpcf7-form textarea {
+      border-color: #3f89ff !important; }
+    body[data-color='green'] .wpcf7-form textarea {
+      border-color: #b5d300 !important; }
+    body[data-color='yellow'] .wpcf7-form textarea {
+      border-color: #fed100 !important; }
+    body[data-color='red'] .wpcf7-form textarea {
+      border-color: #ff4c44 !important; }
+  .wpcf7-form .wpcf7-list-item {
+    width: 100%; }
+  .wpcf7-form input[type="submit"] {
+    border: 5px solid !important;
+    background-color: transparent !important;
+    border-radius: none !important;
+    padding: 5px 10px;
+    margin: 15px 0;
+    cursor: pointer; }
+    body[data-color='blue'] .wpcf7-form input[type="submit"] {
+      border-color: #3f89ff;
+      color: #3f89ff; }
+      body[data-color='blue'] .wpcf7-form input[type="submit"]:hover {
+        background-color: #fde7da !important; }
+    body[data-color='green'] .wpcf7-form input[type="submit"] {
+      border-color: #b5d300;
+      color: #b5d300; }
+      body[data-color='green'] .wpcf7-form input[type="submit"]:hover {
+        background-color: #ede8db !important; }
+    body[data-color='yellow'] .wpcf7-form input[type="submit"] {
+      border-color: #fed100;
+      color: #fed100; }
+      body[data-color='yellow'] .wpcf7-form input[type="submit"]:hover {
+        background-color: #dcece8 !important; }
+    body[data-color='red'] .wpcf7-form input[type="submit"] {
+      border-color: #ff4c44;
+      color: #ff4c44; }
+      body[data-color='red'] .wpcf7-form input[type="submit"]:hover {
+        background-color: #fafadc !important; }
+  .wpcf7-form .wpcf7-list-item {
+    margin-left: 0 !important; }
+  .wpcf7-form .wpcf7-not-valid-tip {
+    margin-top: 5px;
+    text-transform: none; }
+    body[data-color='blue'] .wpcf7-form .wpcf7-not-valid-tip {
+      color: #3f89ff !important; }
+    body[data-color='green'] .wpcf7-form .wpcf7-not-valid-tip {
+      color: #b5d300 !important; }
+    body[data-color='yellow'] .wpcf7-form .wpcf7-not-valid-tip {
+      color: #fed100 !important; }
+    body[data-color='red'] .wpcf7-form .wpcf7-not-valid-tip {
+      color: #ff4c44 !important; }
+  .wpcf7-form .wpcf7-response-output {
+    margin: 15px 0 !important;
+    padding: 5px !important;
+    border: 5px solid !important;
+    background: transparent !important; }
+    body[data-color='blue'] .wpcf7-form .wpcf7-response-output {
+      border-color: #3f89ff !important; }
+    body[data-color='green'] .wpcf7-form .wpcf7-response-output {
+      border-color: #b5d300 !important; }
+    body[data-color='yellow'] .wpcf7-form .wpcf7-response-output {
+      border-color: #fed100 !important; }
+    body[data-color='red'] .wpcf7-form .wpcf7-response-output {
+      border-color: #ff4c44 !important; }
 
 div.wpforms-container-full .wpforms-form {
   max-width: 800px; }
@@ -969,6 +1020,14 @@ div.wpforms-container-full .wpforms-form {
 
 #footer {
   border-top: 5px solid #43454a; }
+  body[data-color='blue'] #footer a:hover {
+    color: #3f89ff; }
+  body[data-color='green'] #footer a:hover {
+    color: #b5d300; }
+  body[data-color='yellow'] #footer a:hover {
+    color: #fed100; }
+  body[data-color='red'] #footer a:hover {
+    color: #ff4c44; }
 
 @media screen and (max-width: 768px) {
   .t-hidden {
@@ -1003,7 +1062,15 @@ div.wpforms-container-full .wpforms-form {
     column-width: unset; }
     #content-page .main-text h2, #content-single-event .main-text h2 {
       margin-top: 30px;
-      break-before: unset; } }
+      break-before: unset; }
+
+  .svg-container.animated-shape {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s; } }
 @media screen and (max-width: 640px) {
   .s-large, .s-big, .s-medium, #header div[class*="menu-1"] ul li {
     font-size: 7vw; }

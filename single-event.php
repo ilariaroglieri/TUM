@@ -83,7 +83,9 @@
                     <div class="info d-two-thirds t-whole">
                       <h3 class="s-big uppercase"><?= $name; ?></h3>
                       <h6 class="s-small spacing-b-1"><?= $qualifica; ?></h6>
-                      <h4 class="btn s-small uppercase">Leggi bio</h4>
+                      <?php if ($bio): ?>
+                        <h4 class="btn s-small uppercase">Leggi bio</h4>
+                      <?php endif; ?>
                     </div>
                   </div>
 

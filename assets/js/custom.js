@@ -13,21 +13,24 @@ jQuery(document).ready(function($) {
     var currentScrollPos = $(window).scrollTop();
     if (currentScrollPos <= 0) {
 	    $('#header').removeClass('compact');
-      $('.content, div[class*="menu-1"]').removeClass('w-c-menu');
+      $('.content, #header div[class*="menu-1"]').removeClass('w-c-menu');
 
 	  } else {
 	    $('#header').addClass('compact');
-      $('.content, div[class*="menu-1"]').addClass('w-c-menu');
+      $('.content, #header div[class*="menu-1"]').addClass('w-c-menu');
 	  }
-
-	  // prevScrollPos = currentScrollPos;
   });
 
+  var currentScrollPos = $(window).scrollTop();
+  if (currentScrollPos <= 0) {
+    $('#header').removeClass('compact');
+    $('.content, #header div[class*="menu-1"]').removeClass('w-c-menu');
 
-// setTimeout(function() {
-//   $('.el').addClass('hidden');
+  } else {
+    $('#header').addClass('compact');
+    $('.content, #header div[class*="menu-1"]').addClass('w-c-menu');
+  }
 
-// },1000);
 
 // --- Hamburger menu
   $('.menu-toggle').click(function() {
