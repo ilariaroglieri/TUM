@@ -32,5 +32,13 @@ function default_attachment_display_settings() {
 
 add_action( 'after_setup_theme', 'default_attachment_display_settings' );
 
+// display all in events
+add_action( 'pre_get_posts', function( $query ){
+  if ( ! is_admin() && $query->is_main_query() ) {
+    if ( is_post_type_archive('event') || is_tax() ) {
+      $query->set('posts_per_page', -1 );
+    }
+  }
+});
 
 ?>

@@ -6,7 +6,7 @@
 
 				<a class="s-small uppercase" href="mailto:info@wearebutik.com">Email</a><br/>
 				<a class="s-small uppercase" href="https://www.instagram.com/tum_turismomusicale/" target="_blank">Instagram</a><br/>
-				<a class="s-small uppercase" href="https://www.facebook.com/TUMturismomusicale" target="_blank">Facebook</a>
+				<a class="s-small uppercase" href="https://www.facebook.com/TUMturismomusicale" target="_blank">Facebook</a><br/>
 				<a class="s-small uppercase" href="https://www.linkedin.com/showcase/tum-turismo-musicale/" target="_blank">Linkedin</a></p>
 			</div>
 

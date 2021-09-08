@@ -22,8 +22,10 @@
         </div>
 
         <?php if ($currentID == 86 || $currentID == 5): ?>
-          <div class="button spacing-b-2">
-            <a href="<?php echo get_page_link(42); ?>">Registrati</a>
+          <div class="container-fluid-w-p">
+            <div class="button spacing-b-2">
+              <a href="<?php echo get_page_link(42); ?>">Registrati</a>
+            </div>
           </div>
         <?php endif; ?>
       </article>

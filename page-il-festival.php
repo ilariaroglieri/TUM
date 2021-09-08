@@ -25,27 +25,35 @@
           <div id="festival-cats" class="spacing-t-2">
           <?php while( have_rows('modulo_categoria') ) : the_row(); ?>
             <?php
-              $cat = get_sub_field('categoria');
+              $acfTerm = get_sub_field('categoria');
               $title = get_sub_field('titolo');
               $text = get_sub_field('testo');
               $link = get_sub_field('link');
             ?>
 
-            <div class="event <?php echo $cat; ?> d-flex t-column flex-row-neg">
+            <div class="event <?php echo $acfTerm; ?> d-flex t-column flex-row-neg">
               <div class="d-half t-whole half-max-width">
                 <h2 class="uppercase s-big"><?= $title; ?></h2>
               </div>
               <div class="text d-half t-whole">
                 <?= $text; ?>
 
-                <?php if ($cat == 'panel'): ?>
+                <?php if ($acfTerm == 'panel'): ?> <!-- change later when programme is complete-->
                   <div class="button spacing-t-2">
                     <a href="<?php echo get_page_link(115); ?>">Leggi il programma completo</a>
                   </div>
                 <?php else: ?>
-                  <div class="button spacing-t-2">
-                    <a href="<?php get_term_link('panel', 'event-category'); ?>">Scopri di più</a>
-                  </div>
+                  <?php $terms = get_terms( 'event-category', $args = array(
+                    'hide_empty' => true, // do not hide empty terms
+                  ));
+                  ?>
+                  <?php foreach( $terms as $term ): 
+                    if ($acfTerm == $term->slug): ?>
+                      <div class="button spacing-t-2">
+                        <a href="<?php echo get_term_link($term, 'event-category'); ?>">Scopri di più</a>
+                      </div>
+                    <?php endif;
+                  endforeach;?>
                 <?php endif; ?>
               </div>
             </div>

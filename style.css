@@ -6,25 +6,25 @@ Version: 1.0
 .line {
   stroke: #43454a; }
 
-.blue, #events-showcase .event.panel, #events-calendar .event.panel, #events-related .event.panel, #festival-cats .event.panel {
+.blue, #events-showcase .event.panel, #events-calendar .event.panel, #events-related .event.panel, #cat-events-archive .event.panel, #festival-cats .event.panel {
   stroke: #3f89ff; }
 
-.green, #events-showcase .event.film, #events-calendar .event.film, #events-related .event.film, #festival-cats .event.film {
+.green, #events-showcase .event.film, #events-calendar .event.film, #events-related .event.film, #cat-events-archive .event.film, #festival-cats .event.film {
   stroke: #b5d300; }
 
-.red, #events-showcase .event.workshop, #events-calendar .event.workshop, #events-related .event.workshop, #festival-cats .event.workshop {
+.red, #events-showcase .event.workshop, #events-calendar .event.workshop, #events-related .event.workshop, #cat-events-archive .event.workshop, #festival-cats .event.workshop {
   stroke: #ff4c44; }
 
-.yellow, #events-showcase .event.tour, #events-calendar .event.tour, #events-related .event.tour, #festival-cats .event.tour {
+.yellow, #events-showcase .event.tour, #events-calendar .event.tour, #events-related .event.tour, #cat-events-archive .event.tour, #festival-cats .event.tour {
   stroke: #fed100; }
 
-body.blue .bg-color, #events-showcase body.event.panel .bg-color, #events-calendar body.event.panel .bg-color, #events-related body.event.panel .bg-color, #festival-cats body.event.panel .bg-color {
+body.blue .bg-color, #events-showcase body.event.panel .bg-color, #events-calendar body.event.panel .bg-color, #events-related body.event.panel .bg-color, #cat-events-archive body.event.panel .bg-color, #festival-cats body.event.panel .bg-color {
   color: #fde7da; }
-body.green .bg-color, #events-showcase body.event.film .bg-color, #events-calendar body.event.film .bg-color, #events-related body.event.film .bg-color, #festival-cats body.event.film .bg-color {
+body.green .bg-color, #events-showcase body.event.film .bg-color, #events-calendar body.event.film .bg-color, #events-related body.event.film .bg-color, #cat-events-archive body.event.film .bg-color, #festival-cats body.event.film .bg-color {
   color: #ede8db; }
-body.yellow .bg-color, #events-showcase body.event.tour .bg-color, #events-calendar body.event.tour .bg-color, #events-related body.event.tour .bg-color, #festival-cats body.event.tour .bg-color {
+body.yellow .bg-color, #events-showcase body.event.tour .bg-color, #events-calendar body.event.tour .bg-color, #events-related body.event.tour .bg-color, #cat-events-archive body.event.tour .bg-color, #festival-cats body.event.tour .bg-color {
   color: #dcece8; }
-body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-calendar body.event.workshop .bg-color, #events-related body.event.workshop .bg-color, #festival-cats body.event.workshop .bg-color {
+body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-calendar body.event.workshop .bg-color, #events-related body.event.workshop .bg-color, #cat-events-archive body.event.workshop .bg-color, #festival-cats body.event.workshop .bg-color {
   color: #fafadc; }
 
 @font-face {
@@ -341,14 +341,8 @@ body[data-color='yellow'] .border-top {
 body[data-color='red'] .border-top {
   border-top: #ff4c44 5px solid; }
 
-body[data-color='blue'] .border-bottom {
-  border-bottom: #3f89ff 5px solid; }
-body[data-color='green'] .border-bottom {
-  border-bottom: #b5d300 5px solid; }
-body[data-color='yellow'] .border-bottom {
-  border-bottom: #fed100 5px solid; }
-body[data-color='red'] .border-bottom {
-  border-bottom: #ff4c44 5px solid; }
+.border-bottom {
+  border-bottom: #43454a 5px solid; }
 
 .no-indent, #content-single-event .accordion-content p {
   text-indent: 0; }
@@ -605,24 +599,24 @@ svg {
       top: 50%;
       width: 8vw; }
 
-body.blue a.underline, #events-showcase body.event.panel a.underline, #events-calendar body.event.panel a.underline, #events-related body.event.panel a.underline, #festival-cats body.event.panel a.underline {
+body.blue a.underline, #events-showcase body.event.panel a.underline, #events-calendar body.event.panel a.underline, #events-related body.event.panel a.underline, #cat-events-archive body.event.panel a.underline, #festival-cats body.event.panel a.underline {
   border-bottom: 0.12em solid #fde7da; }
-  body.blue a.underline:hover, #events-showcase body.event.panel a.underline:hover, #events-calendar body.event.panel a.underline:hover, #events-related body.event.panel a.underline:hover, #festival-cats body.event.panel a.underline:hover {
+  body.blue a.underline:hover, #events-showcase body.event.panel a.underline:hover, #events-calendar body.event.panel a.underline:hover, #events-related body.event.panel a.underline:hover, #cat-events-archive body.event.panel a.underline:hover, #festival-cats body.event.panel a.underline:hover {
     color: #fde7da; }
 
-body.green a.underline, #events-showcase body.event.film a.underline, #events-calendar body.event.film a.underline, #events-related body.event.film a.underline, #festival-cats body.event.film a.underline {
+body.green a.underline, #events-showcase body.event.film a.underline, #events-calendar body.event.film a.underline, #events-related body.event.film a.underline, #cat-events-archive body.event.film a.underline, #festival-cats body.event.film a.underline {
   border-bottom: 0.12em solid #ede8db; }
-  body.green a.underline:hover, #events-showcase body.event.film a.underline:hover, #events-calendar body.event.film a.underline:hover, #events-related body.event.film a.underline:hover, #festival-cats body.event.film a.underline:hover {
+  body.green a.underline:hover, #events-showcase body.event.film a.underline:hover, #events-calendar body.event.film a.underline:hover, #events-related body.event.film a.underline:hover, #cat-events-archive body.event.film a.underline:hover, #festival-cats body.event.film a.underline:hover {
     color: #ede8db; }
 
-body.yellow a.underline, #events-showcase body.event.tour a.underline, #events-calendar body.event.tour a.underline, #events-related body.event.tour a.underline, #festival-cats body.event.tour a.underline {
+body.yellow a.underline, #events-showcase body.event.tour a.underline, #events-calendar body.event.tour a.underline, #events-related body.event.tour a.underline, #cat-events-archive body.event.tour a.underline, #festival-cats body.event.tour a.underline {
   border-bottom: 0.12em solid #dcece8; }
-  body.yellow a.underline:hover, #events-showcase body.event.tour a.underline:hover, #events-calendar body.event.tour a.underline:hover, #events-related body.event.tour a.underline:hover, #festival-cats body.event.tour a.underline:hover {
+  body.yellow a.underline:hover, #events-showcase body.event.tour a.underline:hover, #events-calendar body.event.tour a.underline:hover, #events-related body.event.tour a.underline:hover, #cat-events-archive body.event.tour a.underline:hover, #festival-cats body.event.tour a.underline:hover {
     color: #dcece8; }
 
-body.red a.underline, #events-showcase body.event.workshop a.underline, #events-calendar body.event.workshop a.underline, #events-related body.event.workshop a.underline, #festival-cats body.event.workshop a.underline {
+body.red a.underline, #events-showcase body.event.workshop a.underline, #events-calendar body.event.workshop a.underline, #events-related body.event.workshop a.underline, #cat-events-archive body.event.workshop a.underline, #festival-cats body.event.workshop a.underline {
   border-bottom: 0.12em solid #fafadc; }
-  body.red a.underline:hover, #events-showcase body.event.workshop a.underline:hover, #events-calendar body.event.workshop a.underline:hover, #events-related body.event.workshop a.underline:hover, #festival-cats body.event.workshop a.underline:hover {
+  body.red a.underline:hover, #events-showcase body.event.workshop a.underline:hover, #events-calendar body.event.workshop a.underline:hover, #events-related body.event.workshop a.underline:hover, #cat-events-archive body.event.workshop a.underline:hover, #festival-cats body.event.workshop a.underline:hover {
     color: #fafadc; }
 
 .content {
@@ -725,37 +719,37 @@ body[data-color='red'] #content-home {
     stroke-dashoffset: var(--total-length); }
   to {
     stroke-dashoffset: 0; } }
-#events-showcase .event, #events-calendar .event, #events-related .event, #festival-cats .event {
+#events-showcase .event, #events-calendar .event, #events-related .event, #cat-events-archive .event, #festival-cats .event {
   height: calc(100vh - 18vw);
   border-bottom: 5px solid white;
   position: relative; }
-  #events-showcase .event:hover .svg-container.animated-shape, #events-calendar .event:hover .svg-container.animated-shape, #events-related .event:hover .svg-container.animated-shape, #festival-cats .event:hover .svg-container.animated-shape {
+  #events-showcase .event:hover .svg-container.animated-shape, #events-calendar .event:hover .svg-container.animated-shape, #events-related .event:hover .svg-container.animated-shape, #cat-events-archive .event:hover .svg-container.animated-shape, #festival-cats .event:hover .svg-container.animated-shape {
     opacity: 1; }
-    #events-showcase .event:hover .svg-container.animated-shape svg, #events-calendar .event:hover .svg-container.animated-shape svg, #events-related .event:hover .svg-container.animated-shape svg, #festival-cats .event:hover .svg-container.animated-shape svg {
+    #events-showcase .event:hover .svg-container.animated-shape svg, #events-calendar .event:hover .svg-container.animated-shape svg, #events-related .event:hover .svg-container.animated-shape svg, #cat-events-archive .event:hover .svg-container.animated-shape svg, #festival-cats .event:hover .svg-container.animated-shape svg {
       --looping-percent: 90;
       animation-play-state: running !important; }
-  #events-showcase .event:last-of-type, #events-calendar .event:last-of-type, #events-related .event:last-of-type, #festival-cats .event:last-of-type {
+  #events-showcase .event:last-of-type, #events-calendar .event:last-of-type, #events-related .event:last-of-type, #cat-events-archive .event:last-of-type, #festival-cats .event:last-of-type {
     border-bottom: none; }
-  #events-showcase .event .title a, #events-calendar .event .title a, #events-related .event .title a, #festival-cats .event .title a {
+  #events-showcase .event .title a, #events-calendar .event .title a, #events-related .event .title a, #cat-events-archive .event .title a, #festival-cats .event .title a {
     color: #43454a;
     font-size: 50%; }
-    #events-showcase .event .title a span, #events-calendar .event .title a span, #events-related .event .title a span, #festival-cats .event .title a span {
+    #events-showcase .event .title a span, #events-calendar .event .title a span, #events-related .event .title a span, #cat-events-archive .event .title a span, #festival-cats .event .title a span {
       font-size: 200%; }
-  #events-showcase .event.panel, #events-calendar .event.panel, #events-related .event.panel, #festival-cats .event.panel {
+  #events-showcase .event.panel, #events-calendar .event.panel, #events-related .event.panel, #cat-events-archive .event.panel, #festival-cats .event.panel {
     background: #fde7da no-repeat center center; }
-    #events-showcase .event.panel strong, #events-showcase .event.panel h5, #events-showcase .event.panel h5 > a, #events-calendar .event.panel strong, #events-calendar .event.panel h5, #events-calendar .event.panel h5 > a, #events-related .event.panel strong, #events-related .event.panel h5, #events-related .event.panel h5 > a, #festival-cats .event.panel strong, #festival-cats .event.panel h5, #festival-cats .event.panel h5 > a {
+    #events-showcase .event.panel strong, #events-showcase .event.panel h5, #events-showcase .event.panel h5 > a, #events-calendar .event.panel strong, #events-calendar .event.panel h5, #events-calendar .event.panel h5 > a, #events-related .event.panel strong, #events-related .event.panel h5, #events-related .event.panel h5 > a, #cat-events-archive .event.panel strong, #cat-events-archive .event.panel h5, #cat-events-archive .event.panel h5 > a, #festival-cats .event.panel strong, #festival-cats .event.panel h5, #festival-cats .event.panel h5 > a {
       color: #3f89ff; }
-  #events-showcase .event.tour, #events-calendar .event.tour, #events-related .event.tour, #festival-cats .event.tour {
+  #events-showcase .event.tour, #events-calendar .event.tour, #events-related .event.tour, #cat-events-archive .event.tour, #festival-cats .event.tour {
     background: #dcece8 no-repeat center center; }
-    #events-showcase .event.tour strong, #events-showcase .event.tour h5, #events-showcase .event.tour h5 > a, #events-calendar .event.tour strong, #events-calendar .event.tour h5, #events-calendar .event.tour h5 > a, #events-related .event.tour strong, #events-related .event.tour h5, #events-related .event.tour h5 > a, #festival-cats .event.tour strong, #festival-cats .event.tour h5, #festival-cats .event.tour h5 > a {
+    #events-showcase .event.tour strong, #events-showcase .event.tour h5, #events-showcase .event.tour h5 > a, #events-calendar .event.tour strong, #events-calendar .event.tour h5, #events-calendar .event.tour h5 > a, #events-related .event.tour strong, #events-related .event.tour h5, #events-related .event.tour h5 > a, #cat-events-archive .event.tour strong, #cat-events-archive .event.tour h5, #cat-events-archive .event.tour h5 > a, #festival-cats .event.tour strong, #festival-cats .event.tour h5, #festival-cats .event.tour h5 > a {
       color: #fed100; }
-  #events-showcase .event.workshop, #events-calendar .event.workshop, #events-related .event.workshop, #festival-cats .event.workshop {
+  #events-showcase .event.workshop, #events-calendar .event.workshop, #events-related .event.workshop, #cat-events-archive .event.workshop, #festival-cats .event.workshop {
     background: #fafadc no-repeat center center; }
-    #events-showcase .event.workshop strong, #events-showcase .event.workshop h5, #events-showcase .event.workshop h5 > a, #events-calendar .event.workshop strong, #events-calendar .event.workshop h5, #events-calendar .event.workshop h5 > a, #events-related .event.workshop strong, #events-related .event.workshop h5, #events-related .event.workshop h5 > a, #festival-cats .event.workshop strong, #festival-cats .event.workshop h5, #festival-cats .event.workshop h5 > a {
+    #events-showcase .event.workshop strong, #events-showcase .event.workshop h5, #events-showcase .event.workshop h5 > a, #events-calendar .event.workshop strong, #events-calendar .event.workshop h5, #events-calendar .event.workshop h5 > a, #events-related .event.workshop strong, #events-related .event.workshop h5, #events-related .event.workshop h5 > a, #cat-events-archive .event.workshop strong, #cat-events-archive .event.workshop h5, #cat-events-archive .event.workshop h5 > a, #festival-cats .event.workshop strong, #festival-cats .event.workshop h5, #festival-cats .event.workshop h5 > a {
       color: #ff4c44; }
-  #events-showcase .event.film, #events-calendar .event.film, #events-related .event.film, #festival-cats .event.film {
+  #events-showcase .event.film, #events-calendar .event.film, #events-related .event.film, #cat-events-archive .event.film, #festival-cats .event.film {
     background: #ede8db no-repeat center center; }
-    #events-showcase .event.film strong, #events-showcase .event.film h5, #events-showcase .event.film h5 > a, #events-calendar .event.film strong, #events-calendar .event.film h5, #events-calendar .event.film h5 > a, #events-related .event.film strong, #events-related .event.film h5, #events-related .event.film h5 > a, #festival-cats .event.film strong, #festival-cats .event.film h5, #festival-cats .event.film h5 > a {
+    #events-showcase .event.film strong, #events-showcase .event.film h5, #events-showcase .event.film h5 > a, #events-calendar .event.film strong, #events-calendar .event.film h5, #events-calendar .event.film h5 > a, #events-related .event.film strong, #events-related .event.film h5, #events-related .event.film h5 > a, #cat-events-archive .event.film strong, #cat-events-archive .event.film h5, #cat-events-archive .event.film h5 > a, #festival-cats .event.film strong, #festival-cats .event.film h5, #festival-cats .event.film h5 > a {
       color: #b5d300; }
 
 #festival-cats .event {

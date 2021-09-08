@@ -272,18 +272,19 @@ $headerH: 18vw;
 }
 
 .border-bottom {
-  @at-root body[data-color='blue'] & {
-    border-bottom: $blue 5px solid;
-  }
-  @at-root body[data-color='green'] & {
-    border-bottom: $green 5px solid;
-  }
-  @at-root body[data-color='yellow'] & {
-    border-bottom: $yellow 5px solid;
-  }
-  @at-root body[data-color='red'] & {
-    border-bottom: $red 5px solid;
-  }
+  border-bottom: $primaryColor 5px solid;
+  // @at-root body[data-color='blue'] & {
+  //   border-bottom: $blue 5px solid;
+  // }
+  // @at-root body[data-color='green'] & {
+  //   border-bottom: $green 5px solid;
+  // }
+  // @at-root body[data-color='yellow'] & {
+  //   border-bottom: $yellow 5px solid;
+  // }
+  // @at-root body[data-color='red'] & {
+  //   border-bottom: $red 5px solid;
+  // }
 }
 
 .no-indent {
@@ -777,7 +778,7 @@ body.red {
 }
 
 // home + calendar
-#events-showcase, #events-calendar, #events-related, #festival-cats {
+#events-showcase, #events-calendar, #events-related, #cat-events-archive, #festival-cats {
   .event {
     height: calc(100vh - #{$headerH});
     border-bottom: 5px solid white;
