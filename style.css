@@ -344,6 +344,20 @@ body[data-color='red'] .border-top {
 .border-bottom {
   border-bottom: #43454a 5px solid; }
 
+#embed-wrapper {
+  max-width: 125vh;
+  margin: 0 auto; }
+  #embed-wrapper #embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; }
+    #embed-wrapper #embed iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+
 .no-indent, #content-single-event .accordion-content p {
   text-indent: 0; }
 

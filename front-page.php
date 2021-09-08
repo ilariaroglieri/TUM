@@ -2,9 +2,27 @@
 
 <section class="content" id="content-home">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <!-- streaming area -->
+    <?php $embed = get_field('area_streaming'); ?>
+
+    <?php if ($embed): ?>
+      <div id="streaming-area" class="container-fluid">
+        <div id="streaming-header" class="white-header">
+          <div class="flex-row">
+            <h3 class="uppercase s-large">Live now</h3>
+          </div>
+        </div>
+
+        <div id="embed-wrapper" class="d-flex d-center center">
+          <div id="embed">
+            <?php echo $embed; ?>
+          </div>
+        </div>
+      </div>
+    <?php endif; ?>
 
     <?php if( have_rows('slide') ): ?>
-      <div class="container-fluid">
+      <div id="intro-text" class="container-fluid">
 
         <div class="slider">
           <?php while( have_rows('slide') ) : the_row();
