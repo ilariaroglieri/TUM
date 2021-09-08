@@ -130,8 +130,8 @@
         <?php endif; ?>
 
         <div class="d-flex half-max-width flex-row spacing-p-b-2 spacing-p-t-2">
+          <?php $link = get_field('link_esterno'); ?>
           <?php if ($eventType == 'Evento gratuito con prenotazione'): ?>
-            <?php $link = get_field('link_esterno'); ?>
             <?php if ($link): ?>
               <div class="button">
                 <a class="uppercase" href="<?php echo $link; ?>">Registrati qui</a>

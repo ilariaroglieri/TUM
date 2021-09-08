@@ -124,11 +124,11 @@ $headerH: 18vw;
 }
 
 .max-width {
-  max-width: $desktop-mini;
+  max-width: $desktop-mini + $spacing;
 }
 
 .half-max-width {
-  max-width: $desktop-mini/2;
+  max-width: $desktop-mini/2 - $half-spacing/2;
 }
 
 .f-right {
@@ -372,7 +372,7 @@ strong, h5, h5 a {
 
 svg {
   fill: none;
-  stroke-width: 1vw;
+  stroke-width: .8vw;
 }
 
 
@@ -385,7 +385,7 @@ svg {
 .container-fluid {
   margin: 0;
   position: relative;
-  z-index: 1;
+  // z-index: 1;
   width: 100%;
 }
 
@@ -777,7 +777,7 @@ body.red {
 }
 
 // home + calendar
-#events-showcase, #events-calendar, #events-related {
+#events-showcase, #events-calendar, #events-related, #festival-cats {
   .event {
     height: calc(100vh - #{$headerH});
     border-bottom: 5px solid white;
@@ -804,30 +804,111 @@ body.red {
     &.panel {
       background: $blue-bg no-repeat center center;
       @extend .blue;
-      h5, h5 > a {
+      strong, h5, h5 > a {
         color: $blue;
       }
     
     }
     &.tour {
-      background: $red-bg no-repeat center center;
-      @extend .red;
-      h5, h5 > a {
-        color: $red;
+      background: $yellow-bg no-repeat center center;
+      @extend .yellow;
+      strong, h5, h5 > a {
+        color: $yellow;
       }
     } 
     &.workshop {
-      background: $yellow-bg no-repeat center center;
-      @extend .yellow;
-      h5, h5 > a {
-        color: $yellow;
+      background: $red-bg no-repeat center center;
+      @extend .red;
+      strong, h5, h5 > a {
+        color: $red;
       }
     }
     &.film {
       background: $green-bg no-repeat center center;
       @extend .green;
-      h5, h5 > a {
+      strong, h5, h5 > a {
         color: $green;
+      }
+    }
+  }
+}
+
+#festival-cats {
+  .event {
+    padding: $half-spacing;
+    min-height:33vh;
+    height:initial;
+    p {
+      max-width: $desktop-mini/2;
+    }
+    &.panel {
+      background: $blue-bg no-repeat center center;
+      @extend .blue;
+      h2, h5, h5 > a, a {
+        color: $blue;
+      }
+      .button {
+        border-color: $blue;
+        a {
+          color: $blue;
+        }
+        &:hover {
+          background-color: $blue;
+          a {color: $blue-bg;}
+        }
+      }
+    }
+    &.tour {
+      background: $yellow-bg no-repeat center center;
+      @extend .yellow;
+      h2, h5, h5 > a, a {
+        color: $yellow;
+      }
+      .button {
+        border-color: $yellow;
+        a {
+          color: $yellow;
+        }
+        &:hover {
+          background-color: $yellow;
+          a {color: $yellow-bg;}
+        }
+      }
+    } 
+    &.workshop {
+      background: $red-bg no-repeat center center;
+      @extend .red;
+      h2, h5, h5 > a, a {
+        color: $red;
+      }
+      .button {
+        border-color: $red;
+        a {
+          color: $red;
+        }
+        &:hover {
+          background-color: $red;
+          a {color: $red-bg;}
+        }
+      }
+    }
+    &.film {
+      background: $green-bg no-repeat center center;
+      @extend .green;
+      h2, h5, h5 > a, a {
+        color: $green;
+      }
+      .button {
+        border-color: $green;
+        a {
+          color: $green;
+        }
+        &:hover {
+          background-color: $green;
+          a {
+            color: $green-bg;
+          }
+        }
       }
     }
   }
@@ -1327,6 +1408,9 @@ div.wpforms-container-full .wpforms-form {
 }
 
 @media screen and (max-width: $mobile) {
+  svg {
+    stroke-width: 1vw;
+  }
   .s-large, .s-big, .s-medium {
     font-size: 7vw;
   }
