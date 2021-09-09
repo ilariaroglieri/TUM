@@ -31,7 +31,7 @@
               $link = get_sub_field('link');
             ?>
 
-            <div class="event <?php echo $acfTerm; ?> d-flex t-column flex-row-neg">
+            <div class="event <?php echo $acfTerm; ?> d-flex t-column flex-row-neg" data-type="<?php echo $acfTerm; ?>">
               <div class="d-half t-whole half-max-width">
                 <h2 class="uppercase s-big"><?= $title; ?></h2>
               </div>
@@ -43,6 +43,8 @@
                     <a href="<?php echo get_page_link(115); ?>">Leggi il programma completo</a>
                   </div>
                 <?php else: ?>
+                  <?php echo do_shortcode('[mc4wp_form id="226"]'); ?>
+
                   <?php $terms = get_terms( 'event-category', $args = array(
                     'hide_empty' => true, // do not hide empty terms
                   ));

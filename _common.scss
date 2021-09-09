@@ -24,19 +24,19 @@ $yellow-bg: #dcece8;
   stroke: $primaryColor;
 }
 
-.blue {
+.blue, [data-color='blue'] {
   stroke: $blue;
 }
 
-.green {
+.green, [data-color='green'] {
   stroke: $green;
 }
 
-.red {
+.red, [data-color='red'] {
   stroke: $red;
 }
 
-.yellow {
+.yellow, [data-color='yellow'] {
   stroke: $yellow;
 }
 

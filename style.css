@@ -6,16 +6,16 @@ Version: 1.0
 .line {
   stroke: #43454a; }
 
-.blue, #events-showcase .event.panel, #events-calendar .event.panel, #events-related .event.panel, #cat-events-archive .event.panel, #festival-cats .event.panel {
+.blue, #events-showcase .event.panel, #events-calendar .event.panel, #events-related .event.panel, #cat-events-archive .event.panel, #festival-cats .event.panel, [data-color='blue'] {
   stroke: #3f89ff; }
 
-.green, #events-showcase .event.film, #events-calendar .event.film, #events-related .event.film, #cat-events-archive .event.film, #festival-cats .event.film {
+.green, #events-showcase .event.film, #events-calendar .event.film, #events-related .event.film, #cat-events-archive .event.film, #festival-cats .event.film, [data-color='green'] {
   stroke: #b5d300; }
 
-.red, #events-showcase .event.workshop, #events-calendar .event.workshop, #events-related .event.workshop, #cat-events-archive .event.workshop, #festival-cats .event.workshop {
+.red, #events-showcase .event.workshop, #events-calendar .event.workshop, #events-related .event.workshop, #cat-events-archive .event.workshop, #festival-cats .event.workshop, [data-color='red'] {
   stroke: #ff4c44; }
 
-.yellow, #events-showcase .event.tour, #events-calendar .event.tour, #events-related .event.tour, #cat-events-archive .event.tour, #festival-cats .event.tour {
+.yellow, #events-showcase .event.tour, #events-calendar .event.tour, #events-related .event.tour, #cat-events-archive .event.tour, #festival-cats .event.tour, [data-color='yellow'] {
   stroke: #fed100; }
 
 body.blue .bg-color, #events-showcase body.event.panel .bg-color, #events-calendar body.event.panel .bg-color, #events-related body.event.panel .bg-color, #cat-events-archive body.event.panel .bg-color, #festival-cats body.event.panel .bg-color {
@@ -833,8 +833,6 @@ body[data-color='red'] #content-home {
     background-color: #fafadc; }
   #content-single-event p {
     margin-bottom: 22px; }
-  #content-single-event .hentry {
-    padding-bottom: 20vh; }
   #content-single-event h6 {
     font-weight: normal; }
   #content-single-event .speaker.accordion-btn {

@@ -130,33 +130,52 @@
           </div>
         <?php endif; ?>
 
-        <div class="d-flex half-max-width flex-row spacing-p-b-2 spacing-p-t-2">
           <?php $link = get_field('link_esterno'); ?>
           <?php if ($eventType == 'Evento gratuito con prenotazione'): ?>
             <?php if ($link): ?>
-              <div class="button">
-                <a class="uppercase" href="<?php echo $link; ?>">Registrati qui</a>
+              <div class="d-flex half-max-width flex-row spacing-p-b-2 spacing-p-t-2">
+                <div class="button">
+                  <a class="uppercase" href="<?php echo $link; ?>">Registrati qui</a>
+                </div>
               </div>
             <?php else: ?>
               <?php echo do_shortcode('[mc4wp_form id="226"]'); ?>
             <?php endif; ?>
           <?php elseif ($eventType == 'Evento a pagamento'): ?>
             <?php if ($link): ?>
-              <div class="button">
-                <a class="uppercase" href="<?php echo $link; ?>">Compra qui</a>
+              <div class="d-flex half-max-width flex-row spacing-p-b-4 spacing-p-t-2">
+                <div class="button">
+                  <a class="uppercase" href="<?php echo $link; ?>">Compra qui</a>
+                </div>
               </div>
             <?php else: ?>
-              <?php echo do_shortcode('[mc4wp_form id="226"]'); ?>
+              <div class="d-flex half-max-width flex-row spacing-p-b-2 spacing-p-t-2">
+                <?php echo do_shortcode('[mc4wp_form id="226"]'); ?>
+              </div>
             <?php endif; ?>
           <?php else: ?>
-            <?php $embed = get_field('embed_esterno'); ?>
+            <?php $embed = get_field('embed'); ?>
+            <?php $linkHome = get_field('link_to_homepage'); ?>
             <?php if ($embed): ?>
-              <div class="button">
-                <p class="uppercase">Guarda in streaming su questo sito</p>
+              <div id="embed-wrapper" class="d-flex d-center center">
+                <div id="embed">
+                  <?php echo $embed; ?>
+                </div>
               </div>
             <?php else: ?>
-               <?php echo do_shortcode('[mc4wp_form id="226"]'); ?>
+              <?php if ($linkHome == 1): ?>
+                <div class="d-flex half-max-width flex-row spacing-p-b-4 spacing-p-t-2">
+                  <div class="button">
+                    <a href="<?php echo home_url(); ?>">Guarda in streaming su questo sito</a>
+                  </div>
+                </div>
+              <?php else: ?>
+                <div class="d-flex half-max-width flex-row spacing-p-b-2 spacing-p-t-2">
+                  <?php echo do_shortcode('[mc4wp_form id="226"]'); ?>
+                </div>
+              <?php endif; ?>
             <?php endif; ?>
+
           <?php endif; ?>
         </div>
         </div>
