@@ -43,7 +43,6 @@
                     <a href="<?php echo get_page_link(115); ?>">Leggi il programma completo</a>
                   </div>
                 <?php else: ?>
-                  <?php echo do_shortcode('[mc4wp_form id="226"]'); ?>
 
                   <?php $terms = get_terms( 'event-category', $args = array(
                     'hide_empty' => true, // do not hide empty terms
@@ -56,7 +55,12 @@
                       </div>
                     <?php endif;
                   endforeach;?>
+                  
+                  <div class="spacing-t-2">
+                    <?php echo do_shortcode('[mc4wp_form id="226"]'); ?>
+                  </div>
                 <?php endif; ?>
+
               </div>
             </div>
 

@@ -2,7 +2,7 @@
 
 <?php $currentID = $wp_query->queried_object_id; ?>
 
-<section class="content" id="content-page">
+<section class="content" id="content-page-programma">
 
     <div class="container-fluid-w-p">
       <div class="title">
@@ -15,6 +15,8 @@
 
     </div>
 
+    <?php include ('event-filters.php'); ?>
+
     <div class="container-fluid">
         
         <div id="events-calendar">
@@ -22,15 +24,16 @@
         $cptQuery = new WP_Query( array(
           'post_type'         => 'event',
           'posts_per_page'    => -1,
-          'suppress_filters'  => true,
+          'order'             => ASC,
           'show_past_events'  => false,
+          'orderby'           => 'eventstart'
           ));
         ?>
 
         <?php if ( $cptQuery->have_posts() ) : 
           while ( $cptQuery->have_posts() ) : $cptQuery->the_post(); ?>
             <?php include('event-query.php'); ?>
-          <?php endwhile; wp_reset_postdata(); ?>
+          <?php endwhile; ?>
         <?php else: ?>
 
           <h2>Woops...</h2>

@@ -184,26 +184,26 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
 .d-none {
   display: none; }
 
-.d-flex {
+.d-flex, .svg-container {
   display: flex; }
-  .d-flex.center {
+  .d-flex.center, .center.svg-container {
     align-items: center; }
-  .d-flex.top {
+  .d-flex.top, .top.svg-container {
     align-items: flex-start; }
-  .d-flex.baseline {
+  .d-flex.baseline, .baseline.svg-container {
     align-items: baseline; }
-  .d-flex.between {
+  .d-flex.between, .between.svg-container {
     justify-content: space-between; }
-  .d-flex.v-center {
+  .d-flex.v-center, .svg-container {
     justify-content: center; }
-  .d-flex.column {
+  .d-flex.column, .column.svg-container {
     flex-flow: column; }
-    .d-flex.column.center {
+    .d-flex.column.center, .column.center.svg-container {
       align-items: unset;
       justify-content: center; }
-    .d-flex.column.space-between {
+    .d-flex.column.space-between, .column.space-between.svg-container {
       justify-content: space-between; }
-  .d-flex.wrap {
+  .d-flex.wrap, .wrap.svg-container {
     flex-wrap: wrap; }
 
 .mob-only {
@@ -234,7 +234,7 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
   height: 50vh; }
 
 .full-height-w-h {
-  height: calc(100vh - 18vw); }
+  height: calc(100vh - 18.4vw); }
 
 .max-width {
   max-width: 1230px; }
@@ -331,6 +331,24 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
     color: #fafadc; }
     body[data-color='red'] .button:hover a {
       color: #fafadc; }
+
+.filter-element {
+  padding-right: 10px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  body[data-color='blue'] .filter-element:hover, body[data-color='blue'] .filter-element .active {
+    color: #3f89ff; }
+  body[data-color='green'] .filter-element:hover, body[data-color='green'] .filter-element .active {
+    color: #b5d300; }
+  body[data-color='yellow'] .filter-element:hover, body[data-color='yellow'] .filter-element .active {
+    color: #fed100; }
+  body[data-color='red'] .filter-element:hover, body[data-color='red'] .filter-element .active {
+    color: #ff4c44; }
 
 body[data-color='blue'] .border-top {
   border-top: #3f89ff 5px solid; }
@@ -431,7 +449,7 @@ svg {
   margin-right: 15px;
   margin-left: 15px; }
 
-.flex-row-neg, .wpcf7-form .d-flex {
+.flex-row-neg, .wpcf7-form .d-flex, .wpcf7-form .svg-container {
   margin-right: -15px;
   margin-left: -15px; }
 
@@ -444,7 +462,7 @@ svg {
   left: 0;
   top: 0;
   width: 100%;
-  height: 18vw;
+  height: 18.4vw;
   background-color: white;
   overflow: hidden;
   z-index: 100;
@@ -527,7 +545,7 @@ svg {
     -o-transition: top 0.5s;
     transition: top 0.5s; }
     #header div[class*="menu-1"].active {
-      top: 18vw; }
+      top: 18.4vw; }
       #header div[class*="menu-1"].active.w-c-menu {
         top: 10vw; }
     #header div[class*="menu-1"] ul {
@@ -634,8 +652,8 @@ body.red a.underline, #events-showcase body.event.workshop a.underline, #events-
     color: #fafadc; }
 
 .content {
-  padding-top: 18vw;
-  min-height: calc(100vh - 18vw); }
+  padding-top: 18.4vw;
+  min-height: calc(100vh - 18.4vw); }
   .content p {
     text-indent: 30px; }
     body[data-color='blue'] .content p a {
@@ -722,6 +740,7 @@ body[data-color='red'] #content-home {
     -o-transition: opacity 0.3s;
     transition: opacity 0.3s; }
     .svg-container.animated-shape svg {
+      max-width: 500px;
       animation-play-state: paused;
       --looping-percent: 100;
       --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
@@ -734,7 +753,7 @@ body[data-color='red'] #content-home {
   to {
     stroke-dashoffset: 0; } }
 #events-showcase .event, #events-calendar .event, #events-related .event, #cat-events-archive .event, #festival-cats .event {
-  height: calc(100vh - 18vw);
+  height: calc(100vh - 18.4vw);
   border-bottom: 5px solid white;
   position: relative; }
   #events-showcase .event:hover .svg-container.animated-shape, #events-calendar .event:hover .svg-container.animated-shape, #events-related .event:hover .svg-container.animated-shape, #cat-events-archive .event:hover .svg-container.animated-shape, #festival-cats .event:hover .svg-container.animated-shape {
@@ -776,50 +795,94 @@ body[data-color='red'] #content-home {
     background: #fde7da no-repeat center center; }
     #festival-cats .event.panel h2, #festival-cats .event.panel h5, #festival-cats .event.panel h5 > a, #festival-cats .event.panel a {
       color: #3f89ff; }
-    #festival-cats .event.panel .button {
-      border-color: #3f89ff; }
-      #festival-cats .event.panel .button a {
-        color: #3f89ff; }
-      #festival-cats .event.panel .button:hover {
-        background-color: #3f89ff; }
-        #festival-cats .event.panel .button:hover a {
-          color: #fde7da; }
+    #festival-cats .event.panel .button, #festival-cats .event.panel input[type="submit"] {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      border-color: #3f89ff !important;
+      color: #3f89ff !important; }
+      #festival-cats .event.panel .button a, #festival-cats .event.panel input[type="submit"] a {
+        color: #3f89ff !important; }
+      #festival-cats .event.panel .button:hover, #festival-cats .event.panel input[type="submit"]:hover {
+        color: #fde7da !important;
+        background-color: #3f89ff !important; }
+        #festival-cats .event.panel .button:hover a, #festival-cats .event.panel input[type="submit"]:hover a {
+          color: #fde7da !important; }
+    #festival-cats .event.panel input[type=text],
+    #festival-cats .event.panel input[type=email],
+    #festival-cats .event.panel input[type=url] {
+      border-color: #3f89ff !important; }
   #festival-cats .event.tour {
     background: #dcece8 no-repeat center center; }
     #festival-cats .event.tour h2, #festival-cats .event.tour h5, #festival-cats .event.tour h5 > a, #festival-cats .event.tour a {
       color: #fed100; }
-    #festival-cats .event.tour .button {
-      border-color: #fed100; }
-      #festival-cats .event.tour .button a {
-        color: #fed100; }
-      #festival-cats .event.tour .button:hover {
-        background-color: #fed100; }
-        #festival-cats .event.tour .button:hover a {
-          color: #dcece8; }
+    #festival-cats .event.tour .button, #festival-cats .event.tour input[type="submit"] {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      border-color: #fed100 !important;
+      color: #fed100 !important; }
+      #festival-cats .event.tour .button a, #festival-cats .event.tour input[type="submit"] a {
+        color: #fed100 !important; }
+      #festival-cats .event.tour .button:hover, #festival-cats .event.tour input[type="submit"]:hover {
+        color: #dcece8 !important;
+        background-color: #fed100 !important; }
+        #festival-cats .event.tour .button:hover a, #festival-cats .event.tour input[type="submit"]:hover a {
+          color: #dcece8 !important; }
+    #festival-cats .event.tour input[type=text],
+    #festival-cats .event.tour input[type=email],
+    #festival-cats .event.tour input[type=url] {
+      border-color: #fed100 !important; }
   #festival-cats .event.workshop {
     background: #fafadc no-repeat center center; }
     #festival-cats .event.workshop h2, #festival-cats .event.workshop h5, #festival-cats .event.workshop h5 > a, #festival-cats .event.workshop a {
       color: #ff4c44; }
-    #festival-cats .event.workshop .button {
-      border-color: #ff4c44; }
-      #festival-cats .event.workshop .button a {
-        color: #ff4c44; }
-      #festival-cats .event.workshop .button:hover {
-        background-color: #ff4c44; }
-        #festival-cats .event.workshop .button:hover a {
-          color: #fafadc; }
+    #festival-cats .event.workshop .button, #festival-cats .event.workshop input[type="submit"] {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      border-color: #ff4c44 !important;
+      color: #ff4c44 !important; }
+      #festival-cats .event.workshop .button a, #festival-cats .event.workshop input[type="submit"] a {
+        color: #ff4c44 !important; }
+      #festival-cats .event.workshop .button:hover, #festival-cats .event.workshop input[type="submit"]:hover {
+        color: #fafadc !important;
+        background-color: #ff4c44 !important; }
+        #festival-cats .event.workshop .button:hover a, #festival-cats .event.workshop input[type="submit"]:hover a {
+          color: #fafadc !important; }
+    #festival-cats .event.workshop input[type=text],
+    #festival-cats .event.workshop input[type=email],
+    #festival-cats .event.workshop input[type=url] {
+      border-color: #ff4c44 !important; }
   #festival-cats .event.film {
     background: #ede8db no-repeat center center; }
     #festival-cats .event.film h2, #festival-cats .event.film h5, #festival-cats .event.film h5 > a, #festival-cats .event.film a {
       color: #b5d300; }
-    #festival-cats .event.film .button {
-      border-color: #b5d300; }
-      #festival-cats .event.film .button a {
-        color: #b5d300; }
-      #festival-cats .event.film .button:hover {
-        background-color: #b5d300; }
-        #festival-cats .event.film .button:hover a {
-          color: #ede8db; }
+    #festival-cats .event.film .button, #festival-cats .event.film input[type="submit"] {
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      border-color: #b5d300 !important;
+      color: #b5d300 !important; }
+      #festival-cats .event.film .button a, #festival-cats .event.film input[type="submit"] a {
+        color: #b5d300 !important; }
+      #festival-cats .event.film .button:hover, #festival-cats .event.film input[type="submit"]:hover {
+        color: #ede8db !important;
+        background-color: #b5d300 !important; }
+        #festival-cats .event.film .button:hover a, #festival-cats .event.film input[type="submit"]:hover a {
+          color: #ede8db !important; }
+    #festival-cats .event.film input[type=text],
+    #festival-cats .event.film input[type=email],
+    #festival-cats .event.film input[type=url] {
+      border-color: #b5d300 !important; }
 
 #content-single-event {
   padding-bottom: 0; }
@@ -980,7 +1043,7 @@ input[type="submit"] {
 
 .wpcf7-form {
   max-width: 800px; }
-  .wpcf7-form .d-flex {
+  .wpcf7-form .d-flex, .wpcf7-form .svg-container {
     margin-bottom: 30px; }
   .wpcf7-form .wpcf7-list-item {
     width: 100%; }
@@ -1101,9 +1164,9 @@ div.wpforms-container-full .wpforms-form {
   .t-hidden {
     display: none; }
 
-  .d-flex.t-column {
+  .d-flex.t-column, .t-column.svg-container {
     flex-flow: column; }
-  .d-flex.t-column-reverse {
+  .d-flex.t-column-reverse, .t-column-reverse.svg-container {
     flex-flow: column-reverse; }
 
   .t-whole {
@@ -1138,10 +1201,13 @@ div.wpforms-container-full .wpforms-form {
     -moz-transition: opacity 0.3s;
     -ms-transition: opacity 0.3s;
     -o-transition: opacity 0.3s;
-    transition: opacity 0.3s; } }
+    transition: opacity 0.3s; }
+    .svg-container.animated-shape svg {
+      --looping-percent: 90;
+      animation-play-state: running !important; } }
 @media screen and (max-width: 640px) {
   svg {
-    stroke-width: 1vw; }
+    stroke-width: 1.3vw; }
 
   .s-large, .s-big, .s-medium, #header div[class*="menu-1"] ul li {
     font-size: 7vw; }
@@ -1165,9 +1231,9 @@ div.wpforms-container-full .wpforms-form {
   .m-visible {
     display: inline-block; }
 
-  .d-flex.m-column {
+  .d-flex.m-column, .m-column.svg-container {
     flex-flow: column; }
-  .d-flex.m-column-reverse {
+  .d-flex.m-column-reverse, .m-column-reverse.svg-container {
     flex-flow: column-reverse; }
 
   .m-whole {

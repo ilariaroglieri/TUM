@@ -6,7 +6,7 @@ Version: 1.0
 
 @import 'common';
 
-$headerH: 18vw;
+$headerH: 18.4vw;
 
 // eg @include transition(background-color 200ms, left 200ms);
 @mixin transition($args...) {
@@ -252,6 +252,27 @@ $headerH: 18vw;
       a {
         color: $red-bg;
       }
+    }
+  }
+}
+
+.filter-element {
+  padding-right: 10px;
+  display: inline-block;
+  cursor: pointer;
+  @include transition(all .3s);
+  &:hover, .active {
+    @at-root body[data-color='blue'] & {
+      color: $blue;
+    }
+    @at-root body[data-color='green'] & {
+      color: $green;
+    }
+    @at-root body[data-color='yellow'] & {
+      color: $yellow;
+    }
+    @at-root body[data-color='red'] & {
+      color: $red;
     }
   }
 }
@@ -761,6 +782,8 @@ body.red {
   top: 0;
   z-index:0;
   position: absolute;
+  @extend .d-flex;
+  @extend .v-center;
   &.light-color {
     z-index:10;
     @at-root body[data-color='blue'] & {
@@ -780,6 +803,7 @@ body.red {
     opacity: 0;
     @include transition(opacity .3s);
     svg {
+      max-width: 500px;
       animation-play-state: paused;
       --looping-percent: 100;
       --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
@@ -865,15 +889,23 @@ body.red {
       h2, h5, h5 > a, a {
         color: $blue;
       }
-      .button {
-        border-color: $blue;
+      .button, input[type="submit"] {
+        @include transition(all .3s);
+        border-color: $blue !important;
+        color: $blue !important;
         a {
-          color: $blue;
+          color: $blue !important;
         }
         &:hover {
-          background-color: $blue;
-          a {color: $blue-bg;}
+          color: $blue-bg !important;
+          background-color: $blue !important;
+          a {color: $blue-bg !important;}
         }
+      }
+      input[type=text],
+      input[type=email],
+      input[type=url] {
+        border-color: $blue !important;
       }
     }
     &.tour {
@@ -882,15 +914,23 @@ body.red {
       h2, h5, h5 > a, a {
         color: $yellow;
       }
-      .button {
-        border-color: $yellow;
+      .button, input[type="submit"] {
+        @include transition(all .3s);
+        border-color: $yellow !important;
+        color: $yellow !important;
         a {
-          color: $yellow;
+          color: $yellow !important;
         }
         &:hover {
-          background-color: $yellow;
-          a {color: $yellow-bg;}
+          color: $yellow-bg !important;
+          background-color: $yellow !important;
+          a {color: $yellow-bg !important;}
         }
+      }
+      input[type=text],
+      input[type=email],
+      input[type=url] {
+        border-color: $yellow !important;
       }
     } 
     &.workshop {
@@ -899,15 +939,23 @@ body.red {
       h2, h5, h5 > a, a {
         color: $red;
       }
-      .button {
-        border-color: $red;
+      .button, input[type="submit"] {
+        @include transition(all .3s);
+        border-color: $red !important;
+        color: $red !important;
         a {
-          color: $red;
+          color: $red !important;
         }
         &:hover {
-          background-color: $red;
-          a {color: $red-bg;}
+          color: $red-bg !important;
+          background-color: $red !important;
+          a {color: $red-bg !important;}
         }
+      }
+      input[type=text],
+      input[type=email],
+      input[type=url] {
+        border-color: $red !important;
       }
     }
     &.film {
@@ -916,17 +964,23 @@ body.red {
       h2, h5, h5 > a, a {
         color: $green;
       }
-      .button {
-        border-color: $green;
+      .button, input[type="submit"] {
+        @include transition(all .3s);
+        border-color: $green !important;
+        color: $green !important;
         a {
-          color: $green;
+          color: $green !important;
         }
         &:hover {
-          background-color: $green;
-          a {
-            color: $green-bg;
-          }
+          color: $green-bg !important;
+          background-color: $green !important;
+          a {color: $green-bg !important;}
         }
+      }
+      input[type=text],
+      input[type=email],
+      input[type=url] {
+        border-color: $green !important;
       }
     }
   }
@@ -1074,8 +1128,6 @@ body.red {
 }
 
 // cf7
-
-
 input[type=text],
 input[type=email],
 input[type=url] {
@@ -1421,13 +1473,17 @@ div.wpforms-container-full .wpforms-form {
     &.animated-shape {
       opacity: 1;
       @include transition(opacity .3s);
+      svg { 
+        --looping-percent: 90;
+        animation-play-state: running !important;
+      }
     }
   }
 }
 
 @media screen and (max-width: $mobile) {
   svg {
-    stroke-width: 1vw;
+    stroke-width: 1.3vw;
   }
   .s-large, .s-big, .s-medium {
     font-size: 7vw;
