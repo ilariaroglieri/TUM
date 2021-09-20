@@ -148,9 +148,6 @@ function animateLogo(i) {
         var path1 = strokes[path][0];
         var path2 = strokes[path][1];
 
-        console.log(bodyCol);
-        console.log(strokes[path][2], strokes[path][3]);
-
         setTimeout(function() {
           lineSVG.attr('data-color', bodyCol);
           seclineSVG.attr('data-color', bodyCol);
@@ -203,6 +200,45 @@ function updateActive(scroll) {
     animateLogo(state.activeItem);
   }
 }
+
+$(document).on('click', '#cat-select .filter-element, #venue-select .filter-element, #date-select .filter-element', function(ev) {
+  ev.preventDefault();
+
+  var currFilter = $(this).attr('data-type');
+
+  $('.filter-element[data-type='+currFilter+']').removeClass('active');
+  $(this).addClass('active');
+
+  console.log($(this));
+
+
+  var category = $('#cat-select').attr('data-name');
+  var catTerm = $('#cat-select .filter-element.active').attr('id');
+
+
+  var venue = $('#venue-select').attr('data-name');
+  var venueTerm = $('#venue-select .filter-element.active').attr('id');
+  
+  var date =  $('#date-select .filter-element.active').attr('id');
+  console.log(date);
+
+  $.ajax({
+    url: wpAjax.ajaxUrl,
+    data: {action: 'filterCat', catTerm: catTerm, category: category, venueTerm: venueTerm, venue: venue, date: date},
+    type: 'post',
+    success: function(results) {
+      $('#events-calendar').html(results);
+      console.log(results);
+    },
+    error: function(results) {
+      console.log(results);
+    }
+  })
+});
+
+$(document).on('click', '.reset-filter', function(ev) {
+  location.reload();
+});
 
 //----------END JQUERY -----------
 });

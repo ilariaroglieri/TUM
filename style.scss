@@ -149,8 +149,11 @@ $headerH: 18.4vw;
   text-transform: uppercase;
 }
 
-.btn:hover {
-  text-decoration: underline;
+.btn {
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .button {
@@ -261,7 +264,7 @@ $headerH: 18.4vw;
   display: inline-block;
   cursor: pointer;
   @include transition(all .3s);
-  &:hover, .active {
+  &:hover, &.active {
     @at-root body[data-color='blue'] & {
       color: $blue;
     }
@@ -1271,6 +1274,24 @@ input[type="submit"] {
     }
   }
 }
+
+
+//mc4wp
+.event {
+  .panel-only {
+    display:none;
+  }
+  &.event-category-panel,
+  &.panel {
+    .other-cats {
+      display:none;
+    }
+    .panel-only {
+      display:inline-block;
+    }
+  }
+} 
+
 
 //wp forms
 div.wpforms-container-full .wpforms-form {
