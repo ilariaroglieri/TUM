@@ -67,14 +67,18 @@ $('.accordion-btn').each(function(i, el) {
 
 //--------- SVG SNAP JS -----------
 
-const shapes = document.querySelectorAll('.animated-shape svg');
+function animateSVG() {
+  const shapes = document.querySelectorAll('.animated-shape svg');
 
-Array.from(shapes).forEach((el, i) => {
-  var path = el.querySelector('path').getTotalLength();
-  var time = path/1500;
-  el.style.setProperty('--total-length', path);
-  el.style.setProperty('--animation-time', `${time}s`);
-});
+  Array.from(shapes).forEach((el, i) => {
+    var path = el.querySelector('path').getTotalLength();
+    var time = path/1500;
+    el.style.setProperty('--total-length', path);
+    el.style.setProperty('--animation-time', `${time}s`);
+  });
+}
+
+animateSVG();
 
 
 //logo svg animation
@@ -153,7 +157,6 @@ function animateLogo(i) {
           seclineSVG.attr('data-color', bodyCol);
           lineSVG.animate({ d: path1 }, 250, mina.backout);
           seclineSVG.animate({ d: path2 }, 250, mina.backout);
-
         }, 300)
 
         $('#header .menu-toggle span').css({'background-color':strokes[path][3]});
@@ -201,25 +204,23 @@ function updateActive(scroll) {
   }
 }
 
-$(document).on('click', '#cat-select .filter-element, #venue-select .filter-element, #date-select .filter-element', function(ev) {
+$(document).on('click', '#cat-select .filter-container, #venue-select .filter-container, #date-select .filter-container', function(ev) {
   ev.preventDefault();
 
-  var currFilter = $(this).attr('data-type');
+  var currFilter = $(this).find('.filter-element').attr('data-type');
+  console.log(currFilter);
 
-  $('.filter-element[data-type='+currFilter+']').removeClass('active');
+  $('.filter-element[data-type='+currFilter+']').parent().removeClass('active');
   $(this).addClass('active');
-
-  console.log($(this));
 
 
   var category = $('#cat-select').attr('data-name');
-  var catTerm = $('#cat-select .filter-element.active').attr('id');
-
+  var catTerm = $('#cat-select .filter-container.active .filter-element').attr('id');
 
   var venue = $('#venue-select').attr('data-name');
-  var venueTerm = $('#venue-select .filter-element.active').attr('id');
+  var venueTerm = $('#venue-select .filter-container.active .filter-element').attr('id');
   
-  var date =  $('#date-select .filter-element.active').attr('id');
+  var date =  $('#date-select .filter-container.active .filter-element').attr('id');
   console.log(date);
 
   $.ajax({
@@ -228,7 +229,7 @@ $(document).on('click', '#cat-select .filter-element, #venue-select .filter-elem
     type: 'post',
     success: function(results) {
       $('#events-calendar').html(results);
-      console.log(results);
+      animateSVG();
     },
     error: function(results) {
       console.log(results);

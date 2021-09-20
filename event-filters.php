@@ -15,8 +15,14 @@
 
     if ( $cats ) : ?>
       <div id="cat-select" data-name="<?= $cat; ?>" class="custom-select select-cat d-flex t-column">
-        <?php foreach( $cats as $cat ) : ?>
-          <h3 class="s-regular uppercase filter-element" data-type="cat-filter" id="<?php echo $cat->term_id; ?>"><?php echo $cat->name; ?></h3>
+        <?php foreach( $cats as $category ) :
+          $cat = $category->slug; ?>
+          <div class="filter-container d-flex center <?php echo $cat; ?>">
+            <h3 class="s-regular uppercase filter-element" data-type="cat-filter" id="<?php echo $category->term_id; ?>"><?php echo $category->name; ?></h3>
+            <div class="animated-shape">
+              <?php include ('svg-shapes.php'); ?>
+            </div>
+          </div>
         <?php endforeach; ?>
       </div>
     <?php endif;
@@ -36,7 +42,9 @@
     if ( $venues ) : ?>
       <div id="venue-select" data-name="<?= $venue; ?>" class="custom-select select-venue d-flex t-column">
         <?php foreach( $venues as $venue ) : ?>
-          <h3 class="s-regular uppercase filter-element" data-type="venue-filter" id="<?php echo $venue->term_id; ?>"><?php echo $venue->name; ?></h3>
+          <div class="filter-container">
+            <h3 class="s-regular uppercase filter-element" data-type="venue-filter" id="<?php echo $venue->term_id; ?>"><?php echo $venue->name; ?></h3>
+          </div>
         <?php endforeach; ?>
       </div>
     <?php endif;
@@ -67,7 +75,9 @@
       <?php foreach( $dates_array as $date ) :
         $formatDate = eo_format_date($date, 'd F');
         $formatDateDash = eo_format_date($date, 'Y-m-d'); ?>
-        <h3 class="s-regular uppercase filter-element" data-type="date-filter" id="<?php echo $formatDateDash; ?>"><?php echo $formatDate; ?></h3>
+        <div class="filter-container">
+          <h3 class="s-regular uppercase filter-element" data-type="date-filter" id="<?php echo $formatDateDash; ?>"><?php echo $formatDate; ?></h3>
+        </div>
       <?php endforeach; ?>
 
       <?php wp_reset_postdata(); ?>

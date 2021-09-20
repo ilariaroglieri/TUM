@@ -151,6 +151,7 @@ $headerH: 18.4vw;
 
 .btn {
   cursor: pointer;
+  display: inline-block;
   &:hover {
     text-decoration: underline;
   }
@@ -259,9 +260,9 @@ $headerH: 18.4vw;
   }
 }
 
-.filter-element {
-  padding-right: 10px;
-  display: inline-block;
+.filter-container {
+  padding-right: $spacing;
+  margin-bottom: $half-spacing;
   cursor: pointer;
   @include transition(all .3s);
   &:hover, &.active {
@@ -277,6 +278,58 @@ $headerH: 18.4vw;
     @at-root body[data-color='red'] & {
       color: $red;
     }
+    svg {
+      --looping-percent: 90;
+      animation-play-state: running !important;
+    }
+  }
+  &.film {
+    stroke: $green !important;
+    &:hover, &.active {
+      .filter-element {
+        color: $green;
+      }
+    }
+  }
+  &.workshop {
+    stroke: $red !important;
+    &:hover, &.active {
+      .filter-element {
+        color: $red;
+      }
+    }
+  }
+  &.tour {
+    stroke: $yellow !important;
+    &:hover, &.active {
+      .filter-element {
+        color: $yellow;
+      }
+    }
+  }
+  &.panel {
+    stroke: $blue !important;
+    &:hover, &.active {
+      .filter-element {
+        color: $blue;
+      }
+    }
+  }
+  .filter-element {
+    padding-right: $half-spacing;
+  }
+  .cat-filter {
+    margin-bottom: 0;
+    // padding-right: $half-spacing;
+  }
+  svg {
+    height: 50px;
+    width: 50px;
+    stroke-width: 20px;
+    --looping-percent: 100;
+    --looping-length: calc((var(--looping-percent) * var(--total-length)) / 100);
+     stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
+    animation: loading-loop var(--animation-time) linear infinite;
   }
 }
 
