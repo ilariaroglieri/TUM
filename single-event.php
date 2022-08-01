@@ -154,6 +154,7 @@
 
                     $name = get_sub_field('nome');
                     $qualifica = get_sub_field('qualifica');
+                    $buttonTxt = get_sub_field('testo_bottone_2');
                     $ritratto = get_sub_field('ritratto');
                     $bio = get_sub_field('bio'); ?>
 
@@ -162,7 +163,7 @@
                       <div class="info d-two-thirds t-whole">
                         <h3 class="s-big uppercase"><?= $name; ?></h3>
                         <h6 class="s-small spacing-b-1"><?= $qualifica; ?></h6>
-                        <h4 class="btn s-small uppercase">Leggi bio</h4>
+                        <h4 class="btn s-small uppercase"><?= $buttonTxt; ?></h4>
                       </div>
                     </div>
 

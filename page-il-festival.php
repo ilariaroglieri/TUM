@@ -28,7 +28,7 @@
               $acfTerm = get_sub_field('categoria');
               $title = get_sub_field('titolo');
               $text = get_sub_field('testo');
-              $link = get_sub_field('link');
+              $link = get_sub_field('link_esterno');
             ?>
 
             <div class="event <?php echo $acfTerm; ?> d-flex t-column flex-row-neg" data-type="<?php echo $acfTerm; ?>">
@@ -44,6 +44,7 @@
                   </div>
                 <?php else: ?>
 
+
                   <?php $terms = get_terms( 'event-category', $args = array(
                     'hide_empty' => true, // do not hide empty terms
                   ));
@@ -56,9 +57,19 @@
                     <?php endif;
                   endforeach;?>
                   
+                  <?php if ($link): ?>
+                    <div class="button spacing-t-2">
+                      <a href="<?php echo $link; ?>">Compra qui</a>
+                    </div>
+
+                  <?php else: ?>
+                  
                   <div class="spacing-t-2">
                     <?php echo do_shortcode('[mc4wp_form id="226"]'); ?>
                   </div>
+
+                  <?php endif; ?>
+
                 <?php endif; ?>
 
               </div>

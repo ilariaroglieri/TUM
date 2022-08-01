@@ -46,6 +46,13 @@ add_action( 'pre_get_posts', function( $query ){
   }
 });
 
+// display past events in home
+add_action( 'pre_get_posts', function( $query ){
+  if ( ! is_admin() && $query->is_main_query() ) {
+      $query->set('showpastevents', true);
+  }
+});
+
 // Utenti autenticati
 add_action( 'wp_ajax_nopriv_filterCat', 'filterCatAjax' );
 // Utenti non autenticati

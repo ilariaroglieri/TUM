@@ -17,10 +17,10 @@
 
       <div class="date-time">
         <?php 
-        $month = eo_get_next_occurrence('F');
+        $month = eo_get_the_start('F');
         $shortMonth = substr($month, 0, 3);
         ?>
-        <h5 class="uppercase"><?php eo_next_occurrence('d'); ?> <?php echo $shortMonth; ?> <?php eo_next_occurrence('Y'); ?> <?php _e ('H','sf64_theme');?><?php eo_next_occurrence(get_option('time_format')); ?>  
+        <h5 class="uppercase"><?php eo_the_start('d'); ?> <?php echo $shortMonth; ?> <?php eo_the_start('Y'); ?> <?php _e ('H','sf64_theme');?><?php eo_the_start(get_option('time_format')); ?>  
         </h5>
       </div>
     </div>

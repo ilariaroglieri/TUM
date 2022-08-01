@@ -25,7 +25,7 @@
           'post_type'         => 'event',
           'posts_per_page'    => -1,
           'order'             => 'ASC',
-          'show_past_events'  => false,
+          'showpastevents'  => true,
           'orderby'           => 'eventstart'
           ));
         ?>

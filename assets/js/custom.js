@@ -221,14 +221,16 @@ $(document).on('click', '#cat-select .filter-container, #venue-select .filter-co
   var venueTerm = $('#venue-select .filter-container.active .filter-element').attr('id');
   
   var date =  $('#date-select .filter-container.active .filter-element').attr('id');
-  console.log(date);
 
   $.ajax({
     url: wpAjax.ajaxUrl,
     data: {action: 'filterCat', catTerm: catTerm, category: category, venueTerm: venueTerm, venue: venue, date: date},
     type: 'post',
+    beforeSend: function() {
+      $('#events-calendar').css({'opacity':'.5'});
+    },
     success: function(results) {
-      $('#events-calendar').html(results);
+      $('#events-calendar').css({'opacity':'1'}).html(results);
       animateSVG();
     },
     error: function(results) {

@@ -2,25 +2,7 @@
 
 <section class="content" id="content-home">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <!-- streaming area -->
-    <?php $embed = get_field('area_streaming'); ?>
-
-    <?php if ($embed): ?>
-      <div id="streaming-area" class="container-fluid">
-        <div id="streaming-header" class="white-header">
-          <div class="flex-row">
-            <h3 class="uppercase s-large">Live now</h3>
-          </div>
-        </div>
-
-        <div id="embed-wrapper" class="d-flex d-center center">
-          <div id="embed">
-            <?php echo $embed; ?>
-          </div>
-        </div>
-      </div>
-    <?php endif; ?>
-
+    
     <?php if( have_rows('slide') ): ?>
       <div id="intro-text" class="container-fluid">
 
@@ -29,7 +11,10 @@
 
             $title = get_sub_field('testo_grande');
             $text = get_sub_field('testo_descrittivo');
-            $img = get_sub_field('immagine');?>
+            $link = get_sub_field('link');
+            $img = get_sub_field('immagine');
+            $download = get_sub_field('download');
+            ?>
 
             <div class="slide" style="background: <?php if ($img):?>url( <?php echo $img['url']; ?>) <?php endif; ?> center center no-repeat">
               <div class="d-flex m-column">
@@ -42,8 +27,14 @@
                     <a class="btn uppercase" href="<?php echo get_page_link(5); ?>">Leggi di più</a>
                   </div>
 
+                  <?php if ($link): ?>
+                    <div class="button light spacing-t-2">
+                      <a href="<?php echo $link['url']; ?>" target="_blank"><?php echo $link['title']; ?></a>
+                    </div>
+                  <?php endif; ?>
+
                   <div class="button light spacing-t-2">
-                    <a href="<?php echo get_page_link(42); ?>">Iscriviti alla newsletter</a>
+                    <a href="<?php echo $download['url']; ?>" target="_blank">Scarica il programma</a>
                   </div>
                 </div>
               </div>
@@ -52,6 +43,38 @@
           <?php endwhile; ?>
         </div>
       </div>
+    <?php endif; ?>
+
+    <!-- streaming area -->
+    <?php $showEmbed = get_field('mostra_area_streaming'); ?>
+    <?php $title = get_field('titolo_area_streaming'); ?>
+
+    <?php if ($showEmbed == true): ?>
+      <?php if( have_rows('area_streaming') ): ?>
+        <div class="container-fluid streaming-area">
+          <div id="streaming-header" class="white-header">
+            <div class="flex-row">
+              <h3 class="uppercase s-large"><?= $title; ?></h3>
+            </div>
+          </div>
+
+          <?php while( have_rows('area_streaming') ) : the_row();
+
+            $link_video = get_sub_field('link_video');
+            $time = get_sub_field('orario');
+            $title = get_sub_field('titolo'); ?>
+            <div class="video-label d-flex baseline between">
+              <h4 class="uppercase"><?php echo $title; ?></h4>
+              <h4 class="uppercase"><?php echo $time; ?></h4>
+            </div>
+            <div id="embed-wrapper" class="d-flex d-center center">
+              <div id="embed">
+                <?php echo $link_video; ?>
+              </div>
+            </div>
+          <?php endwhile; ?>
+        </div>
+      <?php endif; ?>
     <?php endif; ?>
 
     <!-- eventi IN EVIDENZA -->
