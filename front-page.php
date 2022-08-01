@@ -16,8 +16,13 @@
             $download = get_sub_field('download');
             ?>
 
-            <div class="slide" style="background: <?php if ($img):?>url( <?php echo $img['url']; ?>) <?php endif; ?> center center no-repeat">
-              <div class="d-flex m-column">
+            <div class="slide">
+              <div class="d-flex">
+                <div class="img-container d-whole t-center">
+                  <img src="<?= $img['url']; ?>" />
+                </div>
+              </div>
+              <div class="d-flex m-column spacing-t-2 spacing-b-2">
                 <div class="d-half t-whole">
                   <h2 class="s-medium uppercase"><?php echo $title; ?></h2>
                 </div>
@@ -28,12 +33,12 @@
                   </div>
 
                   <?php if ($link): ?>
-                    <div class="button light spacing-t-2">
+                    <div class="button spacing-t-2">
                       <a href="<?php echo $link['url']; ?>" target="_blank"><?php echo $link['title']; ?></a>
                     </div>
                   <?php endif; ?>
 
-                  <div class="button light spacing-t-2">
+                  <div class="button spacing-t-2">
                     <a href="<?php echo $download['url']; ?>" target="_blank">Scarica il programma</a>
                   </div>
                 </div>

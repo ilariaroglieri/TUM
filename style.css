@@ -455,6 +455,9 @@ svg {
   fill: none;
   stroke-width: .8vw; }
 
+img {
+  width: 100%; }
+
 .container-fluid-w-p {
   margin: 0 15px;
   position: relative;
@@ -699,30 +702,23 @@ body[data-color='red'] #content-home {
   padding: 15px 0;
   background-blend-mode: screen; }
   body[data-color='blue'] #content-home .slider .slide {
-    background-color: #3f89ff !important; }
+    background-color: #fde7da !important; }
+    body[data-color='blue'] #content-home .slider .slide h2 {
+      color: #3f89ff; }
   body[data-color='green'] #content-home .slider .slide {
-    background-color: #b5d300 !important; }
+    background-color: #ede8db !important; }
+    body[data-color='green'] #content-home .slider .slide h2 {
+      color: #b5d300; }
   body[data-color='yellow'] #content-home .slider .slide {
-    background-color: #fed100 !important; }
+    background-color: #dcece8 !important; }
+    body[data-color='yellow'] #content-home .slider .slide h2 {
+      color: #fed100; }
   body[data-color='red'] #content-home .slider .slide {
-    background-color: #ff4c44 !important; }
-  #content-home .slider .slide::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    mix-blend-mode: multiply;
-    pointer-events: none; }
-    body[data-color='blue'] #content-home .slider .slide::after {
-      background-color: #fde7da; }
-    body[data-color='green'] #content-home .slider .slide::after {
-      background-color: #ede8db; }
-    body[data-color='yellow'] #content-home .slider .slide::after {
-      background-color: #dcece8; }
-    body[data-color='red'] #content-home .slider .slide::after {
-      background-color: #fafadc; }
+    background-color: #fafadc !important; }
+    body[data-color='red'] #content-home .slider .slide h2 {
+      color: #ff4c44; }
+  #content-home .slider .slide .img-container img {
+    height: calc(100vh - 18.4vw - 30px); }
   #content-home .slider .slide p {
     margin-bottom: 22px; }
   #content-home .slider .slide p > strong {

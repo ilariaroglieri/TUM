@@ -454,6 +454,10 @@ svg {
   stroke-width: .8vw;
 }
 
+img {
+  width: 100%;
+}
+
 
 .container-fluid-w-p {
   margin: 0 $half-spacing;
@@ -763,38 +767,31 @@ body.red {
       padding: $half-spacing 0;
       background-blend-mode: screen;
       @at-root body[data-color='blue'] & {
-        background-color: $blue !important;
+        background-color: $blue-bg !important;
+        h2 {
+          color: $blue;
+        }
       }
       @at-root body[data-color='green'] & {
-        background-color: $green !important;
+        background-color: $green-bg !important;
+        h2 {
+          color: $green;
+        }
       }
       @at-root body[data-color='yellow'] & {
-        background-color: $yellow !important;
+        background-color: $yellow-bg !important;
+        h2 {
+          color: $yellow;
+        }
       }
       @at-root body[data-color='red'] & {
-        background-color: $red !important;
+        background-color: $red-bg !important;
+        h2 {
+          color: $red;
+        }
       }
-      &::after {
-        content:'';
-        position:absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        mix-blend-mode: multiply;
-        pointer-events: none;
-        @at-root body[data-color='blue'] & {
-          background-color: $blue-bg;
-        }
-        @at-root body[data-color='green'] & {
-          background-color: $green-bg;
-        }
-        @at-root body[data-color='yellow'] & {
-          background-color: $yellow-bg;
-        }
-        @at-root body[data-color='red'] & {
-          background-color: $red-bg;
-        }
+      .img-container img {
+        height: calc(100vh - #{$headerH} - #{$spacing});
       }
       p {
         margin-bottom: 22px;
