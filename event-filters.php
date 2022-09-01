@@ -1,3 +1,21 @@
+<?php
+  // select current year events...
+  $currYear = date("Y");
+  $events = get_posts(array( 
+    'post_type'         => 'event',
+    'posts_per_page'    => -1,
+    'tax_query' => array(
+      array(
+        'taxonomy' => 'event_year',
+        'field'    => 'slug',
+        'terms'    => array( $currYear ),
+        'operator' => 'IN',
+      )),
+    ),
+  );
+
+?>
+
 <div class="container-fluid filters border-top spacing-p-b-2">
   <div class="d-whole spacing-p-t-2">
     <h5 class="s-regular uppercase">Filtra per: </h5>
@@ -5,13 +23,12 @@
 
   <div class="d-flex flex-row d-column spacing-p-t-1 spacing-p-b-1">
     <!-- categories -->
-    <?php $cat = 'event-category'; ?>
-    <?php $cats = get_terms( array(
-      'taxonomy' => $cat,
-      'hide_empty' => true,
-      'orderby' => 'slug',
-      'order' => 'ASC',
-    ) );
+    <?php
+    // ... the outputs only cats for those posts
+    foreach ($events as $event) {
+      $fcats = wp_get_post_terms($event->ID, 'event-category');
+      $cats[] = $fcats[0];
+    }
 
     if ( $cats ) : ?>
       <div id="cat-select" data-name="<?= $cat; ?>" class="custom-select select-cat d-flex t-column">
@@ -31,19 +48,21 @@
 
   <div class="d-flex flex-row d-column spacing-p-b-1">
     <!-- venues -->
-    <?php $venue = 'event-venue'; ?>
-    <?php $venues = get_terms( array(
-      'taxonomy' => $venue,
-      'hide_empty' => true,
-      'orderby' => 'slug',
-      'order' => 'ASC',
-    ) );
+    <?php 
+    foreach ($events as $event) {
+      $fvenues = wp_get_post_terms($event->ID, 'event-venue');
+      $venues[] = $fvenues[0]->name;
+      $venues_ids[] = $fvenues[0]->term_id;
+    }
+
+    $venues = array_unique($venues);
+    $venues_ids = array_unique($venues_ids);
 
     if ( $venues ) : ?>
       <div id="venue-select" data-name="<?= $venue; ?>" class="custom-select select-venue d-flex t-column">
         <?php foreach( $venues as $venue ) : ?>
           <div class="filter-container">
-            <h3 class="s-regular uppercase filter-element" data-type="venue-filter" id="<?php echo $venue->term_id; ?>"><?php echo $venue->name; ?></h3>
+            <h3 class="s-regular uppercase filter-element" data-type="venue-filter" id="<?php echo $venue_ids; ?>"><?php echo $venue; ?></h3>
           </div>
         <?php endforeach; ?>
       </div>
@@ -53,8 +72,10 @@
 
   <div class="d-flex flex-row d-column spacing-p-b-1">
     <div id="date-select" class="custom-select select-date d-flex t-column">
+      <?php $currDate = date("d-m-Y"); ?>
+
       <?php $events = eo_get_events( array(
-        'event_start_after' => '24-06-2021',
+        'event_start_after' => $currDate,
       ) );
       $dates_array = array();
 

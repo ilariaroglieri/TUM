@@ -63,8 +63,11 @@
 
   <div class="d-flex flex-row d-column spacing-p-b-1">
     <div id="date-select" class="custom-select select-date d-flex t-column">
+      <?php $year = get_terms( array('taxonomy' => 'event_year'));
+      $currYear = $year[0]->slug; ?>
+
       <?php $events = eo_get_events( array(
-        'event_start_after' => '24-06-2021',
+        'event_start_after' => '01-01'.$currYear,
       ) );
       $dates_array = array();
 
