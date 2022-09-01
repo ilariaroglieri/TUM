@@ -22,15 +22,15 @@
                   <img src="<?= $img['url']; ?>" />
                 </div>
               </div>
-              <div class="d-flex m-column spacing-t-2 spacing-b-2">
+              <div class="d-flex t-column spacing-t-2 spacing-b-2">
                 <div class="d-half t-whole">
                   <h2 class="s-medium uppercase"><?php echo $title; ?></h2>
                 </div>
                 <div class="d-half t-whole text max-width">
                   <?php echo $text; ?>
-                  <div class="d-block">
+                  <!-- <div class="d-block">
                     <a class="btn uppercase" href="<?php echo get_page_link(5); ?>">Leggi di più</a>
-                  </div>
+                  </div> -->
 
                   <?php if ($link): ?>
                     <div class="button spacing-t-2">
@@ -38,9 +38,11 @@
                     </div>
                   <?php endif; ?>
 
-                  <div class="button spacing-t-2">
-                    <a href="<?php echo $download['url']; ?>" target="_blank">Scarica il programma</a>
-                  </div>
+                  <?php if ($download): ?>
+                    <div class="button spacing-t-2">
+                      <a href="<?php echo $download['url']; ?>" target="_blank">Scarica il programma</a>
+                    </div>
+                  <?php endif; ?>
                 </div>
               </div>
             </div>

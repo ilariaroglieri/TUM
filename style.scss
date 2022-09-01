@@ -752,15 +752,57 @@ body.red {
 #content-home {
   @at-root body[data-color='blue'] & {
     background-color: $blue-bg;
+    .streaming-area {
+      background-color: $blue-bg;
+    }
+    .video-label {
+      h4 {
+        color: $blue;
+      }
+    }
   }
   @at-root body[data-color='green'] & {
     background-color: $green-bg;
+    .streaming-area {
+      background-color: $green-bg;
+    }
+    .video-label {
+      h4 {
+        color: $green;
+      }
+    }
   }
   @at-root body[data-color='yellow'] & {
     background-color: $yellow-bg;
+    .streaming-area {
+      background-color: $yellow-bg;
+    }
+    .video-label {
+      h4 {
+        color: $yellow;
+      }
+    }
   }
   @at-root body[data-color='red'] & {
     background-color: $red-bg;
+    .streaming-area {
+      background-color: $red-bg;
+    }
+    .video-label {
+      h4 {
+        color: $red;
+      }
+    }
+  }
+  .video-label {
+    border-top: $primaryColor 5px solid;
+    border-bottom: $primaryColor 5px solid;
+    h4 {
+      padding: $half-spacing;
+    }
+  }
+  #streaming-header {
+    border-bottom: none;
   }
   .slider {
     .slide {
@@ -805,23 +847,6 @@ body.red {
 
 
 // home streaming
-.streaming-area {
-  background-color: $blue-bg;
-}
-
-#streaming-header {
-  border-bottom: none;
-}
-
-.video-label {
-  border-top: $primaryColor 5px solid;
-  border-bottom: $primaryColor 5px solid;
-  h4 {
-    padding: $half-spacing;
-    color: $blue;
-  }
-}
-
 #embed-wrapper {
   max-width: 137vh;
   margin: 0 auto;
@@ -1508,8 +1533,14 @@ div.wpforms-container-full .wpforms-form {
 }
 
 @media screen and (max-width: $desktop) {
-
-
+  #content-home .slider {
+    .slide {
+      .img-container img {
+        height: initial;
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $tablet) {

@@ -692,12 +692,35 @@ body.red a.underline, #events-showcase body.event.workshop a.underline, #events-
 
 body[data-color='blue'] #content-home {
   background-color: #fde7da; }
+  body[data-color='blue'] #content-home .streaming-area {
+    background-color: #fde7da; }
+  body[data-color='blue'] #content-home .video-label h4 {
+    color: #3f89ff; }
 body[data-color='green'] #content-home {
   background-color: #ede8db; }
+  body[data-color='green'] #content-home .streaming-area {
+    background-color: #ede8db; }
+  body[data-color='green'] #content-home .video-label h4 {
+    color: #b5d300; }
 body[data-color='yellow'] #content-home {
   background-color: #dcece8; }
+  body[data-color='yellow'] #content-home .streaming-area {
+    background-color: #dcece8; }
+  body[data-color='yellow'] #content-home .video-label h4 {
+    color: #fed100; }
 body[data-color='red'] #content-home {
   background-color: #fafadc; }
+  body[data-color='red'] #content-home .streaming-area {
+    background-color: #fafadc; }
+  body[data-color='red'] #content-home .video-label h4 {
+    color: #ff4c44; }
+#content-home .video-label {
+  border-top: #43454a 5px solid;
+  border-bottom: #43454a 5px solid; }
+  #content-home .video-label h4 {
+    padding: 15px; }
+#content-home #streaming-header {
+  border-bottom: none; }
 #content-home .slider .slide {
   padding: 15px 0;
   background-blend-mode: screen; }
@@ -723,19 +746,6 @@ body[data-color='red'] #content-home {
     margin-bottom: 22px; }
   #content-home .slider .slide p > strong {
     font-weight: normal; }
-
-.streaming-area {
-  background-color: #fde7da; }
-
-#streaming-header {
-  border-bottom: none; }
-
-.video-label {
-  border-top: #43454a 5px solid;
-  border-bottom: #43454a 5px solid; }
-  .video-label h4 {
-    padding: 15px;
-    color: #3f89ff; }
 
 #embed-wrapper {
   max-width: 137vh;
@@ -1216,6 +1226,10 @@ div.wpforms-container-full .wpforms-form {
   body[data-color='red'] #footer a:hover {
     color: #ff4c44; }
 
+@media screen and (max-width: 1440px) {
+  #content-home .slider .slide .img-container img {
+    height: initial;
+    width: 100%; } }
 @media screen and (max-width: 768px) {
   .t-hidden {
     display: none; }
