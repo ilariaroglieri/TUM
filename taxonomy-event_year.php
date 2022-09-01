@@ -17,8 +17,20 @@
       </div>
 
       <div class="main-text max-width spacing-t-2 spacing-b-2">
-        <?php the_content();?>
+        <?= term_description();?>
       </div>
+    </div>
+
+    <!-- rassegna stampa -->
+    <div class="container-fluid d-flex column rassegna">
+      <?php $print = get_field('rassegna_stampa', $taxonomy.'_'.$term_id); ?>
+      <div class="section-label">
+        <h4 class="uppercase">Dicono di noi</h4>
+      </div>
+      <div class="main-text flex-row max-width spacing-t-2 spacing-b-2">
+        <?= $print; ?>
+      </div>
+
     </div>
 
     <!-- streaming area -->
@@ -29,7 +41,7 @@
       <?php if( have_rows('area_streaming', $taxonomy.'_'.$term_id) ): ?>
         <div class="container-fluid streaming-area">
           <?php if ($title): ?>
-            <div id="streaming-header" class="white-header">
+            <div class="streaming-header" class="white-header">
               <div class="flex-row">
                 <h3 class="uppercase s-large"><?= $title; ?></h3>
               </div>
@@ -55,14 +67,8 @@
       <?php endif; ?>
     <?php endif; ?>
 
+
     <!-- archived program -->
-
-    <div class="container-fluid download-program d-flex center t-center">
-      
-
-      <?php $print = get_field('rassegna_stampa', $taxonomy.'_'.$term_id); ?>
-    </div>
-
     <?php include ('event-filters+download.php'); ?>
 
     <div class="container-fluid">

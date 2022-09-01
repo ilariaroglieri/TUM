@@ -59,7 +59,7 @@
     <?php if ($showEmbed == true): ?>
       <?php if( have_rows('area_streaming') ): ?>
         <div class="container-fluid streaming-area">
-          <div id="streaming-header" class="white-header">
+          <div class="streaming-header white-header">
             <div class="flex-row">
               <h3 class="uppercase s-large"><?= $title; ?></h3>
             </div>

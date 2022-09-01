@@ -388,13 +388,13 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
     stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
     animation: loading-loop var(--animation-time) linear infinite; }
 
-body[data-color='blue'] .border-top, body[data-color='blue'] #content-edizione .download-program, #content-edizione body[data-color='blue'] .download-program {
+body[data-color='blue'] .border-top {
   border-top: #3f89ff 5px solid; }
-body[data-color='green'] .border-top, body[data-color='green'] #content-edizione .download-program, #content-edizione body[data-color='green'] .download-program {
+body[data-color='green'] .border-top {
   border-top: #b5d300 5px solid; }
-body[data-color='yellow'] .border-top, body[data-color='yellow'] #content-edizione .download-program, #content-edizione body[data-color='yellow'] .download-program {
+body[data-color='yellow'] .border-top {
   border-top: #fed100 5px solid; }
-body[data-color='red'] .border-top, body[data-color='red'] #content-edizione .download-program, #content-edizione body[data-color='red'] .download-program {
+body[data-color='red'] .border-top {
   border-top: #ff4c44 5px solid; }
 
 .border-bottom {
@@ -707,7 +707,7 @@ body[data-color='red'] #content-home {
   border-bottom: #43454a 5px solid; }
   #content-home .video-label h4 {
     padding: 15px; }
-#content-home #streaming-header {
+#content-home .streaming-header {
   border-bottom: none; }
 #content-home .slider .slide {
   padding: 15px 0;
@@ -737,31 +737,31 @@ body[data-color='red'] #content-home {
 
 body[data-color='blue'] .streaming-area {
   background-color: #fde7da; }
-body[data-color='blue'] .video-label h4 {
+body[data-color='blue'] .video-label h4, body[data-color='blue'] .section-label h4 {
   color: #3f89ff; }
 
 body[data-color='green'] .streaming-area {
   background-color: #ede8db; }
-body[data-color='green'] .video-label h4 {
+body[data-color='green'] .video-label h4, body[data-color='green'] .section-label h4 {
   color: #b5d300; }
 
 body[data-color='yellow'] .streaming-area {
   background-color: #dcece8; }
-body[data-color='yellow'] .video-label h4 {
+body[data-color='yellow'] .video-label h4, body[data-color='yellow'] .section-label h4 {
   color: #fed100; }
 
 body[data-color='red'] .streaming-area {
   background-color: #fafadc; }
-body[data-color='red'] .video-label h4 {
+body[data-color='red'] .video-label h4, body[data-color='red'] .section-label h4 {
   color: #ff4c44; }
 
-.video-label {
+.video-label, .section-label {
   border-top: #43454a 5px solid;
   border-bottom: #43454a 5px solid; }
-  .video-label h4 {
+  .video-label h4, .section-label h4 {
     padding: 15px; }
 
-#streaming-header {
+.streaming-header {
   border-bottom: none; }
 
 #embed-wrapper {
@@ -964,6 +964,8 @@ body[data-color='red'] .video-label h4 {
   background-color: white; }
 #content-edizione #embed-wrapper {
   max-width: 75vh; }
+#content-edizione .rassegna .main-text p {
+  text-indent: 0; }
 
 #content-single-event {
   padding-bottom: 0; }
@@ -1029,12 +1031,12 @@ body[data-color='red'] .video-label h4 {
     body[data-color='red'] .event-img::after, body[data-color='red'] .portrait::after {
       background-color: #fafadc; }
 
-#content-page .main-text, #content-single-event .main-text {
+#content-page .main-text, #content-single-event .main-text, #content-edizione .main-text {
   column-count: 2;
   column-gap: 15px; }
-  #content-page .main-text p, #content-single-event .main-text p {
+  #content-page .main-text p, #content-single-event .main-text p, #content-edizione .main-text p {
     margin-bottom: 22px; }
-  #content-page .main-text h2, #content-page .main-text h5, #content-single-event .main-text h2, #content-single-event .main-text h5 {
+  #content-page .main-text h2, #content-page .main-text h5, #content-single-event .main-text h2, #content-single-event .main-text h5, #content-edizione .main-text h2, #content-edizione .main-text h5 {
     break-before: column; }
 
 .page-id-55 #content-page .main-text, .page-id-42 #content-page .main-text {
