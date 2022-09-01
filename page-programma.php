@@ -17,6 +17,11 @@
 
     <?php include ('event-filters.php'); ?>
 
+    <!-- wpquery events query-->
+    <?php 
+      $currYear = date("Y");
+    ?>
+
     <div class="container-fluid">
         
         <div id="events-calendar">
@@ -26,8 +31,16 @@
           'posts_per_page'    => -1,
           'order'             => 'ASC',
           'showpastevents'  => true,
-          'orderby'           => 'eventstart'
-          ));
+          'orderby'           => 'eventstart',
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'event_year',
+              'field'    => 'slug',
+              'terms'    => array( $currYear ),
+              'operator' => 'IN',
+            ),
+          ),
+        ));
         ?>
 
         <?php if ( $cptQuery->have_posts() ) : 
