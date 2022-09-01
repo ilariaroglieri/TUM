@@ -1,12 +1,15 @@
 <?php 
   $cats = get_the_terms($post->ID, 'event-category');
   $venues = get_the_terms($post->ID, 'event-venue');
+  $years = get_the_terms($post->ID, 'event_year');
   ?>
   <div class="event <?php echo $cats[0]->slug; ?> d-flex column between spacing-p-t-1 spacing-p-b-1" data-type="<?php echo $cats[0]->slug; ?>">
-    <div class="svg-container animated-shape">
-      <?php $cat = $cats[0]->slug; ?>
-      <?php include ('svg-shapes.php'); ?>
-    </div>
+    <?php if ($years[0]->slug == '2021'): ?>
+      <div class="svg-container animated-shape">
+        <?php $cat = $cats[0]->slug; ?>
+        <?php include ('svg-shapes.php'); ?>
+      </div>
+    <?php endif; ?>
 
     <div class="d-flex flex-row between p-relative">
       <div class="tag">

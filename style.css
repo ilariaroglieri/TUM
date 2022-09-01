@@ -272,6 +272,10 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
+  .button.bigger {
+    padding: 5px 30px;
+    width: 100%;
+    text-align: center; }
   .button a {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -384,13 +388,13 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
     stroke-dasharray: var(--looping-length), calc(var(--total-length) - var(--looping-length));
     animation: loading-loop var(--animation-time) linear infinite; }
 
-body[data-color='blue'] .border-top {
+body[data-color='blue'] .border-top, body[data-color='blue'] #content-edizione .download-program, #content-edizione body[data-color='blue'] .download-program {
   border-top: #3f89ff 5px solid; }
-body[data-color='green'] .border-top {
+body[data-color='green'] .border-top, body[data-color='green'] #content-edizione .download-program, #content-edizione body[data-color='green'] .download-program {
   border-top: #b5d300 5px solid; }
-body[data-color='yellow'] .border-top {
+body[data-color='yellow'] .border-top, body[data-color='yellow'] #content-edizione .download-program, #content-edizione body[data-color='yellow'] .download-program {
   border-top: #fed100 5px solid; }
-body[data-color='red'] .border-top {
+body[data-color='red'] .border-top, body[data-color='red'] #content-edizione .download-program, #content-edizione body[data-color='red'] .download-program {
   border-top: #ff4c44 5px solid; }
 
 .border-bottom {
@@ -692,28 +696,12 @@ body.red a.underline, #events-showcase body.event.workshop a.underline, #events-
 
 body[data-color='blue'] #content-home {
   background-color: #fde7da; }
-  body[data-color='blue'] #content-home .streaming-area {
-    background-color: #fde7da; }
-  body[data-color='blue'] #content-home .video-label h4 {
-    color: #3f89ff; }
 body[data-color='green'] #content-home {
   background-color: #ede8db; }
-  body[data-color='green'] #content-home .streaming-area {
-    background-color: #ede8db; }
-  body[data-color='green'] #content-home .video-label h4 {
-    color: #b5d300; }
 body[data-color='yellow'] #content-home {
   background-color: #dcece8; }
-  body[data-color='yellow'] #content-home .streaming-area {
-    background-color: #dcece8; }
-  body[data-color='yellow'] #content-home .video-label h4 {
-    color: #fed100; }
 body[data-color='red'] #content-home {
   background-color: #fafadc; }
-  body[data-color='red'] #content-home .streaming-area {
-    background-color: #fafadc; }
-  body[data-color='red'] #content-home .video-label h4 {
-    color: #ff4c44; }
 #content-home .video-label {
   border-top: #43454a 5px solid;
   border-bottom: #43454a 5px solid; }
@@ -746,6 +734,35 @@ body[data-color='red'] #content-home {
     margin-bottom: 22px; }
   #content-home .slider .slide p > strong {
     font-weight: normal; }
+
+body[data-color='blue'] .streaming-area {
+  background-color: #fde7da; }
+body[data-color='blue'] .video-label h4 {
+  color: #3f89ff; }
+
+body[data-color='green'] .streaming-area {
+  background-color: #ede8db; }
+body[data-color='green'] .video-label h4 {
+  color: #b5d300; }
+
+body[data-color='yellow'] .streaming-area {
+  background-color: #dcece8; }
+body[data-color='yellow'] .video-label h4 {
+  color: #fed100; }
+
+body[data-color='red'] .streaming-area {
+  background-color: #fafadc; }
+body[data-color='red'] .video-label h4 {
+  color: #ff4c44; }
+
+.video-label {
+  border-top: #43454a 5px solid;
+  border-bottom: #43454a 5px solid; }
+  .video-label h4 {
+    padding: 15px; }
+
+#streaming-header {
+  border-bottom: none; }
 
 #embed-wrapper {
   max-width: 137vh;
@@ -942,6 +959,11 @@ body[data-color='red'] #content-home {
     #festival-cats .event.film input[type=email],
     #festival-cats .event.film input[type=url] {
       border-color: #b5d300 !important; }
+
+#content-edizione .streaming-area {
+  background-color: white; }
+#content-edizione #embed-wrapper {
+  max-width: 75vh; }
 
 #content-single-event {
   padding-bottom: 0; }

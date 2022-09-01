@@ -163,6 +163,11 @@ $headerH: 18.4vw;
   display: inline-block;
   cursor: pointer;
   @include transition(all .3s);
+  &.bigger {
+    padding: 5px 30px;
+    width: 100%;
+    text-align: center;
+  }
   a {
     @include transition(all .3s);
   }
@@ -752,47 +757,15 @@ body.red {
 #content-home {
   @at-root body[data-color='blue'] & {
     background-color: $blue-bg;
-    .streaming-area {
-      background-color: $blue-bg;
-    }
-    .video-label {
-      h4 {
-        color: $blue;
-      }
-    }
   }
   @at-root body[data-color='green'] & {
     background-color: $green-bg;
-    .streaming-area {
-      background-color: $green-bg;
-    }
-    .video-label {
-      h4 {
-        color: $green;
-      }
-    }
   }
   @at-root body[data-color='yellow'] & {
     background-color: $yellow-bg;
-    .streaming-area {
-      background-color: $yellow-bg;
-    }
-    .video-label {
-      h4 {
-        color: $yellow;
-      }
-    }
   }
   @at-root body[data-color='red'] & {
     background-color: $red-bg;
-    .streaming-area {
-      background-color: $red-bg;
-    }
-    .video-label {
-      h4 {
-        color: $red;
-      }
-    }
   }
   .video-label {
     border-top: $primaryColor 5px solid;
@@ -847,6 +820,57 @@ body.red {
 
 
 // home streaming
+body[data-color='blue'] {
+  .streaming-area {
+    background-color: $blue-bg;
+  }
+  .video-label {
+    h4 {
+      color: $blue;
+    }
+  }
+}
+body[data-color='green'] {
+  .streaming-area {
+    background-color: $green-bg;
+  }
+  .video-label {
+    h4 {
+      color: $green;
+    }
+  }
+}
+body[data-color='yellow'] {
+  .streaming-area {
+    background-color: $yellow-bg;
+  }
+  .video-label {
+    h4 {
+      color: $yellow;
+    }
+  }
+}
+body[data-color='red'] {
+  .streaming-area {
+    background-color: $red-bg;
+  }
+  .video-label {
+    h4 {
+      color: $red;
+    }
+  }
+}
+.video-label {
+  border-top: $primaryColor 5px solid;
+  border-bottom: $primaryColor 5px solid;
+  h4 {
+    padding: $half-spacing;
+  }
+}
+#streaming-header {
+  border-bottom: none;
+}
+
 #embed-wrapper {
   max-width: 137vh;
   margin: 0 auto;
@@ -1085,9 +1109,22 @@ body.red {
   }
 }
 
+// archives 
+#content-edizione {
+  .streaming-area {
+    background-color: white;
+  }
+  #embed-wrapper {
+    max-width: 75vh;
+  }
+
+  .download-program {
+    @extend .border-top;
+  }
+}
+
 
 // single events
-
 #content-single-event {
   padding-bottom: 0;
   @at-root body[data-color='blue'] & {
