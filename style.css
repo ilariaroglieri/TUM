@@ -1373,6 +1373,12 @@ div.wpforms-container-full .wpforms-form {
     width: calc(8.3333%*2 - 30px);
     margin: 0 15px; }
 
+  #events-showcase .event[data-year="2022"] .title, #events-calendar .event[data-year="2022"] .title, #events-related .event[data-year="2022"] .title, #cat-events-archive .event[data-year="2022"] .title, #festival-cats .event[data-year="2022"] .title {
+    max-width: 70%; }
+  #events-showcase .event[data-year="2022"] .svg-container, #events-calendar .event[data-year="2022"] .svg-container, #events-related .event[data-year="2022"] .svg-container, #cat-events-archive .event[data-year="2022"] .svg-container, #festival-cats .event[data-year="2022"] .svg-container {
+    background-size: 25% !important;
+    transform: scale(1, 1); }
+
   #content-page .main-text, #content-single-event .main-text {
     max-width: 100%;
     column-count: 1;
@@ -1399,7 +1405,7 @@ div.wpforms-container-full .wpforms-form {
     stroke-width: 1.3vw; }
 
   .s-large, .s-big, .s-medium, #header .menu-menu-1-container ul li {
-    font-size: 7vw; }
+    font-size: 8.2vw; }
 
   #header {
     height: 23vw; }
@@ -1410,6 +1416,8 @@ div.wpforms-container-full .wpforms-form {
 
   .content {
     padding-top: 23vw; }
+    .content .title {
+      padding: 7.5px 0; }
 
   #header div[class*="menu-1"].active {
     top: 23vw; }

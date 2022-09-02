@@ -8,7 +8,7 @@
     <div class="container-fluid">
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <div class="flex-row">
-          <h1 class="spacing-p-t-1 s-large uppercase"><?php the_title(); ?></h1>
+          <h1 class="title spacing-p-t-1 s-large uppercase"><?php the_title(); ?></h1>
         </div>
 
         <?php $img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>

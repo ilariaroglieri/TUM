@@ -1776,6 +1776,18 @@ div.wpforms-container-full .wpforms-form {
     margin: 0 #{$half-spacing};
   }
 
+  #events-showcase, #events-calendar, #events-related, #cat-events-archive, #festival-cats {
+    .event[data-year="2022"] {
+      .title {
+        max-width:70%;
+      }
+      .svg-container {
+        background-size: 25% !important;
+        transform: scale(1, 1);
+      }
+    }
+  }
+
   #content-page, #content-single-event {
     .main-text {
       max-width: 100%;
@@ -1808,7 +1820,7 @@ div.wpforms-container-full .wpforms-form {
     stroke-width: 1.3vw;
   }
   .s-large, .s-big, .s-medium {
-    font-size: 7vw;
+    font-size: 8.2vw;
   }
   #header {
     height: 23vw;
@@ -1821,6 +1833,9 @@ div.wpforms-container-full .wpforms-form {
   }
   .content {
     padding-top: 23vw;
+    .title {
+      padding: $half-spacing/2 0;
+    }
   }
   #header div[class*="menu-1"].active {
     top: 23vw;

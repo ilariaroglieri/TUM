@@ -13,7 +13,6 @@
       )),
     ),
   );
-
 ?>
 
 <div class="container-fluid filters border-top spacing-p-b-2">
@@ -90,7 +89,7 @@
           $pointer = clone $start;
 
           while( $pointer <= $end ){
-            $dates_array[$start->format( 'l d F' )] = $start->format( 'l d F');  //Add date as array key
+            $dates_array[$start->format( 'Y-m-d' )] = $start->format( 'Y-m-d');  //Add date as array key
             $pointer->modify( '+1 day' );
           }
         } ?>

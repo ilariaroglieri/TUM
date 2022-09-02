@@ -1,3 +1,4 @@
+
 <div class="container-fluid filters border-top spacing-p-b-2">
   <div class="m-column-reverse d-flex">
     <div class="d-half m-whole spacing-p-t-2">
@@ -67,7 +68,8 @@
       $currYear = $year[0]->slug; ?>
 
       <?php $events = eo_get_events( array(
-        'event_start_after' => '01-01'.$currYear,
+        'event_start_after' => '01-01-'.$currYear,
+        'event_end_before' => '31-12-'.$currYear,
       ) );
       $dates_array = array();
 
@@ -79,7 +81,7 @@
           $pointer = clone $start;
 
           while( $pointer <= $end ){
-            $dates_array[$start->format( 'l d F' )] = $start->format( 'l d F');  //Add date as array key
+            $dates_array[$start->format( 'Y-m-d' )] = $start->format( 'Y-m-d');  //Add date as array key
             $pointer->modify( '+1 day' );
           }
         } ?>
