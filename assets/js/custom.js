@@ -208,7 +208,6 @@ $(document).on('click', '#cat-select .filter-container, #venue-select .filter-co
   ev.preventDefault();
 
   var currFilter = $(this).find('.filter-element').attr('data-type');
-  console.log(currFilter);
 
   $('.filter-element[data-type='+currFilter+']').parent().removeClass('active');
   $(this).addClass('active');

@@ -27,15 +27,18 @@
     // ... the outputs only cats for those posts
     foreach ($events as $event) {
       $fcats = wp_get_post_terms($event->ID, 'event-category');
-      $cats[] = $fcats[0];
+      $cats[] = $fcats[0]->name;
+      $cats_ids[] = $fcats[0]->term_id;
     }
 
+    $cats = array_unique($cats);
+    $cats_ids = array_unique($cats_ids);
+
     if ( $cats ) : ?>
-      <div id="cat-select" data-name="<?= $cat; ?>" class="custom-select select-cat d-flex t-column">
-        <?php foreach( $cats as $category ) :
-          $cat = $category->slug; ?>
+      <div id="cat-select" data-name="event-category" class="custom-select select-cat d-flex t-column">
+        <?php foreach( $cats as $a=>$category ) : ?>
           <div class="filter-container d-flex center <?php echo $cat; ?>">
-            <h3 class="s-regular uppercase filter-element" data-type="cat-filter" id="<?php echo $category->term_id; ?>"><?php echo $category->name; ?></h3>
+            <h3 class="s-regular uppercase filter-element" data-type="cat-filter" id="<?php echo $cats_ids[$a]; ?>"><?php echo $category; ?></h3>
             <div class="animated-shape">
               <?php include ('svg-shapes.php'); ?>
             </div>
@@ -59,10 +62,10 @@
     $venues_ids = array_unique($venues_ids);
 
     if ( $venues ) : ?>
-      <div id="venue-select" data-name="<?= $venue; ?>" class="custom-select select-venue d-flex t-column">
-        <?php foreach( $venues as $venue ) : ?>
+      <div id="venue-select" data-name="event-venue" class="custom-select select-venue d-flex t-column">
+        <?php foreach( $venues as $i=>$venue) : ?>
           <div class="filter-container">
-            <h3 class="s-regular uppercase filter-element" data-type="venue-filter" id="<?php echo $venue_ids; ?>"><?php echo $venue; ?></h3>
+            <h3 class="s-regular uppercase filter-element" data-type="venue-filter" id="<?= $venues_ids[$i]; ?>"><?php echo $venue; ?></h3>
           </div>
         <?php endforeach; ?>
       </div>
