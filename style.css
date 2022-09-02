@@ -855,16 +855,17 @@ body[data-color='red'] .video-label h4, body[data-color='red'] .section-label h4
       text-align: center;
       max-width: 50vw;
       height: 100%;
+      padding: 0 15px;
       margin: 0 auto; }
     #events-showcase .event[data-year="2022"] .animated-pattern, #events-calendar .event[data-year="2022"] .animated-pattern, #events-related .event[data-year="2022"] .animated-pattern, #cat-events-archive .event[data-year="2022"] .animated-pattern, #festival-cats .event[data-year="2022"] .animated-pattern {
       background-size: auto 60% !important;
       transform: scale(1, 0);
       animation: animatedBackground 120s linear infinite;
-      -webkit-transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-      -moz-transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-      -ms-transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-      -o-transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-      transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
+      -webkit-transition: all 0.3s 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      -moz-transition: all 0.3s 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      -ms-transition: all 0.3s 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      -o-transition: all 0.3s 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      transition: all 0.3s 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
     #events-showcase .event[data-year="2022"]:hover .animated-pattern, #events-calendar .event[data-year="2022"]:hover .animated-pattern, #events-related .event[data-year="2022"]:hover .animated-pattern, #cat-events-archive .event[data-year="2022"]:hover .animated-pattern, #festival-cats .event[data-year="2022"]:hover .animated-pattern {
       transform: scale(1, 1); }
     #events-showcase .event.panel, #events-calendar .event.panel, #events-related .event.panel, #cat-events-archive .event.panel, #festival-cats .event.panel {
@@ -878,7 +879,7 @@ body[data-color='red'] .video-label h4, body[data-color='red'] .section-label h4
         #events-showcase .event.panel[data-year="2022"] .title, #events-calendar .event.panel[data-year="2022"] .title, #events-related .event.panel[data-year="2022"] .title, #cat-events-archive .event.panel[data-year="2022"] .title, #festival-cats .event.panel[data-year="2022"] .title {
           background: #3f89ff no-repeat center center; }
         #events-showcase .event.panel[data-year="2022"] .animated-pattern, #events-calendar .event.panel[data-year="2022"] .animated-pattern, #events-related .event.panel[data-year="2022"] .animated-pattern, #cat-events-archive .event.panel[data-year="2022"] .animated-pattern, #festival-cats .event.panel[data-year="2022"] .animated-pattern {
-          background: url("./assets/svg/2022/TUM_panel_pos.svg") repeat-x center center; }
+          background: url("./assets/svg/2022/TUM_panel_neg.svg") repeat-x center center; }
     #events-showcase .event.tour, #events-calendar .event.tour, #events-related .event.tour, #cat-events-archive .event.tour, #festival-cats .event.tour {
       background: #dcece8 no-repeat center center; }
       #events-showcase .event.tour strong, #events-showcase .event.tour h5, #events-showcase .event.tour h5 > a, #events-calendar .event.tour strong, #events-calendar .event.tour h5, #events-calendar .event.tour h5 > a, #events-related .event.tour strong, #events-related .event.tour h5, #events-related .event.tour h5 > a, #cat-events-archive .event.tour strong, #cat-events-archive .event.tour h5, #cat-events-archive .event.tour h5 > a, #festival-cats .event.tour strong, #festival-cats .event.tour h5, #festival-cats .event.tour h5 > a {
@@ -889,6 +890,8 @@ body[data-color='red'] .video-label h4, body[data-color='red'] .section-label h4
           color: #dcece8; }
         #events-showcase .event.tour[data-year="2022"] .title, #events-calendar .event.tour[data-year="2022"] .title, #events-related .event.tour[data-year="2022"] .title, #cat-events-archive .event.tour[data-year="2022"] .title, #festival-cats .event.tour[data-year="2022"] .title {
           background: #fed100 no-repeat center center; }
+        #events-showcase .event.tour[data-year="2022"] .animated-pattern, #events-calendar .event.tour[data-year="2022"] .animated-pattern, #events-related .event.tour[data-year="2022"] .animated-pattern, #cat-events-archive .event.tour[data-year="2022"] .animated-pattern, #festival-cats .event.tour[data-year="2022"] .animated-pattern {
+          background: url("./assets/svg/2022/TUM_tour_neg.svg") repeat-x center center; }
     #events-showcase .event.workshop, #events-calendar .event.workshop, #events-related .event.workshop, #cat-events-archive .event.workshop, #festival-cats .event.workshop {
       background: #fafadc no-repeat center center; }
       #events-showcase .event.workshop strong, #events-showcase .event.workshop h5, #events-showcase .event.workshop h5 > a, #events-showcase .event.workshop .title a, #events-calendar .event.workshop strong, #events-calendar .event.workshop h5, #events-calendar .event.workshop h5 > a, #events-calendar .event.workshop .title a, #events-related .event.workshop strong, #events-related .event.workshop h5, #events-related .event.workshop h5 > a, #events-related .event.workshop .title a, #cat-events-archive .event.workshop strong, #cat-events-archive .event.workshop h5, #cat-events-archive .event.workshop h5 > a, #cat-events-archive .event.workshop .title a, #festival-cats .event.workshop strong, #festival-cats .event.workshop h5, #festival-cats .event.workshop h5 > a, #festival-cats .event.workshop .title a {
@@ -899,6 +902,8 @@ body[data-color='red'] .video-label h4, body[data-color='red'] .section-label h4
           color: #fafadc; }
         #events-showcase .event.workshop[data-year="2022"] .title, #events-calendar .event.workshop[data-year="2022"] .title, #events-related .event.workshop[data-year="2022"] .title, #cat-events-archive .event.workshop[data-year="2022"] .title, #festival-cats .event.workshop[data-year="2022"] .title {
           background: #ff4c44 no-repeat center center; }
+        #events-showcase .event.workshop[data-year="2022"] .animated-pattern, #events-calendar .event.workshop[data-year="2022"] .animated-pattern, #events-related .event.workshop[data-year="2022"] .animated-pattern, #cat-events-archive .event.workshop[data-year="2022"] .animated-pattern, #festival-cats .event.workshop[data-year="2022"] .animated-pattern {
+          background: url("./assets/svg/2022/TUM_ws_neg.svg") repeat-x center center; }
     #events-showcase .event.film, #events-calendar .event.film, #events-related .event.film, #cat-events-archive .event.film, #festival-cats .event.film {
       background: #ede8db no-repeat center center; }
       #events-showcase .event.film strong, #events-showcase .event.film h5, #events-showcase .event.film h5 > a, #events-calendar .event.film strong, #events-calendar .event.film h5, #events-calendar .event.film h5 > a, #events-related .event.film strong, #events-related .event.film h5, #events-related .event.film h5 > a, #cat-events-archive .event.film strong, #cat-events-archive .event.film h5, #cat-events-archive .event.film h5 > a, #festival-cats .event.film strong, #festival-cats .event.film h5, #festival-cats .event.film h5 > a {

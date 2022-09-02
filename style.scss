@@ -984,13 +984,14 @@ body[data-color='red'] {
         text-align: center;
         max-width: 50vw;
         height: 100%;
+        padding: 0 $half-spacing;
         margin: 0 auto;
       }
       .animated-pattern {
         background-size: auto 60% !important;
         transform: scale(1, 0);
         animation: animatedBackground 120s linear infinite;
-        @include transition(all .3s cubic-bezier(0.68, -0.6, 0.32, 1.6));
+        @include transition(all .3s .3s cubic-bezier(0.68, -0.6, 0.32, 1.6));
       }
       &:hover {
         .animated-pattern {
@@ -1014,7 +1015,7 @@ body[data-color='red'] {
         }
         // 2022
         .animated-pattern {
-          background: url('./assets/svg/2022/TUM_panel_pos.svg') repeat-x center center;
+          background: url('./assets/svg/2022/TUM_panel_neg.svg') repeat-x center center;
         }
       }
     }
@@ -1032,6 +1033,10 @@ body[data-color='red'] {
         .title {
           background: $yellow no-repeat center center;
         }
+        // 2022
+        .animated-pattern {
+          background: url('./assets/svg/2022/TUM_tour_neg.svg') repeat-x center center;
+        }
       }
     } 
     &.workshop {
@@ -1047,6 +1052,10 @@ body[data-color='red'] {
         }
         .title {
           background: $red no-repeat center center;
+        }
+        // 2022
+        .animated-pattern {
+          background: url('./assets/svg/2022/TUM_ws_neg.svg') repeat-x center center;
         }
       }
     }
