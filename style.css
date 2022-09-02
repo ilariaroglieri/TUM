@@ -1071,12 +1071,14 @@ body[data-color='red'] .video-label h4, body[data-color='red'] .section-label h4
 
 .event-img {
   position: relative;
-  overflow: hidden;
-  background-size: cover !important; }
+  overflow: hidden; }
+  .event-img .inner-event-img {
+    background-size: cover !important;
+    height: 100%; }
 
-[data-year="2021"] .event-img {
+[data-year="2021"] .event-img .inner-event-img {
   background-blend-mode: screen; }
-  [data-year="2021"] .event-img::after {
+  [data-year="2021"] .event-img .inner-event-img::after {
     content: '';
     position: absolute;
     top: 0;
@@ -1085,22 +1087,25 @@ body[data-color='red'] .video-label h4, body[data-color='red'] .section-label h4
     height: 100%;
     mix-blend-mode: multiply;
     pointer-events: none; }
-  body[data-color='blue'] [data-year="2021"] .event-img {
+  body[data-color='blue'] [data-year="2021"] .event-img .inner-event-img {
     background-color: #3f89ff !important; }
-    body[data-color='blue'] [data-year="2021"] .event-img::after {
+    body[data-color='blue'] [data-year="2021"] .event-img .inner-event-img::after {
       background-color: #fde7da; }
-  body[data-color='green'] [data-year="2021"] .event-img {
+  body[data-color='green'] [data-year="2021"] .event-img .inner-event-img {
     background-color: #b5d300 !important; }
-    body[data-color='green'] [data-year="2021"] .event-img::after {
+    body[data-color='green'] [data-year="2021"] .event-img .inner-event-img::after {
       background-color: #ede8db; }
-  body[data-color='yellow'] [data-year="2021"] .event-img {
+  body[data-color='yellow'] [data-year="2021"] .event-img .inner-event-img {
     background-color: #fed100 !important; }
-    body[data-color='yellow'] [data-year="2021"] .event-img::after {
+    body[data-color='yellow'] [data-year="2021"] .event-img .inner-event-img::after {
       background-color: #dcece8; }
-  body[data-color='red'] [data-year="2021"] .event-img {
+  body[data-color='red'] [data-year="2021"] .event-img .inner-event-img {
     background-color: #ff4c44 !important; }
-    body[data-color='red'] [data-year="2021"] .event-img::after {
+    body[data-color='red'] [data-year="2021"] .event-img .inner-event-img::after {
       background-color: #fafadc; }
+
+[data-year="2022"] .event-img .inner-event-img {
+  filter: saturate(30%) brightness(1.2) sepia(0.2) contrast(0.9); }
 
 .portrait {
   position: relative;

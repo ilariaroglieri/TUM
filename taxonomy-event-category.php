@@ -11,21 +11,49 @@
 
   </div>
 
-  <?php if ( have_posts() ) :?>
-    <div class="container-fluid-w-p">
-      <?php while ( have_posts() ) : the_post(); ?>
+   <?php 
+    $currYear = date("Y");
+  ?>
 
-        <?php include('event-query.php'); ?>
-    
-      <?php endwhile; ?>
-    </div>
-  <?php else: ?>
+  <?php 
+    $cptQuery = new WP_Query( array(
+      'post_type'         => 'event',
+      'posts_per_page'    => -1,
+      'order'             => 'ASC',
+      'showpastevents'  => true,
+      'orderby'           => 'eventstart',
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'event_year',
+          'field'    => 'slug',
+          'terms'    => array( $currYear ),
+          'operator' => 'IN',
+        ),
+        array(
+          'taxonomy' => 'event-category',
+          'field'    => 'slug',
+          'terms'    => $current->slug,
+          'orderby'  => 'menu_order',
+        ),
+      ),
+    ));
+    ?>
 
-  <div class="container-fluid-w-p">
-    <h3 class="spacing-t-1">No content found.</h3>
-  </div>
+    <?php if ( $cptQuery->have_posts() ) : ?> 
+      <div class="container-fluid">
+        <?php while ( $cptQuery->have_posts() ) : $cptQuery->the_post(); ?>
 
-  <?php endif; ?>
+          <?php include('event-query.php'); ?>
+      
+        <?php endwhile; wp_reset_postdata(); ?>
+      </div>
+    <?php else: ?>
+
+      <div class="container-fluid-w-p">
+        <h3 class="spacing-t-1">No content found.</h3>
+      </div>
+
+    <?php endif; ?>
 
 </section>
 

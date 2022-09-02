@@ -1,3 +1,5 @@
+<?php /* Template Name: Festival e biglietti */ ?>
+
 <?php get_header(); ?>
 
 <?php $currentID = $wp_query->queried_object_id; ?>

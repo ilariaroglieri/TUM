@@ -1277,11 +1277,14 @@ body[data-color='red'] {
 .event-img {
   position: relative;
   overflow:hidden;
-  background-size: cover !important;
+  .inner-event-img {
+    background-size: cover !important;
+    height: 100%;
+  }
 }
 
 // 2021
-[data-year="2021"] .event-img {
+[data-year="2021"] .event-img .inner-event-img {
   background-blend-mode: screen;
   &::after {
     content:'';
@@ -1320,8 +1323,8 @@ body[data-color='red'] {
 }
 
 // 2022
-[data-year="2022"] .event-img {
-  // filter: saturate(30%) brightness(1.2) sepia(.2) contrast(.9);
+[data-year="2022"] .event-img .inner-event-img {
+  filter: saturate(30%) brightness(1.2) sepia(.2) contrast(.9);
 }
 
 .portrait {

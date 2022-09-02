@@ -35,7 +35,8 @@
         </div>
 
         <?php $img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-        <div class="event-img half-height" style="background: <?php if ($img):?>url( <?php echo $img[0]; ?>) <?php endif; ?> center center no-repeat">
+        <div class="event-img half-height">
+          <div class="inner-event-img" style="background: <?php if ($img):?>url( <?php echo $img[0]; ?>) <?php endif; ?> center center no-repeat"></div>
           <?php if ($years[0]->slug == '2021'): ?>
             <div class="svg-container light-color">
               <?php $cat = $cats[0]->slug; ?>
