@@ -1209,17 +1209,32 @@ body[data-color='red'] {
 // single events
 #content-single-event {
   padding-bottom: 0;
+  .animated-pattern {
+    background-size: auto 160px !important;
+    transform: scale(1, 1);
+    animation: animatedBackground 500s linear infinite;
+    @include transition(all .3s .3s cubic-bezier(0.68, -0.6, 0.32, 1.6));
+  }
   @at-root body[data-color='blue'] & {
     background-color: $blue-bg;
+    .animated-pattern {
+      background: url('./assets/svg/2022/TUM_panel_pos.svg') repeat-x center calc(100% + 80px);
+    }
   }
   @at-root body[data-color='green'] & {
     background-color: $green-bg;
   }
   @at-root body[data-color='yellow'] & {
     background-color: $yellow-bg;
+    .animated-pattern {
+      background: url('./assets/svg/2022/TUM_tour_pos.svg') repeat-x center calc(100% + 80px);
+    }
   }
   @at-root body[data-color='red'] & {
     background-color: $red-bg;
+    .animated-pattern {
+      background: url('./assets/svg/2022/TUM_ws_pos.svg') repeat-x center calc(100% + 80px);
+    }
   }
   p {
     margin-bottom: 22px;
@@ -1258,7 +1273,58 @@ body[data-color='red'] {
   }
 }
 
-.event-img, .portrait {
+
+.event-img {
+  position: relative;
+  overflow:hidden;
+  background-size: cover !important;
+}
+
+// 2021
+[data-year="2021"] .event-img {
+  background-blend-mode: screen;
+  &::after {
+    content:'';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+  @at-root body[data-color='blue'] & {
+    background-color: $blue !important;
+    &::after {
+      background-color: $blue-bg;
+    }
+  }
+  @at-root body[data-color='green'] & {
+    background-color: $green !important;
+    &::after {
+      background-color: $green-bg;
+    }
+  }
+  @at-root body[data-color='yellow'] & {
+    background-color: $yellow !important;
+    &::after {
+      background-color: $yellow-bg;
+    }
+  }
+  @at-root body[data-color='red'] & {
+    background-color: $red !important;
+    &::after {
+      background-color: $red-bg;
+    }
+  }
+}
+
+// 2022
+[data-year="2022"] .event-img {
+  // filter: saturate(30%) brightness(1.2) sepia(.2) contrast(.9);
+}
+
+.portrait {
   position: relative;
   background-blend-mode: screen;
   background-size: cover !important;

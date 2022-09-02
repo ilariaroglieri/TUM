@@ -1,10 +1,14 @@
 <?php get_header(); ?>
 
+<?php 
+  $years = get_the_terms($post->ID, 'event_year');
+?>
+
 <section class="content" id="content-single-event">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <div class="container-fluid">
-      <article id="event-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <article id="event-<?php the_ID(); ?>" <?php post_class(); ?> data-year="<?php echo $years[0]->slug; ?>">
         <div class="d-flex column between spacing-p-t-1 spacing-p-b-1">
 
           <div class="title flex-row spacing-p-b-1">
@@ -32,10 +36,15 @@
 
         <?php $img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
         <div class="event-img half-height" style="background: <?php if ($img):?>url( <?php echo $img[0]; ?>) <?php endif; ?> center center no-repeat">
-          <div class="svg-container light-color">
-            <?php $cat = $cats[0]->slug; ?>
-            <?php include ('svg-shapes.php'); ?>
-          </div>
+          <?php if ($years[0]->slug == '2021'): ?>
+            <div class="svg-container light-color">
+              <?php $cat = $cats[0]->slug; ?>
+              <?php include ('svg-shapes.php'); ?>
+            </div>
+          <?php elseif ($years[0]->slug == '2022'): ?>
+            <div class="svg-container animated-pattern">
+            </div>
+          <?php endif; ?>
         </div>
 
         <div class="dark-bnd">

@@ -1,7 +1,7 @@
-<?php 
-  $cats = get_the_terms($post->ID, 'event-category');
-  $venues = get_the_terms($post->ID, 'event-venue');
-  $years = get_the_terms($post->ID, 'event_year');
+  <?php 
+    $cats = get_the_terms($post->ID, 'event-category');
+    $venues = get_the_terms($post->ID, 'event-venue');
+    $years = get_the_terms($post->ID, 'event_year');
   ?>
   <div class="event <?php echo $cats[0]->slug; ?> d-flex column between spacing-p-t-1 spacing-p-b-1" data-year="<?php echo $years[0]->slug; ?>" data-type="<?php echo $cats[0]->slug; ?>">
     <?php if ($years[0]->slug == '2021'): ?>
@@ -11,7 +11,6 @@
       </div>
     <?php elseif ($years[0]->slug == '2022'): ?>
       <div class="svg-container animated-pattern">
-        
       </div>
     <?php endif; ?>
 
