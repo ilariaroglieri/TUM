@@ -896,11 +896,10 @@ body[data-color='red'] {
   border-top: 5px solid $primaryColor;
 }
 
-// svg animations
+// svg animations 
 .svg-container {
   height: 100%;
   width: 100%;
-  padding: $double-spacing;
   top: 0;
   z-index:0;
   position: absolute;
@@ -921,7 +920,9 @@ body[data-color='red'] {
       stroke: $red-bg;
     }
   }
+  // 2021
   &.animated-shape {
+    padding: $double-spacing;
     opacity: 0;
     @include transition(opacity .3s);
     svg {
@@ -938,6 +939,16 @@ body[data-color='red'] {
 @keyframes loading-loop {
   from { stroke-dashoffset: var(--total-length); }
   to   { stroke-dashoffset: 0; }
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position-x: 0;
+  }
+/*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position-x: -10000px;
+  }
 }
 
 // home + calendar
@@ -966,13 +977,46 @@ body[data-color='red'] {
         font-size: 200%; 
       }
     }
+    &[data-year="2022"] {
+      .title {
+        @extend .d-flex;
+        align-items: center;
+        text-align: center;
+        max-width: 50vw;
+        height: 100%;
+        margin: 0 auto;
+      }
+      .animated-pattern {
+        background-size: auto 60% !important;
+        transform: scale(1, 0);
+        animation: animatedBackground 120s linear infinite;
+        @include transition(all .3s cubic-bezier(0.68, -0.6, 0.32, 1.6));
+      }
+      &:hover {
+        .animated-pattern {
+          transform: scale(1, 1);
+        }
+      }
+    }
     &.panel {
       background: $blue-bg no-repeat center center;
       @extend .blue;
       strong, h5, h5 > a {
         color: $blue;
       }
-    
+      &[data-year="2022"] {
+        background: $blue no-repeat center center;
+        strong, h5, h5 > a, .title a {
+          color: $blue-bg;
+        }
+        .title {
+          background: $blue no-repeat center center;
+        }
+        // 2022
+        .animated-pattern {
+          background: url('./assets/svg/2022/TUM_panel_pos.svg') repeat-x center center;
+        }
+      }
     }
     &.tour {
       background: $yellow-bg no-repeat center center;
@@ -980,12 +1024,30 @@ body[data-color='red'] {
       strong, h5, h5 > a {
         color: $yellow;
       }
+      &[data-year="2022"] {
+        background: $yellow no-repeat center center;
+        strong, h5, h5 > a, .title a {
+          color: $yellow-bg;
+        }
+        .title {
+          background: $yellow no-repeat center center;
+        }
+      }
     } 
     &.workshop {
       background: $red-bg no-repeat center center;
       @extend .red;
-      strong, h5, h5 > a {
+      strong, h5, h5 > a, .title a {
         color: $red;
+      }
+      &[data-year="2022"] {
+        background: $red no-repeat center center;
+        strong, h5, h5 > a, .title a {
+          color: $red-bg;
+        }
+        .title {
+          background: $red no-repeat center center;
+        }
       }
     }
     &.film {
@@ -993,6 +1055,15 @@ body[data-color='red'] {
       @extend .green;
       strong, h5, h5 > a {
         color: $green;
+      }
+      &[data-year="2022"] {
+        background: $green no-repeat center center;
+        strong, h5, h5 > a {
+          color: $green-bg;
+        }
+        .title {
+          background: $green no-repeat center center;
+        }
       }
     }
   }

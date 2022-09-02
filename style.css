@@ -184,26 +184,26 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
 .d-none {
   display: none; }
 
-.d-flex, .svg-container {
+.d-flex, .svg-container, #events-showcase .event[data-year="2022"] .title, #events-calendar .event[data-year="2022"] .title, #events-related .event[data-year="2022"] .title, #cat-events-archive .event[data-year="2022"] .title, #festival-cats .event[data-year="2022"] .title {
   display: flex; }
-  .d-flex.center, .center.svg-container {
+  .d-flex.center, .center.svg-container, #events-showcase .event[data-year="2022"] .center.title, #events-calendar .event[data-year="2022"] .center.title, #events-related .event[data-year="2022"] .center.title, #cat-events-archive .event[data-year="2022"] .center.title, #festival-cats .event[data-year="2022"] .center.title {
     align-items: center; }
-  .d-flex.top, .top.svg-container {
+  .d-flex.top, .top.svg-container, #events-showcase .event[data-year="2022"] .top.title, #events-calendar .event[data-year="2022"] .top.title, #events-related .event[data-year="2022"] .top.title, #cat-events-archive .event[data-year="2022"] .top.title, #festival-cats .event[data-year="2022"] .top.title {
     align-items: flex-start; }
-  .d-flex.baseline, .baseline.svg-container {
+  .d-flex.baseline, .baseline.svg-container, #events-showcase .event[data-year="2022"] .baseline.title, #events-calendar .event[data-year="2022"] .baseline.title, #events-related .event[data-year="2022"] .baseline.title, #cat-events-archive .event[data-year="2022"] .baseline.title, #festival-cats .event[data-year="2022"] .baseline.title {
     align-items: baseline; }
-  .d-flex.between, .between.svg-container {
+  .d-flex.between, .between.svg-container, #events-showcase .event[data-year="2022"] .between.title, #events-calendar .event[data-year="2022"] .between.title, #events-related .event[data-year="2022"] .between.title, #cat-events-archive .event[data-year="2022"] .between.title, #festival-cats .event[data-year="2022"] .between.title {
     justify-content: space-between; }
-  .d-flex.v-center, .svg-container {
+  .d-flex.v-center, .svg-container, #events-showcase .event[data-year="2022"] .v-center.title, #events-showcase .event[data-year="2022"] .title.svg-container, #events-calendar .event[data-year="2022"] .v-center.title, #events-calendar .event[data-year="2022"] .title.svg-container, #events-related .event[data-year="2022"] .v-center.title, #events-related .event[data-year="2022"] .title.svg-container, #cat-events-archive .event[data-year="2022"] .v-center.title, #cat-events-archive .event[data-year="2022"] .title.svg-container, #festival-cats .event[data-year="2022"] .v-center.title, #festival-cats .event[data-year="2022"] .title.svg-container {
     justify-content: center; }
-  .d-flex.column, .column.svg-container {
+  .d-flex.column, .column.svg-container, #events-showcase .event[data-year="2022"] .column.title, #events-calendar .event[data-year="2022"] .column.title, #events-related .event[data-year="2022"] .column.title, #cat-events-archive .event[data-year="2022"] .column.title, #festival-cats .event[data-year="2022"] .column.title {
     flex-flow: column; }
-    .d-flex.column.center, .column.center.svg-container {
+    .d-flex.column.center, .column.center.svg-container, #events-showcase .event[data-year="2022"] .column.center.title, #events-calendar .event[data-year="2022"] .column.center.title, #events-related .event[data-year="2022"] .column.center.title, #cat-events-archive .event[data-year="2022"] .column.center.title, #festival-cats .event[data-year="2022"] .column.center.title {
       align-items: unset;
       justify-content: center; }
-    .d-flex.column.space-between, .column.space-between.svg-container {
+    .d-flex.column.space-between, .column.space-between.svg-container, #events-showcase .event[data-year="2022"] .column.space-between.title, #events-calendar .event[data-year="2022"] .column.space-between.title, #events-related .event[data-year="2022"] .column.space-between.title, #cat-events-archive .event[data-year="2022"] .column.space-between.title, #festival-cats .event[data-year="2022"] .column.space-between.title {
       justify-content: space-between; }
-  .d-flex.wrap, .wrap.svg-container {
+  .d-flex.wrap, .wrap.svg-container, #events-showcase .event[data-year="2022"] .wrap.title, #events-calendar .event[data-year="2022"] .wrap.title, #events-related .event[data-year="2022"] .wrap.title, #cat-events-archive .event[data-year="2022"] .wrap.title, #festival-cats .event[data-year="2022"] .wrap.title {
     flex-wrap: wrap; }
 
 .mob-only {
@@ -476,7 +476,7 @@ img {
   margin-right: 15px;
   margin-left: 15px; }
 
-.flex-row-neg, .wpcf7-form .d-flex, .wpcf7-form .svg-container {
+.flex-row-neg, .wpcf7-form .d-flex, .wpcf7-form .svg-container, .wpcf7-form #events-showcase .event[data-year="2022"] .title, #events-showcase .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-calendar .event[data-year="2022"] .title, #events-calendar .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-related .event[data-year="2022"] .title, #events-related .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #cat-events-archive .event[data-year="2022"] .title, #cat-events-archive .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #festival-cats .event[data-year="2022"] .title, #festival-cats .event[data-year="2022"] .wpcf7-form .title {
   margin-right: -15px;
   margin-left: -15px; }
 
@@ -788,7 +788,6 @@ body[data-color='red'] .video-label h4, body[data-color='red'] .section-label h4
 .svg-container {
   height: 100%;
   width: 100%;
-  padding: 60px;
   top: 0;
   z-index: 0;
   position: absolute; }
@@ -803,6 +802,7 @@ body[data-color='red'] .video-label h4, body[data-color='red'] .section-label h4
     body[data-color='red'] .svg-container.light-color {
       stroke: #fafadc; }
   .svg-container.animated-shape {
+    padding: 60px;
     opacity: 0;
     -webkit-transition: opacity 0.3s;
     -moz-transition: opacity 0.3s;
@@ -822,6 +822,12 @@ body[data-color='red'] .video-label h4, body[data-color='red'] .section-label h4
     stroke-dashoffset: var(--total-length); }
   to {
     stroke-dashoffset: 0; } }
+@keyframes animatedBackground {
+  from {
+    background-position-x: 0; }
+  /*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position-x: -10000px; } }
 #events-showcase, #events-calendar, #events-related, #cat-events-archive, #festival-cats {
   -webkit-transition: opacity 0.3s;
   -moz-transition: opacity 0.3s;
@@ -844,22 +850,65 @@ body[data-color='red'] .video-label h4, body[data-color='red'] .section-label h4
       font-size: 50%; }
       #events-showcase .event .title a span, #events-calendar .event .title a span, #events-related .event .title a span, #cat-events-archive .event .title a span, #festival-cats .event .title a span {
         font-size: 200%; }
+    #events-showcase .event[data-year="2022"] .title, #events-calendar .event[data-year="2022"] .title, #events-related .event[data-year="2022"] .title, #cat-events-archive .event[data-year="2022"] .title, #festival-cats .event[data-year="2022"] .title {
+      align-items: center;
+      text-align: center;
+      max-width: 50vw;
+      height: 100%;
+      margin: 0 auto; }
+    #events-showcase .event[data-year="2022"] .animated-pattern, #events-calendar .event[data-year="2022"] .animated-pattern, #events-related .event[data-year="2022"] .animated-pattern, #cat-events-archive .event[data-year="2022"] .animated-pattern, #festival-cats .event[data-year="2022"] .animated-pattern {
+      background-size: auto 60% !important;
+      transform: scale(1, 0);
+      animation: animatedBackground 120s linear infinite;
+      -webkit-transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      -moz-transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      -ms-transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      -o-transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+      transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
+    #events-showcase .event[data-year="2022"]:hover .animated-pattern, #events-calendar .event[data-year="2022"]:hover .animated-pattern, #events-related .event[data-year="2022"]:hover .animated-pattern, #cat-events-archive .event[data-year="2022"]:hover .animated-pattern, #festival-cats .event[data-year="2022"]:hover .animated-pattern {
+      transform: scale(1, 1); }
     #events-showcase .event.panel, #events-calendar .event.panel, #events-related .event.panel, #cat-events-archive .event.panel, #festival-cats .event.panel {
       background: #fde7da no-repeat center center; }
       #events-showcase .event.panel strong, #events-showcase .event.panel h5, #events-showcase .event.panel h5 > a, #events-calendar .event.panel strong, #events-calendar .event.panel h5, #events-calendar .event.panel h5 > a, #events-related .event.panel strong, #events-related .event.panel h5, #events-related .event.panel h5 > a, #cat-events-archive .event.panel strong, #cat-events-archive .event.panel h5, #cat-events-archive .event.panel h5 > a, #festival-cats .event.panel strong, #festival-cats .event.panel h5, #festival-cats .event.panel h5 > a {
         color: #3f89ff; }
+      #events-showcase .event.panel[data-year="2022"], #events-calendar .event.panel[data-year="2022"], #events-related .event.panel[data-year="2022"], #cat-events-archive .event.panel[data-year="2022"], #festival-cats .event.panel[data-year="2022"] {
+        background: #3f89ff no-repeat center center; }
+        #events-showcase .event.panel[data-year="2022"] strong, #events-showcase .event.panel[data-year="2022"] h5, #events-showcase .event.panel[data-year="2022"] h5 > a, #events-showcase .event.panel[data-year="2022"] .title a, #events-calendar .event.panel[data-year="2022"] strong, #events-calendar .event.panel[data-year="2022"] h5, #events-calendar .event.panel[data-year="2022"] h5 > a, #events-calendar .event.panel[data-year="2022"] .title a, #events-related .event.panel[data-year="2022"] strong, #events-related .event.panel[data-year="2022"] h5, #events-related .event.panel[data-year="2022"] h5 > a, #events-related .event.panel[data-year="2022"] .title a, #cat-events-archive .event.panel[data-year="2022"] strong, #cat-events-archive .event.panel[data-year="2022"] h5, #cat-events-archive .event.panel[data-year="2022"] h5 > a, #cat-events-archive .event.panel[data-year="2022"] .title a, #festival-cats .event.panel[data-year="2022"] strong, #festival-cats .event.panel[data-year="2022"] h5, #festival-cats .event.panel[data-year="2022"] h5 > a, #festival-cats .event.panel[data-year="2022"] .title a {
+          color: #fde7da; }
+        #events-showcase .event.panel[data-year="2022"] .title, #events-calendar .event.panel[data-year="2022"] .title, #events-related .event.panel[data-year="2022"] .title, #cat-events-archive .event.panel[data-year="2022"] .title, #festival-cats .event.panel[data-year="2022"] .title {
+          background: #3f89ff no-repeat center center; }
+        #events-showcase .event.panel[data-year="2022"] .animated-pattern, #events-calendar .event.panel[data-year="2022"] .animated-pattern, #events-related .event.panel[data-year="2022"] .animated-pattern, #cat-events-archive .event.panel[data-year="2022"] .animated-pattern, #festival-cats .event.panel[data-year="2022"] .animated-pattern {
+          background: url("./assets/svg/2022/TUM_panel_pos.svg") repeat-x center center; }
     #events-showcase .event.tour, #events-calendar .event.tour, #events-related .event.tour, #cat-events-archive .event.tour, #festival-cats .event.tour {
       background: #dcece8 no-repeat center center; }
       #events-showcase .event.tour strong, #events-showcase .event.tour h5, #events-showcase .event.tour h5 > a, #events-calendar .event.tour strong, #events-calendar .event.tour h5, #events-calendar .event.tour h5 > a, #events-related .event.tour strong, #events-related .event.tour h5, #events-related .event.tour h5 > a, #cat-events-archive .event.tour strong, #cat-events-archive .event.tour h5, #cat-events-archive .event.tour h5 > a, #festival-cats .event.tour strong, #festival-cats .event.tour h5, #festival-cats .event.tour h5 > a {
         color: #fed100; }
+      #events-showcase .event.tour[data-year="2022"], #events-calendar .event.tour[data-year="2022"], #events-related .event.tour[data-year="2022"], #cat-events-archive .event.tour[data-year="2022"], #festival-cats .event.tour[data-year="2022"] {
+        background: #fed100 no-repeat center center; }
+        #events-showcase .event.tour[data-year="2022"] strong, #events-showcase .event.tour[data-year="2022"] h5, #events-showcase .event.tour[data-year="2022"] h5 > a, #events-showcase .event.tour[data-year="2022"] .title a, #events-calendar .event.tour[data-year="2022"] strong, #events-calendar .event.tour[data-year="2022"] h5, #events-calendar .event.tour[data-year="2022"] h5 > a, #events-calendar .event.tour[data-year="2022"] .title a, #events-related .event.tour[data-year="2022"] strong, #events-related .event.tour[data-year="2022"] h5, #events-related .event.tour[data-year="2022"] h5 > a, #events-related .event.tour[data-year="2022"] .title a, #cat-events-archive .event.tour[data-year="2022"] strong, #cat-events-archive .event.tour[data-year="2022"] h5, #cat-events-archive .event.tour[data-year="2022"] h5 > a, #cat-events-archive .event.tour[data-year="2022"] .title a, #festival-cats .event.tour[data-year="2022"] strong, #festival-cats .event.tour[data-year="2022"] h5, #festival-cats .event.tour[data-year="2022"] h5 > a, #festival-cats .event.tour[data-year="2022"] .title a {
+          color: #dcece8; }
+        #events-showcase .event.tour[data-year="2022"] .title, #events-calendar .event.tour[data-year="2022"] .title, #events-related .event.tour[data-year="2022"] .title, #cat-events-archive .event.tour[data-year="2022"] .title, #festival-cats .event.tour[data-year="2022"] .title {
+          background: #fed100 no-repeat center center; }
     #events-showcase .event.workshop, #events-calendar .event.workshop, #events-related .event.workshop, #cat-events-archive .event.workshop, #festival-cats .event.workshop {
       background: #fafadc no-repeat center center; }
-      #events-showcase .event.workshop strong, #events-showcase .event.workshop h5, #events-showcase .event.workshop h5 > a, #events-calendar .event.workshop strong, #events-calendar .event.workshop h5, #events-calendar .event.workshop h5 > a, #events-related .event.workshop strong, #events-related .event.workshop h5, #events-related .event.workshop h5 > a, #cat-events-archive .event.workshop strong, #cat-events-archive .event.workshop h5, #cat-events-archive .event.workshop h5 > a, #festival-cats .event.workshop strong, #festival-cats .event.workshop h5, #festival-cats .event.workshop h5 > a {
+      #events-showcase .event.workshop strong, #events-showcase .event.workshop h5, #events-showcase .event.workshop h5 > a, #events-showcase .event.workshop .title a, #events-calendar .event.workshop strong, #events-calendar .event.workshop h5, #events-calendar .event.workshop h5 > a, #events-calendar .event.workshop .title a, #events-related .event.workshop strong, #events-related .event.workshop h5, #events-related .event.workshop h5 > a, #events-related .event.workshop .title a, #cat-events-archive .event.workshop strong, #cat-events-archive .event.workshop h5, #cat-events-archive .event.workshop h5 > a, #cat-events-archive .event.workshop .title a, #festival-cats .event.workshop strong, #festival-cats .event.workshop h5, #festival-cats .event.workshop h5 > a, #festival-cats .event.workshop .title a {
         color: #ff4c44; }
+      #events-showcase .event.workshop[data-year="2022"], #events-calendar .event.workshop[data-year="2022"], #events-related .event.workshop[data-year="2022"], #cat-events-archive .event.workshop[data-year="2022"], #festival-cats .event.workshop[data-year="2022"] {
+        background: #ff4c44 no-repeat center center; }
+        #events-showcase .event.workshop[data-year="2022"] strong, #events-showcase .event.workshop[data-year="2022"] h5, #events-showcase .event.workshop[data-year="2022"] h5 > a, #events-showcase .event.workshop[data-year="2022"] .title a, #events-calendar .event.workshop[data-year="2022"] strong, #events-calendar .event.workshop[data-year="2022"] h5, #events-calendar .event.workshop[data-year="2022"] h5 > a, #events-calendar .event.workshop[data-year="2022"] .title a, #events-related .event.workshop[data-year="2022"] strong, #events-related .event.workshop[data-year="2022"] h5, #events-related .event.workshop[data-year="2022"] h5 > a, #events-related .event.workshop[data-year="2022"] .title a, #cat-events-archive .event.workshop[data-year="2022"] strong, #cat-events-archive .event.workshop[data-year="2022"] h5, #cat-events-archive .event.workshop[data-year="2022"] h5 > a, #cat-events-archive .event.workshop[data-year="2022"] .title a, #festival-cats .event.workshop[data-year="2022"] strong, #festival-cats .event.workshop[data-year="2022"] h5, #festival-cats .event.workshop[data-year="2022"] h5 > a, #festival-cats .event.workshop[data-year="2022"] .title a {
+          color: #fafadc; }
+        #events-showcase .event.workshop[data-year="2022"] .title, #events-calendar .event.workshop[data-year="2022"] .title, #events-related .event.workshop[data-year="2022"] .title, #cat-events-archive .event.workshop[data-year="2022"] .title, #festival-cats .event.workshop[data-year="2022"] .title {
+          background: #ff4c44 no-repeat center center; }
     #events-showcase .event.film, #events-calendar .event.film, #events-related .event.film, #cat-events-archive .event.film, #festival-cats .event.film {
       background: #ede8db no-repeat center center; }
       #events-showcase .event.film strong, #events-showcase .event.film h5, #events-showcase .event.film h5 > a, #events-calendar .event.film strong, #events-calendar .event.film h5, #events-calendar .event.film h5 > a, #events-related .event.film strong, #events-related .event.film h5, #events-related .event.film h5 > a, #cat-events-archive .event.film strong, #cat-events-archive .event.film h5, #cat-events-archive .event.film h5 > a, #festival-cats .event.film strong, #festival-cats .event.film h5, #festival-cats .event.film h5 > a {
         color: #b5d300; }
+      #events-showcase .event.film[data-year="2022"], #events-calendar .event.film[data-year="2022"], #events-related .event.film[data-year="2022"], #cat-events-archive .event.film[data-year="2022"], #festival-cats .event.film[data-year="2022"] {
+        background: #b5d300 no-repeat center center; }
+        #events-showcase .event.film[data-year="2022"] strong, #events-showcase .event.film[data-year="2022"] h5, #events-showcase .event.film[data-year="2022"] h5 > a, #events-calendar .event.film[data-year="2022"] strong, #events-calendar .event.film[data-year="2022"] h5, #events-calendar .event.film[data-year="2022"] h5 > a, #events-related .event.film[data-year="2022"] strong, #events-related .event.film[data-year="2022"] h5, #events-related .event.film[data-year="2022"] h5 > a, #cat-events-archive .event.film[data-year="2022"] strong, #cat-events-archive .event.film[data-year="2022"] h5, #cat-events-archive .event.film[data-year="2022"] h5 > a, #festival-cats .event.film[data-year="2022"] strong, #festival-cats .event.film[data-year="2022"] h5, #festival-cats .event.film[data-year="2022"] h5 > a {
+          color: #ede8db; }
+        #events-showcase .event.film[data-year="2022"] .title, #events-calendar .event.film[data-year="2022"] .title, #events-related .event.film[data-year="2022"] .title, #cat-events-archive .event.film[data-year="2022"] .title, #festival-cats .event.film[data-year="2022"] .title {
+          background: #b5d300 no-repeat center center; }
 
 #festival-cats .event {
   padding: 15px;
@@ -1126,7 +1175,7 @@ input[type="submit"] {
 
 .wpcf7-form {
   max-width: 800px; }
-  .wpcf7-form .d-flex, .wpcf7-form .svg-container {
+  .wpcf7-form .d-flex, .wpcf7-form .svg-container, .wpcf7-form #events-showcase .event[data-year="2022"] .title, #events-showcase .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-calendar .event[data-year="2022"] .title, #events-calendar .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-related .event[data-year="2022"] .title, #events-related .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #cat-events-archive .event[data-year="2022"] .title, #cat-events-archive .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #festival-cats .event[data-year="2022"] .title, #festival-cats .event[data-year="2022"] .wpcf7-form .title {
     margin-bottom: 30px; }
   .wpcf7-form .wpcf7-list-item {
     width: 100%; }
@@ -1258,9 +1307,9 @@ div.wpforms-container-full .wpforms-form {
   .t-hidden {
     display: none; }
 
-  .d-flex.t-column, .t-column.svg-container {
+  .d-flex.t-column, .t-column.svg-container, #events-showcase .event[data-year="2022"] .t-column.title, #events-calendar .event[data-year="2022"] .t-column.title, #events-related .event[data-year="2022"] .t-column.title, #cat-events-archive .event[data-year="2022"] .t-column.title, #festival-cats .event[data-year="2022"] .t-column.title {
     flex-flow: column; }
-  .d-flex.t-column-reverse, .t-column-reverse.svg-container {
+  .d-flex.t-column-reverse, .t-column-reverse.svg-container, #events-showcase .event[data-year="2022"] .t-column-reverse.title, #events-calendar .event[data-year="2022"] .t-column-reverse.title, #events-related .event[data-year="2022"] .t-column-reverse.title, #cat-events-archive .event[data-year="2022"] .t-column-reverse.title, #festival-cats .event[data-year="2022"] .t-column-reverse.title {
     flex-flow: column-reverse; }
 
   .t-whole {
@@ -1328,9 +1377,9 @@ div.wpforms-container-full .wpforms-form {
   .m-visible {
     display: inline-block; }
 
-  .d-flex.m-column, .m-column.svg-container {
+  .d-flex.m-column, .m-column.svg-container, #events-showcase .event[data-year="2022"] .m-column.title, #events-calendar .event[data-year="2022"] .m-column.title, #events-related .event[data-year="2022"] .m-column.title, #cat-events-archive .event[data-year="2022"] .m-column.title, #festival-cats .event[data-year="2022"] .m-column.title {
     flex-flow: column; }
-  .d-flex.m-column-reverse, .m-column-reverse.svg-container {
+  .d-flex.m-column-reverse, .m-column-reverse.svg-container, #events-showcase .event[data-year="2022"] .m-column-reverse.title, #events-calendar .event[data-year="2022"] .m-column-reverse.title, #events-related .event[data-year="2022"] .m-column-reverse.title, #cat-events-archive .event[data-year="2022"] .m-column-reverse.title, #festival-cats .event[data-year="2022"] .m-column-reverse.title {
     flex-flow: column-reverse; }
 
   .m-whole {
