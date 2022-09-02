@@ -51,19 +51,21 @@ jQuery(document).ready(function($) {
   //   useTransform: false
   // });
 
-$('.accordion-btn').each(function(i, el) {
-  var text = $(this).find($('.btn')).html();
-  $(el).click(function() {
-    var content = $(this).next($('.accordion-content'));
-    content.toggleClass('active');
+  $('.accordion-btn').each(function(i, el) {
+    console.log(el);
+    var text = $(this).find($('.btn')).html();
+    $(el).click(function() {
+      var content = $(this).next($('.accordion-content'));
+      console.log(content);
+      content.toggleClass('active');
 
-    if (content.hasClass('active')) {
-      $(this).find($('.btn')).html('Chiudi');
-    } else {
-      $(this).find($('.btn')).html(text);
-    }
+      if (content.hasClass('active')) {
+        $(this).find($('.btn')).html('Chiudi');
+      } else {
+        $(this).find($('.btn')).html(text);
+      }
+    });
   });
-});
 
 //--------- SVG SNAP JS -----------
 

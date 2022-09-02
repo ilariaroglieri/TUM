@@ -1,19 +1,27 @@
 <?php 
 $currPostID = get_queried_object_id();
 $terms = wp_get_object_terms( $currPostID, 'event-category');
+$years = wp_get_object_terms( $currPostID, 'event_year');
 
-$tax_query[] = array(
-  'taxonomy' => 'event-category',
-  'field' => 'slug',
-  'terms' => $terms[0]->slug,
-);
-
-// put all the WP_Query args together
+// select same category + same year
 $args = array( 
   'post_type' => 'event',
   'posts_per_page' => 5,
   'post__not_in' => array($currPostID),
-  'tax_query' => $tax_query 
+  'tax_query' => array(
+    array(
+      'taxonomy' => 'event_year',
+      'field'    => 'slug',
+      'terms'    => $years[0]->slug,
+      'operator' => 'IN',
+    ),
+    array(
+      'taxonomy' => 'event-category',
+      'field'    => 'slug',
+      'terms' => $terms[0]->slug,
+      'orderby'  => 'menu_order',
+    ),
+  ),
 );
 
 $relatedEvents = new WP_Query($args);
