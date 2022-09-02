@@ -351,6 +351,10 @@ $headerH: 18.4vw;
   @at-root body[data-color='red'] & {
     border-top: $red 5px solid;
   }
+  &.grey {
+    border-top: $primaryColor 5px solid !important;
+  }
+
 }
 
 .border-bottom {
@@ -555,7 +559,7 @@ img {
       }
     }
   }
-  div[class*="menu-1"]{
+  .menu-menu-1-container {
     width: 100%;
     z-index:99;
     background-color: white;
@@ -577,16 +581,16 @@ img {
         a {
           &:hover {
             @at-root body[data-color='blue'] & {
-              color: $blue;
+              color: $blue !important;
             }
             @at-root body[data-color='green'] & {
-              color: $green;
+              color: $green !important;
             }
             @at-root body[data-color='yellow'] & {
-              color: $yellow;
+              color: $yellow !important;
             }
             @at-root body[data-color='red'] & {
-              color: $red;
+              color: $red !important;
             }    
           }
         }
@@ -820,46 +824,46 @@ body.red {
 
 
 // home streaming
-body[data-color='blue'] {
-  .streaming-area {
-    background-color: $blue-bg;
-  }
-  .video-label, .section-label {
-    h4 {
-      color: $blue;
-    }
-  }
-}
-body[data-color='green'] {
-  .streaming-area {
-    background-color: $green-bg;
-  }
-  .video-label, .section-label {
-    h4 {
-      color: $green;
-    }
-  }
-}
-body[data-color='yellow'] {
-  .streaming-area {
-    background-color: $yellow-bg;
-  }
-  .video-label, .section-label {
-    h4 {
-      color: $yellow;
-    }
-  }
-}
-body[data-color='red'] {
-  .streaming-area {
-    background-color: $red-bg;
-  }
-  .video-label, .section-label {
-    h4 {
-      color: $red;
-    }
-  }
-}
+// body[data-color='blue'] {
+//   .streaming-area {
+//     background-color: $blue-bg;
+//   }
+//   .video-label, .section-label {
+//     h4 {
+//       color: $blue;
+//     }
+//   }
+// }
+// body[data-color='green'] {
+//   .streaming-area {
+//     background-color: $green-bg;
+//   }
+//   .video-label, .section-label {
+//     h4 {
+//       color: $green;
+//     }
+//   }
+// }
+// body[data-color='yellow'] {
+//   .streaming-area {
+//     background-color: $yellow-bg;
+//   }
+//   .video-label, .section-label {
+//     h4 {
+//       color: $yellow;
+//     }
+//   }
+// }
+// body[data-color='red'] {
+//   .streaming-area {
+//     background-color: $red-bg;
+//   }
+//   .video-label, .section-label {
+//     h4 {
+//       color: $red;
+//     }
+//   }
+// }
 .video-label, .section-label {
   border-top: $primaryColor 5px solid;
   border-bottom: $primaryColor 5px solid;
@@ -907,6 +911,10 @@ body[data-color='red'] {
   @extend .v-center;
   &.light-color {
     z-index:10;
+    svg {
+      height: 80%;
+      margin-top: 5%;
+    }
     @at-root body[data-color='blue'] & {
       stroke: $blue-bg;
     }
@@ -1382,8 +1390,8 @@ body[data-color='red'] {
   }
 }
 
-
-.page-id-55, .page-id-42 {
+// form on one column
+.page-id-55, .page-id-42,.page-id-1327 {
   #content-page {
     .main-text {
       column-count: 1;
@@ -1393,6 +1401,7 @@ body[data-color='red'] {
     }
   }
 }
+
 
 //partner
 .partner-row {

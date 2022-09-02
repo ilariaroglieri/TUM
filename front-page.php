@@ -84,6 +84,21 @@
       <?php endif; ?>
     <?php endif; ?>
 
+    <!-- il festival -->
+    <?php
+    $args = array(
+      'post_type' => 'page',
+      'post__in' => array(1315)
+    );
+    $festivalQuery = new WP_Query( $args );
+    ?>
+
+    <?php while ($festivalQuery -> have_posts()) : $festivalQuery -> the_post(); ?>
+      <!-- categories info and links -->
+      <?php include('cat-modules.php'); ?>
+    <?php endwhile; ?>
+
+
     <!-- eventi IN EVIDENZA -->
     <?php if( have_rows('evento_in_evidenza') ): ?>
       <div class="container-fluid">
