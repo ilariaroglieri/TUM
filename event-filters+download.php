@@ -1,9 +1,9 @@
 <div class="container-fluid filters border-top spacing-p-b-2">
-  <div class="flex-row d-column-reverse d-flex">
-    <div class="d-half spacing-p-t-2">
+  <div class="m-column-reverse d-flex">
+    <div class="d-half m-whole spacing-p-t-2">
       <h5 class="s-regular uppercase">Filtra per: </h5>
     </div>
-    <div class="d-half spacing-p-t-2">
+    <div class="d-half m-whole spacing-p-t-2">
       <?php $download = get_field('download_programma', $taxonomy.'_'.$term_id); ?>
       <?php if ($download): ?>
         <div class="button bigger">
@@ -24,7 +24,7 @@
     ) );
 
     if ( $cats ) : ?>
-      <div id="cat-select" data-name="<?= $cat; ?>" class="custom-select select-cat d-flex t-column">
+      <div id="cat-select" data-name="<?= $cat; ?>" class="custom-select select-cat d-flex m-column">
         <?php foreach( $cats as $category ) :
           $cat = $category->slug; ?>
           <div class="filter-container d-flex center <?php echo $cat; ?>">
@@ -50,7 +50,7 @@
     ) );
 
     if ( $venues ) : ?>
-      <div id="venue-select" data-name="<?= $venue; ?>" class="custom-select select-venue d-flex t-column">
+      <div id="venue-select" data-name="<?= $venue; ?>" class="custom-select select-venue d-flex m-column">
         <?php foreach( $venues as $venue ) : ?>
           <div class="filter-container">
             <h3 class="s-regular uppercase filter-element" data-type="venue-filter" id="<?php echo $venue->term_id; ?>"><?php echo $venue->name; ?></h3>
@@ -62,7 +62,7 @@
   </div>
 
   <div class="d-flex flex-row d-column spacing-p-b-1">
-    <div id="date-select" class="custom-select select-date d-flex t-column">
+    <div id="date-select" class="custom-select select-date d-flex m-column">
       <?php $year = get_terms( array('taxonomy' => 'event_year'));
       $currYear = $year[0]->slug; ?>
 

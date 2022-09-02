@@ -348,15 +348,15 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
-  body[data-color='blue'] .filter-container:hover, body[data-color='blue'] .filter-container .active {
+  body[data-color='blue'] .filter-container:hover, body[data-color='blue'] .filter-container.active {
     color: #3f89ff; }
-  body[data-color='green'] .filter-container:hover, body[data-color='green'] .filter-container .active {
+  body[data-color='green'] .filter-container:hover, body[data-color='green'] .filter-container.active {
     color: #b5d300; }
-  body[data-color='yellow'] .filter-container:hover, body[data-color='yellow'] .filter-container .active {
+  body[data-color='yellow'] .filter-container:hover, body[data-color='yellow'] .filter-container.active {
     color: #fed100; }
-  body[data-color='red'] .filter-container:hover, body[data-color='red'] .filter-container .active {
+  body[data-color='red'] .filter-container:hover, body[data-color='red'] .filter-container.active {
     color: #ff4c44; }
-  .filter-container:hover svg, .filter-container .active svg {
+  .filter-container:hover svg, .filter-container.active svg {
     --looping-percent: 90;
     animation-play-state: running !important; }
   .filter-container.film {

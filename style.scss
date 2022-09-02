@@ -270,7 +270,7 @@ $headerH: 18.4vw;
   margin-bottom: $half-spacing;
   cursor: pointer;
   @include transition(all .3s);
-  &:hover, .active {
+  &:hover, &.active {
     @at-root body[data-color='blue'] & {
       color: $blue;
     }

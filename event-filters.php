@@ -35,7 +35,7 @@
     $cats_ids = array_unique($cats_ids);
 
     if ( $cats ) : ?>
-      <div id="cat-select" data-name="event-category" class="custom-select select-cat d-flex t-column">
+      <div id="cat-select" data-name="event-category" class="custom-select select-cat d-flex m-column">
         <?php foreach( $cats as $a=>$category ) : ?>
           <div class="filter-container d-flex center <?php echo $cat; ?>">
             <h3 class="s-regular uppercase filter-element" data-type="cat-filter" id="<?php echo $cats_ids[$a]; ?>"><?php echo $category; ?></h3>
@@ -62,7 +62,7 @@
     $venues_ids = array_unique($venues_ids);
 
     if ( $venues ) : ?>
-      <div id="venue-select" data-name="event-venue" class="custom-select select-venue d-flex t-column">
+      <div id="venue-select" data-name="event-venue" class="custom-select select-venue d-flex m-column">
         <?php foreach( $venues as $i=>$venue) : ?>
           <div class="filter-container">
             <h3 class="s-regular uppercase filter-element" data-type="venue-filter" id="<?= $venues_ids[$i]; ?>"><?php echo $venue; ?></h3>
@@ -74,7 +74,7 @@
   </div>
 
   <div class="d-flex flex-row d-column spacing-p-b-1">
-    <div id="date-select" class="custom-select select-date d-flex t-column">
+    <div id="date-select" class="custom-select select-date d-flex m-column">
       <?php $currDate = date("d-m-Y"); ?>
 
       <?php $events = eo_get_events( array(
