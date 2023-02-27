@@ -20,6 +20,7 @@
     <!-- wpquery events query-->
     <?php 
       $currYear = date("Y");
+      echo $currYear;
     ?>
 
     <div class="container-fluid">
@@ -30,8 +31,9 @@
           'post_type'         => 'event',
           'posts_per_page'    => -1,
           'order'             => 'ASC',
-          'showpastevents'  => true,
+          'showpastevents'    => true,
           'orderby'           => 'eventstart',
+          'suppress_filters'  => false,
           'tax_query' => array(
             array(
               'taxonomy' => 'event_year',

@@ -39,7 +39,7 @@
       <div class="venues">
         <?php if ($venues):
           foreach( $venues as $venue ): ?>
-            <h5 class="venue uppercase"><a href="<?php echo get_term_link( $venue->term_id ); ?>"><?php echo $venue->name; ?></a></h5>
+            <h5 class="venue uppercase"><?php echo $venue->name; ?></h5>
           <?php endforeach; 
         else: ?>
           <h5 class="venue uppercase">Online</h5>

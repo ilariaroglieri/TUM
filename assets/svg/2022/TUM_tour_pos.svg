@@ -16,7 +16,7 @@
       }
 
       .c, .d {
-        stroke: #b5d300;
+        stroke: #fed100;
       }
 
       .d, .e {

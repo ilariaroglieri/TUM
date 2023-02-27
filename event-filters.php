@@ -1,6 +1,6 @@
 <?php
   // select current year events...
-  $currYear = date("Y");
+  $currYear = date("Y"); 
   $events = get_posts(array( 
     'post_type'         => 'event',
     'posts_per_page'    => -1,

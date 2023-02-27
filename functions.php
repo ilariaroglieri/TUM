@@ -67,6 +67,7 @@ function filterCatAjax() {
   $venueTerm = $_POST['venueTerm'];
   $venue = $_POST['venue'];
 
+  $currYear = date("Y"); 
   $date = $_POST['date'];
 
   $args = array(
@@ -82,7 +83,13 @@ function filterCatAjax() {
         'field'    => 'id',
         'terms'    => $catTerm,
         'operator' => 'IN',
-      )
+      ),
+      array(
+        'taxonomy' => 'event_year',
+        'field'    => 'slug',
+        'terms'    => array( $currYear ),
+        'operator' => 'IN',
+      ),
     );
   }
 
@@ -93,7 +100,13 @@ function filterCatAjax() {
         'taxonomy' => $venue,
         'field'    => 'id',
         'terms'    => $venueTerm,
-      )
+      ),
+      array(
+        'taxonomy' => 'event_year',
+        'field'    => 'slug',
+        'terms'    => array( $currYear ),
+        'operator' => 'IN',
+      ),
     );
   } 
 
@@ -109,7 +122,13 @@ function filterCatAjax() {
         'taxonomy' => $venue,
         'field'    => 'id',
         'terms'    => $venueTerm,
-      )
+      ),
+      array(
+        'taxonomy' => 'event_year',
+        'field'    => 'slug',
+        'terms'    => array( $currYear ),
+        'operator' => 'IN',
+      ),
     );
   };
 

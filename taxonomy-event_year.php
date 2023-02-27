@@ -13,25 +13,29 @@
 
     <div class="container-fluid-w-p">
       <div class="title">
-        <h1 class="spacing-p-t-1 s-large uppercase"><?= $editionName; ?></h1>
+        <h1 class="spacing-p-t-1 s-large uppercase">TUM <?= $editionName; ?></h1>
       </div>
 
-      <div class="main-text max-width spacing-t-2 spacing-b-2">
-        <?= term_description();?>
-      </div>
+      <?php if ($testo): ?>
+        <div class="main-text max-width spacing-t-2 spacing-b-2">
+          <?php $testo = get_field('testo', $taxonomy.'_'.$term_id); ?>
+          <?= $testo;?>
+        </div>
+      <?php endif; ?>
     </div>
 
     <!-- rassegna stampa -->
-    <div class="container-fluid d-flex column rassegna">
-      <?php $print = get_field('rassegna_stampa', $taxonomy.'_'.$term_id); ?>
-      <div class="section-label">
-        <h4 class="uppercase">Dicono di noi</h4>
+    <?php if ($print): ?>
+      <div class="container-fluid d-flex column rassegna">
+        <?php $print = get_field('rassegna_stampa', $taxonomy.'_'.$term_id); ?>
+        <div class="section-label">
+          <h4 class="uppercase">Dicono di noi</h4>
+        </div>
+        <div class="main-text flex-row max-width spacing-t-2 spacing-b-2">
+          <?= $print; ?>
+        </div>
       </div>
-      <div class="main-text flex-row max-width spacing-t-2 spacing-b-2">
-        <?= $print; ?>
-      </div>
-
-    </div>
+    <?php endif; ?>
 
     <!-- streaming area -->
     <?php $showEmbed = get_field('mostra_area_streaming', $taxonomy.'_'.$term_id); ?>
@@ -69,7 +73,18 @@
 
 
     <!-- archived program -->
-    <?php include ('event-filters+download.php'); ?>
+    <?php $download = get_field('download_programma', $taxonomy.'_'.$term_id); ?>
+    <?php if ($download): ?>
+      <div class="container-fluid filters border-top border-bottom grey spacing-p-t-3 spacing-p-b-3">
+        <div class="d-flex">
+          <div class="d-whole t-center">
+            <div class="button bigger">
+              <a href="<?php echo $download['url']; ?>" target="_blank">Scarica il programma</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <?php endif; ?>
 
     <div class="container-fluid">
       <div id="events-calendar">

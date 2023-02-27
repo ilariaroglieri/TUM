@@ -44,11 +44,11 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
   font-size: 54px;
   line-height: 1; }
 
-.s-big {
+.s-big, .button.bigger {
   font-size: 32px;
   line-height: 1; }
 
-.s-regular, body, p, h5, #content-single-event h2, #content-single-event h5, input[type="submit"] {
+.s-regular, body, p, h1, h2, h3, h4, h5, h6, #content-single-event h2, #content-single-event h5, input[type="submit"] {
   font-size: 21px; }
 
 .s-small, #content-single-event h6, input[type=text], input[type=email], input[type=url], select, .wpcf7-form .wpcf7-not-valid-tip, .wpcf7-form .wpcf7-response-output, #footer .menu-menu-1-container ul li {
@@ -274,7 +274,6 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
   transition: all 0.3s; }
   .button.bigger {
     padding: 5px 30px;
-    width: 100%;
     text-align: center; }
   .button a {
     -webkit-transition: all 0.3s;
@@ -398,6 +397,8 @@ body[data-color='red'] .border-top {
   border-top: #ff4c44 5px solid; }
 .border-top.grey {
   border-top: #43454a 5px solid !important; }
+.border-top.white {
+  border-top: white 5px solid !important; }
 
 .border-bottom {
   border-bottom: #43454a 5px solid; }
@@ -683,18 +684,16 @@ body.red a.underline, #events-showcase body.event.workshop a.underline, #events-
 .content {
   padding-top: 18.4vw;
   min-height: calc(100vh - 18.4vw); }
-  .content p {
-    text-indent: 30px; }
-    body[data-color='blue'] .content p a {
-      color: #3f89ff; }
-    body[data-color='green'] .content p a {
-      color: #b5d300; }
-    body[data-color='yellow'] .content p a {
-      color: #fed100; }
-    body[data-color='red'] .content p a {
-      color: #ff4c44; }
-    .content p a:hover {
-      text-decoration: underline; }
+  body[data-color='blue'] .content p a {
+    color: #3f89ff; }
+  body[data-color='green'] .content p a {
+    color: #b5d300; }
+  body[data-color='yellow'] .content p a {
+    color: #fed100; }
+  body[data-color='red'] .content p a {
+    color: #ff4c44; }
+  .content p a:hover {
+    text-decoration: underline; }
 
 body[data-color='blue'] #content-home {
   background-color: #fde7da; }
@@ -904,8 +903,11 @@ body[data-color='red'] #content-home {
   padding: 15px;
   min-height: 33vh;
   height: initial; }
-  #festival-cats .event p {
-    max-width: 600px; }
+  #festival-cats .event .pattern, #festival-cats .event .text {
+    padding-top: 15px; }
+  #festival-cats .event .pattern {
+    padding-left: 15px;
+    animation: animatedBackground 400s linear infinite; }
   #festival-cats .event.panel {
     background: #fde7da no-repeat center center; }
     #festival-cats .event.panel h2, #festival-cats .event.panel h5, #festival-cats .event.panel h5 > a, #festival-cats .event.panel a {
@@ -929,6 +931,9 @@ body[data-color='red'] #content-home {
     #festival-cats .event.panel input[type=email],
     #festival-cats .event.panel input[type=url] {
       border-color: #3f89ff !important; }
+    #festival-cats .event.panel .pattern {
+      background: url("./assets/svg/2022/TUM_panel_pos.svg") repeat-x center calc(100% + 80px);
+      background-size: auto 160px; }
   #festival-cats .event.tour {
     background: #dcece8 no-repeat center center; }
     #festival-cats .event.tour h2, #festival-cats .event.tour h5, #festival-cats .event.tour h5 > a, #festival-cats .event.tour a {
@@ -952,6 +957,9 @@ body[data-color='red'] #content-home {
     #festival-cats .event.tour input[type=email],
     #festival-cats .event.tour input[type=url] {
       border-color: #fed100 !important; }
+    #festival-cats .event.tour .pattern {
+      background: url("./assets/svg/2022/TUM_tour_pos.svg") repeat-x center calc(100% + 80px);
+      background-size: auto 160px; }
   #festival-cats .event.workshop {
     background: #fafadc no-repeat center center; }
     #festival-cats .event.workshop h2, #festival-cats .event.workshop h5, #festival-cats .event.workshop h5 > a, #festival-cats .event.workshop a {
@@ -975,6 +983,9 @@ body[data-color='red'] #content-home {
     #festival-cats .event.workshop input[type=email],
     #festival-cats .event.workshop input[type=url] {
       border-color: #ff4c44 !important; }
+    #festival-cats .event.workshop .pattern {
+      background: url("./assets/svg/2022/TUM_ws_pos.svg") repeat-x center calc(100% + 80px);
+      background-size: auto 160px; }
   #festival-cats .event.film {
     background: #ede8db no-repeat center center; }
     #festival-cats .event.film h2, #festival-cats .event.film h5, #festival-cats .event.film h5 > a, #festival-cats .event.film a {
@@ -1249,11 +1260,11 @@ input[type="submit"] {
     body[data-color='red'] .wpcf7-form .wpcf7-response-output {
       border-color: #ff4c44 !important; }
 
-.event .panel-only {
+.event .workshop-only {
   display: none; }
-.event.event-category-panel .other-cats, .event.panel .other-cats {
+.event.event-category-workshop .other-cats, .event.workshop .other-cats {
   display: none; }
-.event.event-category-panel .panel-only, .event.panel .panel-only {
+.event.event-category-workshop .workshop-only, .event.workshop .workshop-only {
   display: inline-block; }
 
 div.wpforms-container-full .wpforms-form {
@@ -1404,7 +1415,7 @@ div.wpforms-container-full .wpforms-form {
   svg {
     stroke-width: 1.3vw; }
 
-  .s-large, .s-big, .s-medium, #header .menu-menu-1-container ul li {
+  .s-large, .s-big, .button.bigger, .s-medium, #header .menu-menu-1-container ul li {
     font-size: 8.2vw; }
 
   #header {
