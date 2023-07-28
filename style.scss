@@ -1237,6 +1237,32 @@ body.red {
   }
 }
 
+// previous editions
+.event-year-row {
+  @extend .border-bottom;
+  // &:last-of-type {
+  //   border-bottom: 0;
+  // }
+  .event-year-link {
+    margin-left: $half-spacing;
+    @include transition(color .3s);
+    a:hover {
+      @at-root body[data-color='blue'] & {
+        color: $blue;
+      }
+      @at-root body[data-color='green'] & {
+        color: $green;
+      }
+      @at-root body[data-color='yellow'] & {
+        color: $yellow;
+      }
+      @at-root body[data-color='red'] & {
+        color: $red;
+      }
+    }
+  }
+}
+
 
 // single events
 #content-single-event {
