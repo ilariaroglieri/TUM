@@ -12,6 +12,11 @@
     <?php elseif ($years[0]->slug == '2022'): ?>
       <div class="svg-container animated-pattern">
       </div>
+    <?php elseif ($years[0]->slug == '2023'): ?>
+      <div class="svg-container animated-shape-23">
+        <?php $cat = $cats[0]->slug; ?>
+        <?php include('svg-shapes-2023.php'); ?>
+      </div>
     <?php endif; ?>
 
     <div class="d-flex flex-row between p-relative">

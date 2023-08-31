@@ -20,7 +20,6 @@
     <!-- wpquery events query-->
     <?php 
       $currYear = date("Y");
-      echo $currYear;
     ?>
 
     <div class="container-fluid">
