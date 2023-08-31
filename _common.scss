@@ -7,17 +7,27 @@ $tablet: 768px;
 $mobile: 640px;
 
 //colors
-$primaryColor: #43454a;
+$primaryColor: black;
 
-$blue: #3f89ff;
-$green: #b5d300;
-$red: #ff4c44;
-$yellow: #fed100;
+$blue-old: #3f89ff;
+$green-old: #b5d300;
+$red-old: #ff4c44;
+$yellow-old: #fed100;
 
-$blue-bg: #fde7da;
-$green-bg: #ede8db;
-$red-bg: #fafadc;
-$yellow-bg: #dcece8;
+$blue-bg-old: #fde7da;
+$green-bg-old: #ede8db;
+$red-bg-old: #fafadc;
+$yellow-bg-old: #dcece8;
+
+$blue: #3c8cff;
+$green: #00b482;
+$red: #ff323c;
+$yellow: #ffdc00;
+
+$blue-bg: #f0ffff;
+$green-bg: #f0fff0;
+$red-bg: #fff0f0;
+$yellow-bg: #ffffe6;
 
 // colors
 .line {

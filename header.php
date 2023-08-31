@@ -100,7 +100,7 @@
 								</defs>
 								<style type="text/css">
 									#mask{fill:none;stroke:none; stroke-width:2px;}
-									.st0{fill:#43454A;stroke:none;}
+									.st0{fill:black;stroke:none;}
 									.svg-shape{fill:none;stroke-width:5;stroke-linecap:square;stroke-miterlimit:10;}
 								</style>
 								<text class="st0 text" x="0" y="43px">Festival del</text>

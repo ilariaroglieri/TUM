@@ -4,10 +4,12 @@
 
 <section class="content" id="content-previous-years">
   <?php
+    $currYear = date("Y");
     $terms = get_terms( array(
       'taxonomy' => 'event_year',
       'orderby' => 'slug',
       'order' => 'DESC',
+      'exclude' => $currYear
     ));
   ?>
 

@@ -7,6 +7,9 @@
   $term = get_queried_object(); 
   $taxonomy = $term->taxonomy;
   $term_id = $term->term_id;
+
+  $testo = get_field('testo', $taxonomy.'_'.$term_id);
+  $print = get_field('rassegna_stampa', $taxonomy.'_'.$term_id);
 ?>
 
 <section class="content" id="content-edizione">

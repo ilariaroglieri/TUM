@@ -18,8 +18,15 @@
 
             <div class="slide">
               <div class="d-flex">
-                <div class="img-container d-whole t-center">
-                  <img src="<?= $img['url']; ?>" />
+                <div class="img-container">
+                  <img src="<?php echo home_url(); ?>/wp-content/themes/TUM-theme/assets/svg/2023/01-tum-homepage-23.svg" />
+                  <img class="moving-img" data-speed="3" src="<?php echo home_url(); ?>/wp-content/themes/TUM-theme/assets/svg/2023/02-tum-homepage-23.svg" />
+                  <img class="moving-img" data-speed="4" src="<?php echo home_url(); ?>/wp-content/themes/TUM-theme/assets/svg/2023/03-tum-homepage-23.svg" />
+                  <img class="moving-img" data-speed="5" src="<?php echo home_url(); ?>/wp-content/themes/TUM-theme/assets/svg/2023/04-tum-homepage-23.svg" />
+                  <img class="moving-img" data-speed="6" src="<?php echo home_url(); ?>/wp-content/themes/TUM-theme/assets/svg/2023/05-tum-homepage-23.svg" />
+                  <img class="moving-img" data-speed="-2" src="<?php echo home_url(); ?>/wp-content/themes/TUM-theme/assets/svg/2023/06-tum-homepage-23.svg" />
+                  <img class="moving-img" data-speed="-7" src="<?php echo home_url(); ?>/wp-content/themes/TUM-theme/assets/svg/2023/07-tum-homepage-23.svg" />
+                  <img class="moving-img" data-speed="-8" src="<?php echo home_url(); ?>/wp-content/themes/TUM-theme/assets/svg/2023/08-tum-homepage-23.svg" />
                 </div>
               </div>
               <div class="d-flex t-column spacing-t-2 spacing-b-2">

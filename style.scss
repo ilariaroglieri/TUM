@@ -788,7 +788,7 @@ body.red {
   .slider {
     .slide {
       padding: $half-spacing 0;
-      background-blend-mode: screen;
+      padding-top: 0;
       @at-root body[data-color='blue'] & {
         background-color: $blue-bg !important;
         h2 {
@@ -813,8 +813,29 @@ body.red {
           color: $red;
         }
       }
-      .img-container img {
-        height: calc(100vh - #{$headerH} - #{$spacing});
+      .img-container {
+        position: relative;
+        width: 100%;
+        &::before {
+          content:'';
+          display: flex;
+          background-color: #9664b4;
+          position: absolute;
+          top:-18.4vh;
+          left: 0;
+          height: 18.4vh;
+          width: 100%;
+        }
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          @include transition(all .1s);
+          &:first-of-type {
+            position: static;
+          }
+        } 
       }
       p {
         margin-bottom: 22px;
@@ -1240,13 +1261,10 @@ body.red {
 // previous editions
 .event-year-row {
   @extend .border-bottom;
-  // &:last-of-type {
-  //   border-bottom: 0;
-  // }
   .event-year-link {
     margin-left: $half-spacing;
-    @include transition(color .3s);
     a:hover {
+      @include transition(color .3s);
       @at-root body[data-color='blue'] & {
         color: $blue;
       }
