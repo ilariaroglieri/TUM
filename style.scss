@@ -312,7 +312,7 @@ $headerH: 18.4vw;
       }
     }
   }
-  &.panel {
+  &.panel, &.concerti {
     stroke: $blue !important;
     &:hover, &.active {
       .filter-element {
@@ -1064,19 +1064,28 @@ body.red {
       }
       .animated-shape-23 {
         opacity: 0;
+        display: flex;
+        justify-content: space-between;
         @include transition(opacity .5s);
-        svg path {
-          stroke-dasharray: 1;
-          stroke-dashoffset: 1;
-          stroke-linecap: round;
-          animation: dashback 1s linear forwards;
+        svg {
+          &:last-of-type {
+            transform: scale(-1, 1);
+          }
+          path {
+            stroke-width: 6px;
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            animation: dashback 1s linear forwards;
+          }
         }
       }
       &:hover .animated-shape-23 {
         opacity: 1;
       }
     }
-    &.panel {
+    &.panel, &.concerti {
       background: $blue-bg no-repeat center center;
       @extend .blue;
       strong, h5, h5 > a {
@@ -1096,11 +1105,13 @@ body.red {
         }
       }
       &[data-year="2023"] {
+        background: url('../TUM-theme/assets/svg/2023/2023-texture-blue.svg'), $blue-bg;
+        background-size: 50%;
         .animated-shape-2023 {
           padding: 30px;
         }
         &:hover .animated-shape-23 svg .path-1 {
-          animation: dash 2s linear forwards;
+          animation: dash 3s ease-in-out forwards;
         }
       }
     }
@@ -1124,8 +1135,10 @@ body.red {
         }
       }
       &[data-year="2023"] {
+        background: url('../TUM-theme/assets/svg/2023/2023-texture-yellow.svg'), $yellow-bg;
+        background-size: 50%;
         &:hover .animated-shape-23 svg .path-1 {
-          animation: dash 5s linear forwards;
+          animation: dash 5s ease-in-out forwards;
         }
       }
     } 
@@ -1149,8 +1162,10 @@ body.red {
         }
       }
       &[data-year="2023"] {
+        background: url('../TUM-theme/assets/svg/2023/2023-texture-red.svg'), $red-bg;
+        background-size: 50%;
         &:hover .animated-shape-23 svg .path-1 {
-          animation: dash 3s linear forwards;
+          animation: dash 5s ease-in-out forwards;
         }
       }
     }
@@ -1170,18 +1185,20 @@ body.red {
         }
       }
       &[data-year="2023"] {
+        background: url('../TUM-theme/assets/svg/2023/2023-texture-green.svg'), $green-bg;
+        background-size: 50%;
         &:hover .animated-shape-23 svg {
           .path-1 {
-            animation: dash 3s linear forwards;
+            animation: dash 5s ease-in-out forwards;
           }
           .path-2 {
-            animation: dash .8s .3s linear forwards;
+            animation: dash .8s .3s ease-in-out forwards;
           }
           .path-3, .path-4 {
-            animation: dash .3s .6s linear forwards;
+            animation: dash .3s .6s ease-in-out forwards;
           }
           .path-5, .path-6 {
-            animation: dash .15s .6s linear forwards;            
+            animation: dash .15s .6s ease-in-out forwards;            
           }
         }
       }
@@ -1205,7 +1222,7 @@ body.red {
       padding-left: $half-spacing;
       animation: animatedBackground 400s linear infinite;
     }
-    &.panel {
+    &.panel, &.concerti {
       background: $blue-bg no-repeat center center;
       @extend .blue;
       h2, h5, h5 > a, a {
@@ -1932,6 +1949,16 @@ div.wpforms-container-full .wpforms-form {
         transform: scale(1, 1);
       }
     }
+     .event[data-year="2023"] {
+      .title {
+        max-width:100%;
+      }
+      .animated-shape-23 {
+        svg:nth-of-type(2) {
+          display: none;
+        }
+      }
+    }
   }
 
   #content-page, #content-single-event {
@@ -1946,16 +1973,16 @@ div.wpforms-container-full .wpforms-form {
     }
   }
 
-  .svg-container {
-    &.animated-shape {
-      opacity: 1;
-      @include transition(opacity .3s);
-      svg { 
-        --looping-percent: 90;
-        animation-play-state: running !important;
-      }
-    }
-  }
+  // .svg-container {
+  //   &.animated-shape {
+  //     opacity: 1;
+  //     @include transition(opacity .3s);
+  //     svg { 
+  //       --looping-percent: 90;
+  //       animation-play-state: running !important;
+  //     }
+  //   }
+  // }
   .filter-container {
     margin-bottom: 0;
   }
@@ -2021,6 +2048,31 @@ div.wpforms-container-full .wpforms-form {
     .logo {
       margin-bottom: $spacing;
       margin-right: 0;
+    }
+  }
+}
+
+@media screen and (pointer:coarse) {
+  .svg-container {
+    &.animated-shape {
+      opacity: 1;
+      @include transition(opacity .3s);
+      svg { 
+        --looping-percent: 90;
+        animation-play-state: running !important;
+      }
+    }
+  }
+  #events-showcase, #events-calendar, #events-related, #cat-events-archive, #festival-cats {
+    .event[data-year="2023"] {
+      .animated-shape-23 {
+        opacity: 1;
+        svg path {
+          stroke-width: 10px;
+          stroke-dasharray: 0;
+          stroke-dashoffset: 0;
+        }
+      }
     }
   }
 }

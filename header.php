@@ -27,7 +27,7 @@
 	$colorBg = $_SESSION["color-bg"];
 
 } else {
-	if (has_term( 'panel', 'event-category') || is_tax('panel')) {
+	if (has_term( 'panel', 'event-category') || has_term( 'concerti', 'event-category') || is_tax('panel') || is_tax('concerti')) {
     $color = 'blue';
   } else if (has_term( 'workshop', 'event-category') || is_tax('workshop') ) {
     $color = 'red';
