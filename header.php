@@ -27,13 +27,13 @@
 	$colorBg = $_SESSION["color-bg"];
 
 } else {
-	if (has_term( 'panel', 'event-category') || has_term( 'concerti', 'event-category') || is_tax('panel') || is_tax('concerti')) {
+	if (has_term( 'panel', 'event-category') || is_tax('panel')) {
     $color = 'blue';
   } else if (has_term( 'workshop', 'event-category') || is_tax('workshop') ) {
     $color = 'red';
   } else if (has_term( 'tour', 'event-category') || is_tax('tour')) {
     $color = 'yellow';
-  } else if (has_term( 'film', 'event-category') || is_tax('film')) {
+  } else if (has_term( 'film', 'event-category') || has_term( 'concerti', 'event-category') || is_tax('film') || is_tax('concerti')) {
     $color = 'green';
   } 
 }

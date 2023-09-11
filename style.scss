@@ -288,7 +288,7 @@ $headerH: 18.4vw;
       animation-play-state: running !important;
     }
   }
-  &.film {
+  &.film, &.concerti {
     stroke: $green !important;
     &:hover, &.active {
       .filter-element {
@@ -312,7 +312,7 @@ $headerH: 18.4vw;
       }
     }
   }
-  &.panel, &.concerti {
+  &.panel {
     stroke: $blue !important;
     &:hover, &.active {
       .filter-element {
@@ -1085,7 +1085,7 @@ body.red {
         opacity: 1;
       }
     }
-    &.panel, &.concerti {
+    &.panel {
       background: $blue-bg no-repeat center center;
       @extend .blue;
       strong, h5, h5 > a {
@@ -1169,7 +1169,7 @@ body.red {
         }
       }
     }
-    &.film {
+    &.film, &.concerti {
       background: $green-bg no-repeat center center;
       @extend .green;
       strong, h5, h5 > a {
@@ -1222,7 +1222,7 @@ body.red {
       padding-left: $half-spacing;
       animation: animatedBackground 400s linear infinite;
     }
-    &.panel, &.concerti {
+    &.panel {
       background: $blue-bg no-repeat center center;
       @extend .blue;
       h2, h5, h5 > a, a {
@@ -1309,7 +1309,7 @@ body.red {
         background-size: auto 160px;
       }
     }
-    &.film {
+    &.film, &.concerti {
       background: $green-bg no-repeat center center;
       @extend .green;
       h2, h5, h5 > a, a {

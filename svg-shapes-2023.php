@@ -1,4 +1,4 @@
-<?php if ($cat == 'panel' || $cat == 'concerti'): ?>
+<?php if ($cat == 'panel'): ?>
 	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
     <g>
 	    <path class="path-1" d="M702.37,470.6c-83.16-42.15-202.29,4.29-213.01,116.48c-7.67,80.24,39.06,183.35,166.5,201.49 M721.12,350.35
@@ -99,7 +99,7 @@
 				c0,0,164.6-60.09,276.3-161.37C676.84,138.18,610.67,263.14,405.13,436.07z" pathLength="1"/>
 		</g>
 	</svg>
-<?php elseif ($cat == 'film'): ?>
+<?php elseif ($cat == 'film' || $cat == 'concerti'): ?>
 	<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
 		<g>
