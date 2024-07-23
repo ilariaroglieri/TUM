@@ -2062,6 +2062,9 @@ div.wpforms-container-full .wpforms-form {
 }
 
 @media screen and (max-width: $mobile) {
+  html {
+    overflow-x:hidden;
+  }
   svg {
     stroke-width: 1.3vw;
   }
@@ -2132,6 +2135,13 @@ div.wpforms-container-full .wpforms-form {
           height: 100%;
           width: auto;
         }
+      }
+    }
+  }
+  #events-showcase, #events-calendar, #events-related, #cat-events-archive, #festival-cats {
+    .event[data-year="2024"] {
+      .title {
+        max-width: 100%;
       }
     }
   }
