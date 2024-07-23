@@ -17,6 +17,9 @@
         <?php $cat = $cats[0]->slug; ?>
         <?php include('svg-shapes-2023.php'); ?>
       </div>
+    <?php elseif ($years[0]->slug == '2024'): ?>
+      <div class="img-container animated-img"></div>
+      <div class="img-container mirror animated-img"></div>
     <?php endif; ?>
 
     <div class="d-flex flex-row between p-relative">

@@ -4,7 +4,7 @@ Author: Ilaria roglieri
 Version: 1.0
 */
 .line {
-  stroke: black; }
+  stroke: #402944; }
 
 .blue, #events-showcase .event.panel, #events-calendar .event.panel, #events-related .event.panel, #cat-events-archive .event.panel, #festival-cats .event.panel, [data-color='blue'] {
   stroke: #3c8cff; }
@@ -16,7 +16,7 @@ Version: 1.0
   stroke: #ff323c; }
 
 .yellow, #events-showcase .event.tour, #events-calendar .event.tour, #events-related .event.tour, #cat-events-archive .event.tour, #festival-cats .event.tour, [data-color='yellow'] {
-  stroke: #ffdc00; }
+  stroke: #ffb007; }
 
 body.blue .bg-color, #events-showcase body.event.panel .bg-color, #events-calendar body.event.panel .bg-color, #events-related body.event.panel .bg-color, #cat-events-archive body.event.panel .bg-color, #festival-cats body.event.panel .bg-color {
   color: #f0ffff; }
@@ -184,26 +184,26 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
 .d-none {
   display: none; }
 
-.d-flex, .svg-container, #events-showcase .event[data-year="2022"] .title, #events-calendar .event[data-year="2022"] .title, #events-related .event[data-year="2022"] .title, #cat-events-archive .event[data-year="2022"] .title, #festival-cats .event[data-year="2022"] .title, #events-showcase .event[data-year="2023"] .title, #events-calendar .event[data-year="2023"] .title, #events-related .event[data-year="2023"] .title, #cat-events-archive .event[data-year="2023"] .title, #festival-cats .event[data-year="2023"] .title {
+.d-flex, .svg-container, #events-showcase .event[data-year="2022"] .title, #events-calendar .event[data-year="2022"] .title, #events-related .event[data-year="2022"] .title, #cat-events-archive .event[data-year="2022"] .title, #festival-cats .event[data-year="2022"] .title, #events-showcase .event[data-year="2023"] .title, #events-calendar .event[data-year="2023"] .title, #events-related .event[data-year="2023"] .title, #cat-events-archive .event[data-year="2023"] .title, #festival-cats .event[data-year="2023"] .title, #events-showcase .event[data-year="2024"] .title, #events-calendar .event[data-year="2024"] .title, #events-related .event[data-year="2024"] .title, #cat-events-archive .event[data-year="2024"] .title, #festival-cats .event[data-year="2024"] .title {
   display: flex; }
-  .d-flex.center, .center.svg-container, #events-showcase .event[data-year="2022"] .center.title, #events-calendar .event[data-year="2022"] .center.title, #events-related .event[data-year="2022"] .center.title, #cat-events-archive .event[data-year="2022"] .center.title, #festival-cats .event[data-year="2022"] .center.title, #events-showcase .event[data-year="2023"] .center.title, #events-calendar .event[data-year="2023"] .center.title, #events-related .event[data-year="2023"] .center.title, #cat-events-archive .event[data-year="2023"] .center.title, #festival-cats .event[data-year="2023"] .center.title {
+  .d-flex.center, .center.svg-container, #events-showcase .event[data-year="2022"] .center.title, #events-calendar .event[data-year="2022"] .center.title, #events-related .event[data-year="2022"] .center.title, #cat-events-archive .event[data-year="2022"] .center.title, #festival-cats .event[data-year="2022"] .center.title, #events-showcase .event[data-year="2023"] .center.title, #events-calendar .event[data-year="2023"] .center.title, #events-related .event[data-year="2023"] .center.title, #cat-events-archive .event[data-year="2023"] .center.title, #festival-cats .event[data-year="2023"] .center.title, #events-showcase .event[data-year="2024"] .center.title, #events-calendar .event[data-year="2024"] .center.title, #events-related .event[data-year="2024"] .center.title, #cat-events-archive .event[data-year="2024"] .center.title, #festival-cats .event[data-year="2024"] .center.title {
     align-items: center; }
-  .d-flex.top, .top.svg-container, #events-showcase .event[data-year="2022"] .top.title, #events-calendar .event[data-year="2022"] .top.title, #events-related .event[data-year="2022"] .top.title, #cat-events-archive .event[data-year="2022"] .top.title, #festival-cats .event[data-year="2022"] .top.title, #events-showcase .event[data-year="2023"] .top.title, #events-calendar .event[data-year="2023"] .top.title, #events-related .event[data-year="2023"] .top.title, #cat-events-archive .event[data-year="2023"] .top.title, #festival-cats .event[data-year="2023"] .top.title {
+  .d-flex.top, .top.svg-container, #events-showcase .event[data-year="2022"] .top.title, #events-calendar .event[data-year="2022"] .top.title, #events-related .event[data-year="2022"] .top.title, #cat-events-archive .event[data-year="2022"] .top.title, #festival-cats .event[data-year="2022"] .top.title, #events-showcase .event[data-year="2023"] .top.title, #events-calendar .event[data-year="2023"] .top.title, #events-related .event[data-year="2023"] .top.title, #cat-events-archive .event[data-year="2023"] .top.title, #festival-cats .event[data-year="2023"] .top.title, #events-showcase .event[data-year="2024"] .top.title, #events-calendar .event[data-year="2024"] .top.title, #events-related .event[data-year="2024"] .top.title, #cat-events-archive .event[data-year="2024"] .top.title, #festival-cats .event[data-year="2024"] .top.title {
     align-items: flex-start; }
-  .d-flex.baseline, .baseline.svg-container, #events-showcase .event[data-year="2022"] .baseline.title, #events-calendar .event[data-year="2022"] .baseline.title, #events-related .event[data-year="2022"] .baseline.title, #cat-events-archive .event[data-year="2022"] .baseline.title, #festival-cats .event[data-year="2022"] .baseline.title, #events-showcase .event[data-year="2023"] .baseline.title, #events-calendar .event[data-year="2023"] .baseline.title, #events-related .event[data-year="2023"] .baseline.title, #cat-events-archive .event[data-year="2023"] .baseline.title, #festival-cats .event[data-year="2023"] .baseline.title {
+  .d-flex.baseline, .baseline.svg-container, #events-showcase .event[data-year="2022"] .baseline.title, #events-calendar .event[data-year="2022"] .baseline.title, #events-related .event[data-year="2022"] .baseline.title, #cat-events-archive .event[data-year="2022"] .baseline.title, #festival-cats .event[data-year="2022"] .baseline.title, #events-showcase .event[data-year="2023"] .baseline.title, #events-calendar .event[data-year="2023"] .baseline.title, #events-related .event[data-year="2023"] .baseline.title, #cat-events-archive .event[data-year="2023"] .baseline.title, #festival-cats .event[data-year="2023"] .baseline.title, #events-showcase .event[data-year="2024"] .baseline.title, #events-calendar .event[data-year="2024"] .baseline.title, #events-related .event[data-year="2024"] .baseline.title, #cat-events-archive .event[data-year="2024"] .baseline.title, #festival-cats .event[data-year="2024"] .baseline.title {
     align-items: baseline; }
-  .d-flex.between, .between.svg-container, #events-showcase .event[data-year="2022"] .between.title, #events-calendar .event[data-year="2022"] .between.title, #events-related .event[data-year="2022"] .between.title, #cat-events-archive .event[data-year="2022"] .between.title, #festival-cats .event[data-year="2022"] .between.title, #events-showcase .event[data-year="2023"] .between.title, #events-calendar .event[data-year="2023"] .between.title, #events-related .event[data-year="2023"] .between.title, #cat-events-archive .event[data-year="2023"] .between.title, #festival-cats .event[data-year="2023"] .between.title {
+  .d-flex.between, .between.svg-container, #events-showcase .event[data-year="2022"] .between.title, #events-calendar .event[data-year="2022"] .between.title, #events-related .event[data-year="2022"] .between.title, #cat-events-archive .event[data-year="2022"] .between.title, #festival-cats .event[data-year="2022"] .between.title, #events-showcase .event[data-year="2023"] .between.title, #events-calendar .event[data-year="2023"] .between.title, #events-related .event[data-year="2023"] .between.title, #cat-events-archive .event[data-year="2023"] .between.title, #festival-cats .event[data-year="2023"] .between.title, #events-showcase .event[data-year="2024"] .between.title, #events-calendar .event[data-year="2024"] .between.title, #events-related .event[data-year="2024"] .between.title, #cat-events-archive .event[data-year="2024"] .between.title, #festival-cats .event[data-year="2024"] .between.title {
     justify-content: space-between; }
-  .d-flex.v-center, .svg-container, #events-showcase .event[data-year="2022"] .v-center.title, #events-showcase .event[data-year="2022"] .title.svg-container, #events-calendar .event[data-year="2022"] .v-center.title, #events-calendar .event[data-year="2022"] .title.svg-container, #events-related .event[data-year="2022"] .v-center.title, #events-related .event[data-year="2022"] .title.svg-container, #cat-events-archive .event[data-year="2022"] .v-center.title, #cat-events-archive .event[data-year="2022"] .title.svg-container, #festival-cats .event[data-year="2022"] .v-center.title, #festival-cats .event[data-year="2022"] .title.svg-container, #events-showcase .event[data-year="2023"] .v-center.title, #events-showcase .event[data-year="2023"] .title.svg-container, #events-calendar .event[data-year="2023"] .v-center.title, #events-calendar .event[data-year="2023"] .title.svg-container, #events-related .event[data-year="2023"] .v-center.title, #events-related .event[data-year="2023"] .title.svg-container, #cat-events-archive .event[data-year="2023"] .v-center.title, #cat-events-archive .event[data-year="2023"] .title.svg-container, #festival-cats .event[data-year="2023"] .v-center.title, #festival-cats .event[data-year="2023"] .title.svg-container {
+  .d-flex.v-center, .svg-container, #events-showcase .event[data-year="2022"] .v-center.title, #events-showcase .event[data-year="2022"] .title.svg-container, #events-calendar .event[data-year="2022"] .v-center.title, #events-calendar .event[data-year="2022"] .title.svg-container, #events-related .event[data-year="2022"] .v-center.title, #events-related .event[data-year="2022"] .title.svg-container, #cat-events-archive .event[data-year="2022"] .v-center.title, #cat-events-archive .event[data-year="2022"] .title.svg-container, #festival-cats .event[data-year="2022"] .v-center.title, #festival-cats .event[data-year="2022"] .title.svg-container, #events-showcase .event[data-year="2023"] .v-center.title, #events-showcase .event[data-year="2023"] .title.svg-container, #events-calendar .event[data-year="2023"] .v-center.title, #events-calendar .event[data-year="2023"] .title.svg-container, #events-related .event[data-year="2023"] .v-center.title, #events-related .event[data-year="2023"] .title.svg-container, #cat-events-archive .event[data-year="2023"] .v-center.title, #cat-events-archive .event[data-year="2023"] .title.svg-container, #festival-cats .event[data-year="2023"] .v-center.title, #festival-cats .event[data-year="2023"] .title.svg-container, #events-showcase .event[data-year="2024"] .v-center.title, #events-showcase .event[data-year="2024"] .title.svg-container, #events-calendar .event[data-year="2024"] .v-center.title, #events-calendar .event[data-year="2024"] .title.svg-container, #events-related .event[data-year="2024"] .v-center.title, #events-related .event[data-year="2024"] .title.svg-container, #cat-events-archive .event[data-year="2024"] .v-center.title, #cat-events-archive .event[data-year="2024"] .title.svg-container, #festival-cats .event[data-year="2024"] .v-center.title, #festival-cats .event[data-year="2024"] .title.svg-container {
     justify-content: center; }
-  .d-flex.column, .column.svg-container, #events-showcase .event[data-year="2022"] .column.title, #events-calendar .event[data-year="2022"] .column.title, #events-related .event[data-year="2022"] .column.title, #cat-events-archive .event[data-year="2022"] .column.title, #festival-cats .event[data-year="2022"] .column.title, #events-showcase .event[data-year="2023"] .column.title, #events-calendar .event[data-year="2023"] .column.title, #events-related .event[data-year="2023"] .column.title, #cat-events-archive .event[data-year="2023"] .column.title, #festival-cats .event[data-year="2023"] .column.title {
+  .d-flex.column, .column.svg-container, #events-showcase .event[data-year="2022"] .column.title, #events-calendar .event[data-year="2022"] .column.title, #events-related .event[data-year="2022"] .column.title, #cat-events-archive .event[data-year="2022"] .column.title, #festival-cats .event[data-year="2022"] .column.title, #events-showcase .event[data-year="2023"] .column.title, #events-calendar .event[data-year="2023"] .column.title, #events-related .event[data-year="2023"] .column.title, #cat-events-archive .event[data-year="2023"] .column.title, #festival-cats .event[data-year="2023"] .column.title, #events-showcase .event[data-year="2024"] .column.title, #events-calendar .event[data-year="2024"] .column.title, #events-related .event[data-year="2024"] .column.title, #cat-events-archive .event[data-year="2024"] .column.title, #festival-cats .event[data-year="2024"] .column.title {
     flex-flow: column; }
-    .d-flex.column.center, .column.center.svg-container, #events-showcase .event[data-year="2022"] .column.center.title, #events-calendar .event[data-year="2022"] .column.center.title, #events-related .event[data-year="2022"] .column.center.title, #cat-events-archive .event[data-year="2022"] .column.center.title, #festival-cats .event[data-year="2022"] .column.center.title, #events-showcase .event[data-year="2023"] .column.center.title, #events-calendar .event[data-year="2023"] .column.center.title, #events-related .event[data-year="2023"] .column.center.title, #cat-events-archive .event[data-year="2023"] .column.center.title, #festival-cats .event[data-year="2023"] .column.center.title {
+    .d-flex.column.center, .column.center.svg-container, #events-showcase .event[data-year="2022"] .column.center.title, #events-calendar .event[data-year="2022"] .column.center.title, #events-related .event[data-year="2022"] .column.center.title, #cat-events-archive .event[data-year="2022"] .column.center.title, #festival-cats .event[data-year="2022"] .column.center.title, #events-showcase .event[data-year="2023"] .column.center.title, #events-calendar .event[data-year="2023"] .column.center.title, #events-related .event[data-year="2023"] .column.center.title, #cat-events-archive .event[data-year="2023"] .column.center.title, #festival-cats .event[data-year="2023"] .column.center.title, #events-showcase .event[data-year="2024"] .column.center.title, #events-calendar .event[data-year="2024"] .column.center.title, #events-related .event[data-year="2024"] .column.center.title, #cat-events-archive .event[data-year="2024"] .column.center.title, #festival-cats .event[data-year="2024"] .column.center.title {
       align-items: unset;
       justify-content: center; }
-    .d-flex.column.space-between, .column.space-between.svg-container, #events-showcase .event[data-year="2022"] .column.space-between.title, #events-calendar .event[data-year="2022"] .column.space-between.title, #events-related .event[data-year="2022"] .column.space-between.title, #cat-events-archive .event[data-year="2022"] .column.space-between.title, #festival-cats .event[data-year="2022"] .column.space-between.title, #events-showcase .event[data-year="2023"] .column.space-between.title, #events-calendar .event[data-year="2023"] .column.space-between.title, #events-related .event[data-year="2023"] .column.space-between.title, #cat-events-archive .event[data-year="2023"] .column.space-between.title, #festival-cats .event[data-year="2023"] .column.space-between.title {
+    .d-flex.column.space-between, .column.space-between.svg-container, #events-showcase .event[data-year="2022"] .column.space-between.title, #events-calendar .event[data-year="2022"] .column.space-between.title, #events-related .event[data-year="2022"] .column.space-between.title, #cat-events-archive .event[data-year="2022"] .column.space-between.title, #festival-cats .event[data-year="2022"] .column.space-between.title, #events-showcase .event[data-year="2023"] .column.space-between.title, #events-calendar .event[data-year="2023"] .column.space-between.title, #events-related .event[data-year="2023"] .column.space-between.title, #cat-events-archive .event[data-year="2023"] .column.space-between.title, #festival-cats .event[data-year="2023"] .column.space-between.title, #events-showcase .event[data-year="2024"] .column.space-between.title, #events-calendar .event[data-year="2024"] .column.space-between.title, #events-related .event[data-year="2024"] .column.space-between.title, #cat-events-archive .event[data-year="2024"] .column.space-between.title, #festival-cats .event[data-year="2024"] .column.space-between.title {
       justify-content: space-between; }
-  .d-flex.wrap, .wrap.svg-container, #events-showcase .event[data-year="2022"] .wrap.title, #events-calendar .event[data-year="2022"] .wrap.title, #events-related .event[data-year="2022"] .wrap.title, #cat-events-archive .event[data-year="2022"] .wrap.title, #festival-cats .event[data-year="2022"] .wrap.title, #events-showcase .event[data-year="2023"] .wrap.title, #events-calendar .event[data-year="2023"] .wrap.title, #events-related .event[data-year="2023"] .wrap.title, #cat-events-archive .event[data-year="2023"] .wrap.title, #festival-cats .event[data-year="2023"] .wrap.title {
+  .d-flex.wrap, .wrap.svg-container, #events-showcase .event[data-year="2022"] .wrap.title, #events-calendar .event[data-year="2022"] .wrap.title, #events-related .event[data-year="2022"] .wrap.title, #cat-events-archive .event[data-year="2022"] .wrap.title, #festival-cats .event[data-year="2022"] .wrap.title, #events-showcase .event[data-year="2023"] .wrap.title, #events-calendar .event[data-year="2023"] .wrap.title, #events-related .event[data-year="2023"] .wrap.title, #cat-events-archive .event[data-year="2023"] .wrap.title, #festival-cats .event[data-year="2023"] .wrap.title, #events-showcase .event[data-year="2024"] .wrap.title, #events-calendar .event[data-year="2024"] .wrap.title, #events-related .event[data-year="2024"] .wrap.title, #cat-events-archive .event[data-year="2024"] .wrap.title, #festival-cats .event[data-year="2024"] .wrap.title {
     flex-wrap: wrap; }
 
 .mob-only {
@@ -290,9 +290,9 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
     body[data-color='green'] .button a {
       color: #00b482; }
   body[data-color='yellow'] .button {
-    border-color: #ffdc00; }
+    border-color: #ffb007; }
     body[data-color='yellow'] .button a {
-      color: #ffdc00; }
+      color: #ffb007; }
   body[data-color='red'] .button {
     border-color: #ff323c; }
     body[data-color='red'] .button a {
@@ -311,7 +311,7 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
     background-color: #ffffe6;
     border-color: #ffffe6; }
     body[data-color='yellow'] .button.light a {
-      color: #ffdc00; }
+      color: #ffb007; }
   body[data-color='red'] .button.light {
     background-color: #fff0f0;
     border-color: #fff0f0; }
@@ -328,7 +328,7 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
     body[data-color='green'] .button:hover a {
       color: #f0fff0; }
   body[data-color='yellow'] .button:hover {
-    background-color: #ffdc00;
+    background-color: #ffb007;
     color: #ffffe6; }
     body[data-color='yellow'] .button:hover a {
       color: #ffffe6; }
@@ -352,7 +352,7 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
   body[data-color='green'] .filter-container:hover, body[data-color='green'] .filter-container.active {
     color: #00b482; }
   body[data-color='yellow'] .filter-container:hover, body[data-color='yellow'] .filter-container.active {
-    color: #ffdc00; }
+    color: #ffb007; }
   body[data-color='red'] .filter-container:hover, body[data-color='red'] .filter-container.active {
     color: #ff323c; }
   .filter-container:hover svg, .filter-container.active svg {
@@ -367,9 +367,9 @@ body.red .bg-color, #events-showcase body.event.workshop .bg-color, #events-cale
     .filter-container.workshop:hover .filter-element, .filter-container.workshop.active .filter-element {
       color: #ff323c; }
   .filter-container.tour {
-    stroke: #ffdc00 !important; }
+    stroke: #ffb007 !important; }
     .filter-container.tour:hover .filter-element, .filter-container.tour.active .filter-element {
-      color: #ffdc00; }
+      color: #ffb007; }
   .filter-container.panel {
     stroke: #3c8cff !important; }
     .filter-container.panel:hover .filter-element, .filter-container.panel.active .filter-element {
@@ -392,16 +392,16 @@ body[data-color='blue'] .border-top {
 body[data-color='green'] .border-top {
   border-top: #00b482 5px solid; }
 body[data-color='yellow'] .border-top {
-  border-top: #ffdc00 5px solid; }
+  border-top: #ffb007 5px solid; }
 body[data-color='red'] .border-top {
   border-top: #ff323c 5px solid; }
 .border-top.grey {
-  border-top: black 5px solid !important; }
+  border-top: #402944 5px solid !important; }
 .border-top.white {
   border-top: white 5px solid !important; }
 
 .border-bottom, .event-year-row {
-  border-bottom: black 5px solid; }
+  border-bottom: #402944 5px solid; }
 
 .no-indent, #content-single-event .accordion-content p {
   text-indent: 0; }
@@ -409,7 +409,7 @@ body[data-color='red'] .border-top {
 /* basic elements */
 body {
   font-family: 'Basis Grotesque', 'Arial', sans-serif;
-  color: black;
+  color: #402944;
   overflow-x: hidden;
   line-height: 1.2;
   margin: 0; }
@@ -422,10 +422,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2; }
 
 a {
-  color: black;
+  color: #402944;
   text-decoration: none; }
   a:hover {
-    color: black; }
+    color: #402944; }
 
 ul {
   margin: 0;
@@ -441,7 +441,7 @@ body[data-color='green'] .dark-bnd, body[data-color='green'] .dark-bnd a {
   background-color: #00b482;
   color: #f0fff0; }
 body[data-color='yellow'] .dark-bnd, body[data-color='yellow'] .dark-bnd a {
-  background-color: #ffdc00;
+  background-color: #ffb007;
   color: #ffffe6; }
 body[data-color='red'] .dark-bnd, body[data-color='red'] .dark-bnd a {
   background-color: #ff323c;
@@ -454,7 +454,7 @@ strong, h5, h5 a {
   body[data-color='green'] strong, body[data-color='green'] h5, body[data-color='green'] h5 a {
     color: #00b482; }
   body[data-color='yellow'] strong, body[data-color='yellow'] h5, body[data-color='yellow'] h5 a {
-    color: #ffdc00; }
+    color: #ffb007; }
   body[data-color='red'] strong, body[data-color='red'] h5, body[data-color='red'] h5 a {
     color: #ff323c; }
 
@@ -479,7 +479,7 @@ img {
   margin-right: 15px;
   margin-left: 15px; }
 
-.flex-row-neg, .wpcf7-form .d-flex, .wpcf7-form .svg-container, .wpcf7-form #events-showcase .event[data-year="2022"] .title, #events-showcase .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-calendar .event[data-year="2022"] .title, #events-calendar .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-related .event[data-year="2022"] .title, #events-related .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #cat-events-archive .event[data-year="2022"] .title, #cat-events-archive .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #festival-cats .event[data-year="2022"] .title, #festival-cats .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-showcase .event[data-year="2023"] .title, #events-showcase .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #events-calendar .event[data-year="2023"] .title, #events-calendar .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #events-related .event[data-year="2023"] .title, #events-related .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #cat-events-archive .event[data-year="2023"] .title, #cat-events-archive .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #festival-cats .event[data-year="2023"] .title, #festival-cats .event[data-year="2023"] .wpcf7-form .title {
+.flex-row-neg, .wpcf7-form .d-flex, .wpcf7-form .svg-container, .wpcf7-form #events-showcase .event[data-year="2022"] .title, #events-showcase .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-calendar .event[data-year="2022"] .title, #events-calendar .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-related .event[data-year="2022"] .title, #events-related .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #cat-events-archive .event[data-year="2022"] .title, #cat-events-archive .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #festival-cats .event[data-year="2022"] .title, #festival-cats .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-showcase .event[data-year="2023"] .title, #events-showcase .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #events-calendar .event[data-year="2023"] .title, #events-calendar .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #events-related .event[data-year="2023"] .title, #events-related .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #cat-events-archive .event[data-year="2023"] .title, #cat-events-archive .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #festival-cats .event[data-year="2023"] .title, #festival-cats .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #events-showcase .event[data-year="2024"] .title, #events-showcase .event[data-year="2024"] .wpcf7-form .title, .wpcf7-form #events-calendar .event[data-year="2024"] .title, #events-calendar .event[data-year="2024"] .wpcf7-form .title, .wpcf7-form #events-related .event[data-year="2024"] .title, #events-related .event[data-year="2024"] .wpcf7-form .title, .wpcf7-form #cat-events-archive .event[data-year="2024"] .title, #cat-events-archive .event[data-year="2024"] .wpcf7-form .title, .wpcf7-form #festival-cats .event[data-year="2024"] .title, #festival-cats .event[data-year="2024"] .wpcf7-form .title {
   margin-right: -15px;
   margin-left: -15px; }
 
@@ -496,7 +496,7 @@ img {
   background-color: white;
   overflow: hidden;
   z-index: 100;
-  border-bottom: 5px solid black;
+  border-bottom: 5px solid #402944;
   -webkit-transition: height 0.3s 0.3s;
   -moz-transition: height 0.3s 0.3s;
   -ms-transition: height 0.3s 0.3s;
@@ -568,7 +568,7 @@ img {
     background-color: white;
     position: fixed;
     top: -100vh;
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid #402944;
     -webkit-transition: top 0.5s;
     -moz-transition: top 0.5s;
     -ms-transition: top 0.5s;
@@ -585,7 +585,7 @@ img {
       body[data-color='green'] #header .menu-menu-1-container ul li a:hover {
         color: #00b482 !important; }
       body[data-color='yellow'] #header .menu-menu-1-container ul li a:hover {
-        color: #ffdc00 !important; }
+        color: #ffb007 !important; }
       body[data-color='red'] #header .menu-menu-1-container ul li a:hover {
         color: #ff323c !important; }
       body[data-color='blue'] #header .menu-menu-1-container ul li.current-menu-item a {
@@ -593,7 +593,7 @@ img {
       body[data-color='green'] #header .menu-menu-1-container ul li.current-menu-item a {
         color: #00b482; }
       body[data-color='yellow'] #header .menu-menu-1-container ul li.current-menu-item a {
-        color: #ffdc00; }
+        color: #ffb007; }
       body[data-color='red'] #header .menu-menu-1-container ul li.current-menu-item a {
         color: #ff323c; }
   #header .menu-toggle {
@@ -632,7 +632,7 @@ img {
       body[data-color='green'] #header .menu-toggle span {
         background-color: #00b482; }
       body[data-color='yellow'] #header .menu-toggle span {
-        background-color: #ffdc00; }
+        background-color: #ffb007; }
       body[data-color='red'] #header .menu-toggle span {
         background-color: #ff323c; }
       #header .menu-toggle span:nth-child(1) {
@@ -689,7 +689,7 @@ body.red a.underline, #events-showcase body.event.workshop a.underline, #events-
   body[data-color='green'] .content p a {
     color: #00b482; }
   body[data-color='yellow'] .content p a {
-    color: #ffdc00; }
+    color: #ffb007; }
   body[data-color='red'] .content p a {
     color: #ff323c; }
   .content p a:hover {
@@ -704,21 +704,25 @@ body[data-color='yellow'] #content-home {
 body[data-color='red'] #content-home {
   background-color: #fff0f0; }
 #content-home .video-label {
-  border-top: black 5px solid;
-  border-bottom: black 5px solid; }
+  border-top: #402944 5px solid;
+  border-bottom: #402944 5px solid; }
   #content-home .video-label h4 {
     padding: 15px; }
 #content-home .streaming-header {
   border-bottom: none; }
 #content-home .slider .img-container {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  max-height: 80vh; }
+  #content-home .slider .img-container .bnd {
+    height: 100%;
+    width: auto; }
   #content-home .slider .img-container .moving-img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; }
+    height: auto; }
 
 #content-edizione .slider {
   border-top: black 5px solid;
@@ -731,8 +735,8 @@ body[data-color='red'] #content-home {
       width: auto; }
 
 .video-label, .section-label {
-  border-top: black 5px solid;
-  border-bottom: black 5px solid; }
+  border-top: #402944 5px solid;
+  border-bottom: #402944 5px solid; }
   .video-label h4, .section-label h4 {
     padding: 15px; }
 
@@ -757,8 +761,8 @@ body[data-color='red'] #content-home {
   background-color: white;
   padding-top: 15px;
   padding-bottom: 7.5px;
-  border-bottom: 5px solid black;
-  border-top: 5px solid black; }
+  border-bottom: 5px solid #402944;
+  border-top: 5px solid #402944; }
 
 .svg-container {
   height: 100%;
@@ -834,7 +838,7 @@ body[data-color='red'] #content-home {
     #events-showcase .event:last-of-type, #events-calendar .event:last-of-type, #events-related .event:last-of-type, #cat-events-archive .event:last-of-type, #festival-cats .event:last-of-type {
       border-bottom: none; }
     #events-showcase .event .title a, #events-calendar .event .title a, #events-related .event .title a, #cat-events-archive .event .title a, #festival-cats .event .title a {
-      color: black;
+      color: #402944;
       font-size: 50%; }
       #events-showcase .event .title a span, #events-calendar .event .title a span, #events-related .event .title a span, #cat-events-archive .event .title a span, #festival-cats .event .title a span {
         font-size: 200%; }
@@ -883,6 +887,41 @@ body[data-color='red'] #content-home {
         animation: dashback 1s linear forwards; }
     #events-showcase .event[data-year="2023"]:hover .animated-shape-23, #events-calendar .event[data-year="2023"]:hover .animated-shape-23, #events-related .event[data-year="2023"]:hover .animated-shape-23, #cat-events-archive .event[data-year="2023"]:hover .animated-shape-23, #festival-cats .event[data-year="2023"]:hover .animated-shape-23 {
       opacity: 1; }
+    #events-showcase .event[data-year="2024"], #events-calendar .event[data-year="2024"], #events-related .event[data-year="2024"], #cat-events-archive .event[data-year="2024"], #festival-cats .event[data-year="2024"] {
+      position: relative;
+      overflow: hidden; }
+      #events-showcase .event[data-year="2024"] .title, #events-calendar .event[data-year="2024"] .title, #events-related .event[data-year="2024"] .title, #cat-events-archive .event[data-year="2024"] .title, #festival-cats .event[data-year="2024"] .title {
+        align-items: center;
+        text-align: center;
+        max-width: 70vw;
+        height: 100%;
+        padding: 0 15px;
+        margin: 0 auto; }
+      #events-showcase .event[data-year="2024"] .img-container, #events-calendar .event[data-year="2024"] .img-container, #events-related .event[data-year="2024"] .img-container, #cat-events-archive .event[data-year="2024"] .img-container, #festival-cats .event[data-year="2024"] .img-container {
+        position: absolute;
+        top: 0;
+        left: -100vw;
+        height: 100%;
+        width: 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position: left;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s; }
+        #events-showcase .event[data-year="2024"] .img-container.mirror, #events-calendar .event[data-year="2024"] .img-container.mirror, #events-related .event[data-year="2024"] .img-container.mirror, #cat-events-archive .event[data-year="2024"] .img-container.mirror, #festival-cats .event[data-year="2024"] .img-container.mirror {
+          left: unset;
+          right: -100vw;
+          transform: scaleX(-1);
+          transform: rotate(180deg); }
+      #events-showcase .event[data-year="2024"]:hover .img-container, #events-calendar .event[data-year="2024"]:hover .img-container, #events-related .event[data-year="2024"]:hover .img-container, #cat-events-archive .event[data-year="2024"]:hover .img-container, #festival-cats .event[data-year="2024"]:hover .img-container {
+        left: 0; }
+        #events-showcase .event[data-year="2024"]:hover .img-container.mirror, #events-calendar .event[data-year="2024"]:hover .img-container.mirror, #events-related .event[data-year="2024"]:hover .img-container.mirror, #cat-events-archive .event[data-year="2024"]:hover .img-container.mirror, #festival-cats .event[data-year="2024"]:hover .img-container.mirror {
+          left: unset;
+          right: 0; }
     #events-showcase .event.panel, #events-calendar .event.panel, #events-related .event.panel, #cat-events-archive .event.panel, #festival-cats .event.panel {
       background: #f0ffff no-repeat center center; }
       #events-showcase .event.panel strong, #events-showcase .event.panel h5, #events-showcase .event.panel h5 > a, #events-calendar .event.panel strong, #events-calendar .event.panel h5, #events-calendar .event.panel h5 > a, #events-related .event.panel strong, #events-related .event.panel h5, #events-related .event.panel h5 > a, #cat-events-archive .event.panel strong, #cat-events-archive .event.panel h5, #cat-events-archive .event.panel h5 > a, #festival-cats .event.panel strong, #festival-cats .event.panel h5, #festival-cats .event.panel h5 > a {
@@ -902,16 +941,21 @@ body[data-color='red'] #content-home {
           padding: 30px; }
         #events-showcase .event.panel[data-year="2023"]:hover .animated-shape-23 svg .path-1, #events-calendar .event.panel[data-year="2023"]:hover .animated-shape-23 svg .path-1, #events-related .event.panel[data-year="2023"]:hover .animated-shape-23 svg .path-1, #cat-events-archive .event.panel[data-year="2023"]:hover .animated-shape-23 svg .path-1, #festival-cats .event.panel[data-year="2023"]:hover .animated-shape-23 svg .path-1 {
           animation: dash 3s ease-in-out forwards; }
+      #events-showcase .event.panel[data-year="2024"], #events-calendar .event.panel[data-year="2024"], #events-related .event.panel[data-year="2024"], #cat-events-archive .event.panel[data-year="2024"], #festival-cats .event.panel[data-year="2024"] {
+        background: url("../TUM-theme/assets/svg/2024/TUM24_blue_bg.jpg"), #f0ffff;
+        background-size: 100%; }
+        #events-showcase .event.panel[data-year="2024"] .animated-img, #events-calendar .event.panel[data-year="2024"] .animated-img, #events-related .event.panel[data-year="2024"] .animated-img, #cat-events-archive .event.panel[data-year="2024"] .animated-img, #festival-cats .event.panel[data-year="2024"] .animated-img {
+          background-image: url("../TUM-theme/assets/svg/2024/TUM24_blue_fg.png"); }
     #events-showcase .event.tour, #events-calendar .event.tour, #events-related .event.tour, #cat-events-archive .event.tour, #festival-cats .event.tour {
       background: #ffffe6 no-repeat center center; }
       #events-showcase .event.tour strong, #events-showcase .event.tour h5, #events-showcase .event.tour h5 > a, #events-calendar .event.tour strong, #events-calendar .event.tour h5, #events-calendar .event.tour h5 > a, #events-related .event.tour strong, #events-related .event.tour h5, #events-related .event.tour h5 > a, #cat-events-archive .event.tour strong, #cat-events-archive .event.tour h5, #cat-events-archive .event.tour h5 > a, #festival-cats .event.tour strong, #festival-cats .event.tour h5, #festival-cats .event.tour h5 > a {
-        color: #ffdc00; }
+        color: #ffb007; }
       #events-showcase .event.tour[data-year="2022"], #events-calendar .event.tour[data-year="2022"], #events-related .event.tour[data-year="2022"], #cat-events-archive .event.tour[data-year="2022"], #festival-cats .event.tour[data-year="2022"] {
-        background: #ffdc00 no-repeat center center; }
+        background: #ffb007 no-repeat center center; }
         #events-showcase .event.tour[data-year="2022"] strong, #events-showcase .event.tour[data-year="2022"] h5, #events-showcase .event.tour[data-year="2022"] h5 > a, #events-showcase .event.tour[data-year="2022"] .title a, #events-calendar .event.tour[data-year="2022"] strong, #events-calendar .event.tour[data-year="2022"] h5, #events-calendar .event.tour[data-year="2022"] h5 > a, #events-calendar .event.tour[data-year="2022"] .title a, #events-related .event.tour[data-year="2022"] strong, #events-related .event.tour[data-year="2022"] h5, #events-related .event.tour[data-year="2022"] h5 > a, #events-related .event.tour[data-year="2022"] .title a, #cat-events-archive .event.tour[data-year="2022"] strong, #cat-events-archive .event.tour[data-year="2022"] h5, #cat-events-archive .event.tour[data-year="2022"] h5 > a, #cat-events-archive .event.tour[data-year="2022"] .title a, #festival-cats .event.tour[data-year="2022"] strong, #festival-cats .event.tour[data-year="2022"] h5, #festival-cats .event.tour[data-year="2022"] h5 > a, #festival-cats .event.tour[data-year="2022"] .title a {
           color: #ffffe6; }
         #events-showcase .event.tour[data-year="2022"] .title, #events-calendar .event.tour[data-year="2022"] .title, #events-related .event.tour[data-year="2022"] .title, #cat-events-archive .event.tour[data-year="2022"] .title, #festival-cats .event.tour[data-year="2022"] .title {
-          background: #ffdc00 no-repeat center center; }
+          background: #ffb007 no-repeat center center; }
         #events-showcase .event.tour[data-year="2022"] .animated-pattern, #events-calendar .event.tour[data-year="2022"] .animated-pattern, #events-related .event.tour[data-year="2022"] .animated-pattern, #cat-events-archive .event.tour[data-year="2022"] .animated-pattern, #festival-cats .event.tour[data-year="2022"] .animated-pattern {
           background: url("./assets/svg/2022/TUM_tour_neg.svg") repeat-x center center; }
       #events-showcase .event.tour[data-year="2023"], #events-calendar .event.tour[data-year="2023"], #events-related .event.tour[data-year="2023"], #cat-events-archive .event.tour[data-year="2023"], #festival-cats .event.tour[data-year="2023"] {
@@ -919,6 +963,23 @@ body[data-color='red'] #content-home {
         background-size: 50%; }
         #events-showcase .event.tour[data-year="2023"]:hover .animated-shape-23 svg .path-1, #events-calendar .event.tour[data-year="2023"]:hover .animated-shape-23 svg .path-1, #events-related .event.tour[data-year="2023"]:hover .animated-shape-23 svg .path-1, #cat-events-archive .event.tour[data-year="2023"]:hover .animated-shape-23 svg .path-1, #festival-cats .event.tour[data-year="2023"]:hover .animated-shape-23 svg .path-1 {
           animation: dash 5s ease-in-out forwards; }
+      #events-showcase .event.tour[data-year="2024"], #events-calendar .event.tour[data-year="2024"], #events-related .event.tour[data-year="2024"], #cat-events-archive .event.tour[data-year="2024"], #festival-cats .event.tour[data-year="2024"] {
+        background: url("../TUM-theme/assets/svg/2024/TUM24_yellow_bg.jpg"), #ffffe6;
+        background-size: 100%; }
+        #events-showcase .event.tour[data-year="2024"] .animated-img, #events-calendar .event.tour[data-year="2024"] .animated-img, #events-related .event.tour[data-year="2024"] .animated-img, #cat-events-archive .event.tour[data-year="2024"] .animated-img, #festival-cats .event.tour[data-year="2024"] .animated-img {
+          background-image: url("../TUM-theme/assets/svg/2024/TUM24_yellow_fg.png");
+          left: 0;
+          top: -100vh; }
+          #events-showcase .event.tour[data-year="2024"] .animated-img.mirror, #events-calendar .event.tour[data-year="2024"] .animated-img.mirror, #events-related .event.tour[data-year="2024"] .animated-img.mirror, #cat-events-archive .event.tour[data-year="2024"] .animated-img.mirror, #festival-cats .event.tour[data-year="2024"] .animated-img.mirror {
+            left: unset;
+            right: 0;
+            top: unset;
+            bottom: -100vh; }
+        #events-showcase .event.tour[data-year="2024"]:hover .animated-img, #events-calendar .event.tour[data-year="2024"]:hover .animated-img, #events-related .event.tour[data-year="2024"]:hover .animated-img, #cat-events-archive .event.tour[data-year="2024"]:hover .animated-img, #festival-cats .event.tour[data-year="2024"]:hover .animated-img {
+          top: 0; }
+          #events-showcase .event.tour[data-year="2024"]:hover .animated-img.mirror, #events-calendar .event.tour[data-year="2024"]:hover .animated-img.mirror, #events-related .event.tour[data-year="2024"]:hover .animated-img.mirror, #cat-events-archive .event.tour[data-year="2024"]:hover .animated-img.mirror, #festival-cats .event.tour[data-year="2024"]:hover .animated-img.mirror {
+            top: unset;
+            bottom: 0; }
     #events-showcase .event.workshop, #events-calendar .event.workshop, #events-related .event.workshop, #cat-events-archive .event.workshop, #festival-cats .event.workshop {
       background: #fff0f0 no-repeat center center; }
       #events-showcase .event.workshop strong, #events-showcase .event.workshop h5, #events-showcase .event.workshop h5 > a, #events-calendar .event.workshop strong, #events-calendar .event.workshop h5, #events-calendar .event.workshop h5 > a, #events-related .event.workshop strong, #events-related .event.workshop h5, #events-related .event.workshop h5 > a, #cat-events-archive .event.workshop strong, #cat-events-archive .event.workshop h5, #cat-events-archive .event.workshop h5 > a, #festival-cats .event.workshop strong, #festival-cats .event.workshop h5, #festival-cats .event.workshop h5 > a {
@@ -936,6 +997,13 @@ body[data-color='red'] #content-home {
         background-size: 50%; }
         #events-showcase .event.workshop[data-year="2023"]:hover .animated-shape-23 svg .path-1, #events-calendar .event.workshop[data-year="2023"]:hover .animated-shape-23 svg .path-1, #events-related .event.workshop[data-year="2023"]:hover .animated-shape-23 svg .path-1, #cat-events-archive .event.workshop[data-year="2023"]:hover .animated-shape-23 svg .path-1, #festival-cats .event.workshop[data-year="2023"]:hover .animated-shape-23 svg .path-1 {
           animation: dash 5s ease-in-out forwards; }
+      #events-showcase .event.workshop[data-year="2024"], #events-calendar .event.workshop[data-year="2024"], #events-related .event.workshop[data-year="2024"], #cat-events-archive .event.workshop[data-year="2024"], #festival-cats .event.workshop[data-year="2024"] {
+        background: url("../TUM-theme/assets/svg/2024/TUM24_red_bg.jpg"), #fff0f0;
+        background-size: 100%; }
+        #events-showcase .event.workshop[data-year="2024"] .animated-img, #events-calendar .event.workshop[data-year="2024"] .animated-img, #events-related .event.workshop[data-year="2024"] .animated-img, #cat-events-archive .event.workshop[data-year="2024"] .animated-img, #festival-cats .event.workshop[data-year="2024"] .animated-img {
+          background-image: url("../TUM-theme/assets/svg/2024/TUM24_red_fg.png"); }
+          #events-showcase .event.workshop[data-year="2024"] .animated-img.mirror, #events-calendar .event.workshop[data-year="2024"] .animated-img.mirror, #events-related .event.workshop[data-year="2024"] .animated-img.mirror, #cat-events-archive .event.workshop[data-year="2024"] .animated-img.mirror, #festival-cats .event.workshop[data-year="2024"] .animated-img.mirror {
+            transform: rotate(180deg); }
     #events-showcase .event.film, #events-showcase .event.concerti, #events-calendar .event.film, #events-calendar .event.concerti, #events-related .event.film, #events-related .event.concerti, #cat-events-archive .event.film, #cat-events-archive .event.concerti, #festival-cats .event.film, #festival-cats .event.concerti {
       background: #f0fff0 no-repeat center center; }
       #events-showcase .event.film strong, #events-showcase .event.film h5, #events-showcase .event.film h5 > a, #events-showcase .event.concerti strong, #events-showcase .event.concerti h5, #events-showcase .event.concerti h5 > a, #events-calendar .event.film strong, #events-calendar .event.film h5, #events-calendar .event.film h5 > a, #events-calendar .event.concerti strong, #events-calendar .event.concerti h5, #events-calendar .event.concerti h5 > a, #events-related .event.film strong, #events-related .event.film h5, #events-related .event.film h5 > a, #events-related .event.concerti strong, #events-related .event.concerti h5, #events-related .event.concerti h5 > a, #cat-events-archive .event.film strong, #cat-events-archive .event.film h5, #cat-events-archive .event.film h5 > a, #cat-events-archive .event.concerti strong, #cat-events-archive .event.concerti h5, #cat-events-archive .event.concerti h5 > a, #festival-cats .event.film strong, #festival-cats .event.film h5, #festival-cats .event.film h5 > a, #festival-cats .event.concerti strong, #festival-cats .event.concerti h5, #festival-cats .event.concerti h5 > a {
@@ -957,6 +1025,19 @@ body[data-color='red'] #content-home {
           animation: dash .3s .6s ease-in-out forwards; }
         #events-showcase .event.film[data-year="2023"]:hover .animated-shape-23 svg .path-5, #events-showcase .event.film[data-year="2023"]:hover .animated-shape-23 svg .path-6, #events-showcase .event.concerti[data-year="2023"]:hover .animated-shape-23 svg .path-5, #events-showcase .event.concerti[data-year="2023"]:hover .animated-shape-23 svg .path-6, #events-calendar .event.film[data-year="2023"]:hover .animated-shape-23 svg .path-5, #events-calendar .event.film[data-year="2023"]:hover .animated-shape-23 svg .path-6, #events-calendar .event.concerti[data-year="2023"]:hover .animated-shape-23 svg .path-5, #events-calendar .event.concerti[data-year="2023"]:hover .animated-shape-23 svg .path-6, #events-related .event.film[data-year="2023"]:hover .animated-shape-23 svg .path-5, #events-related .event.film[data-year="2023"]:hover .animated-shape-23 svg .path-6, #events-related .event.concerti[data-year="2023"]:hover .animated-shape-23 svg .path-5, #events-related .event.concerti[data-year="2023"]:hover .animated-shape-23 svg .path-6, #cat-events-archive .event.film[data-year="2023"]:hover .animated-shape-23 svg .path-5, #cat-events-archive .event.film[data-year="2023"]:hover .animated-shape-23 svg .path-6, #cat-events-archive .event.concerti[data-year="2023"]:hover .animated-shape-23 svg .path-5, #cat-events-archive .event.concerti[data-year="2023"]:hover .animated-shape-23 svg .path-6, #festival-cats .event.film[data-year="2023"]:hover .animated-shape-23 svg .path-5, #festival-cats .event.film[data-year="2023"]:hover .animated-shape-23 svg .path-6, #festival-cats .event.concerti[data-year="2023"]:hover .animated-shape-23 svg .path-5, #festival-cats .event.concerti[data-year="2023"]:hover .animated-shape-23 svg .path-6 {
           animation: dash .15s .6s ease-in-out forwards; }
+      #events-showcase .event.film[data-year="2024"], #events-showcase .event.concerti[data-year="2024"], #events-calendar .event.film[data-year="2024"], #events-calendar .event.concerti[data-year="2024"], #events-related .event.film[data-year="2024"], #events-related .event.concerti[data-year="2024"], #cat-events-archive .event.film[data-year="2024"], #cat-events-archive .event.concerti[data-year="2024"], #festival-cats .event.film[data-year="2024"], #festival-cats .event.concerti[data-year="2024"] {
+        background: url("../TUM-theme/assets/svg/2024/TUM24_green_bg.jpg"), #f0fff0;
+        background-size: 100%; }
+        #events-showcase .event.film[data-year="2024"] .animated-img, #events-showcase .event.concerti[data-year="2024"] .animated-img, #events-calendar .event.film[data-year="2024"] .animated-img, #events-calendar .event.concerti[data-year="2024"] .animated-img, #events-related .event.film[data-year="2024"] .animated-img, #events-related .event.concerti[data-year="2024"] .animated-img, #cat-events-archive .event.film[data-year="2024"] .animated-img, #cat-events-archive .event.concerti[data-year="2024"] .animated-img, #festival-cats .event.film[data-year="2024"] .animated-img, #festival-cats .event.concerti[data-year="2024"] .animated-img {
+          background-image: url("../TUM-theme/assets/svg/2024/TUM24_green_fg.png");
+          left: 0;
+          top: 100vh; }
+          #events-showcase .event.film[data-year="2024"] .animated-img.mirror, #events-showcase .event.concerti[data-year="2024"] .animated-img.mirror, #events-calendar .event.film[data-year="2024"] .animated-img.mirror, #events-calendar .event.concerti[data-year="2024"] .animated-img.mirror, #events-related .event.film[data-year="2024"] .animated-img.mirror, #events-related .event.concerti[data-year="2024"] .animated-img.mirror, #cat-events-archive .event.film[data-year="2024"] .animated-img.mirror, #cat-events-archive .event.concerti[data-year="2024"] .animated-img.mirror, #festival-cats .event.film[data-year="2024"] .animated-img.mirror, #festival-cats .event.concerti[data-year="2024"] .animated-img.mirror {
+            left: unset;
+            right: 0;
+            top: -100vh; }
+        #events-showcase .event.film[data-year="2024"]:hover .animated-img, #events-showcase .event.concerti[data-year="2024"]:hover .animated-img, #events-calendar .event.film[data-year="2024"]:hover .animated-img, #events-calendar .event.concerti[data-year="2024"]:hover .animated-img, #events-related .event.film[data-year="2024"]:hover .animated-img, #events-related .event.concerti[data-year="2024"]:hover .animated-img, #cat-events-archive .event.film[data-year="2024"]:hover .animated-img, #cat-events-archive .event.concerti[data-year="2024"]:hover .animated-img, #festival-cats .event.film[data-year="2024"]:hover .animated-img, #festival-cats .event.concerti[data-year="2024"]:hover .animated-img {
+          top: 0; }
 
 #festival-cats .event {
   padding: 15px;
@@ -996,26 +1077,26 @@ body[data-color='red'] #content-home {
   #festival-cats .event.tour {
     background: #ffffe6 no-repeat center center; }
     #festival-cats .event.tour h2, #festival-cats .event.tour h5, #festival-cats .event.tour h5 > a, #festival-cats .event.tour a {
-      color: #ffdc00; }
+      color: #ffb007; }
     #festival-cats .event.tour .button, #festival-cats .event.tour input[type="submit"] {
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       -ms-transition: all 0.3s;
       -o-transition: all 0.3s;
       transition: all 0.3s;
-      border-color: #ffdc00 !important;
-      color: #ffdc00 !important; }
+      border-color: #ffb007 !important;
+      color: #ffb007 !important; }
       #festival-cats .event.tour .button a, #festival-cats .event.tour input[type="submit"] a {
-        color: #ffdc00 !important; }
+        color: #ffb007 !important; }
       #festival-cats .event.tour .button:hover, #festival-cats .event.tour input[type="submit"]:hover {
         color: #ffffe6 !important;
-        background-color: #ffdc00 !important; }
+        background-color: #ffb007 !important; }
         #festival-cats .event.tour .button:hover a, #festival-cats .event.tour input[type="submit"]:hover a {
           color: #ffffe6 !important; }
     #festival-cats .event.tour input[type=text],
     #festival-cats .event.tour input[type=email],
     #festival-cats .event.tour input[type=url] {
-      border-color: #ffdc00 !important; }
+      border-color: #ffb007 !important; }
     #festival-cats .event.tour .pattern {
       background: url("./assets/svg/2022/TUM_tour_pos.svg") repeat-x center calc(100% + 80px);
       background-size: auto 160px; }
@@ -1091,7 +1172,7 @@ body[data-color='red'] #content-home {
     body[data-color='green'] .event-year-row .event-year-link a:hover {
       color: #00b482; }
     body[data-color='yellow'] .event-year-row .event-year-link a:hover {
-      color: #ffdc00; }
+      color: #ffb007; }
     body[data-color='red'] .event-year-row .event-year-link a:hover {
       color: #ff323c; }
 
@@ -1170,7 +1251,7 @@ body[data-color='red'] #content-home {
     body[data-color='green'] [data-year="2021"] .event-img .inner-event-img::after {
       background-color: #f0fff0; }
   body[data-color='yellow'] [data-year="2021"] .event-img .inner-event-img {
-    background-color: #ffdc00 !important; }
+    background-color: #ffb007 !important; }
     body[data-color='yellow'] [data-year="2021"] .event-img .inner-event-img::after {
       background-color: #ffffe6; }
   body[data-color='red'] [data-year="2021"] .event-img .inner-event-img {
@@ -1204,7 +1285,7 @@ body[data-color='red'] #content-home {
     body[data-color='green'] .portrait::after {
       background-color: #f0fff0; }
   body[data-color='yellow'] .portrait {
-    background-color: #ffdc00 !important; }
+    background-color: #ffb007 !important; }
     body[data-color='yellow'] .portrait::after {
       background-color: #ffffe6; }
   body[data-color='red'] .portrait {
@@ -1246,7 +1327,7 @@ input[type=text], input[type=email], input[type=url] {
   padding: 5px 0;
   height: 38px;
   background-color: transparent !important;
-  color: black; }
+  color: #402944; }
   body[data-color='blue'] input[type=text],
   body[data-color='blue'] input[type=email],
   body[data-color='blue'] input[type=url] {
@@ -1254,7 +1335,7 @@ input[type=text], input[type=email], input[type=url] {
   body[data-color='green'] input[type=text], body[data-color='green'] input[type=email], body[data-color='green'] input[type=url] {
     border-color: #00b482 !important; }
   body[data-color='yellow'] input[type=text], body[data-color='yellow'] input[type=email], body[data-color='yellow'] input[type=url] {
-    border-color: #ffdc00 !important; }
+    border-color: #ffb007 !important; }
   body[data-color='red'] input[type=text], body[data-color='red'] input[type=email], body[data-color='red'] input[type=url] {
     border-color: #ff323c !important; }
 
@@ -1273,7 +1354,7 @@ textarea {
   body[data-color='green'] textarea {
     border-color: #00b482 !important; }
   body[data-color='yellow'] textarea {
-    border-color: #ffdc00 !important; }
+    border-color: #ffb007 !important; }
   body[data-color='red'] textarea {
     border-color: #ff323c !important; }
 
@@ -1295,8 +1376,8 @@ input[type="submit"] {
     body[data-color='green'] input[type="submit"]:hover {
       background-color: #f0fff0 !important; }
   body[data-color='yellow'] input[type="submit"] {
-    border-color: #ffdc00;
-    color: #ffdc00; }
+    border-color: #ffb007;
+    color: #ffb007; }
     body[data-color='yellow'] input[type="submit"]:hover {
       background-color: #ffffe6 !important; }
   body[data-color='red'] input[type="submit"] {
@@ -1307,7 +1388,7 @@ input[type="submit"] {
 
 .wpcf7-form {
   max-width: 800px; }
-  .wpcf7-form .d-flex, .wpcf7-form .svg-container, .wpcf7-form #events-showcase .event[data-year="2022"] .title, #events-showcase .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-calendar .event[data-year="2022"] .title, #events-calendar .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-related .event[data-year="2022"] .title, #events-related .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #cat-events-archive .event[data-year="2022"] .title, #cat-events-archive .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #festival-cats .event[data-year="2022"] .title, #festival-cats .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-showcase .event[data-year="2023"] .title, #events-showcase .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #events-calendar .event[data-year="2023"] .title, #events-calendar .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #events-related .event[data-year="2023"] .title, #events-related .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #cat-events-archive .event[data-year="2023"] .title, #cat-events-archive .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #festival-cats .event[data-year="2023"] .title, #festival-cats .event[data-year="2023"] .wpcf7-form .title {
+  .wpcf7-form .d-flex, .wpcf7-form .svg-container, .wpcf7-form #events-showcase .event[data-year="2022"] .title, #events-showcase .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-calendar .event[data-year="2022"] .title, #events-calendar .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-related .event[data-year="2022"] .title, #events-related .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #cat-events-archive .event[data-year="2022"] .title, #cat-events-archive .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #festival-cats .event[data-year="2022"] .title, #festival-cats .event[data-year="2022"] .wpcf7-form .title, .wpcf7-form #events-showcase .event[data-year="2023"] .title, #events-showcase .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #events-calendar .event[data-year="2023"] .title, #events-calendar .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #events-related .event[data-year="2023"] .title, #events-related .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #cat-events-archive .event[data-year="2023"] .title, #cat-events-archive .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #festival-cats .event[data-year="2023"] .title, #festival-cats .event[data-year="2023"] .wpcf7-form .title, .wpcf7-form #events-showcase .event[data-year="2024"] .title, #events-showcase .event[data-year="2024"] .wpcf7-form .title, .wpcf7-form #events-calendar .event[data-year="2024"] .title, #events-calendar .event[data-year="2024"] .wpcf7-form .title, .wpcf7-form #events-related .event[data-year="2024"] .title, #events-related .event[data-year="2024"] .wpcf7-form .title, .wpcf7-form #cat-events-archive .event[data-year="2024"] .title, #cat-events-archive .event[data-year="2024"] .wpcf7-form .title, .wpcf7-form #festival-cats .event[data-year="2024"] .title, #festival-cats .event[data-year="2024"] .wpcf7-form .title {
     margin-bottom: 30px; }
   .wpcf7-form .wpcf7-list-item {
     width: 100%; }
@@ -1321,7 +1402,7 @@ input[type="submit"] {
     body[data-color='green'] .wpcf7-form .wpcf7-not-valid-tip {
       color: #00b482 !important; }
     body[data-color='yellow'] .wpcf7-form .wpcf7-not-valid-tip {
-      color: #ffdc00 !important; }
+      color: #ffb007 !important; }
     body[data-color='red'] .wpcf7-form .wpcf7-not-valid-tip {
       color: #ff323c !important; }
   .wpcf7-form .wpcf7-response-output {
@@ -1334,7 +1415,7 @@ input[type="submit"] {
     body[data-color='green'] .wpcf7-form .wpcf7-response-output {
       border-color: #00b482 !important; }
     body[data-color='yellow'] .wpcf7-form .wpcf7-response-output {
-      border-color: #ffdc00 !important; }
+      border-color: #ffb007 !important; }
     body[data-color='red'] .wpcf7-form .wpcf7-response-output {
       border-color: #ff323c !important; }
 
@@ -1356,7 +1437,7 @@ div.wpforms-container-full .wpforms-form {
   body[data-color='green'] div.wpforms-container-full .wpforms-form .wpforms-required-label {
     color: #00b482 !important; }
   body[data-color='yellow'] div.wpforms-container-full .wpforms-form .wpforms-required-label {
-    color: #ffdc00 !important; }
+    color: #ffb007 !important; }
   body[data-color='red'] div.wpforms-container-full .wpforms-form .wpforms-required-label {
     color: #ff323c !important; }
   div.wpforms-container-full .wpforms-form input[type=text], div.wpforms-container-full .wpforms-form input[type=email] {
@@ -1369,7 +1450,7 @@ div.wpforms-container-full .wpforms-form {
     body[data-color='green'] div.wpforms-container-full .wpforms-form input[type=text], body[data-color='green'] div.wpforms-container-full .wpforms-form input[type=email] {
       border-color: #00b482 !important; }
     body[data-color='yellow'] div.wpforms-container-full .wpforms-form input[type=text], body[data-color='yellow'] div.wpforms-container-full .wpforms-form input[type=email] {
-      border-color: #ffdc00 !important; }
+      border-color: #ffb007 !important; }
     body[data-color='red'] div.wpforms-container-full .wpforms-form input[type=text], body[data-color='red'] div.wpforms-container-full .wpforms-form input[type=email] {
       border-color: #ff323c !important; }
   div.wpforms-container-full .wpforms-form textarea {
@@ -1380,7 +1461,7 @@ div.wpforms-container-full .wpforms-form {
     body[data-color='green'] div.wpforms-container-full .wpforms-form textarea {
       border-color: #00b482 !important; }
     body[data-color='yellow'] div.wpforms-container-full .wpforms-form textarea {
-      border-color: #ffdc00 !important; }
+      border-color: #ffb007 !important; }
     body[data-color='red'] div.wpforms-container-full .wpforms-form textarea {
       border-color: #ff323c !important; }
   div.wpforms-container-full .wpforms-form button[type="submit"] {
@@ -1398,8 +1479,8 @@ div.wpforms-container-full .wpforms-form {
       body[data-color='green'] div.wpforms-container-full .wpforms-form button[type="submit"]:hover {
         background-color: #f0fff0 !important; }
     body[data-color='yellow'] div.wpforms-container-full .wpforms-form button[type="submit"] {
-      border-color: #ffdc00;
-      color: #ffdc00; }
+      border-color: #ffb007;
+      color: #ffb007; }
       body[data-color='yellow'] div.wpforms-container-full .wpforms-form button[type="submit"]:hover {
         background-color: #ffffe6 !important; }
     body[data-color='red'] div.wpforms-container-full .wpforms-form button[type="submit"] {
@@ -1416,18 +1497,18 @@ div.wpforms-container-full .wpforms-form {
   body[data-color='green'] .wpforms-confirmation-container-full {
     border-color: #00b482 !important; }
   body[data-color='yellow'] .wpforms-confirmation-container-full {
-    border-color: #ffdc00 !important; }
+    border-color: #ffb007 !important; }
   body[data-color='red'] .wpforms-confirmation-container-full {
     border-color: #ff323c !important; }
 
 #footer {
-  border-top: 5px solid black; }
+  border-top: 5px solid #402944; }
   body[data-color='blue'] #footer a:hover {
     color: #3c8cff; }
   body[data-color='green'] #footer a:hover {
     color: #00b482; }
   body[data-color='yellow'] #footer a:hover {
-    color: #ffdc00; }
+    color: #ffb007; }
   body[data-color='red'] #footer a:hover {
     color: #ff323c; }
 
@@ -1439,9 +1520,9 @@ div.wpforms-container-full .wpforms-form {
   .t-hidden {
     display: none; }
 
-  .d-flex.t-column, .t-column.svg-container, #events-showcase .event[data-year="2022"] .t-column.title, #events-calendar .event[data-year="2022"] .t-column.title, #events-related .event[data-year="2022"] .t-column.title, #cat-events-archive .event[data-year="2022"] .t-column.title, #festival-cats .event[data-year="2022"] .t-column.title, #events-showcase .event[data-year="2023"] .t-column.title, #events-calendar .event[data-year="2023"] .t-column.title, #events-related .event[data-year="2023"] .t-column.title, #cat-events-archive .event[data-year="2023"] .t-column.title, #festival-cats .event[data-year="2023"] .t-column.title {
+  .d-flex.t-column, .t-column.svg-container, #events-showcase .event[data-year="2022"] .t-column.title, #events-calendar .event[data-year="2022"] .t-column.title, #events-related .event[data-year="2022"] .t-column.title, #cat-events-archive .event[data-year="2022"] .t-column.title, #festival-cats .event[data-year="2022"] .t-column.title, #events-showcase .event[data-year="2023"] .t-column.title, #events-calendar .event[data-year="2023"] .t-column.title, #events-related .event[data-year="2023"] .t-column.title, #cat-events-archive .event[data-year="2023"] .t-column.title, #festival-cats .event[data-year="2023"] .t-column.title, #events-showcase .event[data-year="2024"] .t-column.title, #events-calendar .event[data-year="2024"] .t-column.title, #events-related .event[data-year="2024"] .t-column.title, #cat-events-archive .event[data-year="2024"] .t-column.title, #festival-cats .event[data-year="2024"] .t-column.title {
     flex-flow: column; }
-  .d-flex.t-column-reverse, .t-column-reverse.svg-container, #events-showcase .event[data-year="2022"] .t-column-reverse.title, #events-calendar .event[data-year="2022"] .t-column-reverse.title, #events-related .event[data-year="2022"] .t-column-reverse.title, #cat-events-archive .event[data-year="2022"] .t-column-reverse.title, #festival-cats .event[data-year="2022"] .t-column-reverse.title, #events-showcase .event[data-year="2023"] .t-column-reverse.title, #events-calendar .event[data-year="2023"] .t-column-reverse.title, #events-related .event[data-year="2023"] .t-column-reverse.title, #cat-events-archive .event[data-year="2023"] .t-column-reverse.title, #festival-cats .event[data-year="2023"] .t-column-reverse.title {
+  .d-flex.t-column-reverse, .t-column-reverse.svg-container, #events-showcase .event[data-year="2022"] .t-column-reverse.title, #events-calendar .event[data-year="2022"] .t-column-reverse.title, #events-related .event[data-year="2022"] .t-column-reverse.title, #cat-events-archive .event[data-year="2022"] .t-column-reverse.title, #festival-cats .event[data-year="2022"] .t-column-reverse.title, #events-showcase .event[data-year="2023"] .t-column-reverse.title, #events-calendar .event[data-year="2023"] .t-column-reverse.title, #events-related .event[data-year="2023"] .t-column-reverse.title, #cat-events-archive .event[data-year="2023"] .t-column-reverse.title, #festival-cats .event[data-year="2023"] .t-column-reverse.title, #events-showcase .event[data-year="2024"] .t-column-reverse.title, #events-calendar .event[data-year="2024"] .t-column-reverse.title, #events-related .event[data-year="2024"] .t-column-reverse.title, #cat-events-archive .event[data-year="2024"] .t-column-reverse.title, #festival-cats .event[data-year="2024"] .t-column-reverse.title {
     flex-flow: column-reverse; }
 
   .t-whole {
@@ -1510,9 +1591,9 @@ div.wpforms-container-full .wpforms-form {
   .m-visible {
     display: inline-block; }
 
-  .d-flex.m-column, .m-column.svg-container, #events-showcase .event[data-year="2022"] .m-column.title, #events-calendar .event[data-year="2022"] .m-column.title, #events-related .event[data-year="2022"] .m-column.title, #cat-events-archive .event[data-year="2022"] .m-column.title, #festival-cats .event[data-year="2022"] .m-column.title, #events-showcase .event[data-year="2023"] .m-column.title, #events-calendar .event[data-year="2023"] .m-column.title, #events-related .event[data-year="2023"] .m-column.title, #cat-events-archive .event[data-year="2023"] .m-column.title, #festival-cats .event[data-year="2023"] .m-column.title {
+  .d-flex.m-column, .m-column.svg-container, #events-showcase .event[data-year="2022"] .m-column.title, #events-calendar .event[data-year="2022"] .m-column.title, #events-related .event[data-year="2022"] .m-column.title, #cat-events-archive .event[data-year="2022"] .m-column.title, #festival-cats .event[data-year="2022"] .m-column.title, #events-showcase .event[data-year="2023"] .m-column.title, #events-calendar .event[data-year="2023"] .m-column.title, #events-related .event[data-year="2023"] .m-column.title, #cat-events-archive .event[data-year="2023"] .m-column.title, #festival-cats .event[data-year="2023"] .m-column.title, #events-showcase .event[data-year="2024"] .m-column.title, #events-calendar .event[data-year="2024"] .m-column.title, #events-related .event[data-year="2024"] .m-column.title, #cat-events-archive .event[data-year="2024"] .m-column.title, #festival-cats .event[data-year="2024"] .m-column.title {
     flex-flow: column; }
-  .d-flex.m-column-reverse, .m-column-reverse.svg-container, #events-showcase .event[data-year="2022"] .m-column-reverse.title, #events-calendar .event[data-year="2022"] .m-column-reverse.title, #events-related .event[data-year="2022"] .m-column-reverse.title, #cat-events-archive .event[data-year="2022"] .m-column-reverse.title, #festival-cats .event[data-year="2022"] .m-column-reverse.title, #events-showcase .event[data-year="2023"] .m-column-reverse.title, #events-calendar .event[data-year="2023"] .m-column-reverse.title, #events-related .event[data-year="2023"] .m-column-reverse.title, #cat-events-archive .event[data-year="2023"] .m-column-reverse.title, #festival-cats .event[data-year="2023"] .m-column-reverse.title {
+  .d-flex.m-column-reverse, .m-column-reverse.svg-container, #events-showcase .event[data-year="2022"] .m-column-reverse.title, #events-calendar .event[data-year="2022"] .m-column-reverse.title, #events-related .event[data-year="2022"] .m-column-reverse.title, #cat-events-archive .event[data-year="2022"] .m-column-reverse.title, #festival-cats .event[data-year="2022"] .m-column-reverse.title, #events-showcase .event[data-year="2023"] .m-column-reverse.title, #events-calendar .event[data-year="2023"] .m-column-reverse.title, #events-related .event[data-year="2023"] .m-column-reverse.title, #cat-events-archive .event[data-year="2023"] .m-column-reverse.title, #festival-cats .event[data-year="2023"] .m-column-reverse.title, #events-showcase .event[data-year="2024"] .m-column-reverse.title, #events-calendar .event[data-year="2024"] .m-column-reverse.title, #events-related .event[data-year="2024"] .m-column-reverse.title, #cat-events-archive .event[data-year="2024"] .m-column-reverse.title, #festival-cats .event[data-year="2024"] .m-column-reverse.title {
     flex-flow: column-reverse; }
 
   .m-whole {

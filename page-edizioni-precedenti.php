@@ -14,11 +14,11 @@
   ?>
 
   <?php foreach( $terms as $term ) : ?>
-    <div class="container-fluid event-year-row">
-      <?php if ( $term->slug != $currYear ): ?>
+    <?php if ( $term->slug != $currYear ): ?>
+      <div class="container-fluid event-year-row">
         <h2 class="event-year-link spacing-p-t-1 s-large uppercase"><a href="<?php echo get_term_link($term->term_id); ?>">TUM <?= $term->name; ?></a></h2>
-      <?php endif; ?>
-    </div>
+      </div>
+    <?php endif; ?>
   <?php endforeach; ?>
 
 </section>
