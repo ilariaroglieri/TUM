@@ -710,53 +710,25 @@ body[data-color='red'] #content-home {
     padding: 15px; }
 #content-home .streaming-header {
   border-bottom: none; }
-#content-home .slider .slide {
-  padding: 15px 0;
-  padding-top: 0; }
-  body[data-color='blue'] #content-home .slider .slide {
-    background-color: #f0ffff !important; }
-    body[data-color='blue'] #content-home .slider .slide h2 {
-      color: #3c8cff; }
-  body[data-color='green'] #content-home .slider .slide {
-    background-color: #f0fff0 !important; }
-    body[data-color='green'] #content-home .slider .slide h2 {
-      color: #00b482; }
-  body[data-color='yellow'] #content-home .slider .slide {
-    background-color: #ffffe6 !important; }
-    body[data-color='yellow'] #content-home .slider .slide h2 {
-      color: #ffdc00; }
-  body[data-color='red'] #content-home .slider .slide {
-    background-color: #fff0f0 !important; }
-    body[data-color='red'] #content-home .slider .slide h2 {
-      color: #ff323c; }
-  #content-home .slider .slide .img-container {
-    position: relative;
-    width: 100%; }
-    #content-home .slider .slide .img-container::before {
-      content: '';
-      display: flex;
-      background-color: #9664b4;
-      position: absolute;
-      top: -18.4vh;
-      left: 0;
-      height: 18.4vh;
-      width: 100%; }
-    #content-home .slider .slide .img-container img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      -webkit-transition: all 0.1s;
-      -moz-transition: all 0.1s;
-      -ms-transition: all 0.1s;
-      -o-transition: all 0.1s;
-      transition: all 0.1s; }
-      #content-home .slider .slide .img-container img:first-of-type {
-        position: static; }
-  #content-home .slider .slide p {
-    margin-bottom: 22px; }
-  #content-home .slider .slide p > strong {
-    font-weight: normal; }
+#content-home .slider .img-container {
+  position: relative;
+  width: 100%; }
+  #content-home .slider .img-container .moving-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+#content-edizione .slider {
+  border-top: black 5px solid;
+  overflow: hidden; }
+  #content-edizione .slider .swiper-slide {
+    height: 60vh;
+    text-align: center; }
+    #content-edizione .slider .swiper-slide img {
+      height: 100%;
+      width: auto; }
 
 .video-label, .section-label {
   border-top: black 5px solid;
@@ -1500,11 +1472,11 @@ div.wpforms-container-full .wpforms-form {
   #events-showcase .event[data-year="2023"] .animated-shape-23 svg:nth-of-type(2), #events-calendar .event[data-year="2023"] .animated-shape-23 svg:nth-of-type(2), #events-related .event[data-year="2023"] .animated-shape-23 svg:nth-of-type(2), #cat-events-archive .event[data-year="2023"] .animated-shape-23 svg:nth-of-type(2), #festival-cats .event[data-year="2023"] .animated-shape-23 svg:nth-of-type(2) {
     display: none; }
 
-  #content-page .main-text, #content-single-event .main-text {
+  #content-page .main-text, #content-single-event .main-text, #content-edizione .main-text {
     max-width: 100%;
     column-count: 1;
     column-width: unset; }
-    #content-page .main-text h2, #content-single-event .main-text h2 {
+    #content-page .main-text h2, #content-single-event .main-text h2, #content-edizione .main-text h2 {
       margin-top: 30px;
       break-before: unset; }
 
@@ -1557,7 +1529,14 @@ div.wpforms-container-full .wpforms-form {
     justify-content: center; }
     .partner-row .logo {
       margin-bottom: 30px;
-      margin-right: 0; } }
+      margin-right: 0; }
+
+  #content-edizione .slider .swiper-slide {
+    height: 33vh;
+    text-align: center; }
+    #content-edizione .slider .swiper-slide img {
+      height: 100%;
+      width: auto; } }
 @media screen and (pointer: coarse) {
   .svg-container.animated-shape {
     opacity: 1;
@@ -1576,5 +1555,11 @@ div.wpforms-container-full .wpforms-form {
       stroke-width: 10px;
       stroke-dasharray: 0;
       stroke-dashoffset: 0; } }
+@media screen and (orientation: portrait) {
+  #content-edizione .slider .swiper-slide {
+    height: 33vh; }
+    #content-edizione .slider .swiper-slide img {
+      height: 100%;
+      width: auto; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -63,9 +63,11 @@
     if ( $venues ) : ?>
       <div id="venue-select" data-name="event-venue" class="custom-select select-venue d-flex m-column">
         <?php foreach( $venues as $i=>$venue) : ?>
-          <div class="filter-container">
-            <h3 class="s-regular uppercase filter-element" data-type="venue-filter" id="<?= $venues_ids[$i]; ?>"><?php echo $venue; ?></h3>
-          </div>
+          <?php if ($venues_ids[$i]): ?>
+            <div class="filter-container">
+              <h3 class="s-regular uppercase filter-element" data-type="venue-filter" id="<?= $venues_ids[$i]; ?>"><?php echo $venue; ?></h3>
+            </div>
+          <?php endif; ?>
         <?php endforeach; ?>
       </div>
     <?php endif;

@@ -15,7 +15,10 @@ add_action( 'init', 'register_my_menu' );
 
 
 function jquery_scripts() {
-	wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/assets/js/custom.js', array(), '', true );
+
+	wp_enqueue_style( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+  wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), '1.0.0', true );
+  wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/assets/js/custom.js', array(), '', true );
   wp_localize_script('custom', 'wpAjax',
     array(
       'ajaxUrl' => admin_url('admin-ajax.php')

@@ -38,18 +38,19 @@ jQuery(document).ready(function($) {
   });
 
 // --- slider init
-  // $('.slider').slick({
-  //   arrows: false,
-  //   dots: false,
-  //   autoplay: true,
-  //   infinite: true,
-  //   pauseOnHover: false,
-  //   pauseOnFocus: false,
-  //   autoplaySpeed: 3000,
-  //   speed: 1000,
-  //   cssEase: 'ease',
-  //   useTransform: false
-  // });
+
+  const swiper = new Swiper('#content-edizione .slider', {
+    // loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    speed: 1500,
+    touchEventsTarget: 'container-fluid',
+    grabCursor: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 1500,
+    }
+  });
 
   $('.accordion-btn').each(function(i, el) {
     console.log(el);

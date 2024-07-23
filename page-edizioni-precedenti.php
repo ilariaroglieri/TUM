@@ -4,7 +4,7 @@
 
 <section class="content" id="content-previous-years">
   <?php
-    $currYear = date("Y");
+    $currYear = date("Y"); 
     $terms = get_terms( array(
       'taxonomy' => 'event_year',
       'orderby' => 'slug',
@@ -15,7 +15,9 @@
 
   <?php foreach( $terms as $term ) : ?>
     <div class="container-fluid event-year-row">
-      <h2 class="event-year-link spacing-p-t-1 s-large uppercase"><a href="<?php echo get_term_link($term->term_id); ?>">TUM <?= $term->name; ?></a></h2>
+      <?php if ( $term->slug != $currYear ): ?>
+        <h2 class="event-year-link spacing-p-t-1 s-large uppercase"><a href="<?php echo get_term_link($term->term_id); ?>">TUM <?= $term->name; ?></a></h2>
+      <?php endif; ?>
     </div>
   <?php endforeach; ?>
 
